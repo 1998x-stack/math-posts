@@ -30,6 +30,7 @@ VALID_SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 
 def data(root:Path):
     categories=json.loads((root/'content/categories.json').read_text(encoding='utf-8'))
+    knowledge_map=json.loads((root/'content/knowledge-map.json').read_text(encoding='utf-8'))
     posts=json.loads((root/'content/posts.json').read_text(encoding='utf-8'))
     assert isinstance(categories,list) and isinstance(posts,list)
     ids=[c['slug'] for c in categories]
@@ -74,7 +75,7 @@ def data(root:Path):
             assert (path.parent/cover['src']).is_file(),f'Cover SVG missing: {p["slug"]}: {cover["src"]}'
     cover_captions=[p['cover']['caption'] for p in posts if p['status']=='published']
     assert len(cover_captions)==len(set(cover_captions)),'Published cover explanations must be unique'
-    return categories,posts
+    return categories,posts,knowledge_map
 
 
 def url_join(base:str, path:str)->str:
@@ -310,7 +311,7 @@ def topic_labels(categories):
     return {(c['slug'],t['slug']):t['title'] for c in categories for t in c['topics']}
 
 
-def build_topics(categories,posts,base):
+def build_question_types(categories,posts,base):
     published=[p for p in posts if p['status']=='published']
     summary=''.join(
         f'<a href="#category-{H(c["slug"])}">{H(c["title"])} <small>{sum(p["category"]==c["slug"] for p in published):02d}</small></a>'
@@ -342,6 +343,61 @@ def build_topics(categories,posts,base):
     return html_page(title='知识地图 · math-posts',description='math-posts 全部一级分类与二级主题、已发布文章数量及规划中研究方向。',canonical=url_join(base,'topics/'),body=body,depth=1,active='topics')
 
 
+
+def build_topics(categories, posts, base, knowledge_map):
+    """Render the subject-first high-school mathematics knowledge map."""
+    published = {p['slug']: p for p in posts if p['status'] == 'published'}
+    names = {t['id']: t['title'] for a in knowledge_map['areas'] for t in a['subtopics']}
+    area_html = []
+    for area in knowledge_map['areas']:
+        topic_html = []
+        for topic in area['subtopics']:
+            related = [published[x] for x in topic['posts'] if x in published]
+            dots = ''.join('<i class="difficulty-dot' + (' is-filled' if n <= topic['difficulty'] else '') + '"></i>' for n in range(1, 6))
+            prereqs = ''.join('<a href="#topic-' + H(x) + '">' + H(names[x]) + '</a>' for x in topic['prerequisites'])
+            outcomes = ''.join('<li>' + H(x) + '</li>' for x in topic['outcomes'])
+            tags = ''.join('<span>' + H(x) + '</span>' for x in topic['tags'])
+            if related:
+                links = ''.join('<li><a href="../' + article_url(p) + '">' + H(p['title']) + '</a><small>Q' + str(p['question_number']).zfill(2) + '</small></li>' for p in related)
+            else:
+                links = '<li class="knowledge-empty">暂无已发布例题，作为后续内容建设方向</li>'
+            prerequisite_text = prereqs or '<span class="knowledge-root">无前置要求</span>'
+            topic_html.append(
+                '<article class="knowledge-topic" id="topic-' + H(topic['id']) + '">'
+                '<div class="knowledge-topic-head"><span class="knowledge-topic-id">' + H(topic['id']) + '</span>'
+                '<span class="knowledge-difficulty" aria-label="难度 ' + str(topic['difficulty']) + ' / 5">' + dots +
+                '<small>' + H(knowledge_map['difficulty_scale'][str(topic['difficulty'])]) + '</small></span></div>'
+                '<h3>' + H(topic['title']) + '</h3><div class="knowledge-tags">' + tags + '</div>'
+                '<div class="knowledge-detail"><div><strong>学完能够</strong><ul>' + outcomes + '</ul></div>'
+                '<div><strong>建议先修</strong><p>' + prerequisite_text + '</p></div></div>'
+                '<div class="knowledge-related"><strong>关联例题 · ' + str(len(related)) + '</strong><ul>' + links + '</ul></div></article>'
+            )
+        area_count = sum(1 for t in area['subtopics'] for x in t['posts'] if x in published)
+        area_html.append(
+            '<section class="knowledge-area" id="area-' + H(area['slug']) + '">'
+            '<div class="knowledge-area-heading"><div><span class="knowledge-area-kicker">KNOWLEDGE DOMAIN / ' + H(area['english'].upper()) + '</span>'
+            '<h2>' + H(area['title']) + '</h2><p>' + H(area['description']) + '</p></div>'
+            '<span class="knowledge-area-count">' + str(len(area['subtopics'])) + ' 个知识节点<br>' + str(area_count) + ' 个关联例题位次</span></div>'
+            '<div class="knowledge-grid">' + ''.join(topic_html) + '</div></section>'
+        )
+    nav = ''.join('<a href="#area-' + H(a['slug']) + '">' + H(a['title']) + '<small>' + str(len(a['subtopics'])) + ' 个节点</small></a>' for a in knowledge_map['areas'])
+    mapped = {x for a in knowledge_map['areas'] for t in a['subtopics'] for x in t['posts'] if x in published}
+    body = (
+        '<div class="container knowledge-page"><div class="breadcrumb"><a href="../">首页</a> <span>/</span> 知识地图</div>'
+        '<div class="eyebrow muted">HIGH SCHOOL MATHEMATICS / KNOWLEDGE GRAPH</div>'
+        '<h1>' + H(knowledge_map['title']) + '</h1><p class="category-description">' + H(knowledge_map['description']) + '</p>'
+        '<div class="knowledge-summary"><strong>' + str(len(knowledge_map['areas'])) + ' 大领域</strong>'
+        '<strong>' + str(sum(len(a['subtopics']) for a in knowledge_map['areas'])) + ' 个知识节点</strong>'
+        '<strong>' + str(len(mapped)) + ' 篇文章已关联</strong><a href="../question-types/">改按试卷题型浏览 ↗</a></div>'
+        '<nav class="knowledge-overview" aria-label="七大知识领域">' + nav + '</nav>'
+        + ''.join(area_html)
+        + '<p class="knowledge-note">难度为本站面向高中学习路径的编辑分级，不等同于官方考试难度。先修关系表示推荐学习顺序，不代表唯一依赖。</p></div>'
+    )
+    return html_page(title='高中数学知识地图 · math-posts', description=knowledge_map['description'],
+                     canonical=url_join(base, 'topics/'), body=body, depth=1, active='topics')
+
+
+
 def build_category(c,posts,categories,base):
     listing=sorted([p for p in posts if p['status']=='published' and p['category']==c['slug']],key=lambda p:(p['published'],p['slug']),reverse=True)
     rel='../../'
@@ -364,7 +420,7 @@ def build_category(c,posts,categories,base):
         )
     body=f'''<div class="container category-page"><div class="breadcrumb"><a href="{rel}">首页</a> <span>/</span> <a href="{rel}topics/">知识地图</a> <span>/</span> {H(c['title'])}</div>
 <div class="eyebrow muted">TOPIC COLLECTION · {H(c['english']).upper()}</div><h1>{H(c['title'])}<span class="faded-en"> / {H(c['english'])}</span></h1><p class="category-description">{H(c['description'])}</p>
-<p class="taxonomy-hint">{len(listing)} 篇文章 · {len(c['topics'])} 个二级主题 · <a href="{rel}topics/#category-{H(c['slug'])}">查看完整知识地图 ↗</a></p>
+<p class="taxonomy-hint">{len(listing)} 篇文章 · {len(c['topics'])} 个二级主题 · <a href="{rel}question-types/#category-{H(c['slug'])}">查看完整知识地图 ↗</a></p>
 <nav class="topic-jumps" aria-label="本分类二级主题导航">{jumps}</nav>
 {''.join(sections)}
 <div class="category-nav"><div class="eyebrow muted">MORE TOPICS</div>{pills}</div></div>'''
@@ -479,11 +535,12 @@ def build(root:Path,out:Path,base:str):
     assert base.startswith('https://') or base.startswith('http://localhost:'), 'Provide valid HTTPS base URL'
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
-    categories,posts=data(root)
+    categories,posts,knowledge_map=data(root)
     write(out,'index.html',build_home(categories,posts,base))
     for archive_page in range(1,archive_page_count(posts)+1):
         write(out,archive_page_url(archive_page)+'index.html',build_archive(posts,categories,base,archive_page))
-    write(out,'topics/index.html',build_topics(categories,posts,base))
+    write(out,'topics/index.html',build_topics(categories,posts,base,knowledge_map))
+    write(out,'question-types/index.html',build_question_types(categories,posts,base))
     for c in categories:write(out,f'categories/{c["slug"]}/index.html',build_category(c,posts,categories,base))
     published=[p for p in posts if p['status']=='published']
     reading_paths=load_reading_paths(root,published)
@@ -502,7 +559,7 @@ def build(root:Path,out:Path,base:str):
     ordered=sorted(published,key=lambda p:(p['published'],p['slug']),reverse=True)
     search=[{k:p[k] for k in ['title','slug','subtitle','summary','category','topic','tags','published','reading_minutes']}|{'url':article_url(p),'paper':p.get('paper',''),'cover_src':article_url(p)+p['cover']['src'],'category_title':category_names[p['category']],'topic_title':labels[(p['category'],p['topic'])]} for p in ordered]
     write(out,'posts.json',json.dumps(search,ensure_ascii=False,indent=2)+'\n')
-    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/')]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
+    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/')]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
     sitemap=''.join(f'<url><loc>{X(u)}</loc></url>' for u in urls)
     write(out,'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+sitemap+'</urlset>')
     write(out,'robots.txt',f'User-agent: *\nAllow: /\nSitemap: {url_join(base,"sitemap.xml")}\n')
