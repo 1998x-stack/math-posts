@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 2,
+    "pages": [
+      1,
+      2
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "3x−4y+5=0",
+    "independent_check": "整理得 3x−4y+5=0；(1,2) 代入可验算。"
+  },
+  "math_equations": [
+    "x=1+0.8t",
+    "y=2+0.6t",
+    "3x−4y+5=0"
+  ],
+  "editorial_note": ""
+}

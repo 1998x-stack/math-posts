@@ -1,0 +1,28 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 10,
+    "pages": [
+      9
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "3/2",
+    "independent_check": "n 是给定正整数，b 为常数，因此最优位置不依赖二者。"
+  },
+  "math_equations": [
+    "y=frac(n+1,2)(−a_(n+1)^2+3a_(n+1)−b)",
+    "y=−frac(n+1,2)(a_(n+1)−frac(3,2))^2+frac((n+1)(9−4b),8)"
+  ],
+  "editorial_note": ""
+}

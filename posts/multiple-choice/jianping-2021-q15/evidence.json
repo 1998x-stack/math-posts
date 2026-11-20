@@ -1,0 +1,29 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 15,
+    "pages": [
+      14
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "A．√3",
+    "independent_check": "因此 PM²≥4−1=3，最短为 √3，选 A。"
+  },
+  "math_equations": [
+    "F=(3,0)",
+    "PF≥a−c=2",
+    "PM^2=PF^2−MF^2≥3"
+  ],
+  "editorial_note": ""
+}

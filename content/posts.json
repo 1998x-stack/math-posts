@@ -1,0 +1,610 @@
+[
+  {
+    "slug": "jianping-2021-q01",
+    "title": "复合函数的值域：为什么 cos x 不会遗漏任何输入",
+    "subtitle": "余弦曲线覆盖整个输入区间，因此复合函数的值域不变",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "余弦曲线覆盖整个输入区间，因此复合函数的值域不变。先确认 cos x 能取到 [−1,1] 的所有数值，并非只是其中一部分。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "余弦曲线覆盖整个输入区间，因此复合函数的值域不变"
+    }
+  },
+  {
+    "slug": "jianping-2021-q02",
+    "title": "消去参数：从运动点到直线方程",
+    "subtitle": "参数 t 改变的是直线上的位置，消元后得到整条轨迹",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "analytic-geometry",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "参数 t 改变的是直线上的位置，消元后得到整条轨迹。从 x−1=0.8t 与 y−2=0.6t 得到 (x−1)/0.8=(y−2)/0.6。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "参数 t 改变的是直线上的位置，消元后得到整条轨迹"
+    }
+  },
+  {
+    "slug": "jianping-2021-q03",
+    "title": "单调性与最近点：a²+b² 的几何最小值",
+    "subtitle": "半平面边界 a+b=4 上最靠近原点的是点 (2,2)",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "optimization",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "半平面边界 a+b=4 上最靠近原点的是点 (2,2)。利用对称关系 f(4−b)=−f(b)，把 f(a)+f(b)≥0 改写成 f(a)≥f(4−b)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      2,
+      3
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "半平面边界 a+b=4 上最靠近原点的是点 (2,2)"
+    }
+  },
+  {
+    "slug": "jianping-2021-q04",
+    "title": "正方体动点：空间向量点积的取值范围",
+    "subtitle": "正方体底面上的动点 P：中心使向量点积最小、角点最大",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "solid-geometry",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "正方体底面上的动点 P：中心使向量点积最小、角点最大。选择底面为 z=0，设 P=(x,y,0)，0≤x,y≤1，并取 A=(0,0,1)、C=(1,1,1)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      3,
+      4
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正方体底面上的动点 P：中心使向量点积最小、角点最大"
+    }
+  },
+  {
+    "slug": "jianping-2021-q05",
+    "title": "球的体积与表面积：由 r³ 回到 r²",
+    "subtitle": "半径 r 同时决定球体积 r³ 和表面积 r² 的尺度",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "solid-geometry",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "半径 r 同时决定球体积 r³ 和表面积 r² 的尺度。球的体积公式 V=4πr³/3，先求半径，而不是把体积值直接当作面积。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      4,
+      5
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "半径 r 同时决定球体积 r³ 和表面积 r² 的尺度"
+    }
+  },
+  {
+    "slug": "jianping-2021-q06",
+    "title": "等比数列前 n 项积：转成离散二次函数",
+    "subtitle": "等比数列前项积先增后减，整数极值落在 n=3 或 n=4",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "sequences",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "等比数列前项积先增后减，整数极值落在 n=3 或 n=4。两式相除，利用 a₂=qa₁ 与 a₄=qa₃，得到公比 q=5/10=1/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      5,
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "等比数列前项积先增后减，整数极值落在 n=3 或 n=4"
+    }
+  },
+  {
+    "slug": "jianping-2021-q07",
+    "title": "计数排除法：16 个彩球选 3 个",
+    "subtitle": "四种颜色各四球：先数全部，再减去全同色和两红情形",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "combinatorics",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "四种颜色各四球：先数全部，再减去全同色和两红情形。先不限制颜色，16 选 3 共 560 种。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四种颜色各四球：先数全部，再减去全同色和两红情形"
+    }
+  },
+  {
+    "slug": "jianping-2021-q08",
+    "title": "奇函数与中心对称：平行四边形面积",
+    "subtitle": "奇函数的中心对称性让平行四边形面积化为四个三角形",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "analytic-geometry",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "奇函数的中心对称性让平行四边形面积化为四个三角形。定义域为 x<−1 或 x>1；检验 f(−x)=−f(x)，图像关于原点中心对称。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      6,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "奇函数的中心对称性让平行四边形面积化为四个三角形"
+    }
+  },
+  {
+    "slug": "jianping-2021-q09",
+    "title": "子集乘积求和：为什么乘上 (1+a)",
+    "subtitle": "四次二选一展开产生 16 项，去掉空集就得到非空子集之和",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "combinatorics",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "四次二选一展开产生 16 项，去掉空集就得到非空子集之和。每个元素 a 有「选入乘积贡献 a」和「不选贡献 1」两种状态。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      8
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四次二选一展开产生 16 项，去掉空集就得到非空子集之和"
+    }
+  },
+  {
+    "slug": "jianping-2021-q10",
+    "title": "等差数列尾段求和：配方找最优中项",
+    "subtitle": "尾段和是开口向下的二次函数，顶点固定在 aₙ₊₁=3/2",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "sequences",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "尾段和是开口向下的二次函数，顶点固定在 aₙ₊₁=3/2。记公差 d=(aₙ₊₁−a₁)/n，后 n+1 项的和为 (n+1)aₙ₊₁+n(n+1)d/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      9
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "尾段和是开口向下的二次函数，顶点固定在 aₙ₊₁=3/2"
+    }
+  },
+  {
+    "slug": "jianping-2021-q11",
+    "title": "三角函数 max 的尖点：极大与极小之间最短距离",
+    "subtitle": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值。利用 a+b+|a−b|=2max(a,b) 转成两条三角曲线的上包络。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      9,
+      10
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值"
+    }
+  },
+  {
+    "slug": "jianping-2021-q12",
+    "title": "绝对值正弦的两个交点：从区间长度到数列通项",
+    "subtitle": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "sequences",
+      "fill-in",
+      "2021建平",
+      "填空"
+    ],
+    "summary": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加。|sin u| 从 0 上升至 1 再下降至 0，长度为 π 的完整波峰区间才能对任意 0≤m<1 有两个交点（m=0 为端点）。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      11,
+      12
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加"
+    }
+  },
+  {
+    "slug": "jianping-2021-q13",
+    "title": "空间异面直线等距轨迹：为什么是双曲线",
+    "subtitle": "平面内直线距离与空间斜线距离相等形成双曲线两支",
+    "category": "multiple-choice",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "solid-geometry",
+      "multiple-choice",
+      "2021建平",
+      "选择"
+    ],
+    "summary": "平面内直线距离与空间斜线距离相等形成双曲线两支。把空间直线 m 正交投影到 α，得到 m′，其与 l 相交于 O（因 m 与 l 异面，投影方向不与 l 平行）。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      12,
+      13
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "平面内直线距离与空间斜线距离相等形成双曲线两支"
+    }
+  },
+  {
+    "slug": "jianping-2021-q14",
+    "title": "函数生成点：因式分解中的正整数约束",
+    "subtitle": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点",
+    "category": "multiple-choice",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "sequences",
+      "multiple-choice",
+      "2021建平",
+      "选择"
+    ],
+    "summary": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点。将 n+1 个线性项求和，得到 (n+1)(2x₀+n+1)=63。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      13
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点"
+    }
+  },
+  {
+    "slug": "jianping-2021-q15",
+    "title": "椭圆焦点与直角三角形：线段 PM 的最小长度",
+    "subtitle": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "analytic-geometry",
+      "multiple-choice",
+      "2021建平",
+      "选择"
+    ],
+    "summary": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界。椭圆 a=5、b=4，焦距 c=√(a²−b²)=3，故右焦点 F=(3,0)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      14
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界"
+    }
+  },
+  {
+    "slug": "jianping-2021-q16",
+    "title": "倒数平方曲线：对称性、开放性与四个交点",
+    "subtitle": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 8,
+    "tags": [
+      "analytic-geometry",
+      "multiple-choice",
+      "2021建平",
+      "选择"
+    ],
+    "summary": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点。将 (x,y) 同时换成 (−x,−y)，或将 (x,y) 变成 (−y,−x)，方程不变，①②正确。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 16,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      14,
+      15
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点"
+    }
+  },
+  {
+    "slug": "jianping-2021-q17",
+    "title": "三棱锥中的平行证明与二面角：从图形到法向量",
+    "subtitle": "空间坐标把三棱锥的底面投影与二面角法向量直接对应",
+    "category": "worked-solutions",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "solid-geometry",
+      "worked-solutions",
+      "2021建平",
+      "解答"
+    ],
+    "summary": "空间坐标把三棱锥的底面投影与二面角法向量直接对应。由 AD⊥DB，AB=2，DB=1，得 AD=√3、∠DBA=60°；底面 ABC 为等边三角形，且图示中 A、C、B、D 构成平面四边形，可证 DB∥AC。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 17,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      15,
+      16,
+      17
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "空间坐标把三棱锥的底面投影与二面角法向量直接对应"
+    }
+  },
+  {
+    "slug": "jianping-2021-q18",
+    "title": "山坡观塔最大视角：把几何变成一元最优化",
+    "subtitle": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "applied-math",
+      "worked-solutions",
+      "2021建平",
+      "解答"
+    ],
+    "summary": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大。设 O=(0,0)，A=(0,220)，B=(0,300)，C=(200,0)，斜坡斜率为 1/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 18,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      17,
+      18,
+      19
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大"
+    }
+  },
+  {
+    "slug": "jianping-2021-q19",
+    "title": "分段成本函数：年度利润最大化为什么出现在 100 千件",
+    "subtitle": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "applied-math",
+      "worked-solutions",
+      "2021建平",
+      "解答"
+    ],
+    "summary": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件。总收入为 50x 万元，固定成本 250 万元，利润 L=50x−250−C(x)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 19,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      19,
+      20
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件"
+    }
+  },
+  {
+    "slug": "jianping-2021-q20",
+    "title": "椭圆弦中点轨迹与固定交点：从点差法到不变量",
+    "subtitle": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2021建平",
+      "解答"
+    ],
+    "summary": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定。短轴长 4 得 b=2，焦距 2 得 c=1；由 a²=b²+c² 得 a²=5。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定"
+    }
+  },
+  {
+    "slug": "jianping-2021-q21",
+    "title": "帐篷函数的二阶周期点：分段迭代与解的个数",
+    "subtitle": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "functions",
+      "worked-solutions",
+      "2021建平",
+      "解答"
+    ],
+    "summary": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数。把 x 换成 2−x：|2−x−1|=|x−1|，所以函数以 x=1 为对称轴。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 21,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      23,
+      24,
+      25
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 19,
+    "pages": [
+      19,
+      20
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "（1）0<x<80：L=−x²/3+40x−250；x≥80：L=−x−10000/x+1200。（2）100 千件，最大利润 1000 万元。",
+    "independent_check": "该段最大利润 1000；比较 1000>950，全局最优年产量为 100 千件。"
+  },
+  "math_equations": [
+    "L(x)=50x−250−C(x)",
+    "L_1(x)=−frac(x^2,3)+40x−250",
+    "L_2(x)=1200−x−frac(10000,x)",
+    "max L=1000, x=100"
+  ],
+  "editorial_note": ""
+}

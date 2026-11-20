@@ -1,0 +1,78 @@
+[
+  {
+    "slug": "fill-in",
+    "title": "填空题",
+    "english": "Fill in the Blank",
+    "description": "函数、几何、数列与组合：把短答案背后的关键数学结构讲清楚。",
+    "topics": [
+      {
+        "slug": "functions",
+        "title": "函数与三角"
+      },
+      {
+        "slug": "analytic-geometry",
+        "title": "解析几何"
+      },
+      {
+        "slug": "optimization",
+        "title": "最值与不等式"
+      },
+      {
+        "slug": "solid-geometry",
+        "title": "空间几何"
+      },
+      {
+        "slug": "sequences",
+        "title": "数列"
+      },
+      {
+        "slug": "combinatorics",
+        "title": "组合与集合"
+      }
+    ]
+  },
+  {
+    "slug": "multiple-choice",
+    "title": "选择题",
+    "english": "Multiple Choice",
+    "description": "图形辨析、函数构造、圆锥曲线与几何轨迹：训练正确判断的理由。",
+    "topics": [
+      {
+        "slug": "solid-geometry",
+        "title": "空间几何与轨迹"
+      },
+      {
+        "slug": "sequences",
+        "title": "数列与构造"
+      },
+      {
+        "slug": "analytic-geometry",
+        "title": "解析几何与曲线"
+      }
+    ]
+  },
+  {
+    "slug": "worked-solutions",
+    "title": "解答题",
+    "english": "Worked Solutions",
+    "description": "从几何证明到分段最优化，保留所有小问与必要推导。",
+    "topics": [
+      {
+        "slug": "solid-geometry",
+        "title": "立体几何"
+      },
+      {
+        "slug": "applied-math",
+        "title": "应用与最优化"
+      },
+      {
+        "slug": "analytic-geometry",
+        "title": "圆锥曲线综合"
+      },
+      {
+        "slug": "functions",
+        "title": "函数与迭代"
+      }
+    ]
+  }
+]

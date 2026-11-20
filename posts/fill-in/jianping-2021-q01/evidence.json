@@ -1,0 +1,28 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 1,
+    "pages": [
+      1
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "[−2,0]",
+    "independent_check": "因此新函数与 f 在定义域上的值域完全相同。"
+  },
+  "math_equations": [
+    "cos x ∈ [−1,1]",
+    "Range(f(cos x))=[−2,0]"
+  ],
+  "editorial_note": ""
+}

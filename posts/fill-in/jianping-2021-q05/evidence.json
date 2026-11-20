@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 5,
+    "pages": [
+      4,
+      5
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "36π",
+    "independent_check": "使用 S=4πr²，得到 S=36π。"
+  },
+  "math_equations": [
+    "frac(4,3)πr^3=36π",
+    "r=3",
+    "S=4πr^2=36π"
+  ],
+  "editorial_note": ""
+}

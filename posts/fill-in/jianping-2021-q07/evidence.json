@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 7,
+    "pages": [
+      6
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "472",
+    "independent_check": "三红已包含在「全同色」里，所以两类被减去的情况不重复，得到 472。"
+  },
+  "math_equations": [
+    "C(16,3)=560",
+    "4C(4,3)=16",
+    "C(4,2)C(12,1)=72",
+    "560−16−72=472"
+  ],
+  "editorial_note": ""
+}

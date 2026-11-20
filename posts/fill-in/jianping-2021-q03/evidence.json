@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 3,
+    "pages": [
+      2,
+      3
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "8",
+    "independent_check": "由平方和不等式得 a²+b²≥(a+b)²/2≥8，且 a=b=2 时取等。"
+  },
+  "math_equations": [
+    "f(4−b)=−f(b)",
+    "a+b≥4",
+    "a^2+b^2≥frac((a+b)^2,2)≥8"
+  ],
+  "editorial_note": ""
+}

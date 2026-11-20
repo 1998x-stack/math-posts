@@ -1,0 +1,29 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 12,
+    "pages": [
+      11,
+      12
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "n(n−1)π/2",
+    "independent_check": "累加 π+2π+⋯+(n−1)π=n(n−1)π/2。"
+  },
+  "math_equations": [
+    "a_(n+1)−a_n=nπ",
+    "a_n=frac(n(n−1)π,2)"
+  ],
+  "editorial_note": ""
+}

@@ -1,0 +1,27 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 14,
+    "pages": [
+      13
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "B．2 个",
+    "independent_check": "因此生成点有 2 个，选择 B。"
+  },
+  "math_equations": [
+    "(n+1)(2x_0+n+1)=63"
+  ],
+  "editorial_note": ""
+}

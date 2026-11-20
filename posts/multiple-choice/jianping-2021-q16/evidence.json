@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 16,
+    "pages": [
+      14,
+      15
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "D．4 个",
+    "independent_check": "在第一象限用 x+y=2√2 可得唯一交点 (√2,√2)；对称生成其余三点，⑤正确，共 4 个。"
+  },
+  "math_equations": [
+    "frac(1,x^2)+frac(1,y^2)=1",
+    "x^2+y^2≥4",
+    "(±sqrt(2),±sqrt(2))"
+  ],
+  "editorial_note": ""
+}

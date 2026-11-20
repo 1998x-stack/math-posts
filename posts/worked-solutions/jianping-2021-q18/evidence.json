@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 18,
+    "pages": [
+      17,
+      18,
+      19
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "（1）y=(x−200)/2；（2）P=(320,60)",
+    "independent_check": "由 AM–GM，5x/4+128000/x≥800，当且仅当 x=320；对应 y=60，得到最大视角。"
+  },
+  "math_equations": [
+    "y=frac(1,2)(x−200)",
+    "tan(∠APB)=frac(80,frac(5x,4)+frac(128000,x)−360)",
+    "P=(320,60)"
+  ],
+  "editorial_note": ""
+}
