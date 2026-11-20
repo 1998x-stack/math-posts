@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "title": "高中数学知识地图",
+  "description": "以知识依赖关系组织高中数学：先修知识、核心概念、能力目标、难度与当前题库中的关联例题。题型索引独立保留。",
+  "difficulty_scale": {
+    "1": "入门",
+    "2": "基础",
+    "3": "进阶",
+    "4": "综合",
+    "5": "挑战"
+  },
+  "areas": [
+    {
+      "id": "functions-derivatives",
+      "slug": "functions-derivatives",
+      "title": "函数与导数",
+      "english": "Functions & Calculus",
+      "description": "从变量关系、定义域和值域出发，理解函数性质、图像、变化率与最值。",
+      "subtopics": [
+        {
+          "id": "function-basics",
+          "title": "函数概念、定义域与值域",
+          "difficulty": 1,
+          "prerequisites": [],
+          "tags": [
+            "函数",
+            "定义域",
+            "值域"
+          ],
+          "posts": [
+            "jianping-2021-q01"
+          ],
+          "outcomes": [
+            "读懂函数的输入、输出与对应关系",
+            "分析复合函数的定义域和值域"
+          ]
+        },
+        {
+          "id": "function-properties",
+          "title": "单调性、奇偶性与对称性",
+          "difficulty": 2,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "单调性",
+            "奇偶性",
+            "对称性"
+          ],
+          "posts": [
+            "jianping-2021-q03",
+            "jianping-2021-q08"
+          ],
+          "outcomes": [
+            "判断单调性与奇偶性",
+            "把函数性质转化为代数或几何关系"
+          ]
+        },
+        {
+          "id": "function-transformations",
+          "title": "函数图像与分段函数",
+          "difficulty": 3,
+          "prerequisites": [
+            "function-basics",
+            "function-properties"
+          ],
+          "tags": [
+            "函数图像",
+            "分段函数",
+            "迭代"
+          ],
+          "posts": [
+            "jianping-2021-q21"
+          ],
+          "outcomes": [
+            "分析分段表达式与图像变化",
+            "理解函数复合和迭代"
+          ]
+        },
+        {
+          "id": "derivative-intro",
+          "title": "导数、切线与变化率",
+          "difficulty": 3,
+          "prerequisites": [
+            "function-basics",
+            "function-properties"
+          ],
+          "tags": [
+            "导数",
+            "切线",
+            "变化率"
+          ],
+          "posts": [],
+          "outcomes": [
+            "用平均变化率理解瞬时变化率",
+            "把导数解释为切线斜率"
+          ]
+        },
+        {
+          "id": "derivative-applications",
+          "title": "导数与函数最值",
+          "difficulty": 4,
+          "prerequisites": [
+            "derivative-intro",
+            "function-properties"
+          ],
+          "tags": [
+            "导数应用",
+            "单调区间",
+            "最值"
+          ],
+          "posts": [],
+          "outcomes": [
+            "用导数判断单调区间",
+            "结合定义域与端点求最值"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trigonometry",
+      "slug": "trigonometry",
+      "title": "三角函数",
+      "english": "Trigonometry",
+      "description": "从直角三角形和单位圆建立三角函数，再理解周期、图像、恒等变换与三角方程。",
+      "subtopics": [
+        {
+          "id": "trig-ratios",
+          "title": "任意角与三角函数定义",
+          "difficulty": 1,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "任意角",
+            "正弦",
+            "余弦",
+            "正切"
+          ],
+          "posts": [],
+          "outcomes": [
+            "用单位圆解释正弦和余弦",
+            "理解三角函数值的符号与范围"
+          ]
+        },
+        {
+          "id": "unit-circle-graphs",
+          "title": "单位圆、诱导公式与图像",
+          "difficulty": 2,
+          "prerequisites": [
+            "trig-ratios"
+          ],
+          "tags": [
+            "单位圆",
+            "诱导公式",
+            "三角函数图像"
+          ],
+          "posts": [
+            "jianping-2021-q01",
+            "jianping-2021-q11"
+          ],
+          "outcomes": [
+            "在单位圆上定位角与函数值",
+            "识别三角函数图像的周期和对称性"
+          ]
+        },
+        {
+          "id": "trig-identities",
+          "title": "同角关系与恒等变换",
+          "difficulty": 2,
+          "prerequisites": [
+            "trig-ratios"
+          ],
+          "tags": [
+            "同角关系",
+            "恒等式",
+            "三角变换"
+          ],
+          "posts": [],
+          "outcomes": [
+            "使用基本恒等关系化简表达式",
+            "辨别恒等变形的适用条件"
+          ]
+        },
+        {
+          "id": "trig-equations",
+          "title": "三角方程与综合应用",
+          "difficulty": 4,
+          "prerequisites": [
+            "unit-circle-graphs",
+            "trig-identities"
+          ],
+          "tags": [
+            "三角方程",
+            "交点",
+            "周期性"
+          ],
+          "posts": [
+            "jianping-2021-q12"
+          ],
+          "outcomes": [
+            "结合周期性统计区间内交点",
+            "把交点问题转化为区间问题"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sequences",
+      "slug": "sequences",
+      "title": "数列",
+      "english": "Sequences",
+      "description": "把数列看作按自然数编号的函数，掌握通项、递推、等差等比、求和与离散最值。",
+      "subtopics": [
+        {
+          "id": "sequence-basics",
+          "title": "数列概念、通项与递推",
+          "difficulty": 1,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "数列",
+            "通项",
+            "递推"
+          ],
+          "posts": [
+            "jianping-2021-q14"
+          ],
+          "outcomes": [
+            "从规律或递推关系表示数列",
+            "区分通项与递推式"
+          ]
+        },
+        {
+          "id": "arithmetic-sequences",
+          "title": "等差数列与求和",
+          "difficulty": 2,
+          "prerequisites": [
+            "sequence-basics"
+          ],
+          "tags": [
+            "等差数列",
+            "公差",
+            "求和"
+          ],
+          "posts": [
+            "jianping-2021-q10"
+          ],
+          "outcomes": [
+            "使用等差数列通项和求和公式",
+            "将求和式化为关于项数的表达式"
+          ]
+        },
+        {
+          "id": "geometric-sequences",
+          "title": "等比数列与求和",
+          "difficulty": 2,
+          "prerequisites": [
+            "sequence-basics"
+          ],
+          "tags": [
+            "等比数列",
+            "公比",
+            "求和"
+          ],
+          "posts": [
+            "jianping-2021-q06"
+          ],
+          "outcomes": [
+            "从相邻项比值识别公比",
+            "分析等比数列前 n 项积或和"
+          ]
+        },
+        {
+          "id": "sequence-extrema",
+          "title": "数列最值与离散优化",
+          "difficulty": 3,
+          "prerequisites": [
+            "arithmetic-sequences",
+            "geometric-sequences"
+          ],
+          "tags": [
+            "离散最值",
+            "配方",
+            "单调性"
+          ],
+          "posts": [
+            "jianping-2021-q06",
+            "jianping-2021-q10"
+          ],
+          "outcomes": [
+            "区分连续顶点与整数 n 的取值",
+            "比较相邻项或配方确定离散最值"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solid-geometry",
+      "slug": "solid-geometry",
+      "title": "立体几何",
+      "english": "Solid Geometry",
+      "description": "建立空间点线面关系，再学习空间向量、距离、角度、体积与空间轨迹。",
+      "subtopics": [
+        {
+          "id": "spatial-relations",
+          "title": "空间点、线、面的位置关系",
+          "difficulty": 1,
+          "prerequisites": [],
+          "tags": [
+            "空间几何",
+            "点线面",
+            "平行垂直"
+          ],
+          "posts": [
+            "jianping-2021-q13",
+            "jianping-2021-q17"
+          ],
+          "outcomes": [
+            "辨认平行、相交与异面",
+            "使用线面平行和垂直判定"
+          ]
+        },
+        {
+          "id": "polyhedra",
+          "title": "多面体、球与空间度量",
+          "difficulty": 2,
+          "prerequisites": [
+            "spatial-relations"
+          ],
+          "tags": [
+            "多面体",
+            "球",
+            "体积",
+            "表面积"
+          ],
+          "posts": [
+            "jianping-2021-q05",
+            "jianping-2021-q17"
+          ],
+          "outcomes": [
+            "理解常见几何体结构与截面",
+            "区分长度、面积和体积量纲"
+          ]
+        },
+        {
+          "id": "spatial-vectors",
+          "title": "空间向量与坐标法",
+          "difficulty": 3,
+          "prerequisites": [
+            "spatial-relations"
+          ],
+          "tags": [
+            "空间向量",
+            "坐标法",
+            "数量积"
+          ],
+          "posts": [
+            "jianping-2021-q04",
+            "jianping-2021-q17"
+          ],
+          "outcomes": [
+            "建立空间坐标系并表示向量",
+            "用数量积计算角度与距离"
+          ]
+        },
+        {
+          "id": "spatial-angles-distances",
+          "title": "空间角、距离与二面角",
+          "difficulty": 4,
+          "prerequisites": [
+            "spatial-vectors",
+            "polyhedra"
+          ],
+          "tags": [
+            "线面角",
+            "二面角",
+            "距离"
+          ],
+          "posts": [
+            "jianping-2021-q17"
+          ],
+          "outcomes": [
+            "将空间角转化为向量夹角或平面角",
+            "用法向量求二面角"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "analytic-geometry",
+      "slug": "analytic-geometry",
+      "title": "解析几何",
+      "english": "Analytic Geometry",
+      "description": "用坐标和方程表达点、直线与圆锥曲线，把几何关系转化为代数运算。",
+      "subtopics": [
+        {
+          "id": "coordinate-basics",
+          "title": "坐标、向量与参数方程",
+          "difficulty": 1,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "坐标",
+            "向量",
+            "参数方程"
+          ],
+          "posts": [
+            "jianping-2021-q02"
+          ],
+          "outcomes": [
+            "用坐标描述点和方向",
+            "理解参数运动并消去参数"
+          ]
+        },
+        {
+          "id": "line-circle",
+          "title": "直线、圆与位置关系",
+          "difficulty": 2,
+          "prerequisites": [
+            "coordinate-basics"
+          ],
+          "tags": [
+            "直线方程",
+            "圆",
+            "交点"
+          ],
+          "posts": [
+            "jianping-2021-q02"
+          ],
+          "outcomes": [
+            "在常见直线方程间转换",
+            "用方程组判断交点与相切"
+          ]
+        },
+        {
+          "id": "conics",
+          "title": "椭圆、双曲线与抛物线",
+          "difficulty": 3,
+          "prerequisites": [
+            "coordinate-basics",
+            "line-circle"
+          ],
+          "tags": [
+            "圆锥曲线",
+            "椭圆",
+            "双曲线"
+          ],
+          "posts": [
+            "jianping-2021-q13",
+            "jianping-2021-q15",
+            "jianping-2021-q16",
+            "jianping-2021-q20"
+          ],
+          "outcomes": [
+            "从定义和标准方程识别圆锥曲线",
+            "理解焦点、准线与渐近线"
+          ]
+        },
+        {
+          "id": "conic-methods",
+          "title": "弦、轨迹与定点定值问题",
+          "difficulty": 5,
+          "prerequisites": [
+            "conics"
+          ],
+          "tags": [
+            "点差法",
+            "轨迹",
+            "定点定值"
+          ],
+          "posts": [
+            "jianping-2021-q15",
+            "jianping-2021-q16",
+            "jianping-2021-q20"
+          ],
+          "outcomes": [
+            "用联立与韦达关系处理弦问题",
+            "从参数消元或不变量识别轨迹"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probability-statistics",
+      "slug": "probability-statistics",
+      "title": "概率与统计",
+      "english": "Probability & Statistics",
+      "description": "从分类计数与样本信息出发，建立随机事件、概率模型和数据分析基础。",
+      "subtopics": [
+        {
+          "id": "counting-principles",
+          "title": "分类计数、分步计数与排列组合",
+          "difficulty": 1,
+          "prerequisites": [],
+          "tags": [
+            "计数原理",
+            "排列组合",
+            "分类讨论"
+          ],
+          "posts": [
+            "jianping-2021-q07",
+            "jianping-2021-q09"
+          ],
+          "outcomes": [
+            "区分分类加法与分步乘法",
+            "使用组合数计算不计顺序的选取"
+          ]
+        },
+        {
+          "id": "probability-models",
+          "title": "随机事件与古典概型",
+          "difficulty": 2,
+          "prerequisites": [
+            "counting-principles"
+          ],
+          "tags": [
+            "随机事件",
+            "古典概型",
+            "概率"
+          ],
+          "posts": [],
+          "outcomes": [
+            "明确样本空间与事件集合",
+            "在等可能条件下计算概率"
+          ]
+        },
+        {
+          "id": "conditional-probability",
+          "title": "条件概率与独立性",
+          "difficulty": 3,
+          "prerequisites": [
+            "probability-models"
+          ],
+          "tags": [
+            "条件概率",
+            "独立事件"
+          ],
+          "posts": [],
+          "outcomes": [
+            "区分互斥与独立",
+            "使用条件概率解释信息更新"
+          ]
+        },
+        {
+          "id": "statistics-data",
+          "title": "统计量、抽样与数据分析",
+          "difficulty": 2,
+          "prerequisites": [],
+          "tags": [
+            "统计",
+            "抽样",
+            "平均数",
+            "方差"
+          ],
+          "posts": [],
+          "outcomes": [
+            "理解样本与总体的关系",
+            "解释平均数和方差"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inequalities-thinking",
+      "slug": "inequalities-thinking",
+      "title": "不等式与数学思想",
+      "english": "Inequalities & Problem Solving",
+      "description": "学习比较大小、放缩、基本不等式与最值方法，并训练数形结合、转化和分类讨论。",
+      "subtopics": [
+        {
+          "id": "inequality-basics",
+          "title": "不等式性质与等价变形",
+          "difficulty": 1,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "不等式",
+            "等价变形",
+            "范围"
+          ],
+          "posts": [
+            "jianping-2021-q03"
+          ],
+          "outcomes": [
+            "判断不等式变形是否保持方向",
+            "检查平方、乘除与定义域条件"
+          ]
+        },
+        {
+          "id": "classical-inequalities",
+          "title": "基本不等式与平方和估计",
+          "difficulty": 2,
+          "prerequisites": [
+            "inequality-basics"
+          ],
+          "tags": [
+            "基本不等式",
+            "柯西不等式",
+            "平方和"
+          ],
+          "posts": [
+            "jianping-2021-q03"
+          ],
+          "outcomes": [
+            "识别基本不等式和平方和下界",
+            "明确等号成立条件"
+          ]
+        },
+        {
+          "id": "optimization-modeling",
+          "title": "函数建模与最优化",
+          "difficulty": 3,
+          "prerequisites": [
+            "inequality-basics",
+            "function-properties"
+          ],
+          "tags": [
+            "最优化",
+            "建模",
+            "目标函数"
+          ],
+          "posts": [
+            "jianping-2021-q18",
+            "jianping-2021-q19"
+          ],
+          "outcomes": [
+            "把文字条件转成变量、约束和目标",
+            "比较边界、临界点与分段区间"
+          ]
+        },
+        {
+          "id": "math-thinking",
+          "title": "数形结合、转化与分类讨论",
+          "difficulty": 3,
+          "prerequisites": [
+            "function-properties",
+            "coordinate-basics"
+          ],
+          "tags": [
+            "数形结合",
+            "转化思想",
+            "分类讨论"
+          ],
+          "posts": [
+            "jianping-2021-q03",
+            "jianping-2021-q13",
+            "jianping-2021-q20",
+            "jianping-2021-q21"
+          ],
+          "outcomes": [
+            "在代数式、图像和几何对象间切换",
+            "按边界、符号或定义域完整分类"
+          ]
+        }
+      ]
+    }
+  ]
+}
