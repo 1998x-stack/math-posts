@@ -1,0 +1,8 @@
+_site/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+reports/
+.DS_Store
+.pdf-cache/
