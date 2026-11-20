@@ -27,10 +27,10 @@ def test_problem_first_opening_and_stepwise_reasoning():
     for p in manifest():
         html=(ROOT/'posts'/p['category']/p['slug']/'index.html').read_text('utf-8')
         assert html.index('id="overview"') < html.index('id="question"')
-        overview=re.search(r'<section id="overview">([\\s\\S]*?)</section>',html).group(1)
+        overview=re.search(r'<section id="overview">([\s\S]*?)</section>',html).group(1)
         assert len(re.sub(r'<[^>]+>','',overview)) >= 100
         assert '解题路线' in overview
-        solution=re.search(r'<section id="solution">([\\s\\S]*?)</section>',html).group(1)
+        solution=re.search(r'<section id="solution">([\s\S]*?)</section>',html).group(1)
         assert len(re.findall(r'<li>',solution)) == len(re.findall(r'class="step-note"',solution))
         assert '不要直接套公式' not in html
 
