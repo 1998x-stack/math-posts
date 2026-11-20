@@ -32,7 +32,7 @@ def check_article_layout(html: str, filename: str) -> None:
 def source_articles(root=ROOT):
     spec=importlib.util.spec_from_file_location('upstream_validator',root/'skills/math-visual-posts/scripts/validate.py')
     mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
-    _,posts=data(root)
+    _,posts,_=data(root)
     for p in posts:
         if p['status']!='published':continue
         f=root/'posts'/p['category']/p['slug']/'index.html'
@@ -48,13 +48,14 @@ def source_articles(root=ROOT):
 
 
 def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
-    cats,posts=data(ROOT)
+    cats,posts,_=data(ROOT)
     pub=[p for p in posts if p['status']=='published']
-    expect=['index.html','archive/index.html','topics/index.html','404.html','sitemap.xml','feed.xml','posts.json','robots.txt']+[f'categories/{c["slug"]}/index.html' for c in cats]+[article_url(p)+'index.html' for p in pub]
+    expect=['index.html','archive/index.html','topics/index.html','question-types/index.html','404.html','sitemap.xml','feed.xml','posts.json','robots.txt']+[f'categories/{c["slug"]}/index.html' for c in cats]+[article_url(p)+'index.html' for p in pub]
     expect += [archive_page_url(i)+'index.html' for i in range(2,archive_page_count(posts)+1)]
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
-    assert '/topics/' in sitemap,'Taxonomy page absent from sitemap'
+    assert '/topics/' in sitemap,'Knowledge map absent from sitemap'
+    assert '/question-types/' in sitemap,'Question-type index absent from sitemap'
     for p in pub:assert article_url(p) in sitemap,p
     for i in range(1,archive_page_count(posts)+1):
         assert archive_page_url(i) in sitemap,f'Missing archive page {i} in sitemap'
