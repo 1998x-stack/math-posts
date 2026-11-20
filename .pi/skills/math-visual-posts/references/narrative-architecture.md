@@ -60,3 +60,8 @@
 | 5 | Where does equality or a root occur? | marked point / intersection / endpoint | verify the result |
 
 **Rule:** Write the mathematical assertion and its source before drawing. If the assertion, scale, labels or data do not match the derivation, the SVG is incorrect even if it looks polished.
+
+
+## Visual-first scale and density
+
+The reader should see the mathematical object before reading a long explanation. The first viewport shows a problem diagram and compact known/target chips. Place at least two local SVGs next to conceptual derivation steps and a conclusion diagram near the answer. Substantive formulas in the question and step prose are MathML, not Unicode/plain text. Keep paragraphs short (typically <=55 Chinese characters) and move the proof into small diagram + equation + reason units. Each visual-first pilot has at least four distinct, meaningful figures and eight MathML expressions. See [visual-first-standard.md](visual-first-standard.md).
