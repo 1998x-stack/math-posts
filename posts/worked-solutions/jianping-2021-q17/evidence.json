@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 17,
+    "pages": [
+      15,
+      16,
+      17
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "（1）AC∥平面 PDB；（2）−√21/7",
+    "independent_check": "由题图对应钝二面角，余弦值为 −√21/7。"
+  },
+  "math_equations": [
+    "AD=sqrt(3),DB=1,AB=2",
+    "n_1=(0,0,1),n_2=(1,−sqrt(3),−sqrt(3))",
+    "cos(θ)=−frac(sqrt(21),7)"
+  ],
+  "editorial_note": ""
+}

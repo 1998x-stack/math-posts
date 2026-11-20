@@ -1,0 +1,71 @@
+[
+  {
+    "id": "math-path-01",
+    "title": "函数与三角图像",
+    "posts": [
+      "jianping-2021-q01",
+      "jianping-2021-q11",
+      "jianping-2021-q21"
+    ]
+  },
+  {
+    "id": "math-path-02",
+    "title": "数列与递推",
+    "posts": [
+      "jianping-2021-q06",
+      "jianping-2021-q10",
+      "jianping-2021-q12",
+      "jianping-2021-q14"
+    ]
+  },
+  {
+    "id": "math-path-03",
+    "title": "计数方法",
+    "posts": [
+      "jianping-2021-q07",
+      "jianping-2021-q09",
+      "jianping-2021-q14"
+    ]
+  },
+  {
+    "id": "math-path-04",
+    "title": "空间几何可视化",
+    "posts": [
+      "jianping-2021-q05",
+      "jianping-2021-q04",
+      "jianping-2021-q13",
+      "jianping-2021-q17"
+    ]
+  },
+  {
+    "id": "math-path-05",
+    "title": "点线到圆锥曲线",
+    "posts": [
+      "jianping-2021-q02",
+      "jianping-2021-q08",
+      "jianping-2021-q15",
+      "jianping-2021-q16",
+      "jianping-2021-q20"
+    ]
+  },
+  {
+    "id": "math-path-06",
+    "title": "从几何到最优化",
+    "posts": [
+      "jianping-2021-q03",
+      "jianping-2021-q18",
+      "jianping-2021-q19"
+    ]
+  },
+  {
+    "id": "math-path-07",
+    "title": "综合解答题",
+    "posts": [
+      "jianping-2021-q17",
+      "jianping-2021-q18",
+      "jianping-2021-q19",
+      "jianping-2021-q20",
+      "jianping-2021-q21"
+    ]
+  }
+]

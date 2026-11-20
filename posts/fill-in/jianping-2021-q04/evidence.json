@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 4,
+    "pages": [
+      3,
+      4
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "[1/2,1]",
+    "independent_check": "四个顶点到中心的平面距离最大，代入得上界 1。"
+  },
+  "math_equations": [
+    "P=(x,y,0)",
+    "PA·PC=(x−frac(1,2))^2+(y−frac(1,2))^2+frac(1,2)",
+    "frac(1,2)≤PA·PC≤1"
+  ],
+  "editorial_note": ""
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+    "question": 13,
+    "pages": [
+      12,
+      13
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "answer",
+      "derivation",
+      "options-or-subquestions"
+    ]
+  },
+  "answer": {
+    "official": "D．双曲线",
+    "independent_check": "令两距离相等得到双曲线型二次曲线，故选 D。"
+  },
+  "math_equations": [
+    "d(P,l)=|x|",
+    "d(P,m)^2=frac((y−kx)^2,1+k^2)+h^2",
+    "frac((y−kx)^2,1+k^2)+h^2=x^2"
+  ],
+  "editorial_note": ""
+}
