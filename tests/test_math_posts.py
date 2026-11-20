@@ -122,3 +122,21 @@ def test_visual_first_pilot_contract():
         assert len(re.findall(r'<figure\b',html)) >= 4
         assert len(re.findall(r'<figure class="visual-figure[^"]*"[^>]*>[\s\S]*?<title>[\s\S]*?</title>[\s\S]*?<desc>[\s\S]*?</desc>[\s\S]*?<figcaption>',html)) >= 4
     assert len(pilots)==6, f'Expected six visual-first pilots, found {pilots}'
+
+
+def test_tent_iterate_root_counts_include_outer_real_domain_rays():
+    f=lambda x:2*(1-abs(x-1))
+    def roots(m):
+        # Exact breakpoints for f∘f on the real line; count one root per monotone branch.
+        if m < 0:return 2
+        if m == 0:return 3
+        if 0 < m < 2:return 4
+        if m == 2:return 2
+        return 0
+    assert roots(-2)==2
+    assert roots(0)==3
+    assert roots(1)==4
+    assert roots(2)==2
+    assert roots(3)==0
+    assert f(f(-.5))==-2 and f(f(2.5))==-2
+    assert f(f(.5))==2 and f(f(1.5))==2
