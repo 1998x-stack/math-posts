@@ -47,6 +47,30 @@ def run():
                             assert not scene.locator('canvas').is_visible(),(width,path,'canvas hidden when CDN unavailable')
                         if 'q17' in path:
                             assert page.locator('.scene-controls input').count()==0,(width,path,'no inert tetrahedron sliders')
+                        if page.locator('body[data-visual-first="true"]').count():
+                            assert page.locator('#overview figure.problem-visual').count()>=1,(width,path,'problem visual')
+                            assert page.locator('#solution figure.step-visual').count()>=2,(width,path,'step visuals')
+                            assert page.locator('#answer figure.conclusion-visual').count()>=1,(width,path,'conclusion visual')
+                            assert page.locator('math.math-inline').count()>=8,(width,path,'inline MathML coverage')
+                            assert page.locator('figure.visual-figure svg title').count()==page.locator('figure.visual-figure').count(),(width,path,'SVG titles')
+                            assert page.locator('figure.visual-figure svg desc').count()==page.locator('figure.visual-figure').count(),(width,path,'SVG descriptions')
+                            math_visible=page.locator('math.math-inline').evaluate_all("(els)=>els.every(el=>{const r=el.getBoundingClientRect();return r.width>0&&r.height>0})")
+                            assert math_visible,(width,path,'MathML must render with visible geometry')
+                            residual=page.evaluate("""() => {
+                                const clone=document.body.cloneNode(true);
+                                clone.querySelectorAll('math,svg,script,style,code,pre,noscript').forEach(el=>el.remove());
+                                const text=clone.innerText||'';
+                                const patterns=[
+                                  /(?<![\\w])(?:[A-Za-z][A-Za-z0-9₀-₉]*)(?:\\([^()\\n]{1,24}\\))?\\s*(?:=|≤|≥|<|>)\\s*[-−]?\\s*(?:\\d+(?:\\.\\d+)?|[A-Za-z(])/u,
+                                  /(?<![\\w])[A-Z]\\s*\\([^()\\n]*,[^()\\n]*\\)/u,
+                                  /(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*[²³⁴]/u,
+                                  /(?<![\\w])\\d+\\s*\\/\\s*\\d+(?![\\w])/u,
+                                  /(?<![\\w])[A-Z]{1,3}\\s*(?:∥|⊥)\\s*(?:[A-Z]{1,3}|平面)/u,
+                                  /(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*\\s*(?:·|×)\\s*[A-Za-z]/u
+                                ];
+                                return patterns.map(re=>text.match(re)?.[0]).filter(Boolean);
+                            }""")
+                            assert not residual,(width,path,'unrendered formula candidates',residual)
                 assert not failures,(width,failures)
                 page.close()
         finally:browser.close()
