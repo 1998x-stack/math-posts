@@ -24,6 +24,22 @@ def validate(path: Path) -> dict:
     for phrase in BANNED:
         if phrase in soup.get_text(' ', strip=True) or phrase in html:
             failures.append('Banned production/process copy found: ' + phrase)
+    overview = soup.find(id='overview')
+    question = soup.find(id='question')
+    if overview is None or question is None:
+        failures.append('Every post needs a problem-first overview before the formal question')
+    elif html.find('id="overview"') > html.find('id="question"'):
+        failures.append('Problem overview must appear before the formal question')
+    elif len(overview.get_text(' ', strip=True)) < 100:
+        failures.append('Problem overview is too short to explain the task')
+    elif '解题路线' not in overview.get_text(' ', strip=True):
+        failures.append('Problem overview must include a concise solution route')
+    if '不要直接套公式' in html:
+        failures.append('Generic filler copy is forbidden; explain this problem specifically')
+    solution_steps = soup.select('#solution ol li')
+    for index, step in enumerate(solution_steps, 1):
+        if not step.select_one('.step-note'):
+            failures.append(f'Solution step {index} needs a problem-specific why/explanation note')
     anchors = {tag.get('id') for tag in soup.select('[id]')}
     for a in soup.select('a[href^="#"]'):
         target = a['href'][1:]
