@@ -25,6 +25,15 @@ python -m http.server 8000 --directory _site
 
 GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之前不宣称已上线。第 4、5、13、17 题涉及空间几何，计划或已实现 Three.js，二维问题保留轻量 SVG。
 
+
+## Visual-first article pilot
+
+The first visual-first redesign batch covers Q04 (cube dot product), Q06 (geometric-sequence product), Q17 (tetrahedron and dihedral angle), Q19 (piecewise profit optimization), Q20 (ellipse chord midpoint), and Q21 (tent-function iteration).
+
+Each pilot page now starts with a problem diagram and compact condition/target chips, places SVG diagrams beside conceptual solution steps, ends with a conclusion diagram, and renders substantive inline formulas in MathML. The quality gate requires at least four meaningful figures, eight inline MathML expressions, no raw formula candidates in visible prose, concise paragraphs, and responsive Chromium checks at 1440 / 768 / 390 / 360 px.
+
+The remaining published articles are not yet promoted to this stricter visual-first contract; they are the next migration batch.
+
 ## 反馈迭代
 
 后续根据你的反馈调整 canonical Skill 与模板，再同步四套 Agent 镜像。不维护互相冲突的多套规范。
