@@ -70,3 +70,36 @@ def test_3d_progressive_enhancement_accessible():
         assert '<canvas tabindex="0"' in src
         assert 'class="static-scene"' in src
         assert 'assets/math3d.js' in src
+
+
+def test_high_school_knowledge_map_has_seven_domains_and_maps_all_posts():
+    data=json.loads((ROOT/'content/knowledge-map.json').read_text('utf-8'))
+    published={p['slug'] for p in manifest() if p['status']=='published'}
+    areas=data['areas']
+    assert len(areas)==7
+    ids={t['id'] for area in areas for t in area['subtopics']}
+    assert len(ids)==sum(len(a['subtopics']) for a in areas)
+    mapped=set()
+    for area in areas:
+        assert area['title'] and area['english'] and area['description']
+        for topic in area['subtopics']:
+            assert 1 <= topic['difficulty'] <= 5
+            assert all(parent in ids for parent in topic['prerequisites'])
+            assert all(slug in published for slug in topic['posts'])
+            assert topic['outcomes'] and topic['tags']
+            mapped.update(topic['posts'])
+    assert mapped == published
+
+def test_knowledge_map_prerequisites_are_acyclic():
+    data=json.loads((ROOT/'content/knowledge-map.json').read_text('utf-8'))
+    graph={t['id']:t['prerequisites'] for a in data['areas'] for t in a['subtopics']}
+    visiting=set()
+    visited=set()
+    def visit(node):
+        assert node not in visiting, 'prerequisite cycle: '+node
+        if node in visited:return
+        visiting.add(node)
+        for parent in graph[node]:visit(parent)
+        visiting.remove(node)
+        visited.add(node)
+    for node in graph:visit(node)
