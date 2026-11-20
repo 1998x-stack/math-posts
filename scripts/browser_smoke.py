@@ -36,6 +36,7 @@ def run():
                         assert page.locator('#overview').evaluate("(el)=>el.compareDocumentPosition(document.querySelector('#question')) & Node.DOCUMENT_POSITION_FOLLOWING"),(width,path,'overview order')
                         assert page.locator('#solution .step-note').count()==page.locator('#solution li').count(),(width,path,'step explanations')
                         assert page.locator('figure svg').count()>=1,(width,path,'SVG')
+                        assert page.locator('math').count()>=1,(width,path,'MathML')
                         assert page.locator('math[aria-label],math[aria-labelledby]').count()==page.locator('math').count(),(width,path,'MathML accessible labels')
                         if any(f'q{n:02d}' in path for n in (4,13,17)):
                             assert page.locator('.static-scene svg').count()>=1,(width,path,'3D static fallback')
