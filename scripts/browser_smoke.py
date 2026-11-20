@@ -23,6 +23,7 @@ def run():
             for width in (1440,768,390,360):
                 page=browser.new_page(viewport={'width':width,'height':850},reduced_motion='reduce')
                 failures=[]
+                page.route('https://cdn.jsdelivr.net/**',lambda route:route.abort())
                 page.on('pageerror',lambda e:failures.append(str(e)))
                 for path in pages:
                     page.goto(host+path,wait_until='domcontentloaded',timeout=30000)
@@ -39,7 +40,11 @@ def run():
                         assert page.locator('math').count()>=1,(width,path,'MathML')
                         assert page.locator('math[aria-label],math[aria-labelledby]').count()==page.locator('math').count(),(width,path,'MathML accessible labels')
                         if any(f'q{n:02d}' in path for n in (4,13,17)):
-                            assert page.locator('.static-scene svg').count()>=1,(width,path,'3D static fallback')
+                            scene=page.locator('[data-three-scene]')
+                            scene.wait_for(timeout=5000)
+                            page.locator('[data-three-scene][data-ready="false"]').wait_for(timeout=10000)
+                            assert scene.locator('.static-scene').is_visible(),(width,path,'visible offline SVG fallback')
+                            assert not scene.locator('canvas').is_visible(),(width,path,'canvas hidden when CDN unavailable')
                         if 'q17' in path:
                             assert page.locator('.scene-controls input').count()==0,(width,path,'no inert tetrahedron sliders')
                 assert not failures,(width,failures)
