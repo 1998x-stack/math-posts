@@ -90,6 +90,57 @@ def validate(path: Path) -> dict:
                 region = math.find_parent(class_=['math-scroll', 'eq-scroll'])
             if region is None or region.get('tabindex') != '0' or region.get('role') != 'region':
                 failures.append(f'MathML {idx} display equation needs a keyboard-focusable scroll region')
+
+    # Visual-first pages are held to a stricter presentation contract than legacy articles.
+    body = soup.body
+    if body and body.get('data-visual-first') == 'true':
+        overview_section = soup.find(id='overview')
+        solution_section = soup.find(id='solution')
+        answer_section = soup.find(id='answer')
+        if overview_section is None or not overview_section.select('figure.problem-visual'):
+            failures.append('Visual-first page needs a problem diagram inside #overview')
+        if solution_section is None or len(solution_section.select('figure.step-visual')) < 2:
+            failures.append('Visual-first page needs at least two step-level SVG diagrams inside #solution')
+        if answer_section is None or not answer_section.select('figure.conclusion-visual'):
+            failures.append('Visual-first page needs a conclusion diagram inside #answer')
+        if len(figures) < 4:
+            failures.append(f'Visual-first page needs at least four meaningful figures, found {len(figures)}')
+        inline_math = soup.select('math.math-inline')
+        if len(inline_math) < 8:
+            failures.append(f'Visual-first page needs at least eight inline MathML expressions, found {len(inline_math)}')
+        for index, figure in enumerate(soup.select('figure.visual-figure'), 1):
+            svg = figure.find('svg')
+            if svg is None or svg.find('title') is None or svg.find('desc') is None:
+                failures.append(f'Visual-first figure {index} needs an SVG title and description')
+            if not figure.find('figcaption'):
+                failures.append(f'Visual-first figure {index} needs a teaching caption')
+        for section_id in ('overview', 'question', 'solution', 'answer'):
+            section = soup.find(id=section_id)
+            if section is None:
+                continue
+            for paragraph in section.find_all('p'):
+                fragment = BeautifulSoup(str(paragraph), 'html.parser')
+                for tag in fragment.select('math, svg, code'):
+                    tag.decompose()
+                text = fragment.get_text(' ', strip=True)
+                if len(text) > 110:
+                    failures.append(f'Visual-first paragraph in #{section_id} is too long ({len(text)} chars); split it or visualize the reasoning')
+        visible = BeautifulSoup(str(body), 'html.parser')
+        for tag in visible.select('math, svg, script, style, code, pre, noscript'):
+            tag.decompose()
+        visible_text = visible.get_text(' ', strip=True)
+        raw_formula_patterns = (
+            re.compile(r'(?<![\\w])(?:[A-Za-z][A-Za-z0-9₀-₉]*)(?:\\([^()\\n]{1,24}\\))?\\s*(?:=|≤|≥|<|>)\\s*[-−]?\\s*(?:\\d+(?:\\.\\d+)?|[A-Za-z(])'),
+            re.compile(r'(?<![\\w])[A-Z]\\s*\\([^()\\n]*,[^()\\n]*\\)'),
+            re.compile(r'(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*[²³⁴]'),
+            re.compile(r'(?<![\\w])\\d+\\s*/\\s*\\d+(?![\\w])'),
+            re.compile(r'(?<![\\w])[A-Z]{1,3}\\s*(?:∥|⊥)\\s*(?:[A-Z]{1,3}|平面)'),
+            re.compile(r'(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*\\s*(?:·|×)\\s*[A-Za-z]')
+        )
+        for pattern in raw_formula_patterns:
+            match = pattern.search(visible_text)
+            if match:
+                failures.append('Unrendered mathematical expression in visual-first page: ' + match.group(0))
     if not soup.find('a', href=re.compile('source-notes|github.com/1998x-stack/math-posts')):
         warnings.append('No source provenance hyperlink in article')
     return {
