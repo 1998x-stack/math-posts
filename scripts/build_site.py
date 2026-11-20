@@ -73,6 +73,28 @@ def data(root:Path):
             assert isinstance(cover.get('caption'),str) and 8<=len(cover['caption'])<=80,f'Missing cover explanation: {p["slug"]}'
             assert 'observe' not in cover['caption'].lower() and 'derive' not in cover['caption'].lower(),f'Generic cover: {p["slug"]}'
             assert (path.parent/cover['src']).is_file(),f'Cover SVG missing: {p["slug"]}: {cover["src"]}'
+    areas=knowledge_map.get('areas',[])
+    assert len(areas)==7,'Knowledge map must contain seven subject domains'
+    topic_ids=[t['id'] for a in areas for t in a.get('subtopics',[])]
+    assert len(topic_ids)==len(set(topic_ids)),'Duplicate knowledge topic ID'
+    topic_by_id={t['id']:t for a in areas for t in a.get('subtopics',[])}
+    post_ids={p['slug'] for p in posts if p['status']=='published'}
+    mapped=set()
+    for topic in topic_by_id.values():
+        assert 1 <= topic.get('difficulty',0) <= 5,topic
+        assert topic.get('title') and topic.get('outcomes') and topic.get('tags'),topic
+        assert all(x in topic_by_id for x in topic.get('prerequisites',[])),topic
+        assert all(x in post_ids for x in topic.get('posts',[])),topic
+        mapped.update(topic.get('posts',[]))
+    assert mapped == post_ids, 'Every published post must map to at least one knowledge node'
+    visiting=set();visited=set()
+    def visit_topic(node):
+        assert node not in visiting,'Knowledge prerequisite cycle: '+node
+        if node in visited:return
+        visiting.add(node)
+        for parent in topic_by_id[node].get('prerequisites',[]):visit_topic(parent)
+        visiting.remove(node);visited.add(node)
+    for node in topic_ids:visit_topic(node)
     cover_captions=[p['cover']['caption'] for p in posts if p['status']=='published']
     assert len(cover_captions)==len(set(cover_captions)),'Published cover explanations must be unique'
     return categories,posts,knowledge_map
