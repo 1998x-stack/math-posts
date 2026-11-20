@@ -125,6 +125,25 @@ function mount(T, root) {
     down={x:event.clientX,y:event.clientY};render();});
   canvas.addEventListener('pointerup',()=>{down=null;});canvas.addEventListener('pointercancel',()=>{down=null;});
   canvas.addEventListener('wheel',event=>{event.preventDefault();radius=Math.min(15,Math.max(1.7,radius*(event.deltaY>0?1.08:.92)));render();},{passive:false});
+  // Keyboard equivalent of pointer orbit and wheel zoom.
+  // Canvas itself receives focus; arrow keys rotate, +/- zoom.
+  canvas.tabIndex = 0;
+  canvas.addEventListener('keydown', event => {
+    const step = .12;
+    switch (event.key) {
+      case 'ArrowLeft': yaw -= step; break;
+      case 'ArrowRight': yaw += step; break;
+      case 'ArrowUp': pitch = Math.min(1.45, pitch + step); break;
+      case 'ArrowDown': pitch = Math.max(-1.2, pitch - step); break;
+      case '=':
+      case '+': radius = Math.max(1.7, radius*.91); break;
+      case '-':
+      case '_': radius = Math.min(15, radius*1.1); break;
+      default: return;
+    }
+    event.preventDefault();
+    render();
+  });
   const reset=root.querySelector('[data-reset]');
   if(reset)reset.addEventListener('click',()=>{yaw=.7;pitch=.6;radius=type==='tetra'?4.7:type==='skew'?3.8:type==='cube'?3.1:3.4;render();});
   root.dataset.ready='true';

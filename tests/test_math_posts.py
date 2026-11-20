@@ -44,3 +44,10 @@ def test_tent_iterate_above_max_has_zero_roots():
     for i in range(-1000,1001):
         x=i/100
         assert f(f(x))<=2+1e-9
+
+def test_3d_progressive_enhancement_accessible():
+    for n,c in ((4,'fill-in'),(5,'fill-in'),(13,'multiple-choice'),(17,'worked-solutions')):
+        src=(ROOT/'posts'/c/f'jianping-2021-q{n:02d}'/'index.html').read_text('utf-8')
+        assert '<canvas tabindex="0"' in src
+        assert 'class="static-scene"' in src
+        assert 'assets/math3d.js' in src
