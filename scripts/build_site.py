@@ -101,7 +101,7 @@ def html_page(*,title,description,canonical,body,depth=0,active='home',lang='zh-
 <title>{H(title)}</title></head><body>
 <a class="skip-link" href="#main">跳至正文</a>
 <header class="site-header"><div class="container header-row"><a class="wordmark" href="{rel}" aria-label="math.posts 首页">math<span>.</span>posts</a>
-<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span aria-hidden="true">☰</span><span class="menu-label">菜单</span></button><nav id="site-nav" class="top-nav" aria-label="主导航"><a {'aria-current="page"' if active=='home' else ''} href="{rel}">首页</a><a {'aria-current="page"' if active=='topics' else ''} href="{rel}topics/">知识地图</a><a href="{rel}#categories">研究领域</a><a href="{rel}#reading-paths">学习路径</a><a href="{rel}#discover">文章索引</a><a {'aria-current="page"' if active=='archive' else ''} href="{rel}archive/">归档</a><a href="https://github.com/1998x-stack/math-posts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></header>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span aria-hidden="true">☰</span><span class="menu-label">菜单</span></button><nav id="site-nav" class="top-nav" aria-label="主导航"><a {'aria-current="page"' if active=='home' else ''} href="{rel}">首页</a><a {'aria-current="page"' if active=='topics' else ''} href="{rel}topics/">知识地图</a><a href="{rel}#categories">数学题型</a><a href="{rel}#reading-paths">学习路径</a><a href="{rel}#discover">文章索引</a><a {'aria-current="page"' if active=='archive' else ''} href="{rel}archive/">归档</a><a href="https://github.com/1998x-stack/math-posts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></header>
 <main id="main">{body}</main>
 <footer class="site-footer"><div class="container footer-main"><div><a class="wordmark" href="{rel}">math<span>.</span>posts</a><p>把问题画出来，把推导讲清楚。</p></div><div><p class="footer-label">EXPLORE</p><a href="{rel}archive/">所有文章</a><a href="{rel}feed.xml">RSS 订阅</a><a href="https://github.com/1998x-stack/math-posts">源代码</a></div></div><div class="container legal"><span>© math-posts · Independent technical notes</span><span>Think visually. Prove carefully.</span></div></footer>
 </body></html>'''
@@ -194,7 +194,7 @@ def build_home(categories,posts,base):
             <div class="feature-copy"><span class="feature-kicker">本期精选 · {H(labels[(feature['category'],feature['topic'])])}</span>
                 <h2><a href="{article_url(feature)}">{H(feature['title'])} <span aria-hidden="true">↗</span></a></h2>
                 <p>{H(feature['subtitle'])}</p>
-                <div class="feature-foot"><span>{feature['reading_minutes']} 分钟深度阅读</span><a href="{article_url(feature)}">进入这篇研究笔记 →</a></div>
+                <div class="feature-foot"><span>{feature['reading_minutes']} 分钟深度阅读</span><a href="{article_url(feature)}">进入这篇数学题解 →</a></div>
             </div></aside>'''
     else:
         feature_markup=''
@@ -204,7 +204,7 @@ def build_home(categories,posts,base):
             <span class="research-card-top"><span class="research-num">{i:02d} / FIELD</span><span class="research-count">{counts[c['slug']]:02d} 篇</span></span>
             <strong>{H(c['title'])}</strong><span class="research-english">{H(c['english'])}</span>
             <span class="research-description">{H(c['description'])}</span>
-            <span class="research-enter">探索领域 <span aria-hidden="true">↗</span></span>
+            <span class="research-enter">进入题型 <span aria-hidden="true">↗</span></span>
         </a>''' for i,c in enumerate(sorted(active,key=lambda c:-counts[c['slug']]),1)
     )
     planned_links=''.join(
@@ -212,14 +212,11 @@ def build_home(categories,posts,base):
         for c in planned
     )
 
+    # The editorial routes are now sourced from the same curated manifest as
+    # the related-reading cards, rather than hard-coded ML paper slugs.
     learning_paths=[
-        ('从经典机器学习出发','看见线性模型、概率假设、最大间隔与树提升的共同问题。',['linear-regression','logistic-regression','naive-bayes','svm','pca','xgboost']),
-        ('构建模型架构直觉','从卷积与残差，沿序列记忆走向 Attention。',['cnn','resnet','rnn','lstm','seq2seq','transformer']),
-        ('理解优化与高效微调','从梯度与优化器到预训练和参数高效适配。',['sgd','adam','adamw','gpt-1','lora','qlora']),
-        ('追溯数据与计算规律','讨论训练语料、数据治理与计算最优的边界。',['the-pile','fineweb','chinchilla']),
-        ('学习对齐与策略优化','连接偏好反馈、奖励目标与策略梯度。',['reinforce','ppo','rlhf','dpo','grpo']),
-        ('进入高效推理系统','从注意力基础到位置表示、缓存与推理内存。',['transformer','rope','gqa','flashattention','kv-cache','pagedattention']),
-        ('系统理解强化学习','先掌握价值函数，再进入 Actor–Critic 与连续控制。',['dqn','ddpg','td3','sac'])
+        (route['title'], '围绕这一数学主题，从较直观的题目逐步过渡到综合应用。', route['posts'])
+        for route in json.loads((ROOT/'content/reading_paths.json').read_text(encoding='utf-8'))
     ]
     route_cards=[]
     for number,(name,description,slugs) in enumerate(learning_paths,1):
@@ -234,7 +231,7 @@ def build_home(categories,posts,base):
         )
 
     spotlight=[]
-    for slug,eyebrow in [('resnet','架构直觉'),('xgboost','经典机器学习'),('ppo','强化学习')]:
+    for slug,eyebrow in [('jianping-2021-q04','正方体与空间向量'),('jianping-2021-q13','空间轨迹与双曲线'),('jianping-2021-q17','三棱锥与二面角')]:
         if slug not in by_slug:continue
         p=by_slug[slug]
         spotlight.append(
@@ -266,48 +263,48 @@ def build_home(categories,posts,base):
 
     body=f'''<section class="hero container" aria-labelledby="home-title">
       <div class="hero-left">
-        <div class="eyebrow"><span class="eyebrow-dot"></span> XM / RESEARCH ATLAS</div>
-        <h1 id="home-title">让复杂的模型，<br>变成<span class="marker">可以推演</span>的直觉。</h1>
-        <p class="hero-text">从一个真正的问题出发，读懂一篇论文。沿着机制图解、逐步推导与可验证的代码，建立能够迁移的理解。</p>
-        <div class="hero-actions"><a class="primary-link" href="#reading-paths">选择一条学习路径 <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#discover">查找具体论文 ↗</a></div>
-        <div class="hero-stats" aria-label="知识库概览"><div><strong>{count}</strong><span>篇研究笔记</span></div><div><strong>{len(active)}</strong><span>个已有内容的领域</span></div><div><strong>{len(route_cards)}</strong><span>条学习路径</span></div></div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> MATH / VISUAL PROBLEM ATLAS</div>
+        <h1 id="home-title">让抽象的数学题，<br>变成<span class="marker">看得见</span>的推导。</h1>
+        <p class="hero-text">从 PDF 原题出发，先看关键观察，再一步步推导；遇到空间几何，通过可旋转的三维场景建立直觉。</p>
+        <div class="hero-actions"><a class="primary-link" href="#reading-paths">选择一条学习路径 <span aria-hidden="true">↗</span></a><a class="secondary-link" href="#discover">搜索数学题目 ↗</a></div>
+        <div class="hero-stats" aria-label="知识库概览"><div><strong>{count}</strong><span>篇数学题解</span></div><div><strong>{len(active)}</strong><span>种已发布的题型</span></div><div><strong>{len(route_cards)}</strong><span>条学习路径</span></div></div>
       </div>{feature_markup}
     </section>
     <nav class="entry-strip" aria-label="探索方式"><div class="container entry-grid">
-      <a href="#categories"><span class="entry-index">01 / SUBJECTS</span><strong>按研究领域探索</strong><span>查看不同问题的完整分类 ↗</span></a>
-      <a href="#reading-paths"><span class="entry-index">02 / PATHS</span><strong>按学习顺序阅读</strong><span>沿着关键论文逐步进阶 ↗</span></a>
+      <a href="#categories"><span class="entry-index">01 / SUBJECTS</span><strong>按题型探索</strong><span>查看不同问题的完整分类 ↗</span></a>
+      <a href="#reading-paths"><span class="entry-index">02 / PATHS</span><strong>按学习顺序阅读</strong><span>沿题目知识点逐步进阶 ↗</span></a>
       <a href="#discover"><span class="entry-index">03 / INDEX</span><strong>直接查找一篇文章</strong><span>按关键词与主题筛选 ↗</span></a>
     </div></nav>
     <section class="container spotlight-section" aria-labelledby="spotlight-title">
-      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三篇值得作为起点的研究</h2></div><p>不只追最新：先建立能够复用的概念，再深入具体模型。</p></div>
+      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三道值得先读的题</h2></div><p>从短题入手，再进入几何和综合证明；一题一图，不重复通用封面。</p></div>
       <div class="spotlight-grid">{''.join(spotlight)}</div>
     </section>
     <section id="categories" class="category-band" aria-labelledby="subjects-title"><div class="container">
-      <div class="section-header"><div><div class="eyebrow muted">FIELDS OF STUDY</div><h2 id="subjects-title">从研究领域进入知识网络</h2></div><p>有内容的领域优先展示；尚在筹备的方向清晰标注。<a href="topics/">完整知识地图 ↗</a></p></div>
+      <div class="section-header"><div><div class="eyebrow muted">FIELDS OF STUDY</div><h2 id="subjects-title">从题型进入数学知识网络</h2></div><p>有内容的领域优先展示；尚在筹备的方向清晰标注。<a href="topics/">完整知识地图 ↗</a></p></div>
       <div class="research-grid">{subject_cards}</div>
       {f'<div class="planned-fields"><span>持续建设中的方向</span>{planned_links}</div>' if planned else ''}
     </div></section>
     <section id="reading-paths" class="container learning-paths" aria-labelledby="paths-title">
-      <div class="section-header"><div><div class="eyebrow muted">GUIDED READING / LEARNING ROUTES</div><h2 id="paths-title">以问题串起论文，而非孤立记忆</h2></div><p>学习路线只连接已发布的内容；每一步都可以独立阅读。</p></div>
+      <div class="section-header"><div><div class="eyebrow muted">GUIDED READING / LEARNING ROUTES</div><h2 id="paths-title">以知识点串起题目，而非孤立刷题</h2></div><p>学习路线只连接已发布的内容；每一步都可以独立阅读。</p></div>
       <div class="route-grid">{''.join(route_cards)}</div>
     </section>
     <section id="discover" class="container latest" aria-labelledby="index-title"><span id="latest" class="anchor-alias" aria-hidden="true"></span>
-      <div class="section-header"><div><div class="eyebrow muted">COMPLETE ARTICLE INDEX</div><h2 id="index-title">查找你的下一篇研究笔记 <span class="count">{count:02d}</span></h2></div><p>全库搜索与筛选；每页只加载 8 篇文章及对应缩略图。</p></div>
+      <div class="section-header"><div><div class="eyebrow muted">COMPLETE ARTICLE INDEX</div><h2 id="index-title">查找你的下一篇数学题解 <span class="count">{count:02d}</span></h2></div><p>全库搜索与筛选；每页只加载 8 篇文章及对应缩略图。</p></div>
       <div class="browse-controls">
-        <label class="search-field" for="search-posts"><span aria-hidden="true">⌕</span><input id="search-posts" type="search" placeholder="搜索论文、模型、关键词或概念" autocomplete="off" data-search-input></label>
-        <label class="filter-field" for="category-filter"><span>研究领域</span><select id="category-filter" data-category-filter><option value="">全部领域</option>{options}</select></label>
+        <label class="search-field" for="search-posts"><span aria-hidden="true">⌕</span><input id="search-posts" type="search" placeholder="搜索题号、题型、函数、几何或知识点" autocomplete="off" data-search-input></label>
+        <label class="filter-field" for="category-filter"><span>数学题型</span><select id="category-filter" data-category-filter><option value="">全部领域</option>{options}</select></label>
         <span class="visible-count" aria-live="polite" data-visible-count>共 {count} 篇文章</span>
       </div>
       <div class="index-list" data-post-grid data-page-size="{HOME_PAGE_SIZE}">{''.join(search_cards)}</div>
       <p class="empty-result" hidden data-no-results>没有找到匹配的文章。试试更简短的关键词，或清除筛选条件。</p>
       <div class="index-footer"><nav class="pagination" data-home-pagination aria-label="文章索引分页" hidden></nav><a href="archive/">查看完整时间归档 ↗</a></div>
     </section>
-    <section class="closing"><div class="container"><div class="eyebrow">AN OPEN, TRACEABLE NOTEBOOK</div>
-      <h2>可解释的理解，需要可追溯的证据。</h2>
-      <p>文章连接题源说明、数学推导与代码验证。想按知识体系检索？前往知识地图；想了解内容生产方式？阅读仓库规范。</p>
-      <div class="closing-actions"><a href="topics/">探索知识地图 ↗</a><a href="https://github.com/1998x-stack/math-posts">查看研究笔记仓库 ↗</a></div>
+    <section class="closing"><div class="container"><div class="eyebrow">OPEN MATHEMATICS / SOURCE-VERIFIED</div>
+      <h2>从原题到答案，每一步都可以核对。</h2>
+      <p>每篇题解连接 PDF 来源页码、数学推导与图形实验。想按知识体系检索？前往知识地图；想了解内容生产方式？阅读仓库规范。</p>
+      <div class="closing-actions"><a href="topics/">探索知识地图 ↗</a><a href="https://github.com/1998x-stack/math-posts">查看数学题库仓库 ↗</a></div>
     </div></section>'''
-    return html_page(title='math-posts · 数学题目与知识图谱',description='深度学习、机器学习、LLM、强化学习与系统技术研究笔记：按领域、学习路径或论文关键词发现原理、图解、推导与可运行代码。',canonical=base,body=body)
+    return html_page(title='math-posts · 数学题目与知识图谱',description='21 道上海建平中学数学试题：填空题、选择题和解答题；逐题解析、公式与 SVG / Three.js 交互。',canonical=base,body=body)
 
 def topic_labels(categories):
     return {(c['slug'],t['slug']):t['title'] for c in categories for t in c['topics']}
@@ -336,7 +333,7 @@ def build_topics(categories,posts,base):
     body=(
         '<div class="container taxonomy-page"><div class="breadcrumb"><a href="../">首页</a> <span>/</span> 知识地图</div>'
         '<div class="eyebrow muted">RESEARCH TAXONOMY · KNOWLEDGE MAP</div><h1>知识地图</h1>'
-        f'<p class="category-description">覆盖 {len(categories)} 个一级研究领域、{sum(len(c["topics"]) for c in categories)} 个二级主题、'
+        f'<p class="category-description">覆盖 {len(categories)} 个一级数学题型、{sum(len(c["topics"]) for c in categories)} 个二级主题、'
         f'{len(published)} 篇正式发布文章。每篇文章归属一个主主题；交叉学科通过标签和学习路径相互连接。'
         '“规划中”代表尚无文章，不代表已有解读。</p>'
         f'<nav class="taxonomy-overview" aria-label="跳转至一级分类">{summary}</nav>'
@@ -396,8 +393,8 @@ def build_archive(posts,categories,base,page=1):
     first=(page-1)*ARCHIVE_PAGE_SIZE+1 if current else 0
     last=first+len(current)-1 if current else 0
     pager=archive_pagination(page,pages,rel)
-    body=f'''<div class="container archive-page"><div class="breadcrumb"><a href="{rel}">首页</a> <span>/</span> <a href="{rel}archive/">文章归档</a>{f' <span>/</span> 第 {page} 页' if page>1 else ''}</div><div class="eyebrow muted">ALL EXPLAINERS · CHRONOLOGICAL</div><h1>研究笔记归档<span class="count">{len(published):02d}</span></h1><p class="category-description">按发布时间浏览全部正式发布的文章。每页仅显示 {ARCHIVE_PAGE_SIZE} 篇，保留各自的 SVG 机制缩略图。</p><p class="archive-range">第 {page} / {pages} 页 · 显示 {first}–{last} / {len(published)} 篇</p><ol class="timeline">{cards}</ol>{pager}</div>'''
-    return html_page(title=f'文章归档{" · 第 "+str(page)+" 页" if page>1 else ""} · math-posts',description='按时间浏览 math-posts 深度学习论文图解文章。',canonical=url_join(base,archive_page_url(page)),body=body,depth=1 if page==1 else 3,active='archive')
+    body=f'''<div class="container archive-page"><div class="breadcrumb"><a href="{rel}">首页</a> <span>/</span> <a href="{rel}archive/">文章归档</a>{f' <span>/</span> 第 {page} 页' if page>1 else ''}</div><div class="eyebrow muted">ALL EXPLAINERS · CHRONOLOGICAL</div><h1>数学题解归档<span class="count">{len(published):02d}</span></h1><p class="category-description">按发布时间浏览本试卷已转写并发布的数学题解。每页仅显示 {ARCHIVE_PAGE_SIZE} 篇，保留每题专属的 SVG 图解封面。</p><p class="archive-range">第 {page} / {pages} 页 · 显示 {first}–{last} / {len(published)} 篇</p><ol class="timeline">{cards}</ol>{pager}</div>'''
+    return html_page(title=f'文章归档{" · 第 "+str(page)+" 页" if page>1 else ""} · math-posts',description='按时间与题型浏览 math-posts 的原创数学题解文章。',canonical=url_join(base,archive_page_url(page)),body=body,depth=1 if page==1 else 3,active='archive')
 
 
 def write(out:Path,path:str,content:str):
@@ -445,7 +442,7 @@ def build_feed(categories:list,posts:list,base:str)->str:
     channel=ET.SubElement(rss,'channel')
     ET.SubElement(channel,'title').text='math-posts'
     ET.SubElement(channel,'link').text=base
-    ET.SubElement(channel,'description').text='以图解、数学推导与论文证据理解机器学习、LLM 和系统技术。'
+    ET.SubElement(channel,'description').text='从原卷题目出发，用 SVG 图解、数学推导与 Three.js 交互理解数学。'
     ET.SubElement(channel,'language').text='zh-cn'
     ET.SubElement(channel,f'{{{atom_ns}}}link',{
         'href':url_join(base,'feed.xml'),
