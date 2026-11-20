@@ -1,1 +1,45 @@
 :root{color-scheme:light;--ink:#1c343a;--muted:#526b74;--accent:#167d80;--paper:#fffefa;--line:#d8e8e3;--soft:#f2f8f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--accent);text-underline-offset:3px}a:focus-visible,button:focus-visible,input:focus-visible,.math-scroll:focus-visible{outline:3px solid #147f80;outline-offset:3px}.skip-link{position:absolute;top:-5em;left:1em;background:#123;padding:10px;color:#fff}.skip-link:focus{top:0}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);max-width:1200px;margin:auto;gap:clamp(24px,5vw,64px);padding:64px 24px 100px}.toc{position:sticky;top:2em;align-self:start;font-size:.88rem}.toc strong{display:block;margin-bottom:20px}.toc a{display:block;text-decoration:none;border-left:2px solid #d6e6e3;padding:7px 13px}.toc a:hover{background:var(--soft)}main{min-width:0}article{max-width:790px}h1{font-size:clamp(2rem,4vw,2.9rem);letter-spacing:-.03em;line-height:1.23;margin:16px 0}.lead{color:var(--muted);font-size:1.07rem}.eyebrow{font:700 .75rem/1.4 system-ui;letter-spacing:.12em;color:var(--accent)}h2{font-size:clamp(1.28rem,3vw,1.7rem);margin:2.7rem 0 1.1rem;line-height:1.4}section{margin-top:2.4rem}p,li{overflow-wrap:anywhere}li{margin:.65em 0}figure{margin:1.6rem 0}figure svg,figure img{display:block;width:100%;height:auto;border-radius:17px}figcaption{font-size:.85rem;color:var(--muted);margin-top:.7rem}.math-equation{max-width:100%;background:var(--soft);border:1px solid var(--line);border-radius:13px;padding:15px;margin:14px 0}.math-scroll{max-width:100%;overflow:auto;white-space:nowrap}.math-scroll math[display=block]{font-size:1.15em}.answer{border-top:3px solid #168383;border-bottom:1px solid var(--line);padding:20px 0;font-size:1.1rem}.question{background:#f8faf6;border:1px solid var(--line);border-radius:12px;padding:18px 24px}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;padding-left:23px}.hint{border-left:3px solid #d89356;background:#fff8f0;padding:15px 19px}.scene-wrap{background:#f0f8f5;border:1px solid #c6dfda;border-radius:15px;padding:12px;min-width:0}.scene-wrap canvas{width:100%;height:340px;display:none;border-radius:12px}.scene-wrap[data-ready="true"] canvas{display:block}.scene-wrap[data-ready="true"] .static-scene{display:none}.scene-wrap .static-scene svg{max-width:100%}.scene-controls{display:flex;flex-wrap:wrap;gap:13px;align-items:center;padding:10px}.scene-controls label{display:flex;gap:7px;align-items:center}.scene-controls input{max-width:130px}.scene-readout{font-size:.85rem;color:var(--muted)}.meta{font-size:.82rem;color:var(--muted)}footer.article-footer{margin-top:4rem;padding:2rem 0;border-top:1px solid var(--line)}@media(max-width:840px){.layout{display:block;padding:30px 18px 75px}.toc{position:static;border-bottom:1px solid var(--line);padding:0 0 15px;margin-bottom:25px}.toc a{display:inline-block;border:0;padding:6px 9px}.scene-wrap canvas{height:270px}}@media(max-width:480px){body{font-size:16px}.choices{grid-template-columns:1fr}.question{padding:15px}.scene-controls{flex-direction:column;align-items:stretch}}@media print{.toc,.skip-link,.scene-controls{display:none!important}.layout{display:block;padding:0}body{font-size:11pt}.scene-wrap canvas{display:none!important}.scene-wrap .static-scene{display:block!important}section{break-inside:avoid}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Visual-first mathematics pages: diagrams carry the explanation, prose supplies the proof. */
+.visual-first-page .lead{max-width:42rem;font-size:1rem;line-height:1.65;margin:.6rem 0}
+.visual-first-page header{margin-bottom:1.5rem}
+.visual-first-page section{margin-top:2rem}
+.visual-first-page h2{margin:2.1rem 0 .85rem}
+.visual-first-page p{max-width:72ch}
+.visual-first-page .problem-overview{display:grid;gap:12px}
+.visual-first-page .problem-overview>p{margin:.2rem 0}
+.visual-first-page .fact-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.visual-first-page .fact-chip{min-width:0;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#f5faf7}
+.visual-first-page .fact-chip small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.06em;font-weight:750;margin-bottom:4px}
+.visual-first-page .fact-chip strong{display:block;color:#1c5758;font-size:.97rem;line-height:1.55}
+.visual-first-page figure.visual-figure{margin:14px 0 20px;padding:12px;background:#f5faf7;border:1px solid #dbe9e3;border-radius:16px}
+.visual-first-page figure.visual-figure svg{max-height:300px}
+.visual-first-page figure.visual-figure figcaption{margin:8px 5px 2px;font-size:.8rem;line-height:1.5}
+.visual-first-page figure.problem-visual{margin-top:16px}
+.visual-first-page figure.step-visual{max-width:680px;margin:12px 0 16px;padding:9px}
+.visual-first-page figure.step-visual svg{max-height:240px}
+.visual-first-page figure.conclusion-visual{border-color:#a9d2c7;background:#f0f8f4}
+.visual-first-page #solution ol{padding-left:1.35rem}
+.visual-first-page #solution ol>li{padding:0 0 12px 4px;margin:1rem 0;border-bottom:1px solid #edf1ed}
+.visual-first-page .step-note{margin:.55rem 0 .35rem;padding:9px 12px;background:#f6f8f4;border-left:3px solid #79aaa0;border-radius:0 8px 8px 0;font-size:.91rem;line-height:1.65}
+.visual-first-page .math-inline{display:inline-block;vertical-align:-.13em;margin:0 .08em;font-family:"Cambria Math","STIX Two Math","Latin Modern Math",serif;font-size:1.06em;white-space:nowrap;color:#163f49}
+.visual-first-page .math-equation{margin:12px 0;padding:13px 16px}
+.visual-first-page .answer{margin-top:1rem}
+.visual-first-page .answer strong{color:#176f70}
+@media(max-width:620px){
+ .visual-first-page .fact-strip{grid-template-columns:1fr 1fr}
+ .visual-first-page .fact-chip{padding:10px}
+ .visual-first-page figure.visual-figure{padding:7px;border-radius:12px}
+ .visual-first-page figure.visual-figure svg{max-height:235px}
+ .visual-first-page figure.step-visual svg{max-height:205px}
+ .visual-first-page .step-note{font-size:.88rem}
+}
+@media(max-width:390px){
+ .visual-first-page .fact-strip{grid-template-columns:1fr}
+ .visual-first-page .fact-chip{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+ .visual-first-page .fact-chip small{margin:0;flex:none}
+}
+@media print{
+ .visual-first-page figure.visual-figure{break-inside:avoid;background:#fff;border-color:#bbb}
+ .visual-first-page .fact-chip{background:#fff}
+}
