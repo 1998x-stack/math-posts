@@ -1,43 +1,110 @@
 ---
 name: math-visual-posts
-description: 把数学 PDF 原题转为可溯源、可读、可交互的数学 Post。包含原卷核对、MathML、SVG 和 Three.js 空间场景的制作与校验。
+description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教、公式可验算且可视化准确的数学 Post。
 ---
 
 # Math Visual Posts
 
-本 Skill 基于 [xm-posts](https://github.com/1998x-stack/xm-posts) 的 olah-style-paper-posts 改造：**数学真实 > 原题忠实 > 教学可懂 > 视觉新奇**。服务高中生、大学生及数学自学者。每次反馈先修改本规范，再运行 sync_skills 镜像同步。
+本 Skill 从 xm-posts 的 olah-style-paper-posts 改造而来，面向初高中、高校学习者与自学者。优先级固定为：**数学真实 > 原题忠实 > 题意易懂 > 推导完整 > 图形准确 > 视觉新奇**。每次用户反馈先沉淀到 canonical Skill，再同步四个镜像。
 
-## 输入 / 产物
+## 输入与交付物
 
-输入是用户上传 PDF（含图形与解析）或独立数学题。输出为 `posts/<category>/<slug>/index.html`、`assets/*.svg`（独特题目封面）、`evidence.json`、必要时的 Three.js 场景，及 `content/posts.json` 中的分类、题型、主题、题源页码和发表状态。不要把用户上传 PDF 冒充有公开链接的论文。
+输入可以是用户上传的试卷 PDF（含题干、图形和解析）或独立数学题。每题输出：
+- `posts/<category>/<slug>/index.html`：可独立阅读的完整题解；
+- `assets/*.svg`：与题目数学对象一一对应的原创图解；
+- `evidence.json`：原卷题号、页码、题干转录状态、官方答案、独立验算与编辑说明；
+- `content/posts.json`：题型、知识分类、标签、题源页码、摘要和发布状态；
+- 仅在真正有帮助时添加 Three.js 场景。
 
-## Gate 0：浏览代码与试卷
+用户上传的 PDF 不能冒充公开论文或虚构公共下载链接。
 
-读取仓库 `AGENTS.md`、分类注册表、页面构建器、此 Skill 与现有题解；浏览 PDF 原始页渲染，识别选择、填空与解答每一道题及跨页解析。图片里的上标、根号、向量、区间、`<` 与 `≤` 不能仅凭文本提取器推断。详见 [PDF 提取](references/pdf-question-extraction.md)。
+## Gate 0：先读仓库，再读原卷
 
-## Gate 1：数学内容校对
+1. 阅读 `AGENTS.md`、分类注册表、`content/posts.json`、构建器、验证器、现有页面和本 Skill。
+2. 浏览 PDF 原始页渲染，而不只依赖 OCR/文本提取。逐题建立题号、题型、页码、题干、选项、小问、答案和图形清单。
+3. 对上标、根号、向量、区间端点、负号、`<` / `≤`、单位和图中点名逐项复核。跨页题解必须连读。
+4. 先列出所有待处理题目与证据缺口，再开始写 HTML；不得根据标题猜题意。
 
-完整记录题干、题目选项、所有小问、条件、单位、原解、正确结果和 PDF 页码。独立验算，不偷换题设；如果原解有疑似笔误，在证据中标注“原题原样 / 独立核验 / 编辑勘误”。不能核实的题一律留 `draft`，不写 `published`。把问题的可解性、定义域、取等条件、分类边界检查清楚。
+详见 [PDF 提取规范](references/pdf-question-extraction.md)。
 
-## Gate 2：循序渐进的题解
+## Gate 1：数学事实与来源校对
 
-固定阅读路径：**原题 → 关键观察 → 思路转换 → 每步推导 → 原创图解 / 交互实验 → 答案 → 易错点 → 相关阅读**。所有步骤都有解释；不能只贴答案、宽泛概念总结或没有数学关系的装饰。可扩展为专题长文，但题目页面仍保持独立可引用的 URL。
+每题建立一份“题目事实表”：
+- 原题文字、选项、全部小问、已知条件、定义域/值域、单位、参数范围；
+- 原卷给出的答案与原卷推导；
+- 独立推导、代数/数值验算、等号成立条件、边界与退化情况；
+- PDF 页码与图形位置。
 
-## Gate 3：数学排版与图解
+明确区分“原卷原样”“独立核验”“编辑补充/勘误”。发现原卷疑似笔误时，不静默替换；先保留原样，再解释差异。任何未核实的题保持 `draft`，不能标为 `published`。
 
-数学公式以语义正确的 **MathML Core** 为优先，提供屏幕阅读器名称和小屏可聚焦的横向公式区；遵循 [数学排版](references/math-typesetting.md)。关键图形以**可编辑的独立 SVG** 创作并作封面；坐标轴、交点、面积、梯度、向量必须与推导一致。参考 [SVG 制作](references/svg-production.md)。每篇 cover 特定于本题，禁止重复通用“observe / derive / verify”插画。
+## Gate 2：强制问题优先的页面叙事
 
-## Gate 4：Three.js 专项规则
+**每篇 HTML 必须在正式题干之前，先用通俗语言解释“这道题在问什么”。** 这不是可选摘要，也不能只重复标题。
 
-仅当**真正三维结构**能帮助理解时使用 Three.js：正方体动点、三棱锥、球、异面直线等。纯函数和组合题默认 SVG。Three.js 场景必须具有数学坐标、正确几何体、旋转/缩放/重置、可键盘控制的参数、实时数值与推导一致，以及禁网/无 WebGL SVG 回退。锁版本并标明运行依赖，不得称 CDN 模式完全离线。完整见 [Three.js](references/threejs-production.md)。
+固定页面顺序：
+1. 标题与一句话定位；
+2. **题意拆解（必需，位于原题之前）**：用自己的话说明研究对象、已知条件、要求什么、题目真正的难点；
+3. 解题路线：用一行概括“条件 → 数学模型 → 目标”；
+4. 原题原文（忠实转录）；
+5. 关键观察：指出真正可用的性质、结构或限制；
+6. 思路转换：解释为什么选择这个方法，而不是只报方法名称；
+7. 逐步推导；
+8. 与推导一致的 SVG / 必要时的交互；
+9. 答案、独立验算、等号条件、易错点与边界；
+10. 相关阅读或题源。
 
-## Gate 5：可验证的教育交互
+### 每一步推导的最低要求
 
-参数域合法，初始状态传达核心内容，极值、边界、共线、退化等状态要有正确处理；按钮、滑块、ARIA、触屏与键盘、reduced-motion、打印样式齐备。交互不是玩具，必须能验证题解中的一个论断。
+每个步骤都要同时回答：
+- **做什么**：当前这一步具体写出什么式子、建立什么坐标或分类；
+- **为什么**：它来自哪条题设、定义、定理或等价变形；
+- **怎么算**：中间代数步骤不能跳过关键等式；
+- **检查什么**：本步的符号、范围、单位、分母非零、端点或取等条件如何确认。
 
-## Gate 6：证据及质量闸门
+在每个步骤后加入一段针对本题的“为什么这样做”。禁止复制“不要直接套公式”“先把条件转成关系”等无信息量的通用句。对于解答题，逐小问展开，不能把多个关键论证压缩为一句“联立化简可得”。
 
-`evidence.json` 至少有 `source.title`、`source.question`、`source.pages`、`transcription.status`、`answer.official` 与独立校对说明。所有数学事实来自原卷或明确标注的原创推导。
+### 面向初高中学习者的表达
+
+先解释题目对象，再引入符号。新符号第一次出现时说明含义和范围。将复杂题拆成可检查的小问题；必要时用小数值、特殊点或极端情况建立直觉，再回到严格推导。语言要清楚，不为显得专业而堆术语。
+
+## Gate 3：公式与数学排版
+
+数学公式优先使用语义正确的 MathML Core。遵循 [数学排版规范](references/math-typesetting.md)：
+- 每个关键公式有可读的 `aria-label`，长公式放在可键盘聚焦的横向滚动区域；
+- 公式前后解释符号、来源、变形理由、适用条件与结论；
+- 逐项检查正负号、指数、下标、括号、分母、根号范围、绝对值、单位和不等号方向；
+- 对分段函数、参数方程、极值、数列、组合计数等，明确变量域、端点是否包含、离散/连续约束；
+- 用独立代入、边界值、等号条件或第二种方法复核答案。
+
+公式不能只“显示正确”：必须与题干、文字推导、SVG 标签和最终答案一致。禁止把复杂公式用 Unicode 伪排版，也禁止对整页 HTML 做盲目正则替换。
+
+## Gate 4：SVG 必须解释本题的数学对象
+
+绘制前先写图示断言：图中每条线、每个点、每个区域究竟表示什么，它对应哪一步推导。然后画图并写出能核验的图注。
+
+- 坐标轴、点位、长度、角度、面积、函数曲线、交点、数列项和参数范围要与公式一致；
+- 曲线图必须标出实际研究的量；例如题目研究前 n 项积，图中就必须画前 n 项积，不能误画单项通项；
+- 选择题要逐项判断时，图示应帮助区分对称性、边界、可行域或反例；
+- SVG 必须有 `xmlns`、`viewBox`、`title`、`desc`、可访问标签与非空图注；独立导出后仍可读；
+- 一张图若没有增加理解，就删除，而不是为了每篇都“有图”而装饰。
+
+详见 [SVG 制作规范](references/svg-production.md)。
+
+## Gate 5：Three.js 只为真正的三维理解服务
+
+默认二维 SVG。只有三维坐标、空间投影、异面直线、二面角、立体动点等内容确实需要空间旋转观察时才用 Three.js。
+
+**每个控件必须对应一个真实数学变量或可验证的场景操作。** 不得为了“有交互”而给静态题目加无关的 x/y 滑块；滑块改变的量、画面、实时读数和公式必须来自同一数据源。纯代数、函数、数列、组合、平面解析几何默认不用 Three.js。
+
+Three.js 场景必须有正确的数学坐标、命名点、几何面、相机旋转/缩放/重置、键盘与触屏支持、实时数值、静态 SVG 回退，并明确 CDN 需要联网。不能把 CDN 模式称为完全离线。完整标准见 [Three.js 规范](references/threejs-production.md)。
+
+## Gate 6：教育交互与可访问性
+
+参数域合法；默认状态就能解释核心结论；极值、边界、共线、退化和无解情况正确处理。所有按钮、滑块、图例、Canvas 和公式滚动区都要有可访问名称、键盘操作与焦点样式。检查触屏、reduced-motion、打印样式和窄屏溢出。交互不是玩具，必须验证题解中的某个数学论断。
+
+## Gate 7：证据、静态检查与浏览器检查
+
+`evidence.json` 至少包含 `source.title`、`source.question`、`source.pages`、`transcription.status`、`answer.official`、`answer.independent_check` 和必要的 `editorial_note`。
 
 运行：
 ```bash
@@ -47,17 +114,28 @@ python scripts/build_site.py
 python scripts/validate_site.py
 python -m pytest -q
 ```
-浏览器至少检查 1440 / 768 / 390 / 360 px、HTML/SVG/MathML、键盘行为、无横溢、Three.js 加载与无 WebGL 回退；无法执行的检查必须明确记录为“未验证”。
 
-## Gate 7：发布与反馈
+浏览器至少检查 1440 / 768 / 390 / 360 px：
+- 页面无横向溢出，题意拆解位于正式题干前；
+- 所有步骤均有本题专属理由说明；
+- SVG、MathML 的实际渲染、公式滚动和无障碍名称；
+- 图注与图形断言相符，图形数值与公式一致；
+- 键盘/触屏控件、打印样式、无 JS 错误；
+- Three.js 网络失败/WebGL 禁用时静态 SVG 和完整题解仍可用。
 
-制作 topic branch + PR，审查 diff，CI 通过后才合并；再检查 GitHub Pages 实际 workflow 与页面 URL。用户的下一轮反馈应沉淀为 canonical `skills/math-visual-posts/`；四个 `.claude/.pi/.agent/.opencode` 镜像仅由 `scripts/sync_skills.py` 更新。
+未实际执行的浏览器或设备检查必须标记“未验证”，不能把静态 DOM 检查说成渲染通过。
 
-## 参考路线
+## Gate 8：PR、部署与反馈闭环
 
-- [pdf-question-extraction.md](references/pdf-question-extraction.md)
-- [threejs-production.md](references/threejs-production.md)
-- [math-typesetting.md](references/math-typesetting.md)
-- [svg-production.md](references/svg-production.md)
-- [browser-qa.md](references/browser-qa.md)
-- [publishing.md](references/publishing.md)
+建立 topic branch，逐文件审查 diff；运行构建、静态校验、单元测试和浏览器检查。创建 PR，CI 通过后按仓库发布流程合并；确认 GitHub Pages workflow 成功，并抽查线上页面、SVG、公式和移动端。用户的下一轮反馈要先更新 canonical Skill，再同步 `.claude/.pi/.agent/.opencode` 四个镜像；不得手工让镜像漂移。
+
+## 参考规范
+
+- [PDF 提取](references/pdf-question-extraction.md)
+- [叙事架构](references/narrative-architecture.md)
+- [数学排版](references/math-typesetting.md)
+- [SVG 制作](references/svg-production.md)
+- [Three.js](references/threejs-production.md)
+- [浏览器 QA](references/browser-qa.md)
+- [评分卡](references/scorecard.md)
+- [发布流程](references/publishing.md)

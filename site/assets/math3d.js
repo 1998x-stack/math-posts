@@ -1,4 +1,4 @@
-/* Three.js math scenes for Q04 / Q05 / Q13 / Q17.
+/* Three.js math scenes for Q04 / Q13 / Q17.
  * Pinned MIT dependency: https://github.com/mrdoob/three.js/tree/r160
  * Network/WebGL failure must leave the independently authored SVG visible.
  */
@@ -83,14 +83,6 @@ function mount(T, root) {
     }
     sliders.forEach(s=>s.addEventListener('input',update));
     center=V(.5,.5,.5);radius=3.1;dynamic=update;
-  } else if(type==='sphere'){
-    const sphere=new T.Mesh(new T.SphereGeometry(1,48,24),blue);scene.add(sphere);
-    const wire=new T.LineSegments(new T.EdgesGeometry(new T.SphereGeometry(1,16,8)),edgeMaterial);scene.add(wire);
-    const q=ball(V(1,0,0),.07);
-    function update(){const phi=+sliders[0].value*Math.PI*2, theta=+sliders[1].value*Math.PI;
-      q.position.set(Math.sin(theta)*Math.cos(phi),Math.sin(theta)*Math.sin(phi),Math.cos(theta));
-      setOutput('球半径 r=3：体积 V=36π；表面积 S=36π。滑块改变观察的球面点。');render();}
-    sliders.forEach(s=>s.addEventListener('input',update));radius=3.4;dynamic=update;
   } else if(type==='skew'){
     const plane=new T.Mesh(new T.PlaneGeometry(2.6,2.6),blue);plane.position.set(.5,.4,-.015);scene.add(plane);
     line(V(0,-.9,0),V(0,1.6,0),edgeMaterial); // l

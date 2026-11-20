@@ -1,5 +1,5 @@
 """Cross-file coverage and selected independent math invariants."""
-import json,math
+import json,math,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
@@ -23,6 +23,25 @@ def test_original_svg_cover_and_source():
         assert ledger['source']['pages']==p['source_pages']
         assert p['cover']['caption'] not in captions
         captions.add(p['cover']['caption'])
+def test_problem_first_opening_and_stepwise_reasoning():
+    for p in manifest():
+        html=(ROOT/'posts'/p['category']/p['slug']/'index.html').read_text('utf-8')
+        assert html.index('id="overview"') < html.index('id="question"')
+        overview=re.search(r'<section id="overview">([\\s\\S]*?)</section>',html).group(1)
+        assert len(re.sub(r'<[^>]+>','',overview)) >= 100
+        assert '解题路线' in overview
+        solution=re.search(r'<section id="solution">([\\s\\S]*?)</section>',html).group(1)
+        assert len(re.findall(r'<li>',solution)) == len(re.findall(r'class="step-note"',solution))
+        assert '不要直接套公式' not in html
+
+def test_q06_visualizes_partial_products_not_sequence_terms():
+    html=(ROOT/'posts/fill-in/jianping-2021-q06'/'index.html').read_text('utf-8')
+    svg=(ROOT/'posts/fill-in/jianping-2021-q06'/'assets/cover.svg').read_text('utf-8')
+    for source in (html,svg):
+        assert 'Pₙ' in source and '并列最大' in source
+        assert 'n 等于 3 和 4' in source
+    assert 'data-three-scene="sphere"' not in (ROOT/'posts/fill-in/jianping-2021-q05'/'index.html').read_text('utf-8')
+
 def test_cube_dot_product_boundaries():
     def f(x,y):return (x-.5)**2+(y-.5)**2+.5
     assert f(.5,.5)==.5
@@ -46,7 +65,7 @@ def test_tent_iterate_above_max_has_zero_roots():
         assert f(f(x))<=2+1e-9
 
 def test_3d_progressive_enhancement_accessible():
-    for n,c in ((4,'fill-in'),(5,'fill-in'),(13,'multiple-choice'),(17,'worked-solutions')):
+    for n,c in ((4,'fill-in'),(13,'multiple-choice'),(17,'worked-solutions')):
         src=(ROOT/'posts'/c/f'jianping-2021-q{n:02d}'/'index.html').read_text('utf-8')
         assert '<canvas tabindex="0"' in src
         assert 'class="static-scene"' in src
