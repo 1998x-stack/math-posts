@@ -103,3 +103,22 @@ def test_knowledge_map_prerequisites_are_acyclic():
         visiting.remove(node)
         visited.add(node)
     for node in graph:visit(node)
+
+
+def test_visual_first_pilot_contract():
+    pilots=[]
+    for p in manifest():
+        html=(ROOT/'posts'/p['category']/p['slug']/'index.html').read_text('utf-8')
+        if 'data-visual-first="true"' not in html:
+            continue
+        pilots.append(p['slug'])
+        overview=re.search(r'<section id="overview">([\\s\\S]*?)</section>',html).group(1)
+        solution=re.search(r'<section id="solution">([\\s\\S]*?)</section>',html).group(1)
+        answer=re.search(r'<section id="answer">([\\s\\S]*?)</section>',html).group(1)
+        assert 'class="visual-figure problem-visual"' in overview
+        assert len(re.findall(r'class="visual-figure step-visual"',solution)) >= 2
+        assert 'class="visual-figure conclusion-visual"' in answer
+        assert len(re.findall(r'class="math-inline"',html)) >= 8
+        assert len(re.findall(r'<figure\\b',html)) >= 4
+        assert len(re.findall(r'<figure class="visual-figure[^"]*"[^>]*>[\\s\\S]*?<title>[\\s\\S]*?</title>[\\s\\S]*?<desc>[\\s\\S]*?</desc>[\\s\\S]*?<figcaption>',html)) >= 4
+    assert len(pilots)==6, f'Expected six visual-first pilots, found {pilots}'
