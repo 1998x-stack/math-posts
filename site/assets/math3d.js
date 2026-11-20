@@ -94,7 +94,7 @@ function mount(T, root) {
   } else if(type==='skew'){
     const plane=new T.Mesh(new T.PlaneGeometry(2.6,2.6),blue);plane.position.set(.5,.4,-.015);scene.add(plane);
     line(V(0,-.9,0),V(0,1.6,0),edgeMaterial); // l
-    line(V(-.6,-.15,.8),V(1.5,1.1,.8),auxMaterial); // m, skew to l
+    line(V(-.6,-.36,.8),V(1.5,.9,.8),auxMaterial); // m, skew to l
     const p=ball(V(.5,.5,0),.065);
     function update(){const x=+sliders[0].value,y=+sliders[1].value;
       p.position.set(x,y,0);const dl=x;
