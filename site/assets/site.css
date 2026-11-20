@@ -454,3 +454,43 @@
   .pagination .page-control{min-width:77px}
 }
 @media print{.pagination{display:none!important}}
+
+
+/* Subject-first high-school mathematics knowledge map. */
+.knowledge-page{padding-top:28px;padding-bottom:80px}
+.knowledge-page>h1{font-family:Georgia,"Noto Serif SC",serif;font-size:clamp(38px,6vw,64px);letter-spacing:-.045em;margin:18px 0 12px;color:#183e3c}
+.knowledge-summary{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin:26px 0;padding:16px 18px;border:1px solid #dce7df;background:#f7faf6;border-radius:12px;color:#315c59;font-size:13px}
+.knowledge-summary strong{font-size:14px}.knowledge-summary a{margin-left:auto;color:#176c68;font-weight:750}
+.knowledge-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:22px 0 54px}
+.knowledge-overview a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:13px 14px;border:1px solid #dce7df;border-radius:9px;background:#fffefa;color:#244d49;font-weight:750;font-size:13px}
+.knowledge-overview a:hover{border-color:#8bb7a8;background:#f1f7f1}
+.knowledge-overview small{color:#71857c;font-size:10px;white-space:nowrap}
+.knowledge-area{scroll-margin-top:24px;margin:0 0 58px}
+.knowledge-area-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;border-bottom:1px solid #d7e2da;padding-bottom:18px;margin-bottom:20px}
+.knowledge-area-kicker{font-size:10px;letter-spacing:.14em;color:#68827a;font-weight:800}
+.knowledge-area-heading h2{font:700 clamp(27px,4vw,38px) Georgia,"Noto Serif SC",serif;color:#1d4946;margin:7px 0}
+.knowledge-area-heading p{max-width:720px;margin:0;color:#63766e;line-height:1.8;font-size:14px}
+.knowledge-area-count{text-align:right;white-space:nowrap;color:#6e837a;font-size:11px;line-height:1.8}
+.knowledge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.knowledge-topic{min-width:0;border:1px solid #dce6de;border-radius:12px;background:#fffefa;padding:19px 20px;scroll-margin-top:24px}
+.knowledge-topic-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.knowledge-topic-id{font:700 10px ui-monospace,monospace;color:#8a9a90;letter-spacing:.04em}
+.knowledge-difficulty{display:flex;align-items:center;gap:4px}.knowledge-difficulty small{margin-left:5px;color:#6d8077;font-size:10px}
+.difficulty-dot{width:7px;height:7px;border:1px solid #b6c9bc;border-radius:50%}.difficulty-dot.is-filled{background:#3d8275;border-color:#3d8275}
+.knowledge-topic h3{font-size:18px;color:#244b47;margin:12px 0 10px;line-height:1.5}
+.knowledge-tags{display:flex;flex-wrap:wrap;gap:6px}.knowledge-tags span{padding:3px 8px;border-radius:20px;background:#eff5ef;color:#547269;font-size:10px}
+.knowledge-detail{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px;padding-top:14px;border-top:1px solid #edf0e9}
+.knowledge-detail strong,.knowledge-related>strong{font-size:11px;color:#48645b}
+.knowledge-detail ul{margin:7px 0 0;padding-left:16px;color:#687b72;font-size:12px;line-height:1.8}
+.knowledge-detail p{margin:7px 0 0;display:flex;flex-wrap:wrap;gap:5px}
+.knowledge-detail p a{font-size:11px;color:#176d67;text-decoration:underline;text-underline-offset:3px}
+.knowledge-root{font-size:11px;color:#849188}
+.knowledge-related{margin-top:14px;padding-top:12px;border-top:1px solid #edf0e9}
+.knowledge-related ul{list-style:none;margin:7px 0 0;padding:0;display:grid;gap:5px}
+.knowledge-related li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:12px}
+.knowledge-related li a{color:#176d67;line-height:1.55}.knowledge-related li small{flex:none;color:#8a968d;font-size:10px}
+.knowledge-empty{color:#8a968d;font-size:11px}
+.knowledge-note{margin-top:34px;padding:14px 16px;background:#f5f6ef;border-radius:8px;color:#718078;font-size:12px;line-height:1.8}
+@media(max-width:850px){.knowledge-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.knowledge-grid{grid-template-columns:1fr}.knowledge-area-heading{align-items:start;flex-direction:column}.knowledge-area-count{text-align:left}.knowledge-summary a{margin-left:0}.knowledge-overview{margin-bottom:38px}.knowledge-topic{padding:16px}}
+@media print{.knowledge-overview{display:none}.knowledge-topic{break-inside:avoid}}
