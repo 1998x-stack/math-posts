@@ -91,10 +91,10 @@
     tags.append(element('span', '', post.reading_minutes + ' 分钟'));
     tags.append(element('span', '', post.published));
     if (post.paper) {
-      const paper = link('原始论文 ↗', post.paper, 'paper-source');
+      const paper = link('题源说明 ↗', post.paper, 'paper-source');
       paper.target = '_blank';
       paper.rel = 'noopener noreferrer';
-      paper.setAttribute('aria-label', '原始论文：' + post.title);
+      paper.setAttribute('aria-label', '题源说明：' + post.title);
       tags.append(paper);
     }
     main.append(tags);
