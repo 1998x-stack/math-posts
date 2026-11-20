@@ -67,6 +67,10 @@ description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教�
 
 先解释题目对象，再引入符号。新符号第一次出现时说明含义和范围。将复杂题拆成可检查的小问题；必要时用小数值、特殊点或极端情况建立直觉，再回到严格推导。语言要清楚，不为显得专业而堆术语。
 
+## Gate 2.5：Visual-first 页面尺度
+
+执行 [Visual-first 标准](references/visual-first-standard.md)。文章不是长篇文字题解配一张装饰图：首屏必须先展示题目场景、条件和目标；每个概念性推导步骤就近放置 SVG；结论区域再次可视化标出答案。标记为 `data-visual-first="true"` 的页面必须达到至少 4 张有独立教学价值的 SVG、至少 8 个 MathML 表达式，并通过公式残留审计与窄屏浏览器检查。原题、题意和推导中的实质性公式都必须渲染，不能只把最后的“关键数学关系”写成 MathML。
+
 ## Gate 3：公式与数学排版
 
 数学公式优先使用语义正确的 MathML Core。遵循 [数学排版规范](references/math-typesetting.md)：
@@ -133,7 +137,7 @@ python -m pytest -q
 
 - [PDF 提取](references/pdf-question-extraction.md)
 - [叙事架构](references/narrative-architecture.md)
-- [数学排版](references/math-typesetting.md)
+- [数学排版](references/math-typesetting.md)\n- [Visual-first 页面尺度](references/visual-first-standard.md)
 - [SVG 制作](references/svg-production.md)
 - [Three.js](references/threejs-production.md)
 - [浏览器 QA](references/browser-qa.md)
