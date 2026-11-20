@@ -130,12 +130,12 @@ def validate(path: Path) -> dict:
             tag.decompose()
         visible_text = visible.get_text(' ', strip=True)
         raw_formula_patterns = (
-            re.compile(r'(?<![\\w])(?:[A-Za-z][A-Za-z0-9₀-₉]*)(?:\\([^()\\n]{1,24}\\))?\\s*(?:=|≤|≥|<|>)\\s*[-−]?\\s*(?:\\d+(?:\\.\\d+)?|[A-Za-z(])'),
-            re.compile(r'(?<![\\w])[A-Z]\\s*\\([^()\\n]*,[^()\\n]*\\)'),
-            re.compile(r'(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*[²³⁴]'),
-            re.compile(r'(?<![\\w])\\d+\\s*/\\s*\\d+(?![\\w])'),
-            re.compile(r'(?<![\\w])[A-Z]{1,3}\\s*(?:∥|⊥)\\s*(?:[A-Z]{1,3}|平面)'),
-            re.compile(r'(?<![\\w])[A-Za-z][A-Za-z0-9₀-₉]*\\s*(?:·|×)\\s*[A-Za-z]')
+            re.compile(r'(?<![\w])(?:[A-Za-z][A-Za-z0-9₀-₉]*)(?:\([^()\n]{1,24}\))?\s*(?:=|≤|≥|<|>)\s*[-−]?\s*(?:\d+(?:\.\d+)?|[A-Za-z(])'),
+            re.compile(r'(?<![\w])[A-Z]\s*\([^()\n]*,[^()\n]*\)'),
+            re.compile(r'(?<![\w])[A-Za-z][A-Za-z0-9₀-₉]*[²³⁴]'),
+            re.compile(r'(?<![\w])\d+\s*/\s*\d+(?![\w])'),
+            re.compile(r'(?<![\w])[A-Z]{1,3}\s*(?:∥|⊥)\s*(?:[A-Z]{1,3}|平面)'),
+            re.compile(r'(?<![\w])[A-Za-z][A-Za-z0-9₀-₉]*\s*(?:·|×)\s*[A-Za-z]')
         )
         for pattern in raw_formula_patterns:
             match = pattern.search(visible_text)
