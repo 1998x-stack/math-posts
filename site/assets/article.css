@@ -13,16 +13,16 @@
 .visual-first-page .fact-chip small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.06em;font-weight:750;margin-bottom:4px}
 .visual-first-page .fact-chip strong{display:block;color:#1c5758;font-size:.97rem;line-height:1.55}
 .visual-first-page figure.visual-figure{margin:14px 0 20px;padding:12px;background:#f5faf7;border:1px solid #dbe9e3;border-radius:16px}
-.visual-first-page figure.visual-figure svg{max-height:300px}
+.visual-first-page figure.visual-figure svg{max-height:none}
 .visual-first-page figure.visual-figure figcaption{margin:8px 5px 2px;font-size:.8rem;line-height:1.5}
 .visual-first-page figure.problem-visual{margin-top:16px}
 .visual-first-page figure.step-visual{max-width:680px;margin:12px 0 16px;padding:9px}
-.visual-first-page figure.step-visual svg{max-height:240px}
+.visual-first-page figure.step-visual svg{max-height:none}
 .visual-first-page figure.conclusion-visual{border-color:#a9d2c7;background:#f0f8f4}
 .visual-first-page #solution ol{padding-left:1.35rem}
 .visual-first-page #solution ol>li{padding:0 0 12px 4px;margin:1rem 0;border-bottom:1px solid #edf1ed}
 .visual-first-page .step-note{margin:.55rem 0 .35rem;padding:9px 12px;background:#f6f8f4;border-left:3px solid #79aaa0;border-radius:0 8px 8px 0;font-size:.91rem;line-height:1.65}
-.visual-first-page .math-inline{display:inline-block;vertical-align:-.13em;margin:0 .08em;font-family:"Cambria Math","STIX Two Math","Latin Modern Math",serif;font-size:1.06em;white-space:nowrap;color:#163f49}
+.visual-first-page .math-inline{display:inline-block;vertical-align:-.13em;margin:0 .08em;font-family:"Cambria Math","STIX Two Math","Latin Modern Math",serif;font-size:1.06em;max-width:100%;white-space:normal;overflow-x:auto;color:#163f49}
 .visual-first-page .math-equation{margin:12px 0;padding:13px 16px}
 .visual-first-page .answer{margin-top:1rem}
 .visual-first-page .answer strong{color:#176f70}
@@ -30,8 +30,8 @@
  .visual-first-page .fact-strip{grid-template-columns:1fr 1fr}
  .visual-first-page .fact-chip{padding:10px}
  .visual-first-page figure.visual-figure{padding:7px;border-radius:12px}
- .visual-first-page figure.visual-figure svg{max-height:235px}
- .visual-first-page figure.step-visual svg{max-height:205px}
+ .visual-first-page figure.visual-figure svg{max-height:none}
+ .visual-first-page figure.step-visual svg{max-height:none}
  .visual-first-page .step-note{font-size:.88rem}
 }
 @media(max-width:390px){
