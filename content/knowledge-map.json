@@ -29,7 +29,8 @@
           ],
           "posts": [
             "jianping-2021-q01",
-            "week12-gaosan-q08"
+            "week12-gaosan-q08",
+            "chongming-2023-q04"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
@@ -302,7 +303,8 @@
           ],
           "posts": [
             "jianping-2021-q06",
-            "week12-gaosan-q05"
+            "week12-gaosan-q05",
+            "chongming-2023-q05"
           ],
           "outcomes": [
             "从相邻项比值识别公比",
@@ -487,7 +489,8 @@
             "复平面"
           ],
           "posts": [
-            "week12-gaosan-q02"
+            "week12-gaosan-q02",
+            "chongming-2023-q03"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -696,7 +699,8 @@
             "week12-gaosan-q01",
             "week12-gaosan-q03",
             "derivative-classics-q02",
-            "derivative-classics-q03"
+            "derivative-classics-q03",
+            "chongming-2023-q02"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -717,7 +721,8 @@
             "数轴"
           ],
           "posts": [
-            "week12-gaosan-q03"
+            "week12-gaosan-q03",
+            "chongming-2023-q01"
           ],
           "outcomes": [
             "将条件集合转化成区间",
