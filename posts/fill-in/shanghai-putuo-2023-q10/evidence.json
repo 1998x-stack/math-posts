@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 10,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "page 1 question",
+      "page 6 reference answer",
+      "signs and superscripts",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "2",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "样本和 620，第三项 124，平方离差和 9+1+0+1+9=20，因此 √(20/5)=2。",
+    "independent_result": "2"
+  },
+  "math_equations": [
+    "a+b=620−373=247",
+    "a=124 或 b=124",
+    "121<123<124<125<127",
+    "s=√(20/5)=2"
+  ],
+  "svg_assertion": "121、123、124、125、127 相对均值124的离差为负三负一零正一正三。",
+  "editorial_note": "原卷仅有参考答案，没有官方详细解析；本站 SVG 与逐步教学解法为独立编写。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}
