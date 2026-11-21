@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="vector-title vector-desc">
+<title id="vector-title">向量 AB 的长度与勾股关系</title>
+<desc id="vector-desc">点 A 为 (1,2)，点 B 为 (4,6)。从 A 水平移动 3 单位，再向上移动 4 单位到 B，向量 AB 的模等于 5。</desc>
+<rect width="480" height="360" rx="12" fill="#f8fbf8"/>
+<path d="M90 28 V310 H444" stroke="#708a82" stroke-width="2" fill="none"/>
+<path d="M90 28 l-5 10 h10z M444 310 l-10 -5 v10z" fill="#708a82"/>
+<g font-size="12" fill="#5a7269" font-family="system-ui"><text x="448" y="325">x</text><text x="75" y="24">y</text><text x="72" y="327">O</text></g>
+<g fill="none" stroke="#d2dfd8" stroke-width="1">
+<path d="M130 310 V30 M170 310 V30 M210 310 V30 M250 310 V30 M90 270 H440 M90 230 H440 M90 190 H440 M90 150 H440 M90 110 H440 M90 70 H440"/>
+</g>
+<path d="M130 230 H250 V70" fill="none" stroke="#c47753" stroke-dasharray="7 5" stroke-width="3"/>
+<path d="M130 230 L250 70" stroke="#226b61" stroke-width="4" stroke-linecap="round"/>
+<path d="M243 75 l-14 4 9 7" fill="none" stroke="#226b61" stroke-width="3"/>
+<path d="M237 230 v-13 h13" fill="none" stroke="#c47753" stroke-width="2"/>
+<circle cx="130" cy="230" r="5" fill="#226b61"/><circle cx="250" cy="70" r="5" fill="#226b61"/>
+<g font-family="system-ui" font-size="15" fill="#244d48">
+<text x="100" y="216">A (1,2)</text><text x="260" y="68">B (4,6)</text>
+<text x="184" y="249">Δx=3</text><text x="264" y="156">Δy=4</text>
+<text x="160" y="130" font-weight="700">|AB|=5</text>
+</g>
+</svg>
