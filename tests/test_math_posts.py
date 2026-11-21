@@ -222,3 +222,14 @@ def test_every_math_post_has_real_mathml_coverage():
         slash = chr(92)
         for token in (slash + 'frac', slash + 'sqrt', slash + '(', '$$'):
             assert token not in visible_text, (p['slug'], token)
+
+
+def test_q08_area_math_matches_answer():
+    from bs4 import BeautifulSoup
+
+    html = (ROOT / 'posts/fill-in/jianping-2021-q08/index.html').read_text('utf-8')
+    soup = BeautifulSoup(html, 'html.parser')
+    formulas = [m for m in soup.find_all('math') if '面积 S 等于二十六除以三' in (m.get('aria-label') or '')]
+    assert len(formulas) == 1
+    assert '26' in formulas[0].get_text()
+    assert '26/3' in soup.select_one('#answer').get_text()

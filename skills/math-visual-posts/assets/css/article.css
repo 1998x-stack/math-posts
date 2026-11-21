@@ -44,3 +44,9 @@ figure{margin:2.1rem 0;padding:1.2rem;border:1px solid var(--border);border-radi
 .math-scroll math[display=block]{width:max-content;min-width:100%}
 @media(max-width:640px){.formula-bank{padding:1rem}.formula-bank-grid{grid-template-columns:1fr}}
 @media print{.formula-bank{background:#fff;break-inside:avoid}.formula-bank-grid{grid-template-columns:1fr 1fr}.math-scroll{overflow:visible}.math-scroll math[display=block]{font-size:1rem}}
+
+/* Semantic inline math added during reviewed prose cleanup.
+   Inline-block and horizontal scrolling preserve long equations on 360px screens. */
+math.math-inline{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:-.2em;white-space:nowrap;scrollbar-width:thin}
+math.math-inline mfrac{line-height:1.2}
+@media print{math.math-inline{font-size:.92em;overflow:visible;max-width:none}}
