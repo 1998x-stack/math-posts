@@ -287,21 +287,21 @@
   },
   {
     "slug": "jianping-2021-q11",
-    "title": "三角函数 max 的尖点：极大与极小之间最短距离",
-    "subtitle": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值",
+    "title": "三角函数的上包络：极值点为何相距 3/4",
+    "subtitle": "用 max 恒等式拆开绝对值，再用单位圆锁定全局最小值",
     "category": "fill-in",
     "topic": "functions",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "functions",
       "fill-in",
       "2021建平",
       "填空"
     ],
-    "summary": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值。利用 a+b+|a−b|=2max(a,b) 转成两条三角曲线的上包络。",
+    "summary": "把绝对值三角函数化为两条波形的上包络，严格求出全局最大点、最小点及最近横向距离。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 11,
     "question_type": "fill-in",
@@ -311,26 +311,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "两条三角曲线的上包络：谷底在交点、峰顶在单支峰值"
+      "caption": "上包络峰顶与交点谷底的最近横向距离为 3/4"
     }
   },
   {
     "slug": "jianping-2021-q12",
-    "title": "绝对值正弦的两个交点：从区间长度到数列通项",
-    "subtitle": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加",
+    "title": "绝对值正弦的交点条件：从一个波峰推出数列通项",
+    "subtitle": "“任意水平线恰有两个交点”把区间长度锁定为 nπ",
     "category": "fill-in",
     "topic": "sequences",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "sequences",
       "fill-in",
       "2021建平",
       "填空"
     ],
-    "summary": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加。|sin u| 从 0 上升至 1 再下降至 0，长度为 π 的完整波峰区间才能对任意 0≤m<1 有两个交点（m=0 为端点）。",
+    "summary": "把绝对值正弦缩放回标准波形，严格证明相邻数列项之差为 nπ，再累加得到通项。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 12,
     "question_type": "fill-in",
@@ -340,26 +340,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "每一段 |sin| 恰走过一个波峰，区间长度随 n 按 nπ 增加"
+      "caption": "标准绝对值正弦的一个完整波峰恰好与水平线相交两次"
     }
   },
   {
     "slug": "jianping-2021-q13",
-    "title": "空间异面直线等距轨迹：为什么是双曲线",
-    "subtitle": "平面内直线距离与空间斜线距离相等形成双曲线两支",
+    "title": "空间异面直线的等距轨迹：投影后为什么得到双曲线",
+    "subtitle": "把空间距离拆成平面投影距离与固定高度，再识别二次曲线",
     "category": "multiple-choice",
     "topic": "solid-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "solid-geometry",
       "multiple-choice",
       "2021建平",
       "选择"
     ],
-    "summary": "平面内直线距离与空间斜线距离相等形成双曲线两支。把空间直线 m 正交投影到 α，得到 m′，其与 l 相交于 O（因 m 与 l 异面，投影方向不与 l 平行）。",
+    "summary": "将空间直线投影到平面，建立距离平方关系，化成判别式为负的二次曲线并选出双曲线。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 13,
     "question_type": "multiple-choice",
@@ -369,26 +369,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "平面内直线距离与空间斜线距离相等形成双曲线两支"
+      "caption": "空间直线的固定高度与平面投影共同决定双曲线轨迹"
     }
   },
   {
     "slug": "jianping-2021-q14",
-    "title": "函数生成点：因式分解中的正整数约束",
-    "subtitle": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点",
+    "title": "函数生成点的整数计数：63 的因数对怎样筛选",
+    "subtitle": "先把求和式变成乘积，再用正整数约束过滤因数对",
     "category": "multiple-choice",
     "topic": "sequences",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
     "tags": [
       "sequences",
       "multiple-choice",
       "2021建平",
       "选择"
     ],
-    "summary": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点。将 n+1 个线性项求和，得到 (n+1)(2x₀+n+1)=63。",
+    "summary": "把线性函数连续求和化为两个正整数因子的乘积，枚举63的因数对并筛选生成点。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 14,
     "question_type": "multiple-choice",
@@ -397,26 +397,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "63 的因数配对再经过正整数约束筛选，恰得到两个生成点"
+      "caption": "63 的因数对经过正整数条件筛选后只剩两组"
     }
   },
   {
     "slug": "jianping-2021-q15",
-    "title": "椭圆焦点与直角三角形：线段 PM 的最小长度",
-    "subtitle": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界",
+    "title": "椭圆焦点与直角三角形：最短 PM 为什么是 √3",
+    "subtitle": "先用直角三角形转化目标，再证明椭圆点到焦点至少相距 a−c",
     "category": "multiple-choice",
     "topic": "analytic-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "analytic-geometry",
       "multiple-choice",
       "2021建平",
       "选择"
     ],
-    "summary": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界。椭圆 a=5、b=4，焦距 c=√(a²−b²)=3，故右焦点 F=(3,0)。",
+    "summary": "利用椭圆定义证明点到焦点的最短距离为a−c，再由勾股定理得到PM的最小值。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 15,
     "question_type": "multiple-choice",
@@ -425,26 +425,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "椭圆最右端离焦点最近，直角三角形把焦距转为 PM 的下界"
+      "caption": "椭圆右顶点离右焦点最近，直角三角形边长为 2、1、√3"
     }
   },
   {
     "slug": "jianping-2021-q16",
-    "title": "倒数平方曲线：对称性、开放性与四个交点",
-    "subtitle": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点",
+    "title": "倒数平方曲线：四支分支、对称性与四个交点",
+    "subtitle": "先看定义域与无界性，再用不等式和象限对称逐项判断",
     "category": "multiple-choice",
     "topic": "analytic-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "analytic-geometry",
       "multiple-choice",
       "2021建平",
       "选择"
     ],
-    "summary": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点。将 (x,y) 同时换成 (−x,−y)，或将 (x,y) 变成 (−y,−x)，方程不变，①②正确。",
+    "summary": "分析倒数平方曲线的对称性、开闭性、圆交点与菱形交点，逐项核对四个正确命题。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 16,
     "question_type": "multiple-choice",
@@ -454,18 +454,18 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "四支开放曲线避开原点附近圆盘，并在四象限形成对称交点"
+      "caption": "四支开放分支避开半径 √2 圆，并与菱形相交于四个对称点"
     }
   },
   {
     "slug": "jianping-2021-q17",
-    "title": "三棱锥中的平行证明与二面角：从图形到法向量",
-    "subtitle": "空间坐标把三棱锥的底面投影与二面角法向量直接对应",
+    "title": "三棱锥中的平行证明与二面角：从截面到法向量",
+    "subtitle": "第一问抓住底面角度关系，第二问用坐标和法向量保留钝角符号",
     "category": "worked-solutions",
     "topic": "solid-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
+    "updated": "2026-11-21",
     "reading_minutes": 14,
     "tags": [
       "solid-geometry",
@@ -473,7 +473,7 @@
       "2021建平",
       "解答"
     ],
-    "summary": "空间坐标把三棱锥的底面投影与二面角法向量直接对应。由 AD⊥DB，AB=2，DB=1，得 AD=√3、∠DBA=60°；底面 ABC 为等边三角形，且图示中 A、C、B、D 构成平面四边形，可证 DB∥AC。",
+    "summary": "通过直角三角形证明DB平行AC，再建立空间直角坐标系计算二面角的有向余弦。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 17,
     "question_type": "worked-solutions",
@@ -484,26 +484,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "空间坐标把三棱锥的底面投影与二面角法向量直接对应"
+      "caption": "底面中 DB 平行 AC，空间法向量给出二面角的钝角余弦"
     }
   },
   {
     "slug": "jianping-2021-q18",
-    "title": "山坡观塔最大视角：把几何变成一元最优化",
-    "subtitle": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大",
+    "title": "山坡观塔的最大视角：用 AM-GM 找到观察点",
+    "subtitle": "先把视角正切写成有理式，再把几何最优化变成两项和的最小值",
     "category": "worked-solutions",
     "topic": "applied-math",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 14,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "applied-math",
       "worked-solutions",
       "2021建平",
       "解答"
     ],
-    "summary": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大。设 O=(0,0)，A=(0,220)，B=(0,300)，C=(200,0)，斜坡斜率为 1/2。",
+    "summary": "建立坐标并计算两条视线的正切表达式，利用均值不等式确定最大视角的位置。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 18,
     "question_type": "worked-solutions",
@@ -514,26 +514,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "两条山顶视线之间的夹角随坡上位置改变，在 P=(320,60) 最大"
+      "caption": "观察点沿斜坡移动，在 P=(320,60) 时视角达到最大"
     }
   },
   {
     "slug": "jianping-2021-q19",
-    "title": "分段成本函数：年度利润最大化为什么出现在 100 千件",
-    "subtitle": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件",
+    "title": "分段成本与利润最大化：为什么最优产量是 100 千件",
+    "subtitle": "两个成本区间必须分别求最大利润，再比较全局候选",
     "category": "worked-solutions",
     "topic": "applied-math",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 14,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "applied-math",
       "worked-solutions",
       "2021建平",
       "解答"
     ],
-    "summary": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件。总收入为 50x 万元，固定成本 250 万元，利润 L=50x−250−C(x)。",
+    "summary": "将分段成本转成分段利润函数，分别用配方与AM-GM求极值并比较两个区间。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 19,
     "question_type": "worked-solutions",
@@ -543,26 +543,26 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "利润函数在产量 80 千件处分段，右侧最优点是 100 千件"
+      "caption": "两段利润分别达到 950 与 1000 万元，全局最优为 100 千件"
     }
   },
   {
     "slug": "jianping-2021-q20",
-    "title": "椭圆弦中点轨迹与固定交点：从点差法到不变量",
-    "subtitle": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定",
+    "title": "椭圆弦中点轨迹与固定交点：点差法和参数范围核验",
+    "subtitle": "韦达定理给出中点轨迹；当前转录的参数范围存在待复核冲突",
     "category": "worked-solutions",
     "topic": "analytic-geometry",
-    "status": "published",
+    "status": "draft",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 14,
+    "updated": "2026-11-21",
+    "reading_minutes": 15,
     "tags": [
       "analytic-geometry",
       "worked-solutions",
       "2021建平",
       "解答"
     ],
-    "summary": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定。短轴长 4 得 b=2，焦距 2 得 c=1；由 a²=b²+c² 得 a²=5。",
+    "summary": "草稿：按现有题干转录推导椭圆弦中点轨迹，并记录与现存答案的参数范围冲突，待原卷复核。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 20,
     "question_type": "worked-solutions",
@@ -574,7 +574,7 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "所有经过 P 的弦中点画出一条椭圆弧，AC 与 BD 的交点横坐标固定"
+      "caption": "椭圆外点引弦，韦达定理确定中点轨迹并核验参数范围"
     }
   },
   {

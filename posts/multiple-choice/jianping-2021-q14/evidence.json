@@ -18,10 +18,10 @@
   },
   "answer": {
     "official": "B．2 个",
-    "independent_check": "因此生成点有 2 个，选择 B。"
+    "independent_check": "(x₀,n)=(9,2) 与 (1,6)，分别代回求和均为63；总计2个生成点。"
   },
   "math_equations": [
     "(n+1)(2x_0+n+1)=63"
   ],
-  "editorial_note": ""
+  "editorial_note": "令 p=n+1、q=2x₀+n+1，满足 pq=63、p≥2、q−p=2x₀ 为正偶数；合法因数对只有(3,21)、(7,9)。"
 }

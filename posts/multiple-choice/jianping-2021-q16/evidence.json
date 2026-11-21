@@ -19,12 +19,12 @@
   },
   "answer": {
     "official": "D．4 个",
-    "independent_check": "在第一象限用 x+y=2√2 可得唯一交点 (√2,√2)；对称生成其余三点，⑤正确，共 4 个。"
+    "independent_check": "①②④⑤正确，共4个；与圆 x²+y²=2 无交点，与菱形相交于四个(±√2,±√2)点。"
   },
   "math_equations": [
     "frac(1,x^2)+frac(1,y^2)=1",
     "x^2+y^2≥4",
     "(±sqrt(2),±sqrt(2))"
   ],
-  "editorial_note": ""
+  "editorial_note": "先由 y²=x²/(x²−1) 得 |x|>1，确认四支开放分支；再由 (x²+y²)(1/x²+1/y²)≥4 得 x²+y²≥4；菱形第一象限边上唯一交点为(√2,√2)。"
 }

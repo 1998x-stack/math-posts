@@ -11,22 +11,22 @@
     "material": "user-uploaded PDF (not a public URL)"
   },
   "transcription": {
-    "status": "checked-against-rendered-pages",
+    "status": "needs-source-recheck",
     "checked_elements": [
       "question",
-      "answer",
-      "derivation",
-      "options-or-subquestions"
+      "ellipse parameters",
+      "midpoint parameter range",
+      "intersection degeneracies"
     ]
   },
   "answer": {
     "official": "（1）y²/5+x²/4=1；（2）5x²−20x+4y²=0，0≤x≤1；（3）x_Q=1",
-    "independent_check": "设 AC、BD 的参数方程求交，借椭圆条件和 C、D、P 共线式消元，得到交点横坐标恒为 1。"
+    "independent_check": "按当前转录独立计算：真割线时 0≤u<4/5，含切线闭包时 0≤u≤4/5；与现存答案 0≤u≤1 不一致。第三问在非退化割线条件下推得 x_Q=1。"
   },
   "math_equations": [
     "frac(y^2,5)+frac(x^2,4)=1",
     "5x^2−20x+4y^2=0",
     "x_Q=1"
   ],
-  "editorial_note": ""
+  "editorial_note": "现有题干转录写 P=(4,0)，由此得到 Δ=400−1280k²，k²≤5/16，弦中点横坐标 u=16k²/(5+4k²) 的上界是4/5；但仓库现有答案记录 0≤u≤1。原卷 PDF 当前无法读取，故保留冲突并将文章设为 draft，待重新核对题干点 P、焦距定义及官方范围。"
 }
