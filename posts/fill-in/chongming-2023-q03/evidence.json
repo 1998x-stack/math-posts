@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 3,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and endpoints",
+      "official answer",
+      "all subscripts"
+    ]
+  },
+  "answer": {
+    "official": "6",
+    "independent_check": "(2+6i)(3+i)=6+2i+18i−6=20i；虚部 20 非零，和原卷答案 6 一致。"
+  },
+  "math_equations": [
+    "(2+ai)(3+i)=(6−a)+(2+3a)i",
+    "6−a=0",
+    "2+3a=20≠0",
+    "a=6"
+  ],
+  "figure_assertions": [
+    "乘积的坐标是六减 a 和二加三 a；a 等于六时位于虚轴二十 i 处，横坐标为零但不是原点。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "答案取自原 PDF 第 7 页；推导、图示、核验是独立编辑新增。未声称 PDF 有公开 URL。"
+}
