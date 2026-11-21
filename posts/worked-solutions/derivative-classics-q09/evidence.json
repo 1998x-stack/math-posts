@@ -1,0 +1,34 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 9,
+    "pages": [
+      11,
+      12,
+      13
+    ],
+    "school": "安徽合肥市第一中学 · 2025届高三阶段性诊断",
+    "material": "project PDF, not a public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "reference_answer",
+      "all_subquestions",
+      "page_breaks",
+      "endpoints_and_root_summation"
+    ]
+  },
+  "answer": {
+    "official": "PDF 参考答案：（1）a=2；（2）唯一零点；（3）按参考解析证明正弦和的严格上下界。",
+    "independent_check": "数值求根 x≈3.075638 落在(1+π/2,1+π)内；sin1≈0.84147>1/2，补上来源证明中k=1的边界核验。"
+  },
+  "editorial_note": "原PDF第9题第三问参考证明在将 k=1 代入局部单调区间时存在范围缺口；本站独立提供全k严格的正弦下界证明并逐项核对原卷，不擅自更改题干或参考结论。",
+  "math_equations": [
+    "参数由极值导数确定",
+    "函数的唯一负向穿越位置",
+    "逐项正弦下界",
+    "部分和最终双边严格不等式"
+  ]
+}
