@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 9,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "operator-missing-in-rendered-source; reconstructed-from-answer; requires-confirmation",
+    "checked_elements": [
+      "original question",
+      "formula",
+      "reference answer"
+    ],
+    "uncertainty": "原卷第1页集合A中的分式与数字1之间比较符号在渲染页缺失，依据答案(4,5]推断“≥”；原文未直接确认"
+  },
+  "answer": {
+    "official": "(4,5]",
+    "official_source": "PDF page 7 reference answer",
+    "independent_result": "(4,5]",
+    "independent_check": "a=5时 B=[3,4)⊆(2,4]；a=4时 B=[2,3)含2而A不含2；a>5时 B可能含大于4的元素。第7页参考答案为(4,5]。"
+  },
+  "math_equations": [
+    "A=(2,4]",
+    "x\\in(2,4],\\quad\\log_{\\frac12}4=-2",
+    "B=[a-2,a-1)",
+    "a-2>2,\\quad a-1\\le4",
+    "4<a\\le5"
+  ],
+  "editorial_note": "原卷第1页集合A中的分式与数字1之间比较符号在渲染页缺失，依据答案(4,5]推断“≥”；原文未直接确认",
+  "qa": {
+    "source_checked": false,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

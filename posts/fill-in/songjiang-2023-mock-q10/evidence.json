@@ -1,0 +1,43 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 10,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question",
+      "formula",
+      "reference answer"
+    ],
+    "uncertainty": null
+  },
+  "answer": {
+    "official": "y=±2√2 x",
+    "official_source": "PDF page 7 reference answer",
+    "independent_result": "y=±2√2 x",
+    "independent_check": "用一条示例双曲线a=1、b=√8、c=3，取右支M=(1.3,√(8×0.69))，按对称构造得Q=(4.1724,−1.6203)、N=(0.5862,−0.8102)，计算ON=1=a、F₂Q=2=2a；原卷第7页答案正是y=±2√2x。"
+  },
+  "math_equations": [
+    "MF_1=MQ,\\quad F_1N=NQ",
+    "|F_2Q|=2a",
+    "|ON|=\\frac{|F_2Q|}{2}=a",
+    "a=\\frac{2c}{6}=\\frac c3,\\quad\\frac ca=3",
+    "\\frac ba=\\sqrt8=2\\sqrt2",
+    "y=\\pm2\\sqrt2x"
+  ],
+  "editorial_note": "依据原卷第1页题干和第7页答案独立复核；推导非原卷官方步骤。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

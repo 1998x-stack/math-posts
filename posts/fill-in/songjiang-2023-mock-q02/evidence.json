@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 2,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF; source filename 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question text",
+      "math operators",
+      "parameters",
+      "page 7 reference answer"
+    ]
+  },
+  "answer": {
+    "official": "π",
+    "official_source": "source PDF page 7, fill-in answer key",
+    "independent_result": "π",
+    "independent_check": "f(π/4)=1/2，f(5π/4)=1/2，隔 π 完全重复；而 f(3π/4)=−1/2，隔 π/2 不重复。"
+  },
+  "math_equations": [
+    "y=\\frac12\\sin(2x)",
+    "2T=2\\pi,\\quad T=\\pi",
+    "f(x+\\pi)=f(x),\\quad f(x+\\frac{\\pi}{2})=-f(x)"
+  ],
+  "editorial_note": "原题对照PDF第1页渲染图；参考答案取PDF第7页。后续逐步解法为独立推导。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

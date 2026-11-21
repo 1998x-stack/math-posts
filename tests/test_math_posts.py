@@ -258,3 +258,48 @@ def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
     assert first*(1+ratio)==-1
     assert first*(1-ratio**2)==-3
     assert first*ratio**3==-8
+
+def test_songjiang_2023_first_ten_sequential_with_glyph_caveats():
+    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock"]
+    assert [p["question_number"] for p in seq]==list(range(1,11))
+    assert len(seq)==10
+    assert [p["status"] for p in seq]==["published"]*7+["draft","draft","published"]
+    for q,p in enumerate(seq,1):
+        assert p["category"]=="fill-in" and p["source_pages"]==[1]
+        assert p["reference_answer_pages"]==[7]
+        article=ROOT/"posts"/p["category"]/p["slug"]
+        html=(article/"index.html").read_text("utf-8")
+        svg=(article/"assets/cover.svg").read_text("utf-8")
+        ledger=json.loads((article/"evidence.json").read_text("utf-8"))
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '先理解题目在问什么' in html and 'data-math-scroll' in html
+        assert '<math display="block"' in html
+        assert '<svg' in html and '<title>' in svg and '<desc>' in svg
+        assert ledger["source"]["question"]==q and ledger["source"]["answers_pages"]==[7]
+        assert ledger["answer"]["official"]
+        if q in (8,9):
+            assert "operator-missing" in ledger["transcription"]["status"]
+            assert "≥" in ledger["editorial_note"]
+            assert not ledger["qa"]["source_checked"]
+        else:
+            assert ledger["qa"]["source_checked"]
+    assert [p["question_number"] for p in seq if p["status"]=="draft"]==[8,9]
+
+def test_songjiang_2023_math_invariants():
+    import cmath
+    assert [n for n in range(-3,3) if -2<n<=1]==[-1,0,1]
+    assert all(abs(math.sin(t)*math.cos(t)-0.5*math.sin(2*t))<1e-12 for t in [-2,-0.2,0,1,2])
+    assert (2+1j)**2==3+4j
+    assert 2*(3*1+3*2)-3*(2*1+2)==6
+    fun=lambda x:(2**x-1)/(2**x+1)
+    assert all(math.isclose(fun(-x),-fun(x)) for x in (-3,-1,0,1,3))
+    assert math.isclose(math.pi*4*5,20*math.pi)
+    assert math.isclose((math.pi*4*4*3/3),16*math.pi)
+    a,b=(5,3),(-1,2)
+    assert a[0]*b[0]+a[1]*b[1]==1 and b[0]**2+b[1]**2==5
+    assert math.isclose((a[0]+.2)*b[0]+(a[1]-.4)*b[1],0)
+    assert math.isclose(abs(2-2)+abs(2-3),1)
+    assert 2*(.5)**2+.5==1 and 2*(-1)**2-1==1
+    assert 4<4.5<=5
+    assert 3**2==1**2+8
+    assert math.isclose(2*math.sqrt(2),math.sqrt(8))

@@ -1762,5 +1762,355 @@
       "src": "assets/cover.svg",
       "caption": "平方差消元确定公比 −2，第四项是 −8"
     }
+  },
+  {
+    "slug": "songjiang-2023-mock-q01",
+    "title": "集合交集：区间与整数集合的筛选",
+    "subtitle": "左开右闭的区间只有 −1、0、1 三个整数",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "集合",
+      "区间"
+    ],
+    "summary": "2023年松江区高三一模第1题：左开右闭的区间只有 −1、0、1 三个整数。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "数轴上的 (-2,1] 与整数点的精确交集"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q02",
+    "title": "正弦乘余弦：倍角恒等式与最小正周期",
+    "subtitle": "sin x cos x 等于二分之一 sin 2x，完整波形只需要 π",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "三角",
+      "周期"
+    ],
+    "summary": "2023年松江区高三一模第2题：sin x cos x 等于二分之一 sin 2x，完整波形只需要 π。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "y=sin x cos x 的一个周期和重复波形"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q03",
+    "title": "共轭复数：确定参数并计算复数的平方",
+    "subtitle": "共轭先比较实部虚部，再用 i²=−1 展开",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "复数",
+      "共轭"
+    ],
+    "summary": "2023年松江区高三一模第3题：共轭先比较实部虚部，再用 i²=−1 展开。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "复平面中的 z=2+i 与 z²=3+4i"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q04",
+    "title": "等差数列求和：用消去首项的方法求公差",
+    "subtitle": "2S₃−3S₂ 正好消去未知首项，只留下 3d",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "数列",
+      "等差数列"
+    ],
+    "summary": "2023年松江区高三一模第4题：2S₃−3S₂ 正好消去未知首项，只留下 3d。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "前二项和与前三项和消去首项后的公差关系"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q05",
+    "title": "奇函数定参数：指数分式的原点对称性",
+    "subtitle": "用 f(0)=0 锁定 a=1，再证明 f(−x)=−f(x)",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "奇函数",
+      "指数函数"
+    ],
+    "summary": "2023年松江区高三一模第5题：用 f(0)=0 锁定 a=1，再证明 f(−x)=−f(x)。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "当且仅当 a=1 时指数分式实现原点对称"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q06",
+    "title": "圆锥三四五直角三角形：侧面积反求体积",
+    "subtitle": "半径4，母线5，高3；最终体积16π",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "圆锥",
+      "体积"
+    ],
+    "summary": "2023年松江区高三一模第6题：半径4，母线5，高3；最终体积16π。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "轴截面呈3、4、5直角三角形，三种长度各司其职"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q07",
+    "title": "向量正交分解：求 a 在 b 上的投影向量",
+    "subtitle": "点积为1、方向向量平方模为5，投影坐标(−1/5,2/5)",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "向量",
+      "投影向量"
+    ],
+    "summary": "2023年松江区高三一模第7题：点积为1、方向向量平方模为5，投影坐标(−1/5,2/5)。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "向量a分解成沿b的微小投影与垂直于b的剩余向量"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q08",
+    "title": "绝对值距离和恒成立：从最小值求参数区间",
+    "subtitle": "三角不等式给出最小值 1，推出 a∈[−1,1/2]",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "绝对值",
+      "恒成立"
+    ],
+    "summary": "2023年松江区高三一模第8题：三角不等式给出最小值 1，推出 a∈[−1,1/2]。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "绝对值距离和的图像在[2,3]有高度为1的平台"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q09",
+    "title": "集合包含与对数值域：从开闭端点推出 4<a≤5",
+    "subtitle": "原集合 A=(2,4]，值域 B=[a−2,a−1)，端点决定最终严格性",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 13,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "集合包含",
+      "对数"
+    ],
+    "summary": "2023年松江区高三一模第9题：原集合 A=(2,4]，值域 B=[a−2,a−1)，端点决定最终严格性。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "a=4.5的样例中B完全嵌入A，正确反映两端开闭"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q10",
+    "title": "双曲线焦点反射与中位线：从ON求渐近线",
+    "subtitle": "角平分线构造使 ON 恰等于实半轴 a，进而得到离心率 e=3",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "双曲线",
+      "渐近线"
+    ],
+    "summary": "2023年松江区高三一模第10题：角平分线构造使 ON 恰等于实半轴 a，进而得到离心率 e=3。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "反射使N成为F₁Q中点，中位线ON始终等于实半轴a"
+    }
   }
 ]

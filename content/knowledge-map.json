@@ -72,7 +72,8 @@
           "posts": [
             "jianping-2021-q03",
             "jianping-2021-q08",
-            "week12-gaosan-q07"
+            "week12-gaosan-q07",
+            "songjiang-2023-mock-q05"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -193,7 +194,8 @@
           ],
           "posts": [
             "jianping-2021-q01",
-            "jianping-2021-q11"
+            "jianping-2021-q11",
+            "songjiang-2023-mock-q02"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -212,7 +214,9 @@
             "恒等式",
             "三角变换"
           ],
-          "posts": [],
+          "posts": [
+            "songjiang-2023-mock-q02"
+          ],
           "outcomes": [
             "使用基本恒等关系化简表达式",
             "辨别恒等变形的适用条件"
@@ -282,7 +286,8 @@
           ],
           "posts": [
             "jianping-2021-q10",
-            "week12-gaosan-q05"
+            "week12-gaosan-q05",
+            "songjiang-2023-mock-q04"
           ],
           "outcomes": [
             "使用等差数列通项和求和公式",
@@ -376,7 +381,8 @@
           ],
           "posts": [
             "jianping-2021-q05",
-            "jianping-2021-q17"
+            "jianping-2021-q17",
+            "songjiang-2023-mock-q06"
           ],
           "outcomes": [
             "理解常见几何体结构与截面",
@@ -468,7 +474,8 @@
             "参数方程"
           ],
           "posts": [
-            "jianping-2021-q02"
+            "jianping-2021-q02",
+            "songjiang-2023-mock-q07"
           ],
           "outcomes": [
             "用坐标描述点和方向",
@@ -490,7 +497,8 @@
           ],
           "posts": [
             "week12-gaosan-q02",
-            "chongming-2023-q03"
+            "chongming-2023-q03",
+            "songjiang-2023-mock-q03"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -549,7 +557,8 @@
             "shanghai-2024-geometry-jinshan-q20",
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
-            "shanghai-2024-geometry-yangpu-q20"
+            "shanghai-2024-geometry-yangpu-q20",
+            "songjiang-2023-mock-q10"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -584,7 +593,8 @@
             "shanghai-2024-geometry-jinshan-q20",
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
-            "shanghai-2024-geometry-yangpu-q20"
+            "shanghai-2024-geometry-yangpu-q20",
+            "songjiang-2023-mock-q10"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",
@@ -722,7 +732,8 @@
           ],
           "posts": [
             "week12-gaosan-q03",
-            "chongming-2023-q01"
+            "chongming-2023-q01",
+            "songjiang-2023-mock-q01"
           ],
           "outcomes": [
             "将条件集合转化成区间",

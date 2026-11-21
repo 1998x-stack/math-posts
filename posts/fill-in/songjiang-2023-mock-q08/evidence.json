@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 8,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "operator-missing-in-rendered-source; reconstructed-from-answer; requires-confirmation",
+    "checked_elements": [
+      "original question",
+      "formula",
+      "reference answer"
+    ],
+    "uncertainty": "原卷第1页不等式比较符号未渲染，依据第7页答案推定为“≥”，未取得清晰原版核实"
+  },
+  "answer": {
+    "official": "[−1,1/2]",
+    "official_source": "PDF page 7 reference answer",
+    "independent_result": "[−1,1/2]",
+    "independent_check": "a=−1 或 1/2 时右式为1，恒成立且可取等；a=1时右式为3，而x=2时左式为1，故不成立；与参考答案同范围。"
+  },
+  "math_equations": [
+    "|x-2|+|x-3|\\ge1",
+    "\\min_{x\\in\\mathbb{R}}(|x-2|+|x-3|)=1",
+    "2a^2+a-1\\le0",
+    "(2a-1)(a+1)\\le0\\quad\\Rightarrow\\quad-1\\le a\\le\\frac12"
+  ],
+  "editorial_note": "原卷第1页不等式比较符号未渲染，依据第7页答案推定为“≥”，未取得清晰原版核实",
+  "qa": {
+    "source_checked": false,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
