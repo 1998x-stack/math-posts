@@ -194,3 +194,22 @@ def test_week12_photographed_first_five_are_complete_and_evidenced():
     assert [x for x in (-2,0,1) if 2*x*x+x-1<0]==[0]
     assert math.comb(6,2)*2**2==60
     assert (1+3)**2==1*(1+5*3)
+
+
+def test_every_math_post_has_real_mathml_coverage():
+    posts=manifest()
+    assert len(posts)==42
+    for p in posts:
+        html=(ROOT/'posts'/p['category']/p['slug']/'index.html').read_text('utf-8')
+        math_tags=re.findall(r'<math\\b[^>]*>',html,re.I)
+        display_tags=re.findall(r'<math\\b[^>]*display=["\\']block["\\'][^>]*>',html,re.I)
+        inline_tags=re.findall(r'<math\\b[^>]*class=["\\'][^"\\']*math-inline[^"\\']*["\\'][^>]*>',html,re.I)
+        assert len(math_tags)>=10, (p['slug'],len(math_tags))
+        assert len(display_tags)>=4, (p['slug'],len(display_tags))
+        assert len(inline_tags)>=2, (p['slug'],len(inline_tags))
+        assert 'class="formula-bank"' in html, p['slug']
+        for tag in math_tags:
+            assert re.search(r'aria-label=["\\'][^"\\']+["\\']',tag), (p['slug'],tag)
+        outside=re.sub(r'<math\\b[\\s\\S]*?</math>','',html,flags=re.I)
+        outside=re.sub(r'<(script|style|pre|code)\\b[\\s\\S]*?</\\1>','',outside,flags=re.I)
+        assert not re.search(r'\\\\(?:[()\\[\\]]|frac\\b|sqrt\\b|sum\\b|int\\b|begin\\b|end\\b)|\\$\\$?',outside), p['slug']

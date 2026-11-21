@@ -60,6 +60,9 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
               .filter(s=>s.getBoundingClientRect().width<1||s.getBoundingClientRect().height<1).length,
             brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth<1).length,
             mathCount:math.length,
+            mathDisplayCount:math.filter(e=>e.getAttribute('display')==='block').length,
+            mathInlineCount:math.filter(e=>e.classList.contains('math-inline')).length,
+            mathCoverageFailure:math.length<10 || math.filter(e=>e.getAttribute('display')==='block').length<4 || math.filter(e=>e.classList.contains('math-inline')).length<2,
             mathWrongNamespace:math.filter(e=>e.namespaceURI!==ns).length,
             mathNestedInSVG:document.querySelectorAll('svg math').length,
             mathZeroSized:math.filter(e=>visible(e)
@@ -72,7 +75,8 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
            and measure['brokenImages']==0 and measure['heading']==1
            and measure['mathWrongNamespace']==0 and measure['mathNestedInSVG']==0
            and measure['mathZeroSized']==0 and measure['mathBadFractions']==0
-           and measure['mathBadScrollRegions']==0 and not errors and not network)
+           and measure['mathBadScrollRegions']==0 and not measure['mathCoverageFailure']
+           and not errors and not network)
         report['viewports'][label]={'pass':okay,**measure,'errors':errors,'external_requests':network}
         if not okay:report['pass']=False
         if label=='desktop':
