@@ -1,0 +1,22 @@
+/* Accessible math stepper example, not a mandatory site-wide theme. */
+.solution-stepper-demo{max-width:920px;margin:28px auto;padding:24px;font-family:system-ui,"Noto Sans SC",sans-serif;color:#203a38;line-height:1.85}
+.solution-stepper-demo h1,.solution-stepper-demo h2,.solution-stepper-demo h3{line-height:1.4}
+.solution-stepper-demo .demo-note{color:#6f807b;font-size:.92rem}
+.solution-stepper-demo .prompt{padding:18px;border:1px solid #ccdcd3;border-radius:10px;background:#f4f8f3}
+.solution-stepper-demo .stepper-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:20px 0}
+.solution-stepper-demo button{min-height:42px;border:1px solid #85afa3;border-radius:6px;padding:7px 14px;background:#eff7f2;color:#1b5e58;font-weight:650;cursor:pointer}
+.solution-stepper-demo button:disabled{cursor:not-allowed;opacity:.5}
+.solution-stepper-demo button:focus-visible{outline:3px solid #3e9385;outline-offset:3px}
+.solution-stepper-demo output{font-size:.92rem;min-width:105px;color:#436a62}
+.solution-stepper-demo ol{padding-left:27px}
+.solution-stepper-demo [data-solution-step]{margin:14px 0;padding:18px 20px;border:1px solid #d3e3d9;border-radius:9px;background:#fff}
+.solution-stepper-demo [data-solution-step][hidden]{display:none!important}
+.solution-stepper-demo .step-proof{padding:12px;border-left:3px solid #82b6a5;background:#f4f8f5;overflow-x:auto}
+.solution-stepper-demo .step-check{border-top:1px solid #e0eae4;padding-top:9px;color:#41675a}
+.solution-stepper-demo figure{margin:18px 0}
+.solution-stepper-demo figure img{display:block;width:100%;max-width:620px;height:auto}
+.solution-stepper-demo figcaption{font-size:.9rem;color:#516c64}
+.solution-stepper-demo .math-scroll{overflow-x:auto;max-width:100%}
+@media(max-width:520px){.solution-stepper-demo{padding:12px}.solution-stepper-demo [data-solution-step]{padding:12px}.solution-stepper-demo .stepper-actions{gap:7px}}
+@media(prefers-reduced-motion:reduce){.solution-stepper-demo *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media print{.solution-stepper-demo [data-stepper-controls]{display:none!important}.solution-stepper-demo [data-solution-step][hidden]{display:list-item!important}.solution-stepper-demo{margin:0;padding:0}}
