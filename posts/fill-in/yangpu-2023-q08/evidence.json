@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 8,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and quantifiers",
+      "fractions, superscripts, signs, vector notation",
+      "source answer on page 8"
+    ]
+  },
+  "answer": {
+    "official": "5/3 或 5/4",
+    "independent_check": "举两个满足条件的具体曲线：x²/16−y²/9=1 的渐近线为 y=±3x/4，离心率 c/a=5/4；y²/9−x²/16=1 也有渐近线 y=±3x/4，但离心率 c/a=5/3。"
+  },
+  "math_equations": [
+    "横轴型的斜率 b 比 a 等于四分之三，离心率五分之四",
+    "纵轴型的斜率 a 比 b 等于四分之三，离心率三分之五"
+  ],
+  "figure_assertions": [
+    "左右两图共用相同斜率 ±3/4 的虚线渐近线，但左右开口型的离心率为 5/4，上下开口型为 5/3。",
+    "曲线分别按照 x²/16−y²/9=1 与 y²/9−x²/16=1 的比例绘制；渐近线方向不变而实轴方向互换，正是出现两种答案的几何原因。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified",
+    "responsive_browser_test": "not verified"
+  },
+  "editorial_note": "题干对照用户上传 PDF 第 1 页渲染图核对；原卷第 8 页提供参考答案，但没有本题完整解题过程。逐步推导及专属 SVG 为独立编写；未声称浏览器渲染测试通过。"
+}

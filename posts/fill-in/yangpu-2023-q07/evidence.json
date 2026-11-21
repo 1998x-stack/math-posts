@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 7,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and quantifiers",
+      "fractions, superscripts, signs, vector notation",
+      "source answer on page 8"
+    ]
+  },
+  "answer": {
+    "official": "12",
+    "independent_check": "男性 12 人、女性 9 人，样本合计 21 人；12/21=48/84=4/7，9/21=36/84=3/7。"
+  },
+  "math_equations": [
+    "总体八十四人",
+    "二十一乘以八十四分之四十八等于十二",
+    "样本和总体的男女比例同为四比三"
+  ],
+  "figure_assertions": [
+    "上条代表总体 84 人、下条代表样本 21 人；两条的男女性别比例均为 4:3。",
+    "画面中男性部分宽度为总宽的 4/7，女性部分为 3/7；长度表示比例，标注的人数展示 48→12 与 36→9 的一致缩放。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified",
+    "responsive_browser_test": "not verified"
+  },
+  "editorial_note": "题干对照用户上传 PDF 第 1 页渲染图核对；原卷第 8 页提供参考答案，但没有本题完整解题过程。逐步推导及专属 SVG 为独立编写；未声称浏览器渲染测试通过。"
+}

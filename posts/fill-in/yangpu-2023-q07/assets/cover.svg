@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="q7t q7d"><title id="q7t">分层抽样：84 人队伍中抽出 21 人，男运动员取几人</title><desc id="q7d">比例一致的两条百分比堆叠条，原总体男四十八女三十六，样本男十二女九。</desc><rect width="760" height="360" rx="20" fill="#f4f9f7"/><text x="30" y="40" font-size="22" font-weight="700" fill="#234352">分层抽样：把总体比例原样缩放到样本</text>
+<g fill="#234352" font-size="18"><text x="40" y="97">总体（84 人）</text><text x="40" y="214">样本（21 人）</text></g>
+<rect x="145" y="115" width="300" height="65" rx="5" fill="#167d80"/><rect x="445" y="115" width="225" height="65" rx="5" fill="#e2a16c"/>
+<rect x="145" y="230" width="300" height="65" rx="5" fill="#167d80"/><rect x="445" y="230" width="225" height="65" rx="5" fill="#e2a16c"/>
+<g font-size="18" text-anchor="middle" fill="#fff"><text x="295" y="154">男 48 人 · 4/7</text><text x="557.5" y="154" fill="#3d3329">女 36 人 · 3/7</text><text x="295" y="268">男 12 人 · 4/7</text><text x="557.5" y="268" fill="#3d3329">女 9 人 · 3/7</text></g>
+<g stroke="#728c92" stroke-dasharray="5 6"><path d="M445 185V226"/></g><g fill="#375360" font-size="15"><text x="145" y="319">48/84 = 12/21 = 4/7</text><text x="448" y="319">36/84 = 9/21 = 3/7</text></g></svg>
