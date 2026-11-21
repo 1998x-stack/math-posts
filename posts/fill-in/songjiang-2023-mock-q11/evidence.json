@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 11,
+    "pages": [
+      2
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF: 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-PDF-and-answer-key",
+    "checked_elements": [
+      "full statement",
+      "mathematical operators",
+      "answer key",
+      "options if any"
+    ]
+  },
+  "answer": {
+    "official": "5√3π/6",
+    "official_source": "uploaded PDF p.7 reference key",
+    "independent_result": "5√3π/6",
+    "independent_check": "近面3段、每段弧角π/6且半径2√3/3；远面3段、每段π/2且半径√3/3。相加5√3π/6与参考答案一致。"
+  },
+  "math_equations": [
+    "x^2+y^2+z^2=\\frac43",
+    "R=\\frac{2\\sqrt3}{3},\\quad\\Delta\\theta=\\frac{\\pi}{6}",
+    "L_{\\mathrm{near}}=3\\cdot R\\cdot\\frac{\\pi}{6}=\\frac{\\sqrt3\\pi}{3}",
+    "r=\\frac{\\sqrt3}{3},\\quad L_{\\mathrm{far}}=3\\cdot\\frac{\\pi r}{2}=\\frac{\\sqrt3\\pi}{2}",
+    "L=\\frac{\\sqrt3\\pi}{3}+\\frac{\\sqrt3\\pi}{2}=\\frac{5\\sqrt3}{6}\\pi"
+  ],
+  "visual_assertions": [
+    "三个相邻面的30°圆弧与三个对面的90°圆弧"
+  ],
+  "editorial_note": "题干严格据用户提供的8页PDF转写；分步解析为独立推导，非原卷完整官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
