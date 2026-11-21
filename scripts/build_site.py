@@ -199,12 +199,14 @@ def archive_pagination(page:int,pages:int,rel:str)->str:
     return f'<nav class="pagination" aria-label="文章归档分页">{"".join(links)}</nav>'
 
 
-def build_home(categories,posts,base):
+def build_home(categories,posts,base,papers=None,taxonomy=None):
     """Editorial home: fast routes into the corpus, full local search, no draft links."""
     published=[p for p in posts if p['status']=='published']
     published.sort(key=lambda p:(p['published'],p['slug']),reverse=True)
     by_slug={p['slug']:p for p in published}
     labels=topic_labels(categories)
+    papers=papers or []
+    taxonomy=taxonomy or {"dimensions":[]}
     counts={c['slug']:sum(p['category']==c['slug'] for p in published) for c in categories}
     active=[c for c in categories if counts[c['slug']]]
     planned=[c for c in categories if not counts[c['slug']]]
@@ -287,6 +289,27 @@ def build_home(categories,posts,base):
         f'<option value="{H(c["slug"])}">{H(c["title"])} · {counts[c["slug"]]}</option>' for c in active
     )
 
+    paper_options=''.join(
+        f'<option value="{H(paper["id"],quote=True)}">{H(paper["title"])} · {sum(p["paper_id"]==paper["id"] for p in published)} 题</option>'
+        for paper in sorted(papers,key=lambda p:(p["year"] or 0,p["title"]),reverse=True)
+        if any(p["paper_id"]==paper["id"] for p in published)
+    )
+    facet_options={}
+    for dim in taxonomy["dimensions"]:
+        options_for_dim=[]
+        for tag in dim["tags"]:
+            count_tag=sum(tag["id"] in p["facets"][dim["id"]] for p in published)
+            if count_tag:
+                options_for_dim.append(f'<option value="{H(tag["id"])}">{H(tag["title"])} · {count_tag}</option>')
+        facet_options[dim["id"]]=''.join(options_for_dim)
+    selected_papers=[paper for paper in sorted(papers,key=lambda p:(p["year"] or 0,p["title"]),reverse=True)
+                     if any(p["paper_id"]==paper["id"] for p in published)][:4]
+    paper_cards=''.join(
+        f'<a class="paper-highlight" href="papers/{H(paper["id"])}/"><strong>{H(paper["title"])}</strong>'
+        f'<span>{sum(p["paper_id"]==paper["id"] for p in published)} 道已公开题解 →</span></a>'
+        for paper in selected_papers
+    )
+
     body=f'''<section class="hero container" aria-labelledby="home-title">
       <div class="hero-left">
         <div class="eyebrow"><span class="eyebrow-dot"></span> MATH / VISUAL PROBLEM ATLAS</div>
@@ -311,6 +334,11 @@ def build_home(categories,posts,base):
       <div class="research-grid">{subject_cards}</div>
       {f'<div class="planned-fields"><span>持续建设中的方向</span>{planned_links}</div>' if planned else ''}
     </div></section>
+    <section id="paper-entry" class="container paper-entry-section" aria-labelledby="paper-entry-title">
+      <div class="section-header"><div><div class="eyebrow muted">EXAM PAPER ATLAS</div><h2 id="paper-entry-title">按一张试卷的原始题号学习</h2></div>
+      <p>区分学校整卷、地区单题摘录与专题练习。<a href="papers/">全部试卷与题集 ↗</a></p></div>
+      <div class="paper-highlight-grid">{paper_cards}</div>
+    </section>
     <section id="reading-paths" class="container learning-paths" aria-labelledby="paths-title">
       <div class="section-header"><div><div class="eyebrow muted">GUIDED READING / LEARNING ROUTES</div><h2 id="paths-title">以知识点串起题目，而非孤立刷题</h2></div><p>学习路线只连接已发布的内容；每一步都可以独立阅读。</p></div>
       <div class="route-grid">{''.join(route_cards)}</div>
@@ -319,7 +347,12 @@ def build_home(categories,posts,base):
       <div class="section-header"><div><div class="eyebrow muted">COMPLETE ARTICLE INDEX</div><h2 id="index-title">查找你的下一篇数学题解 <span class="count">{count:02d}</span></h2></div><p>全库搜索与筛选；每页只加载 8 篇文章及对应缩略图。</p></div>
       <div class="browse-controls">
         <label class="search-field" for="search-posts"><span aria-hidden="true">⌕</span><input id="search-posts" type="search" placeholder="搜索题号、题型、函数、几何或知识点" autocomplete="off" data-search-input></label>
-        <label class="filter-field" for="category-filter"><span>数学题型</span><select id="category-filter" data-category-filter><option value="">全部领域</option>{options}</select></label>
+        <label class="filter-field" for="category-filter"><span>答题形式</span><select id="category-filter" data-category-filter><option value="">全部题型</option>{options}</select></label>
+        <label class="filter-field" for="concept-filter"><span>知识点</span><select id="concept-filter" data-facet-filter="concept"><option value="">全部知识点</option>{facet_options.get("concept","")}</select></label>
+        <label class="filter-field" for="paper-filter"><span>来源试卷</span><select id="paper-filter" data-facet-filter="paper"><option value="">全部试卷</option>{paper_options}</select></label>
+        <label class="filter-field" for="method-filter"><span>解题方法</span><select id="method-filter" data-facet-filter="method"><option value="">全部方法</option>{facet_options.get("method","")}</select></label>
+        <label class="filter-field" for="visual-filter"><span>可视化方式</span><select id="visual-filter" data-facet-filter="visual"><option value="">全部图解</option>{facet_options.get("visual","")}</select></label>
+        <button type="button" class="facet-reset" data-filter-reset>清除筛选</button>
         <span class="visible-count" aria-live="polite" data-visible-count>共 {count} 篇文章</span>
       </div>
       <div class="index-list" data-post-grid data-page-size="{HOME_PAGE_SIZE}">{''.join(search_cards)}</div>
@@ -331,7 +364,7 @@ def build_home(categories,posts,base):
       <p>每篇题解连接 PDF 来源页码、数学推导与图形实验。想按知识体系检索？前往知识地图；想了解内容生产方式？阅读仓库规范。</p>
       <div class="closing-actions"><a href="topics/">探索知识地图 ↗</a><a href="https://github.com/1998x-stack/math-posts">查看数学题库仓库 ↗</a></div>
     </div></section>'''
-    return html_page(title='math-posts · 数学题目与知识图谱',description='21 道上海建平中学数学试题：填空题、选择题和解答题；逐题解析、公式与 SVG / Three.js 交互。',canonical=base,body=body)
+    return html_page(title='math-posts · 数学题目与知识图谱',description='按知识点、学校试卷、原卷题号、解题方法与可视化浏览数学题；每题具有可核对的数学推导。',canonical=base,body=body)
 
 def topic_labels(categories):
     return {(c['slug'],t['slug']):t['title'] for c in categories for t in c['topics']}
@@ -563,7 +596,7 @@ def build(root:Path,out:Path,base:str):
     out.mkdir(parents=True)
     categories,posts,knowledge_map=data(root)
     papers,taxonomy=load_atlas(root,posts,knowledge_map)
-    write(out,'index.html',build_home(categories,posts,base))
+    write(out,'index.html',build_home(categories,posts,base,papers,taxonomy))
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     for paper in papers:
         write(out,f'papers/{paper["id"]}/index.html',build_paper_detail(paper,posts,taxonomy,base,html_page,article_url))
