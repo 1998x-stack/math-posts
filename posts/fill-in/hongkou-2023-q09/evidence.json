@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 9,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "f(x)=lg|a+4/(2-x)|+b",
+      "a,b real",
+      "odd function",
+      "reference answer -1"
+    ]
+  },
+  "answer": {
+    "official": "-1",
+    "independent_check": "2 excluded => -2 excluded => a+1=0 -> a=-1; f(0)=b=0; resulting log rational function is odd on R\\{-2,2}"
+  },
+  "math_equations": [
+    "a+4/(2-(-2))=a+1=0",
+    "f(x)=lg|(x+2)/(2-x)|",
+    "f(-x)=-f(x)",
+    "a+b=-1"
+  ],
+  "diagram_assertions": [
+    "vertical asymptotes x=-2 and x=2",
+    "pairs (1,log10 3) and (-1,-log10 3)",
+    "all curves sampled from exact function"
+  ],
+  "editorial_note": "第7页仅有答案。定义域排除、充分性核验和数值采样曲线为本站独立编写。"
+}
