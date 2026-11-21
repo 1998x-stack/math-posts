@@ -39,7 +39,7 @@ def run():
                         assert page.locator('figure svg').count()>=1,(width,path,'SVG')
                         assert page.locator('math').count()>=1,(width,path,'MathML')
                         assert page.locator('math[aria-label],math[aria-labelledby]').count()==page.locator('math').count(),(width,path,'MathML accessible labels')
-                        if any(f'q{n:02d}' in path for n in (4,13,17)):
+                        if any(f'jianping-2021-q{n:02d}' in path for n in (4,13,17)):
                             scene=page.locator('[data-three-scene]')
                             scene.wait_for(timeout=5000)
                             page.locator('[data-three-scene][data-ready="false"]').wait_for(timeout=10000)
