@@ -579,21 +579,21 @@
   },
   {
     "slug": "jianping-2021-q21",
-    "title": "帐篷函数的二阶周期点：分段迭代与解的个数",
-    "subtitle": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数",
+    "title": "帐篷函数的二次迭代：W 形图像、水平线根数与真二周期点",
+    "subtitle": "从两段帐篷到四段 W 曲线，再由 f(f(x))=x 剔除不动点",
     "category": "worked-solutions",
     "topic": "functions",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 14,
+    "updated": "2026-11-21",
+    "reading_minutes": 19,
     "tags": [
       "functions",
       "worked-solutions",
       "2021建平",
       "解答"
     ],
-    "summary": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数。把 x 换成 2−x：|2−x−1|=|x−1|，所以函数以 x=1 为对称轴。",
+    "summary": "完整分段推导 f(f(x))，用可调水平线图精确展示实根数变化，并证明两个真二周期点互相映射。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 21,
     "question_type": "worked-solutions",
@@ -604,7 +604,7 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数"
+      "caption": "帐篷映射二次迭代形成双峰 W 曲线，水平线 m=1 有四个交点"
     }
   },
   {
