@@ -25,6 +25,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "余弦曲线覆盖整个输入区间，因此复合函数的值域不变"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "functions",
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -54,6 +63,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "参数 t 改变的是直线上的位置，消元后得到整条轨迹"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "analytic-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -83,6 +100,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "半平面边界 a+b=4 上最靠近原点的是点 (2,2)"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "functions",
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -112,6 +139,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "正方体底面上的动点 P：中心使向量点积最小、角点最大"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "solid-geometry",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -141,6 +177,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "半径 r 同时决定球体积 r³ 和表面积 r² 的尺度"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -170,6 +214,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "等比数列前项积先增后减，整数极值落在 n=3 或 n=4"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -198,6 +250,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "按红球个数分类：0 个红球 208 种，1 个红球 264 种"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "counting"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -227,6 +287,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "奇函数的中心对称性让平行四边形面积化为四个三角形"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -255,6 +323,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "四次二选一展开产生 16 项，去掉空集就得到非空子集之和"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "counting"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -283,6 +359,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "尾段和是开口向下的二次函数，顶点固定在 aₙ₊₁=3/2"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -312,6 +396,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "上包络峰顶与交点谷底的最近横向距离为 3/4"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -341,6 +433,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "标准绝对值正弦的一个完整波峰恰好与水平线相交两次"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "sequences",
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -370,6 +471,19 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "空间直线的固定高度与平面投影共同决定双曲线轨迹"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "inequalities",
+        "reasoning",
+        "solid-geometry",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -398,6 +512,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "63 的因数对经过正整数条件筛选后只剩两组"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -426,6 +548,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆右顶点离右焦点最近，直角三角形边长为 2、1、√3"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -455,6 +586,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "四支开放分支避开半径 √2 圆，并与菱形相交于四个对称点"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -485,6 +625,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "底面中 DB 平行 AC，空间法向量给出二面角的钝角余弦"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "solid-geometry",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -515,6 +664,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "观察点沿斜坡移动，在 P=(320,60) 时视角达到最大"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "optimization"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -544,6 +702,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "两段利润分别达到 950 与 1000 万元，全局最优为 100 千件"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "optimization"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -575,6 +742,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆外点引弦，韦达定理确定中点轨迹并核验参数范围"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -605,6 +781,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "帐篷映射二次迭代形成双峰 W 曲线，水平线 m=1 有四个交点"
+    },
+    "paper_id": "jianping-2021-mock-03",
+    "facets": {
+      "concept": [
+        "functions",
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -637,6 +823,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "焦点垂线定位 P，过右焦点的弦承载向量线性组合"
+    },
+    "paper_id": "shanghai-2024-er-mo-pudong",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -669,6 +865,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "固定斜率弦的中点落在斜率为 −1/2 的轨迹线段上"
+    },
+    "paper_id": "shanghai-2024-er-mo-jiading",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -701,6 +906,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆上的距离极值与沿 OT 方向的平行弦"
+    },
+    "paper_id": "shanghai-2024-er-mo-changning",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -733,6 +948,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "抛物线焦点弦与椭圆径向交点之间的面积映射"
+    },
+    "paper_id": "shanghai-2024-er-mo-minhang",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -765,6 +990,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "从椭圆顶点 P 出发的两条弦与连接弦 AB"
+    },
+    "paper_id": "shanghai-2024-er-mo-hongkou",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -798,6 +1032,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "直线坡道在T点与半圆相切；桥面沿半圆到U点，再由半径40米的圆弧平顺落到D点"
+    },
+    "paper_id": "shanghai-2024-er-mo-jingan",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -831,6 +1074,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "右焦点F、弦AB与中心对称点C；向量条件转化为直线斜率和截距"
+    },
+    "paper_id": "shanghai-2024-er-mo-putuo",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -864,6 +1117,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆左右顶点、焦点与弦MN；斜率乘积条件使MN恒过F₂"
+    },
+    "paper_id": "shanghai-2024-er-mo-xuhui",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -897,6 +1160,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "双曲线与共顶点辅助椭圆；最值点P=(√2,√2)，辅助椭圆交点Q=(1/√2,1)"
+    },
+    "paper_id": "shanghai-2024-er-mo-baoshan",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -930,6 +1202,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "上焦点水平弦MN，P在直线MN上；P=(0,1)时F₂QEP为矩形"
+    },
+    "paper_id": "shanghai-2024-er-mo-songjiang",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -961,6 +1243,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "双曲线渐近线、三角形内切圆半径及等腰焦点弦斜率"
+    },
+    "paper_id": "shanghai-2024-er-mo-qingpu",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -992,6 +1283,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "焦点距离、向量和、周长约束与直线圆相切"
+    },
+    "paper_id": "shanghai-2024-er-mo-jinshan",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1023,6 +1323,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "定点弦与垂足圆，固定圆心在 x 轴"
+    },
+    "paper_id": "shanghai-2024-er-mo-chongming",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1054,6 +1363,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆与等轴双曲线、焦点弦与斜率倒数"
+    },
+    "paper_id": "shanghai-2024-er-mo-huangpu",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1085,6 +1403,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆弦、重心与两三角形面积比"
+    },
+    "paper_id": "shanghai-2024-er-mo-yangpu",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1116,6 +1444,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "导圆、椭圆切线与定值题源核查"
+    },
+    "paper_id": "shanghai-2024-er-mo-fengxian",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [
+        "counterexample"
+      ],
+      "visual": []
     }
   },
   {
@@ -1149,6 +1488,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "以 2 为中心的闭区间距离模型"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "inequalities"
+      ],
+      "method": [],
+      "visual": [
+        "number-line"
+      ]
     }
   },
   {
@@ -1182,6 +1531,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "z 与 iz 相差九十度且等长的向量图"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": [
+        "complex-plane"
+      ]
     }
   },
   {
@@ -1215,6 +1574,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "开区间与有限集合的唯一重合元素"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "sets"
+      ],
+      "method": [],
+      "visual": [
+        "number-line"
+      ]
     }
   },
   {
@@ -1248,6 +1618,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "二项展开选取次数与指数归零表"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "counting"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1281,6 +1659,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "等差点列与特定三项的等比中项关系"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1313,6 +1699,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "指数曲线的最小值与辅助函数的唯一谷底，决定参数零点数量"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1347,6 +1744,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "临界参数下导函数在零与圆周率处触轴但不为负"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1379,6 +1786,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "切线商函数的唯一极大值与指数差函数在临界参数处非负"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1410,6 +1827,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "合法双零点实例中左根的对称点严格位于右根左侧"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1443,6 +1871,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "负参数时驻点处指数与指数加对数的函数值形成严格正差"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1477,6 +1915,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "圆锥的轴截面与半圆扇形展开图显示母线二、高根号三"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1510,6 +1956,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "偶函数g纵轴对称和奇函数f原点对称的双图对照"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": [
+        "function-plot"
+      ]
     }
   },
   {
@@ -1543,6 +1999,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "两个自然对数根的和六积四决定换底对数和等于七"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1577,6 +2041,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "圆心四三半径一的最近点展示参数a等于四时直角边界"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "inequalities",
+        "reasoning",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1611,6 +2086,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "重复零与四个非零偶数各自按数位计数的九加四乘二十七示意"
+    },
+    "paper_id": "week12-gaosan-worksheet",
+    "facets": {
+      "concept": [
+        "counting"
+      ],
+      "method": [
+        "casework"
+      ],
+      "visual": []
     }
   },
   {
@@ -1641,6 +2126,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "整数点落在半开区间内，交集只留下 2、3、4"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "sets"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1671,6 +2165,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "分子零点 −1/2 与分母零点 2 将数轴分成三个区间"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1701,6 +2203,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "纯虚数要求实部等于零，同时虚部不等于零"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1731,6 +2241,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "点 (4,2) 给出输入 4 和输出 2，底数唯一为 2"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1761,6 +2279,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "平方差消元确定公比 −2，第四项是 −8"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1796,6 +2322,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "数轴上的 (-2,1] 与整数点的精确交集"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "sets"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1831,6 +2366,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "y=sin x cos x 的一个周期和重复波形"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1866,6 +2409,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "复平面中的 z=2+i 与 z²=3+4i"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1901,6 +2452,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "前二项和与前三项和消去首项后的公差关系"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1936,6 +2495,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "当且仅当 a=1 时指数分式实现原点对称"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -1971,6 +2538,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "轴截面呈3、4、5直角三角形，三种长度各司其职"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2006,6 +2581,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "向量a分解成沿b的微小投影与垂直于b的剩余向量"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "vector"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2041,6 +2625,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "绝对值距离和的图像在[2,3]有高度为1的平台"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "optimization"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2076,6 +2669,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "a=4.5的样例中B完全嵌入A，正确反映两端开闭"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "sets"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2111,6 +2713,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "反射使N成为F₁Q中点，中位线ON始终等于实半轴a"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "conics"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2141,6 +2752,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "分子零点与分母零点把数轴分成三个符号区间"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2171,6 +2790,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "两项乘积恒为 4，等号在 x=2 时成立"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2201,6 +2828,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "把半径 3 代入球体积公式，得到 36π"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2231,6 +2866,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "令第二项出现 k 次，用幂次条件定位 k=4"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "counting"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2261,6 +2904,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "实系数二次方程的非实根与共轭根成对出现"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2293,6 +2944,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "立方差分解成两个严格正因子"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2325,6 +2985,17 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "两个区间的共同部分是闭区间 [0,1]"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "sets"
+      ],
+      "method": [],
+      "visual": [
+        "number-line"
+      ]
     }
   },
   {
@@ -2357,6 +3028,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "定义域交集 x>5 筛去非法根 −1"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2389,6 +3068,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "单位圆上 y=1/2 的两个交点"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": [
+        "unit-circle"
+      ]
     }
   },
   {
@@ -2421,6 +3110,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "复数 2+2i 在复平面中的坐标"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": [
+        "complex-plane"
+      ]
     }
   },
   {
@@ -2454,6 +3153,16 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "复数 z 在复平面上的实部与虚部坐标"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [],
+      "visual": [
+        "complex-plane"
+      ]
     }
   },
   {
@@ -2487,6 +3196,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "正方形底面边长一与棱柱高二"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2520,6 +3237,15 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "数轴标出零点一与解集右侧开区间"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "inequalities"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2553,6 +3279,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "正切曲线在给定开区间内的唯一零点"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   },
   {
@@ -2586,6 +3320,14 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "cos二x在相邻长度派区间上的重复图像"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry"
+      ],
+      "method": [],
+      "visual": []
     }
   }
 ]

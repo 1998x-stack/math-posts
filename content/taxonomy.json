@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "description": "知识概念/解题方法/真实图解为正交维度；答题形式和试卷为独立结构。",
+  "dimensions": [
+    {
+      "id": "concept",
+      "title": "知识概念",
+      "tags": [
+        {
+          "id": "analytic-geometry",
+          "title": "解析几何",
+          "aliases": [
+            "坐标几何",
+            "直线与圆"
+          ]
+        },
+        {
+          "id": "vector",
+          "title": "向量",
+          "aliases": [
+            "数量积",
+            "空间向量",
+            "平面向量",
+            "投影向量"
+          ]
+        },
+        {
+          "id": "conics",
+          "title": "圆锥曲线",
+          "aliases": [
+            "椭圆",
+            "双曲线",
+            "抛物线",
+            "焦点弦"
+          ]
+        },
+        {
+          "id": "functions",
+          "title": "函数",
+          "aliases": [
+            "定义域",
+            "单调性",
+            "复合函数"
+          ]
+        },
+        {
+          "id": "derivatives",
+          "title": "导数",
+          "aliases": [
+            "切线",
+            "驻点",
+            "导函数"
+          ]
+        },
+        {
+          "id": "trigonometry",
+          "title": "三角函数",
+          "aliases": [
+            "正弦",
+            "余弦",
+            "正切"
+          ]
+        },
+        {
+          "id": "sequences",
+          "title": "数列",
+          "aliases": [
+            "等差数列",
+            "等比数列",
+            "递推"
+          ]
+        },
+        {
+          "id": "solid-geometry",
+          "title": "立体几何",
+          "aliases": [
+            "空间几何",
+            "圆锥",
+            "多面体"
+          ]
+        },
+        {
+          "id": "complex-numbers",
+          "title": "复数",
+          "aliases": [
+            "复平面",
+            "虚数单位"
+          ]
+        },
+        {
+          "id": "sets",
+          "title": "集合与区间",
+          "aliases": [
+            "交集",
+            "并集",
+            "区间"
+          ]
+        },
+        {
+          "id": "inequalities",
+          "title": "不等式",
+          "aliases": [
+            "分式不等式",
+            "基本不等式",
+            "绝对值"
+          ]
+        },
+        {
+          "id": "optimization",
+          "title": "最值与优化",
+          "aliases": [
+            "最小值",
+            "最优化"
+          ]
+        },
+        {
+          "id": "counting",
+          "title": "组合计数",
+          "aliases": [
+            "二项式",
+            "组合数",
+            "分类计数"
+          ]
+        },
+        {
+          "id": "probability-statistics",
+          "title": "概率统计",
+          "aliases": [
+            "样本",
+            "方差"
+          ]
+        },
+        {
+          "id": "reasoning",
+          "title": "数学思想与证明",
+          "aliases": [
+            "转化",
+            "构造",
+            "数形结合"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "title": "解题方法",
+      "tags": [
+        {
+          "id": "number-shape",
+          "title": "数形结合",
+          "aliases": [
+            "图像法"
+          ]
+        },
+        {
+          "id": "coordinate-method",
+          "title": "坐标法",
+          "aliases": [
+            "建立坐标系"
+          ]
+        },
+        {
+          "id": "casework",
+          "title": "分类讨论",
+          "aliases": [
+            "分类计数",
+            "分情况"
+          ]
+        },
+        {
+          "id": "algebraic-transform",
+          "title": "代数变形",
+          "aliases": [
+            "换元",
+            "因式分解"
+          ]
+        },
+        {
+          "id": "parameter-analysis",
+          "title": "参数分析",
+          "aliases": [
+            "临界值",
+            "参数分类"
+          ]
+        },
+        {
+          "id": "counterexample",
+          "title": "反例检验",
+          "aliases": [
+            "举反例"
+          ]
+        },
+        {
+          "id": "mathematical-induction",
+          "title": "数学归纳法",
+          "aliases": [
+            "归纳证明"
+          ]
+        },
+        {
+          "id": "construction",
+          "title": "构造法",
+          "aliases": [
+            "构造函数",
+            "辅助线"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visual",
+      "title": "图解方式",
+      "tags": [
+        {
+          "id": "number-line",
+          "title": "数轴与区间",
+          "aliases": [
+            "开闭端点"
+          ]
+        },
+        {
+          "id": "coordinate-plane",
+          "title": "坐标图",
+          "aliases": [
+            "坐标系"
+          ]
+        },
+        {
+          "id": "function-plot",
+          "title": "函数曲线",
+          "aliases": [
+            "函数图像"
+          ]
+        },
+        {
+          "id": "unit-circle",
+          "title": "单位圆",
+          "aliases": []
+        },
+        {
+          "id": "complex-plane",
+          "title": "复平面",
+          "aliases": []
+        },
+        {
+          "id": "sign-table",
+          "title": "符号表",
+          "aliases": []
+        },
+        {
+          "id": "vector-projection",
+          "title": "向量投影",
+          "aliases": []
+        },
+        {
+          "id": "tree-diagram",
+          "title": "计数树",
+          "aliases": []
+        },
+        {
+          "id": "spatial-3d",
+          "title": "空间三维",
+          "aliases": [
+            "Three.js"
+          ]
+        },
+        {
+          "id": "feasible-region",
+          "title": "可行域",
+          "aliases": []
+        }
+      ]
+    }
+  ]
+}
