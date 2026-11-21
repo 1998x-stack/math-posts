@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 1,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "printed question",
+      "mathematical symbols and exponents",
+      "domain and interval endpoints",
+      "official answer key",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "1",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "z=i(1−i)=i−i²=1+i，因此 Im(z)=1。",
+    "independent_result": "1"
+  },
+  "math_equations": [
+    "z=i(1−i)",
+    "i²=−1",
+    "z=1+i",
+    "Im(z)=1"
+  ],
+  "editorial_note": "原题转写依据 PDF 第1页渲染图；参考答案依据 PDF 第6页。页面推导和 SVG 为独立教学编写，未将参考答案扩写内容冒充原卷解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}

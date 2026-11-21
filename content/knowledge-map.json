@@ -30,7 +30,8 @@
           "posts": [
             "jianping-2021-q01",
             "week12-gaosan-q08",
-            "chongming-2023-q04"
+            "chongming-2023-q04",
+            "shanghai-putuo-2023-q03"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
@@ -197,7 +198,8 @@
             "正切"
           ],
           "posts": [
-            "yangpu-2023-q04"
+            "yangpu-2023-q04",
+            "shanghai-putuo-2023-q04"
           ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
@@ -220,7 +222,8 @@
             "jianping-2021-q01",
             "jianping-2021-q11",
             "songjiang-2023-mock-q02",
-            "yangpu-2023-q04"
+            "yangpu-2023-q04",
+            "shanghai-putuo-2023-q05"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -240,7 +243,8 @@
             "三角变换"
           ],
           "posts": [
-            "songjiang-2023-mock-q02"
+            "songjiang-2023-mock-q02",
+            "shanghai-putuo-2023-q05"
           ],
           "outcomes": [
             "使用基本恒等关系化简表达式",
@@ -261,7 +265,8 @@
             "周期性"
           ],
           "posts": [
-            "jianping-2021-q12"
+            "jianping-2021-q12",
+            "shanghai-putuo-2023-q04"
           ],
           "outcomes": [
             "结合周期性统计区间内交点",
@@ -408,7 +413,8 @@
             "jianping-2021-q05",
             "jianping-2021-q17",
             "songjiang-2023-mock-q06",
-            "hongkou-2023-q03"
+            "hongkou-2023-q03",
+            "shanghai-putuo-2023-q02"
           ],
           "outcomes": [
             "理解常见几何体结构与截面",
@@ -526,7 +532,8 @@
             "chongming-2023-q03",
             "songjiang-2023-mock-q03",
             "hongkou-2023-q05",
-            "yangpu-2023-q05"
+            "yangpu-2023-q05",
+            "shanghai-putuo-2023-q01"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -744,7 +751,8 @@
             "derivative-classics-q02",
             "derivative-classics-q03",
             "chongming-2023-q02",
-            "hongkou-2023-q01"
+            "hongkou-2023-q01",
+            "shanghai-putuo-2023-q03"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",

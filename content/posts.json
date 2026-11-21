@@ -2422,5 +2422,170 @@
       "src": "assets/cover.svg",
       "caption": "复数 2+2i 在复平面中的坐标"
     }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q01",
+    "title": "复数与虚部：展开 z=i(1−i)，读出虚部 1",
+    "subtitle": "先用 i²=−1 展开复数乘法，再化为 a+bi 的标准形式。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "普陀区",
+      "填空题",
+      "复数",
+      "虚数单位",
+      "虚部",
+      "复平面"
+    ],
+    "summary": "由 z=i(1−i) 得 z=1+i，按复数标准形式读取虚部为 1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "复数 z 在复平面上的实部与虚部坐标"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q02",
+    "title": "正四棱柱体积：底面周长 4、高 2，为什么 V=2",
+    "subtitle": "正方形底面周长确定边长，再用底面积乘高。",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "2023普陀一模",
+      "普陀区",
+      "填空题",
+      "正四棱柱",
+      "正方形",
+      "棱柱体积",
+      "底面积"
+    ],
+    "summary": "底面周长为 4 得边长 1，底面积 1，高 2，体积为 2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正方形底面边长一与棱柱高二"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q03",
+    "title": "分式与幂函数不等式：解出函数负值区间 x>1",
+    "subtitle": "乘以恒正的 x²，把分式不等式化成五次幂不等式。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "普陀区",
+      "填空题",
+      "函数",
+      "分式不等式",
+      "定义域",
+      "幂函数单调性"
+    ],
+    "summary": "利用 x²>0 将 f(x)<0 化为 1−x⁵<0，得到 x>1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "数轴标出零点一与解集右侧开区间"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q04",
+    "title": "正切函数的零点：在指定区间内只有 x=0",
+    "subtitle": "令 θ=2x，换算角度范围后筛选 tanθ=0 的整数解。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "普陀区",
+      "填空题",
+      "正切函数",
+      "三角方程",
+      "零点",
+      "区间"
+    ],
+    "summary": "由 −π/2<2x<π/2 与 tan(2x)=0 得唯一零点 x=0。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正切曲线在给定开区间内的唯一零点"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q05",
+    "title": "三角恒等变换与周期：函数 1−2sin²x 的最小正周期",
+    "subtitle": "将表达式改写为 cos(2x)，得到最小正周期 π。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "普陀区",
+      "填空题",
+      "三角恒等式",
+      "二倍角公式",
+      "函数周期",
+      "余弦函数"
+    ],
+    "summary": "1−2sin²x=cos(2x)，角变量系数为 2，因此最小正周期为 π。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "cos二x在相邻长度派区间上的重复图像"
+    }
   }
 ]
