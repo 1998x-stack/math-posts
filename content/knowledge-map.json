@@ -524,15 +524,18 @@
           "tags": [
             "坐标",
             "向量",
-            "参数方程"
+            "参数方程",
+            "向量投影"
           ],
           "posts": [
             "jianping-2021-q02",
-            "songjiang-2023-mock-q07"
+            "songjiang-2023-mock-q07",
+            "yangpu-2023-q06"
           ],
           "outcomes": [
             "用坐标描述点和方向",
-            "理解参数运动并消去参数"
+            "理解参数运动并消去参数",
+            "通过数量积和垂直分解求平面向量在给定非零方向上的投影坐标"
           ]
         },
         {
@@ -643,7 +646,8 @@
             "jiading-2023-q12",
             "jiading-2023-q14",
             "jiading-2023-q20",
-            "shanghai-putuo-2023-q07"
+            "shanghai-putuo-2023-q07",
+            "yangpu-2023-q08"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -716,7 +720,8 @@
             "week12-gaosan-q10",
             "hongkou-2023-q04",
             "shanghai-putuo-2023-q06",
-            "hongkou-2023-q08"
+            "hongkou-2023-q08",
+            "yangpu-2023-q10"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -774,15 +779,18 @@
             "统计",
             "抽样",
             "平均数",
-            "方差"
+            "方差",
+            "分层抽样"
           ],
           "posts": [
             "jiading-2023-q19",
-            "shanghai-putuo-2023-q10"
+            "shanghai-putuo-2023-q10",
+            "yangpu-2023-q07"
           ],
           "outcomes": [
             "理解样本与总体的关系",
-            "解释平均数和方差"
+            "解释平均数和方差",
+            "依据总体各层比例分配分层抽样的样本容量，并核对整数名额"
           ]
         }
       ]
@@ -860,7 +868,8 @@
           "posts": [
             "jianping-2021-q03",
             "hongkou-2023-q02",
-            "week12-gaosan-q15"
+            "week12-gaosan-q15",
+            "yangpu-2023-q09"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",

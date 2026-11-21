@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 6,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and quantifiers",
+      "fractions, superscripts, signs, vector notation",
+      "source answer on page 8"
+    ]
+  },
+  "answer": {
+    "official": "(3,0)",
+    "independent_check": "投影后向量 p=(3,0) 与 b 平行；残差 a−p=(0,4) 满足 (a−p)·b=0，因此 p 正是正交投影。"
+  },
+  "math_equations": [
+    "向量点积等于三",
+    "向量 a 在向量 b 上的投影向量坐标是三逗号零"
+  ],
+  "figure_assertions": [
+    "青色向量 OA=(3,4)，橙色向量 OH=(3,0)；虚线 AH 垂直于水平目标方向。",
+    "原向量可拆成水平投影 OH 与竖直残差 HA：a=(3,0)+(0,4)。图中坐标和箭头长度按同一比例绘制。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified",
+    "responsive_browser_test": "not verified"
+  },
+  "editorial_note": "题干对照用户上传 PDF 第 1 页渲染图核对；原卷第 8 页提供参考答案，但没有本题完整解题过程。逐步推导及专属 SVG 为独立编写；未声称浏览器渲染测试通过。"
+}
