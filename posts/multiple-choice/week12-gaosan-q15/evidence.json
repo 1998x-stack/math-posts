@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 15,
+    "pages": [
+      2
+    ],
+    "image_number": 2,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not printed"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "a>0",
+      "x,y strictly positive",
+      "x+y=2a",
+      "if and only if x=y gives minimum",
+      "xy+1/x+1/y",
+      "options A (0,1], B (0,cuberoot(2)], C (0,sqrt(2)], D (0,2]"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供可认证的官方标准答案；照片中仅有手写推导。",
+    "independent_result": "B (0,∛2]",
+    "independent_check": "let t=xy∈(0,a²]; G=t+2a/t with unconstrained minimizer t0=√(2a). Unique min at x=y iff a²≤t0 iff a³≤2."
+  },
+  "math_equations": [
+    "0<xy≤a² with equality iff x=y=a",
+    "G(t)=t+2a/t",
+    "G'(t)=1−2a/t²",
+    "a²≤√(2a) iff a³≤2"
+  ],
+  "diagram_assertions": [
+    "a=1 gives t0> a²",
+    "a=3/2 gives t0<a²"
+  ],
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  },
+  "editorial_note": "第15题起位于照片2、印刷页2；B 的上界是三次根号2而非平方根，注意端点包含。"
+}
