@@ -1614,6 +1614,156 @@
     }
   },
   {
+    "slug": "chongming-2023-q01",
+    "title": "集合交集：从连续区间筛出三个离散元素",
+    "subtitle": "整数点落在半开区间内，交集只留下 2、3、4",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "集合",
+      "区间",
+      "填空题",
+      "2023崇明一模"
+    ],
+    "summary": "半开区间中筛选有限集合，交集留下 2、3、4，强调左开右闭的端点判定。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "整数点落在半开区间内，交集只留下 2、3、4"
+    }
+  },
+  {
+    "slug": "chongming-2023-q02",
+    "title": "分式不等式：两个临界点之间为何取负",
+    "subtitle": "分子零点 −1/2 与分母零点 2 将数轴分成三个区间",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "分式不等式",
+      "符号分析",
+      "填空题",
+      "2023崇明一模"
+    ],
+    "summary": "利用分子零点和分母禁点的符号表，严格确定负值区间 (−1/2,2)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "分子零点 −1/2 与分母零点 2 将数轴分成三个区间"
+    }
+  },
+  {
+    "slug": "chongming-2023-q03",
+    "title": "复数乘法：怎样让乘积落到虚轴上",
+    "subtitle": "纯虚数要求实部等于零，同时虚部不等于零",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "复数",
+      "纯虚数",
+      "填空题",
+      "2023崇明一模"
+    ],
+    "summary": "将复数乘积写成 (6−a)+(2+3a)i，实部为零时 a=6 并核验虚部 20。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "纯虚数要求实部等于零，同时虚部不等于零"
+    }
+  },
+  {
+    "slug": "chongming-2023-q04",
+    "title": "对数函数过定点：把 logₐ4=2 读成 a²=4",
+    "subtitle": "点 (4,2) 给出输入 4 和输出 2，底数唯一为 2",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "对数函数",
+      "指数互化",
+      "填空题",
+      "2023崇明一模"
+    ],
+    "summary": "将函数过点条件写成 logₐ4=2，转成 a²=4 并按对数底数定义筛出 2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "点 (4,2) 给出输入 4 和输出 2，底数唯一为 2"
+    }
+  },
+  {
+    "slug": "chongming-2023-q05",
+    "title": "等比数列公比为负：前四项为何是 1、−2、4、−8",
+    "subtitle": "平方差消元确定公比 −2，第四项是 −8",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "等比数列",
+      "负公比",
+      "填空题",
+      "2023崇明一模"
+    ],
+    "summary": "用平方差 1−q² 消去首项并验证分母非零，推出 q=−2、a₁=1、a₄=−8。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "平方差消元确定公比 −2，第四项是 −8"
+    }
+  },
+  {
     "slug": "songjiang-2023-mock-q01",
     "title": "集合交集：区间与整数集合的筛选",
     "subtitle": "左开右闭的区间只有 −1、0、1 三个整数",
