@@ -67,3 +67,25 @@
 - 第20题(3)原卷未定义k，额外解释为l斜率时可独立求得2，但不能将额外解释冒充原题，应持续保持draft直至题源澄清。
 - 第16题x≥0的比较符在上传版缺字，记录推断依据。不得在未核实来源上声称无误识别。
 - 对于简写LaTeX如 `\\frac52`，公式转换必须正确产生分子5分母2的MathML；遍历本批所有mfrac，核实恰有两个合法子元素。尤其复查第15题的星等因子5/2和第18题角B=π/3。
+
+
+## 题库信息架构与逐题教学升级（2026-11-21）
+
+以下要求面向所有后续 PDF 批次和新建题目；与数学公式覆盖率、来源证据和现有知识地图共同生效。
+
+1. **内容 ID**：`content/posts.json` 每题保持既有 `slug`、`category`、`topic`、`question_number` 和文章 URL；新增 `paper_id`，同一试卷的 `(paper_id, question_number)` 唯一。不要从文件名猜学校、考试年或题目总数。
+2. **试卷实体**：`content/papers.json` 管理具体考试/摘录/练习/专题集合；`source_id` 指向原始 PDF/照片/汇编。2024 上海二模解析几何汇编中的 16 个区第20题是不同地区试卷摘录，共用源文档，不能合并为一张试卷。
+3. **检索标签**：`content/taxonomy.json` 规范化 concept/method/visual 标签 ID；答题形式独立于知识概念。知识图谱先修节点仍以 `content/knowledge-map.json` 为真值源；旧自由文本 `tags` 只用于历史检索兼容。
+4. **保守标注**：每题至少 1 个经过核对的概念标签；解题方法和可视化标签只在该题确实实现/论证后赋值。避免仅因标题包含“向量”“反例”就宣称已完成某方法教学。标签不等于证明或来源证据。
+5. **页面体验**：题意拆解（明确编辑解释）→ 原题 → 条件标注 → 思路地图 → 逐步证明（目标、依据、计算、疑问、检查）→ 本题精确图形 → 答案独立复核 → 变式与关联题。无 JS 时全部证明仍可读；多小问按原题结构展开。
+6. **图形选型**：数轴/符号表、函数曲线/导数符号、单位圆、向量投影、圆锥曲线动点、计数树、概率模型、三维旋转等按真实数学问题选，不按固定封面模板选。参数图在临界值、定义域、退化点必须与数学结论一致。
+7. **试卷浏览**：`/papers/` 与 `/papers/<paper_id>/` 只为 published 题目提供链接；draft 可标“暂未公开”，但不得泄漏标题、答案或 URL；未核实完整原卷数量时不得展示虚假的覆盖率分母。
+8. **质量闭环**：更新 canonical Skill 后用 `python scripts/sync_skills.py` 同步四个镜像；运行 `pytest`、`build_site.py`、`validate_site.py`、浏览器 smoke。只在真实运行成功后标为已验证，CI/PR 部署要分开表述。
+
+详细执行标准：
+- [学生视角逐步解题](skills/math-visual-posts/references/student-solution-design.md)
+- [数学题型图解蓝图](skills/math-visual-posts/references/visualization-by-problem-type.md)
+- [多维标签与检索](skills/math-visual-posts/references/taxonomy-and-tags.md)
+- [试卷与来源 Schema](skills/math-visual-posts/references/exam-provenance-schema.md)
+
+**过渡边界**：现有 132 道题已进行试卷 ID 与初步概念标签登记，但解题方法/可视化标签仍需按题人工复核和补全。不能把索引迁移等同于已逐篇重做教学图。
