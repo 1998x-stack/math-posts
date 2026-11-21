@@ -20,7 +20,7 @@ def fixture_data():
 def test_all_questions_have_stable_unique_paper_identity_and_tags():
     posts, knowledge, papers, taxonomy = fixture_data()
     assert len(posts) >= 132 and len(papers) == 25
-    assert sum(p['status'] == 'published' for p in posts) >= 127
+    assert sum(p['status'] == 'published' for p in posts) >= 126
     assert len({(p["paper_id"], p["question_number"]) for p in posts}) == len(posts)
     assert all(p["facets"]["concept"] for p in posts if p["status"] == "published")
     assert set(d["id"] for d in taxonomy["dimensions"]) == {"concept", "method", "visual"}
@@ -137,3 +137,12 @@ def test_huangpu_focus_vertex_language_is_mathematically_correct():
     svg = (article / "assets/cover.svg").read_text("utf-8")
     assert "共焦" not in html and "共焦" not in svg
     assert "椭圆焦点" in svg and "双曲线顶点" in svg
+
+
+def test_never_publish_explicitly_unverified_source_glyph():
+    posts, _, _, _ = fixture_data()
+    item=next(p for p in posts if p['slug']=='songjiang-2023-mock-q16')
+    assert item['status']=='draft'
+    evidence=json.loads((ROOT/'posts'/item['category']/item['slug']/'evidence.json').read_text('utf-8'))
+    assert evidence['qa']['source_checked'] is False
+    assert '缺失' in evidence['editorial_note']

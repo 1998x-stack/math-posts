@@ -73,9 +73,16 @@ def load_atlas(root: Path, posts: list, knowledge_map: dict):
             values = facets[axis]
             assert isinstance(values, list) and len(values) == len(set(values)), f"Duplicate {axis}: {slug}"
             assert all(isinstance(v, str) and v in tags[axis] for v in values), f"Unknown {axis}: {slug}"
+        source=root / "posts" / post["category"] / slug / "evidence.json"
+        assert source.is_file(), f"Missing per-question provenance: {slug}"
+        provenance=json.loads(source.read_text(encoding="utf-8"))
+        assert provenance.get("source", {}).get("question")==number, f"Evidence question mismatch: {slug}"
+        assert provenance.get("source", {}).get("pages")==post.get("source_pages"), f"Evidence pages mismatch: {slug}"
+        assert "official" in provenance.get("answer", {}), f"Missing official-answer provenance field: {slug}"
         if post["status"] == "published":
             assert slug in mapped, f"No knowledge-map entry: {slug}"
             assert facets["concept"], f"Published post without concept tag: {slug}"
+            assert provenance.get("qa", {}).get("source_checked") is not False, f"Unverified source published: {slug}"
     return papers, taxonomy
 
 
