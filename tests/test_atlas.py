@@ -163,3 +163,13 @@ def test_verified_number_shape_visualization_facets_are_grounded_in_svg():
     p=by_slug['jiading-2023-q19']
     assert 'optimization' in p['facets']['concept']
     assert 'probability-statistics' not in p['facets']['concept']
+
+
+def test_skill_gates_follow_actual_execution_order():
+    skill=(ROOT/'skills/math-visual-posts/SKILL.md').read_text("utf-8")
+    gates=["Gate 0", "Gate 1", "Gate 1.5", "Gate 2", "Gate 2.5",
+           "Gate 3", "Gate 4", "Gate 5", "Gate 6", "Gate 7", "Gate 7.5", "Gate 8"]
+    positions=[skill.index("## "+g+"：") for g in gates]
+    assert positions==sorted(positions)
+    for name in ("student-solution-design","visualization-by-problem-type","taxonomy-and-tags","exam-provenance-schema"):
+        assert "references/"+name+".md" in skill
