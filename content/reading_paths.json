@@ -85,5 +85,16 @@
       "shanghai-2024-geometry-huangpu-q20",
       "shanghai-2024-geometry-yangpu-q20"
     ]
+  },
+  {
+    "id": "math-path-09",
+    "title": "导数及其应用：切线、单调性、零点偏移与恒成立",
+    "posts": [
+      "derivative-classics-q01",
+      "derivative-classics-q02",
+      "derivative-classics-q03",
+      "derivative-classics-q04",
+      "derivative-classics-q05"
+    ]
   }
 ]
