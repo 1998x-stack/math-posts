@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 17,
+    "pages": [
+      3
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-original-rendered-PDF",
+    "checked_elements": [
+      "question statement",
+      "symbols",
+      "options where present",
+      "official reference answer"
+    ],
+    "uncertainty": null
+  },
+  "answer": {
+    "official": "（1）平面ACD⊥平面ABC；（2）arccos(√5/3)",
+    "official_source": "PDF p.7 reference answer",
+    "independent_result": "（1）平面ACD⊥平面ABC；（2）arccos(√5/3)",
+    "independent_check": "坐标B=(0,0,0),C=(2,0,0),D=(2,2,0),A=(0,0,1)满足所有条件，点D到平面ABC(y=0)的垂足是C，cos∠DAC=√5/3。"
+  },
+  "math_equations": [
+    "AB\\perp CD",
+    "CD\\perp\\text{平面}ABC",
+    "\\text{平面}ACD\\perp\\text{平面}ABC",
+    "\\theta=\\angle DAC",
+    "AC=\\sqrt5,\\quad AD=3,\\quad \\cos\\theta=\\frac{\\sqrt5}{3}",
+    "\\theta=\\arccos\\frac{\\sqrt5}{3}"
+  ],
+  "editorial_note": "按PDF原卷内容与参考答案逐项核对。推导和图解为独立教学写作，未伪称原卷官方过程。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
