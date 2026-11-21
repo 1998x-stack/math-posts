@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 5,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and exponents",
+      "official answer",
+      "domain and interval endpoints"
+    ]
+  },
+  "answer": {
+    "official": "2",
+    "independent_check": "直接展开得 z=2+2i。按复数标准形式 z=a+bi，虚部 Im(z)=b=2；复平面中的点 (2,2) 也给出相同结果。"
+  },
+  "math_equations": [
+    "2i(1−i)=2i−2i²",
+    "z=2+2i",
+    "Im(z)=2"
+  ],
+  "figure_assertions": [
+    "复数 2+2i 在复平面中的坐标"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "原题按 PDF 第 1 页渲染图逐字核对；参考答案按 PDF 第 8 页核对。第 8 页仅列标准答案，没有提供本题逐步解析；页面中的推导为独立推导。原卷为用户上传文件，没有公开下载链接。"
+}

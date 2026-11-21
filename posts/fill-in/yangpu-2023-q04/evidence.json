@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 4,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and exponents",
+      "official answer",
+      "domain and interval endpoints"
+    ]
+  },
+  "answer": {
+    "official": "π/6 或 5π/6",
+    "independent_check": "sin(π/6)=1/2；又因为 sin(π−θ)=sin θ，所以 sin(5π/6)=1/2。两角均属于开区间 (0,π)，且上半圆只有这两个交点。"
+  },
+  "math_equations": [
+    "sin(π/6)=1/2",
+    "sin(5π/6)=1/2"
+  ],
+  "figure_assertions": [
+    "单位圆上 y=1/2 的两个交点"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "原题按 PDF 第 1 页渲染图逐字核对；参考答案按 PDF 第 8 页核对。第 8 页仅列标准答案，没有提供本题逐步解析；页面中的推导为独立推导。原卷为用户上传文件，没有公开下载链接。"
+}
