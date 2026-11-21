@@ -146,3 +146,20 @@ def test_never_publish_explicitly_unverified_source_glyph():
     evidence=json.loads((ROOT/'posts'/item['category']/item['slug']/'evidence.json').read_text('utf-8'))
     assert evidence['qa']['source_checked'] is False
     assert '缺失' in evidence['editorial_note']
+
+
+def test_verified_number_shape_visualization_facets_are_grounded_in_svg():
+    posts, _, _, _ = fixture_data()
+    by_slug={p['slug']:p for p in posts}
+    for slug,method,visual,title in (
+        ('jianping-2021-q02','coordinate-method','coordinate-plane','参数方程消元为直线'),
+        ('jianping-2021-q03','number-shape','feasible-region','半平面约束的最近点'),
+        ('jianping-2021-q08','number-shape','coordinate-plane','奇函数与平行四边形'),
+    ):
+        p=by_slug[slug]
+        assert method in p['facets']['method'] and visual in p['facets']['visual']
+        svg=(ROOT/'posts'/p['category']/p['slug']/p['cover']['src']).read_text('utf-8')
+        assert title in svg
+    p=by_slug['jiading-2023-q19']
+    assert 'optimization' in p['facets']['concept']
+    assert 'probability-statistics' not in p['facets']['concept']

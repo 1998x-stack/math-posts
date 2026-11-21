@@ -69,8 +69,12 @@
       "concept": [
         "analytic-geometry"
       ],
-      "method": [],
-      "visual": []
+      "method": [
+        "coordinate-method"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
     }
   },
   {
@@ -109,8 +113,12 @@
         "optimization",
         "reasoning"
       ],
-      "method": [],
-      "visual": []
+      "method": [
+        "number-shape"
+      ],
+      "visual": [
+        "feasible-region"
+      ]
     }
   },
   {
@@ -292,10 +300,15 @@
     "paper_id": "jianping-2021-mock-03",
     "facets": {
       "concept": [
+        "analytic-geometry",
         "functions"
       ],
-      "method": [],
-      "visual": []
+      "method": [
+        "number-shape"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
     }
   },
   {
@@ -4137,8 +4150,7 @@
     "paper_id": "jiading-2023-mock",
     "facets": {
       "concept": [
-        "optimization",
-        "probability-statistics"
+        "optimization"
       ],
       "method": [],
       "visual": []

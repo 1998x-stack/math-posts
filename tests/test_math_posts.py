@@ -383,7 +383,7 @@ def test_songjiang_second_ten_source_and_semantic_mathml():
     from bs4 import BeautifulSoup
     docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]>=11],key=lambda p:p["question_number"])
     assert [p["question_number"] for p in docs]==list(range(11,21))
-    assert [p["status"] for p in docs]==["published"]*9+["draft"]
+    assert [p["status"] for p in docs]==["published"]*5+["draft"]+["published"]*3+["draft"]
     assert [p["category"] for p in docs]==["fill-in"]*2+["multiple-choice"]*4+["worked-solutions"]*4
     assert [p["source_pages"] for p in docs]==[[2],[2],[2],[2],[2,3],[3],[3],[4],[4],[5]]
     for p in docs:
