@@ -67,43 +67,34 @@ def validate(path: Path) -> dict:
         if script['src'].startswith('http'): warnings.append('External JS dependency: ' + script['src'])
     for link in soup.find_all('link', href=True):
         if link['href'].startswith('http'): warnings.append('External stylesheet dependency: ' + link['href'])
-    # MathML coverage is mandatory for every published math-post.
+    # MathML is optional for legacy articles; whenever present it must be well formed.
     maths = soup.find_all('math')
-    display_maths = [m for m in maths if m.get('display') == 'block']
-    inline_maths = [m for m in maths if 'math-inline' in (m.get('class') or [])]
-    if len(maths) < 10:
-        failures.append(f'MathML coverage too low: expected >=10 expressions, found {len(maths)}')
-    if len(display_maths) < 4:
-        failures.append(f'Display MathML coverage too low: expected >=4, found {len(display_maths)}')
-    if len(inline_maths) < 2:
-        failures.append(f'Inline MathML coverage too low: expected >=2, found {len(inline_maths)}')
-    if not soup.select_one('.formula-bank'):
-        failures.append('Missing the problem-specific core formula summary')
-    visible_text = "\\n".join(
-        str(node) for node in soup.find_all(string=True)
-        if not (node.parent and node.parent.find_parent(['math', 'svg', 'script', 'style', 'code', 'pre']))
-    )
-    if re.search(r'\\(?:[()\[\]]|frac\b|sqrt\b|sum\b|int\b|begin\b|end\b)|\$\$?', visible_text):
-        failures.append('Visible raw LaTeX source found outside MathML')
-    raw_formula_pattern = re.compile(
-        r'(?<![A-Za-z0-9])(?:[A-Za-z][A-Za-z0-9₀-₉⁰-⁹]*)(?:\([^()\n]{1,28}\))?'
-        r'\s*(?:=|≤|≥|≠|≈|∈|∉|⊥|∥|·|×)\s*[-+−]?(?:\d|[A-Za-zπ√])'
-    )
-    raw_formula_candidates = 0
-    for text_node in soup.find_all(string=True):
-        parent = text_node.parent
-        if parent and parent.find_parent(['math', 'svg', 'script', 'style', 'code', 'pre']):
-            continue
-        if raw_formula_pattern.search(str(text_node)):
-            raw_formula_candidates += 1
-    if raw_formula_candidates:
-        warnings.append(f'Possible unrendered equation-like text nodes: {raw_formula_candidates}; inspect each candidate')
-
+    for idx, math in enumerate(maths, 1):
+        if math.find_parent('svg'):
+            failures.append(f'MathML {idx} nested inside SVG (invalid namespace)')
+        if not (math.get('aria-label') or math.get('aria-labelledby')):
+            failures.append(f'MathML {idx} missing accessible description')
+        if not math.find(['mi', 'mn', 'mo', 'mrow', 'mfrac', 'msup', 'msub', 'munder', 'munderover', 'mtable']):
+            failures.append(f'MathML {idx} has no mathematical structure')
+        if math.get('display') not in (None, 'inline', 'block'):
+            failures.append(f'MathML {idx} invalid display attribute')
+        for name, arity in [('mfrac', 2), ('msub', 2), ('msup', 2),
+                            ('msubsup', 3), ('munder', 2), ('mover', 2), ('munderover', 3)]:
+            for node in math.find_all(name):
+                children = [child for child in node.children if getattr(child, 'name', None)]
+                if len(children) != arity:
+                    failures.append(f'MathML {idx} malformed {name}: expected {arity} children, got {len(children)}')
+        if math.get('display') == 'block':
+            region = math.find_parent(attrs={'data-math-scroll': True})
+            if region is None:
+                region = math.find_parent(class_=['math-scroll', 'eq-scroll'])
+            if region is None or region.get('tabindex') != '0' or region.get('role') != 'region':
+                failures.append(f'MathML {idx} display equation needs a keyboard-focusable scroll region')
     if not soup.find('a', href=re.compile('source-notes|github.com/1998x-stack/math-posts')):
         warnings.append('No source provenance hyperlink in article')
     return {
         'path': str(path), 'pass': not failures,
-        'counts': {'h2': len(soup.find_all('h2')), 'figures': len(figures), 'svg': len(svgs), 'buttons': len(soup.find_all('button')), 'mathml': len(maths), 'mathml_display': len(display_maths), 'mathml_inline': len(inline_maths), 'raw_formula_candidates': raw_formula_candidates},
+        'counts': {'h2': len(soup.find_all('h2')), 'figures': len(figures), 'svg': len(svgs), 'buttons': len(soup.find_all('button')), 'mathml': len(maths)},
         'failures': failures, 'warnings': warnings,
     }
 

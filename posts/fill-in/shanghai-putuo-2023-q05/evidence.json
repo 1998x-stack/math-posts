@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 5,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "printed question",
+      "mathematical symbols and exponents",
+      "domain and interval endpoints",
+      "official answer key",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "π",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "1−2sin²x=cos(2x)，角变量 2x 的最小正周期为 2π，故 x 的最小正周期为 π。",
+    "independent_result": "π"
+  },
+  "math_equations": [
+    "1−2sin²x=cos(2x)",
+    "f(x+π)=f(x)",
+    "2T=2π",
+    "T=π"
+  ],
+  "editorial_note": "原题转写依据 PDF 第1页渲染图；参考答案依据 PDF 第6页。页面推导和 SVG 为独立教学编写，未将参考答案扩写内容冒充原卷解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}
