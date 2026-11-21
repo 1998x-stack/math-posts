@@ -2587,5 +2587,165 @@
       "src": "assets/cover.svg",
       "caption": "cos二x在相邻长度派区间上的重复图像"
     }
+  },
+  {
+    "slug": "hongkou-2023-q06",
+    "title": "无穷等比数列求和：首项 2、公比 1/3 为什么总和是 3",
+    "subtitle": "项按三分之一缩小，部分和从下方逼近极限 3",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "sequences",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "数列",
+      "等比数列",
+      "无穷级数"
+    ],
+    "summary": "bₙ=2(1/3)ⁿ⁻¹，Sₙ=3(1−3⁻ⁿ)；收敛条件 |q|<1 使总和为 3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "单项等比递减与前五个部分和逼近极限三"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q07",
+    "title": "导数与切线方程：在 y=ln x+2x 上寻找斜率为 3 的切线",
+    "subtitle": "斜率等于导数，唯一切点 (1,2) 决定切线方程",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "导数",
+      "切线",
+      "对数函数"
+    ],
+    "summary": "由 f′(x)=1/x+2=3 得 x=1，切点 (1,2)，切线 3x−y−1=0。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "自然对数曲线与斜率为三的切线在一二相切"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q08",
+    "title": "古典概型与相邻排列：甲参与连续两天活动的概率",
+    "subtitle": "五天选两天共有十种日期组合，其中四种相邻",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "combinatorics",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "概率",
+      "古典概型",
+      "组合数"
+    ],
+    "summary": "从 5 天选 2 天共有 10 种组合；相邻两天有 4 种，概率为 2/5。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "十组甲的参与日期中四组是相邻日期"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q09",
+    "title": "对数函数的奇偶性：为什么要先检查定义域的对称性",
+    "subtitle": "由对称的定义域缺口先确定 a，再求 b",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "奇函数",
+      "定义域",
+      "对数函数"
+    ],
+    "summary": "分母使 x=2 不可取；奇函数要求 x=−2 也不可取，得 a=−1、b=0，a+b=−1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "对数分式函数的对称定义域与互为相反的函数值"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q10",
+    "title": "余弦图像的轴心间距：由最小距离反求频率与相位",
+    "subtitle": "轴心最短距离 π/(2ω)=π/8 锁定 ω=4，轴位置锁定相位",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "三角函数",
+      "余弦函数",
+      "图像对称性"
+    ],
+    "summary": "最小轴心距离为 π/(2ω)，得到 ω=4；x=π/6 为轴且 |φ|<π/2，得到 φ=π/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "余弦波谷对称轴到两侧最近对称中心的距离"
+    }
   }
 ]
