@@ -32,6 +32,10 @@
       {
         "slug": "complex-numbers",
         "title": "复数与复平面"
+      },
+      {
+        "slug": "probability-statistics",
+        "title": "概率与统计"
       }
     ]
   },

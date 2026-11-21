@@ -3260,5 +3260,160 @@
       "src": "assets/cover.svg",
       "caption": "橙色是两段半圆弧，青色是下半椭圆，B 为下顶点；P、Q 是第二问的等号点，N 是第三问的固定点。"
     }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q06",
+    "title": "二项式展开：合并两部分的 x² 系数得到 16",
+    "subtitle": "分别求出四次方和五次方展开式里的 x² 系数，再把它们相加。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "二项式定理",
+      "组合数",
+      "系数"
+    ],
+    "summary": "C(4,2)+C(5,2)=6+10=16，两个展开式同次幂的系数必须合并。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四次方中 x² 系数六与五次方中 x² 系数十的合并示意"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q07",
+    "title": "双曲线渐近线：两条直线的锐角为 π/3",
+    "subtitle": "从标准式读出渐近线斜率 ±1/√3，再计算夹角。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "双曲线",
+      "渐近线",
+      "夹角"
+    ],
+    "summary": "渐近线 y=±x/√3 的方向角是 ±π/6，较小夹角为 π/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "双曲线两条斜率正负根号三分之一的渐近线六十度夹角"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q08",
+    "title": "抽两罐至少一罐中奖：概率为 3/5",
+    "subtitle": "15 种不区分顺序的抽法中有 9 种含有中奖饮料。",
+    "category": "fill-in",
+    "topic": "probability-statistics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "古典概型",
+      "组合计数",
+      "互补事件"
+    ],
+    "summary": "所有抽法 C(6,2)=15，全部未中奖 C(4,2)=6，中奖概率为 3/5。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "十五种无序饮料组合中九种包含至少一罐中奖饮料"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q09",
+    "title": "固定直线与参数圆恰有一个交点：m=0",
+    "subtitle": "用圆心到竖直直线的距离等于半径建立相切条件。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "直线与圆",
+      "相切",
+      "参数"
+    ],
+    "summary": "圆心到 x=−1 的距离为 1+m²/4，等于半径 1 仅当 m=0。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "参数为零时竖直直线负一与单位圆唯一切点的坐标模型"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q10",
+    "title": "中位数和平均数都为 124：标准差等于 2",
+    "subtitle": "由均值确定两未知数据之和，再用中位数还原完整样本。",
+    "category": "fill-in",
+    "topic": "probability-statistics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "中位数",
+      "平均数",
+      "标准差"
+    ],
+    "summary": "由 a+b=247 且中位数为124，得样本 121、123、124、125、127；离差平方和20，标准差2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "五个水果质量样本相对均值一百二十四的五个离差"
+    }
   }
 ]

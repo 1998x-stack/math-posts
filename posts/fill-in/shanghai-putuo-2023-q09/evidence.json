@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 9,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "page 1 question",
+      "page 6 reference answer",
+      "signs and superscripts",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "0",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "m=0 时圆 x²+y²=1，代入 x=−1 得 y=0；m≠0 时 d>1，无交点。",
+    "independent_result": "0"
+  },
+  "math_equations": [
+    "O=(m²/4,m),r=1",
+    "d=|m²/4+1|=1+m²/4",
+    "1+m²/4=1",
+    "m=0"
+  ],
+  "svg_assertion": "半径为一的圆在最左端负一零点与竖直直线相切。",
+  "editorial_note": "原卷仅有参考答案，没有官方详细解析；本站 SVG 与逐步教学解法为独立编写。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}
