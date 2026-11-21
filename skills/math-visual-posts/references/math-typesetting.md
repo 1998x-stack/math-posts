@@ -20,20 +20,6 @@ A mathematical expression is a computational claim, not visual decoration. Write
 - Do not mix `<math>` into `<svg><text>`. SVG text is an SVG context; MathML markup inserted there can have the wrong namespace and cause missing graphics. If a diagram needs a mathematical label, use compact plain SVG text or separately positioned HTML MathML; validate SVG text and standalone exports.
 - Keep equations outside `<pre><code>` and escaped examples. Do not duplicate live MathML in hidden fallback content without explicit accessibility control.
 
-## 数学题解页面的公式覆盖率（强制质量门禁）
-
-本规范同时适用于高中数学题解、竞赛题、解析几何、数列、函数、概率与统计页面。不是“有 MathML 就算通过”。
-
-- 每篇 HTML 至少 **10 个 MathML 表达式**，至少 **4 个 display 公式**、至少 **2 个 inline 公式**；不得复制粘贴相同表达式来满足数量。
-- 公式必须覆盖：题设/定义、模型或坐标、关键等价变形、变量范围/边界/等号条件、最终结论/验算。复杂题按每个小问分别核对。
-- 普通段落中出现的数学关系也要渲染：例如 f(x)=...、x²/a²+y²/b²=1、aₙ₊₁−aₙ=...、|u·v|、C(n,k)。不要只把公式放进末尾的公式清单，却让正文继续裸露原始表达式。
-- Unicode 上下标仅可用于不承担推导意义的短符号提及；幂、下标、分式、根式和绝对值关系必须使用 MathML 结构节点。
-- 每个 MathML 的 aria-label 应说明关系含义；display 公式必须处于 tabindex=0、role=region 且有可访问名称的横向滚动容器中。
-- 页面不能出现可见的 LaTeX 源码（如 frac、sqrt、math delimiter、$）。检查范围必须排除代码示例、脚本和样式，不能用排除规则掩盖正文中的源码。
-- 每次改动必须逐页核验公式的正负号、分母、根号范围、变量域、区间端点、向量方向、参数约束与等号条件。公式清单只能作为导航，不能替代正文逐步推导。
-
-scripts/validate.py 执行数量、结构和源码门禁；scripts/browser_check.py 检查真实浏览器中的 MathML namespace、非零尺寸、分式上下位置、滚动区和页面溢出。数量通过但内容错误，仍然失败。
-
 ## Minimal correct example
 
 ```html

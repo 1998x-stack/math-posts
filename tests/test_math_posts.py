@@ -309,7 +309,7 @@ def test_every_math_post_has_real_mathml_coverage():
     from bs4 import BeautifulSoup
 
     posts = manifest()
-    assert len(posts) >= 77
+    assert len(posts) >= 82
     for p in posts:
         html = (ROOT / 'posts' / p['category'] / p['slug'] / 'index.html').read_text('utf-8')
         soup = BeautifulSoup(html, 'html.parser')
