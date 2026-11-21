@@ -1,0 +1,37 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 4,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "printed question",
+      "power and inequality",
+      "set notation",
+      "coefficient expressions"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中仅见手写作答。",
+    "independent_check": "k=2 时 x 的指数为 6−3×2=0；相邻 k=1 与 k=3 的指数分别为 +3、−3，都不是常数项。展开式仅此一项满足要求。",
+    "independent_result": "60"
+  },
+  "math_equations": [
+    "T_(k+1)=C(6,k)2^k x^(6−3k)",
+    "k=2",
+    "C(6,2)×4=60"
+  ],
+  "editorial_note": "按第1张照片打印题干复核；数学解释和 SVG 均为独立编写，不声称有官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

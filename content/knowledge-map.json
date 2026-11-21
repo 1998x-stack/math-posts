@@ -245,7 +245,8 @@
             "求和"
           ],
           "posts": [
-            "jianping-2021-q10"
+            "jianping-2021-q10",
+            "week12-gaosan-q05"
           ],
           "outcomes": [
             "使用等差数列通项和求和公式",
@@ -265,7 +266,8 @@
             "求和"
           ],
           "posts": [
-            "jianping-2021-q06"
+            "jianping-2021-q06",
+            "week12-gaosan-q05"
           ],
           "outcomes": [
             "从相邻项比值识别公比",
@@ -416,6 +418,27 @@
           ]
         },
         {
+          "id": "complex-numbers",
+          "title": "复数平面、复数模与旋转",
+          "difficulty": 2,
+          "prerequisites": [
+            "coordinate-basics"
+          ],
+          "tags": [
+            "复数",
+            "复数模",
+            "虚数单位",
+            "复平面"
+          ],
+          "posts": [
+            "week12-gaosan-q02"
+          ],
+          "outcomes": [
+            "将复数 a+bi 对应到平面点 (a,b)",
+            "用模和乘法理解向量长度与旋转"
+          ]
+        },
+        {
           "id": "line-circle",
           "title": "直线、圆与位置关系",
           "difficulty": 2,
@@ -529,7 +552,8 @@
           ],
           "posts": [
             "jianping-2021-q07",
-            "jianping-2021-q09"
+            "jianping-2021-q09",
+            "week12-gaosan-q04"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -610,11 +634,34 @@
             "范围"
           ],
           "posts": [
-            "jianping-2021-q03"
+            "jianping-2021-q03",
+            "week12-gaosan-q01",
+            "week12-gaosan-q03"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
             "检查平方、乘除与定义域条件"
+          ]
+        },
+        {
+          "id": "set-intervals",
+          "title": "集合交并运算与区间表示",
+          "difficulty": 1,
+          "prerequisites": [
+            "inequality-basics"
+          ],
+          "tags": [
+            "集合",
+            "交集",
+            "区间",
+            "数轴"
+          ],
+          "posts": [
+            "week12-gaosan-q03"
+          ],
+          "outcomes": [
+            "将条件集合转化成区间",
+            "根据成员资格判断有限集和区间的交集"
           ]
         },
         {

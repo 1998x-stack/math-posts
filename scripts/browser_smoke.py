@@ -39,7 +39,10 @@ def run():
                         assert page.locator('figure svg').count()>=1,(width,path,'SVG')
                         assert page.locator('math').count()>=1,(width,path,'MathML')
                         assert page.locator('math[aria-label],math[aria-labelledby]').count()==page.locator('math').count(),(width,path,'MathML accessible labels')
-                        if any(f'q{n:02d}' in path for n in (4,13,17)):
+                        if 'week12-gaosan-' in path:
+                            assert page.locator('math[display="block"]').count() >= 1,(width,path,'display MathML equation')
+                            assert page.locator('math').evaluate_all("(nodes)=>nodes.every(n=>n.namespaceURI==='http://www.w3.org/1998/Math/MathML' && n.getBoundingClientRect().width>0 && n.getBoundingClientRect().height>0)"),(width,path,'native MathML namespace and visible geometry')
+                        if any(f'jianping-2021-q{n:02d}' in path for n in (4,13,17)):
                             scene=page.locator('[data-three-scene]')
                             scene.wait_for(timeout=5000)
                             page.locator('[data-three-scene][data-ready="false"]').wait_for(timeout=10000)

@@ -1,0 +1,37 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 3,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "printed question",
+      "power and inequality",
+      "set notation",
+      "coefficient expressions"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中仅见手写作答。",
+    "independent_check": "直接代入不等式：x=−2 时 2x²+x−1=5>0，x=0 时为 −1<0，x=1 时为 2>0；只有零合格。",
+    "independent_result": "{0}"
+  },
+  "math_equations": [
+    "2x²+x−1=(2x−1)(x+1)",
+    "B=(−1,1/2)",
+    "A∩B={0}"
+  ],
+  "editorial_note": "按第1张照片打印题干复核；数学解释和 SVG 均为独立编写，不声称有官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

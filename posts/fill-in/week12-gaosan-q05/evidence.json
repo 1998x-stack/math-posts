@@ -1,0 +1,39 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 5,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "nonzero common difference",
+      "first term",
+      "indices 1, 2, 6",
+      "geometric progression condition"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中仅见手写作答。",
+    "independent_check": "a₁=1,a₂=4,a₆=16, 4²=1×16 且 d=3≠0",
+    "independent_result": "a_n=3n−2"
+  },
+  "math_equations": [
+    "a₂²=a₁a₆",
+    "(1+d)²=1+5d",
+    "d(d−3)=0",
+    "d=3",
+    "a_n=3n−2"
+  ],
+  "editorial_note": "按第1张照片打印题干复核；独立绘制散点图，与公差和等比条件一致。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
