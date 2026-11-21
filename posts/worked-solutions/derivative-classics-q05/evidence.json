@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 5,
+    "pages": [
+      6,
+      7
+    ],
+    "school": "南京大学附属中学（2025届高三下学期2月模拟）",
+    "material": "user-supplied PDF (62 pages; not publicly linked)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "subquestions",
+      "math_signs",
+      "PDF reference answer"
+    ]
+  },
+  "answer": {
+    "official": "题源 PDF 参考答案：（1）(e+1)x−y−1=0；（2）证明见解析（结论 f(x₀)>e^{x₀}）。",
+    "independent_check": "取 a=−1 得 x₀≈0.567143，且 ln x₀≈−0.567143，所以 f(x₀)−e^{x₀}=0.567143>0。"
+  },
+  "editorial_note": "原卷包含参考答案与解析；本文保留题源所载答案，独立补充的严格证明、取等、定义域和图解与原解区分。",
+  "math_equations": [
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动"
+  ]
+}

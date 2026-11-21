@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 3,
+    "pages": [
+      5,
+      6
+    ],
+    "school": "东北育才学校（2024届考前三模）",
+    "material": "user-supplied PDF (62 pages; not publicly linked)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "subquestions",
+      "math_signs",
+      "PDF reference answer"
+    ]
+  },
+  "answer": {
+    "official": "题源 PDF 参考答案：（1）h(x)=x+1；（2）极大值为1（x=0），无极小值；（3）a≤1/2。",
+    "independent_check": "a=1/2 时 t=eˣ−1−x−x²/2≥0（x≥0），在 x=0 等号成立；若 a>1/2，近0的二次项为负。"
+  },
+  "editorial_note": "原卷包含参考答案与解析；本文保留题源所载答案，独立补充的严格证明、取等、定义域和图解与原解区分。",
+  "math_equations": [
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动"
+  ]
+}
