@@ -185,3 +185,15 @@ python -m pytest -q
 - [各数学题型图解](references/visualization-by-problem-type.md)
 - [标签与首页检索](references/taxonomy-and-tags.md)
 - [试卷 Schema 与来源](references/exam-provenance-schema.md)
+
+## Gate 3.5：全仓库公式原位审计与旧文整改
+
+公式排版不只检查新增文章。每次 PR、main push 和每周定期扫描全部已登记文章：
+- python scripts/audit_teaching_quality.py --output _audit/teaching-quality.json
+- python scripts/audit_math_rendering.py --output _audit/math-rendering.json
+
+第二份报告必须细化到**原题区和每一个解题步骤**：发现裸公式候选、混合排版、MathML 无障碍名称缺失、分式/上下标结构错误，以及解析几何图形缺口。不得把一篇文章中的公式总数当作题干或步骤的覆盖证明。候选只用于建立人工复核队列，不得自动替换 HTML。
+
+旧文整改顺序：原题中有数学关系但无 MathML → 具体步骤中有数学关系但无 MathML → 同一段落中 MathML 与裸公式混用 → 图形与方程/标签不一致。每次修改都要对照原 PDF 渲染页，并核对符号、分母、指数、区间端点、变量范围和等号条件。未取得原 PDF 或符号不清楚时保留 draft/未验证状态。
+
+解析几何专门执行 [解析几何公式与图形审计](references/analytic-geometry-visual-audit.md)：图形必须由同一数学模型生成，并对点在曲线上、交点、切线、垂直、焦点距离、参数范围和退化情形设置可核对断言。有限斜率参数法必须单独处理竖直线。SVG 只提供理解证据，不代替代数证明。
