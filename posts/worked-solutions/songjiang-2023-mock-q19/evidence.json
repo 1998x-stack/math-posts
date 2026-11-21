@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 19,
+    "pages": [
+      4
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "source-checked-with-incomplete-reference-answer",
+    "checked_elements": [
+      "full original statement",
+      "figure",
+      "mathematics",
+      "reference answer"
+    ],
+    "uncertainty": "第7页参考答案第19题（1）仅印“120米”，但原题分别问谷底深度与桥长；独立计算谷深160米、桥长120米。"
+  },
+  "answer": {
+    "official": "(1) 120米（参考页未列另一个所求值）；(2) 20米",
+    "official_source": "PDF p.7 reference answer (result only)",
+    "independent_result": "（1）谷深160米、桥长120米；（2）O′E=20米（总成本155k万元）",
+    "independent_check": "原卷函数 h₂(40)=160，左坡 h₁(80)=160，AB=120；b=20时 h₁(60)=90、h₂(20)=110，CD=70、EF=50，总造价(3/2)k·70+k·50=155k。参考答案页只列120米，显然对应桥长；20米与(2)一致。"
+  },
+  "math_equations": [
+    "H=-\\frac{40^3}{800}+6\\cdot40=160",
+    "a=\\sqrt{40\\cdot160}=80,\\quad AB=80+40=120",
+    "0<b<40,\\quad a=80-b",
+    "CD=160-\\frac{(80-b)^2}{40}",
+    "EF=160+\\frac{b^3}{800}-6b",
+    "T(b)=\\frac{3k}{2}CD+kEF",
+    "T'(b)=\\frac{3k}{800}b(b-20)",
+    "b=20,\\quad CD=70,\\quad EF=50,\\quad T_{\\min}=155k"
+  ],
+  "editorial_note": "第7页参考答案第19题（1）仅印“120米”，但原题分别问谷底深度与桥长；独立计算谷深160米、桥长120米。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
