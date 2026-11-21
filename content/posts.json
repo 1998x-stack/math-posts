@@ -2924,5 +2924,341 @@
       "src": "assets/cover.svg",
       "caption": "让 x=π/3 成为波峰，得到 ω=2+6n 并筛出最小正值"
     }
+  },
+  {
+    "slug": "jiading-2023-q11",
+    "title": "空间投影向量：点积如何决定方向与坐标",
+    "subtitle": "投影是向量而非一个长度；负点积意味着沿给定方向反向。",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "填空题",
+      "空间向量",
+      "数量积",
+      "向量投影",
+      "正交分解"
+    ],
+    "summary": "投影是向量而非一个长度；负点积意味着沿给定方向反向。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "将 AB 分解为沿 CA 所在直线的分量和正交残差；图是正交分解示意，不把二维屏幕坐标冒充三维坐标。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q12",
+    "title": "抛物线与瞬时速度：关联点的运动有多快",
+    "subtitle": "从 x²=3y 隐式求导，到 C 点速率 √3v/20。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "填空题",
+      "抛物线",
+      "隐函数求导",
+      "瞬时速度",
+      "链式法则"
+    ],
+    "summary": "从 x²=3y 隐式求导，到 C 点速率 √3v/20。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "右支示意：A、B 等高，B、C 等横坐标；C 的位置由 √(3y) 决定，速率需对时间求导。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q13",
+    "title": "余弦定理与充分必要条件：只锁定 A 角",
+    "subtitle": "给定不等式确保 A 为钝角，却覆盖不了钝角在 B 或 C 的情况。",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "余弦定理",
+      "充分条件",
+      "必要条件",
+      "反例"
+    ],
+    "summary": "给定不等式确保 A 为钝角，却覆盖不了钝角在 B 或 C 的情况。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左图 A 为钝角，满足不等式；右图 B 为钝角、A 为锐角，说明反向推导不成立。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q14",
+    "title": "双曲线开口比较：先统一到各自主轴",
+    "subtitle": "开口由相对主轴的渐近线斜率决定，不是只看 x²、y² 的分母。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "双曲线",
+      "渐近线",
+      "开口角",
+      "方程比较"
+    ],
+    "summary": "开口由相对主轴的渐近线斜率决定，不是只看 x²、y² 的分母。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "绿色双射线表示以各自主轴为参照的渐近线开口；Γ₃ 主轴竖直，其横向半轴比为 3/2，明显比其余三条更宽。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q15",
+    "title": "五局三胜提前中止：公平奖金应按胜率分",
+    "subtitle": "甲已 2:0 领先，只要后三局不全输，就能赢得整场。",
+    "category": "multiple-choice",
+    "topic": "probability",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "概率",
+      "五局三胜",
+      "独立事件",
+      "公平分配"
+    ],
+    "summary": "甲已 2:0 领先，只要后三局不全输，就能赢得整场。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "继续三局的八种等概率结局中，仅乙乙乙导致甲失冠，其余七种结局对应甲获胜。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q16",
+    "title": "割圆术与 π 下界：为什么 60 边形才跨过 3.14",
+    "subtitle": "比较内接正 54 边形与正 60 边形周长对圆周的逼近。",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "割圆术",
+      "圆周率",
+      "正多边形",
+      "三角函数",
+      "单调下界"
+    ],
+    "summary": "比较内接正 54 边形与正 60 边形周长对圆周的逼近。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 16,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "周长下界随 n 增大而上升；n=9 尚低于 3.14，n=10 对应 60 边形首次越过阈值。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q17",
+    "title": "正四棱柱：证两平面垂直并求点面距离",
+    "subtitle": "用底面对角线的垂直关系定位公共法向，再用体积等式求 3√22/11。",
+    "category": "worked-solutions",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 15,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "正四棱柱",
+      "线面垂直",
+      "面面垂直",
+      "点面距离",
+      "体积法"
+    ],
+    "summary": "用底面对角线的垂直关系定位公共法向，再用体积等式求 3√22/11。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 17,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "青色四边形表示竖直对角平面，橙色三角形表示 A₁BD；从同一四面体分别以 ABD 与 A₁BD 为底，可把未知距离变为体积的高。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q18",
+    "title": "调和数列：倒数化等差求中项与通项",
+    "subtitle": "把 aₙ 的倒数当成等差数列，两个条件立刻决定所有项。",
+    "category": "worked-solutions",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 15,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "调和数列",
+      "倒数",
+      "等差数列",
+      "通项公式"
+    ],
+    "summary": "把 aₙ 的倒数当成等差数列，两个条件立刻决定所有项。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 18,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左侧是严格线性增长的离散点列 1/aₙ，右侧是取倒数后的递减数列 aₙ；连线仅帮助读图，不表示 n 可取非整数。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q19",
+    "title": "十年通勤用车成本：分段建模、折旧与电池更换",
+    "subtitle": "按题设独立复算：前五年 B 更省，第六年起 A 更省；并指出标准答案中的油耗算式偏差。",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "实际应用",
+      "数学建模",
+      "折旧",
+      "总拥有成本",
+      "分段函数",
+      "电池更换"
+    ],
+    "summary": "按题设独立复算：前五年 B 更省，第六年起 A 更省；并指出标准答案中的油耗算式偏差。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 19,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3,
+      4
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "10 年成本曲线按题设准确油耗计算。B 车第 6 年因电池更换出现跃升，前五年的较低运行成本不应外推为十年始终较便宜。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q20",
+    "title": "三段心形曲线：椭圆、半圆与距离的最值",
+    "subtitle": "同一曲线拆成下半椭圆与两侧上半圆，用三角不等式和参数化解答全部三问。",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 19,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "椭圆",
+      "半圆",
+      "三角不等式",
+      "参数方程",
+      "距离最值"
+    ],
+    "summary": "同一曲线拆成下半椭圆与两侧上半圆，用三角不等式和参数化解答全部三问。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "橙色是两段半圆弧，青色是下半椭圆，B 为下顶点；P、Q 是第二问的等号点，N 是第三问的固定点。"
+    }
   }
 ]
