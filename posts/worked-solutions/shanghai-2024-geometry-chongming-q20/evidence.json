@@ -1,0 +1,33 @@
+{
+  "source": {
+    "title": "2024届高三二模数学汇编：解析几何",
+    "question": 20,
+    "region": "崇明区",
+    "pages": [
+      14
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "all_three_subquestions",
+      "math_symbols",
+      "source_figures_if_present"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供官方答案或解析。",
+    "independent_check": "两个 R 坐标均满足直线 x+y=1，分别使 B 点角和 R 点角为 60°；弦 PQ 必经过 K=(−1,−1)，所以垂足 H 满足 ∠AHK=90°，在以 AK 为直径的圆上。"
+  },
+  "math_equations": [
+    "e=\\frac{c}{a}=\\frac1{\\sqrt2},\\quad R=(t,1-t)",
+    "t=3-\\sqrt3\\quad\\text{或}\\quad t=1+\\frac{\\sqrt3}{3}",
+    "(u+v)x+(2uv-1)y+(2uv+1)=0",
+    "K=(-1,-1),\\quad \\angle AHK=90^\\circ",
+    "M=(-\\frac12,0),\\quad MH=\\frac{\\sqrt5}{2}"
+  ],
+  "editorial_note": "原题及公式逐页核对；推导是独立计算，不伪称官方解析。",
+  "uncertainty": null
+}

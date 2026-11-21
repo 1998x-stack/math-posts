@@ -1,0 +1,35 @@
+{
+  "source": {
+    "title": "2024届高三二模数学汇编：解析几何",
+    "question": 20,
+    "region": "青浦区",
+    "pages": [
+      12
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "all_three_subquestions",
+      "math_symbols",
+      "source_figures_if_present"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供官方答案或解析。",
+    "independent_check": "代入 P=(18,20) 得 PF₁=29、PF₂=25，半周长为 30，面积为 60，因此内切圆半径 60/30=2；两条候选焦点弦斜率平方均为 5/13，根积为负，故左右两支各有一个交点。"
+  },
+  "math_equations": [
+    "c^2=4+5=9,\\quad F_1=(-3,0),F_2=(3,0)",
+    "y=\\pm\\frac{\\sqrt{5}}{2}x",
+    "3y=2\\cdot\\frac{PF_1+PF_2+6}{2}",
+    "y=x+2,\\quad x^2-16x-36=0",
+    "P=(18,20),\\quad k_{PF_2}=\\frac{20}{18-3}=\\frac43",
+    "AF_1=BF_1\\quad\\Longrightarrow\\quad x_A+x_B=-\\frac83",
+    "k^2=\\frac5{13},\\quad l:y=\\pm\\sqrt{\\frac5{13}}(x-3)"
+  ],
+  "editorial_note": "原题及公式逐页核对；推导是独立计算，不伪称官方解析。 原卷第（3）问曲线字母写作 E，与此前 Γ 不一致；在正文保留字母 E 并注明根据上下文按 Γ 理解。",
+  "uncertainty": null
+}
