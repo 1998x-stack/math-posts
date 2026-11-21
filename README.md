@@ -100,3 +100,8 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 - [PDF / 试卷 / 题目 Schema](skills/math-visual-posts/references/exam-provenance-schema.md)
 
 初始标签由现有知识地图、明确的题目标签与来源结构迁移；对尚未逐篇核对的解题方法和图示形式，保持空列表，不为了筛选数量而误标。未来批次必须执行逐题人工审查和浏览器检查。
+
+
+### 本轮复审核验边界
+
+[132 道题逐条来源/标签台账](docs/reviews/2026-11-21-atlas-132-question-ledger.md) 与 [CI 教学质量审计](https://github.com/1998x-stack/math-posts/actions/runs/44909575648) 明确区分静态结构和数学内容审核。当前扫描发现 34 篇原题没有 MathML、61 篇解题步骤没有原位 MathML；后续必须逐题按新的数学排版 Reference 精修，不应把它们当作已经完成全部教学可视化升级的文章。启发式裸公式候选仅作人工复核线索。
