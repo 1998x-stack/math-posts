@@ -461,7 +461,12 @@
             "shanghai-2024-geometry-putuo-q20",
             "shanghai-2024-geometry-xuhui-q20",
             "shanghai-2024-geometry-baoshan-q20",
-            "shanghai-2024-geometry-songjiang-q20"
+            "shanghai-2024-geometry-songjiang-q20",
+            "shanghai-2024-geometry-qingpu-q20",
+            "shanghai-2024-geometry-jinshan-q20",
+            "shanghai-2024-geometry-chongming-q20",
+            "shanghai-2024-geometry-huangpu-q20",
+            "shanghai-2024-geometry-yangpu-q20"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -491,7 +496,12 @@
             "shanghai-2024-geometry-putuo-q20",
             "shanghai-2024-geometry-xuhui-q20",
             "shanghai-2024-geometry-baoshan-q20",
-            "shanghai-2024-geometry-songjiang-q20"
+            "shanghai-2024-geometry-songjiang-q20",
+            "shanghai-2024-geometry-qingpu-q20",
+            "shanghai-2024-geometry-jinshan-q20",
+            "shanghai-2024-geometry-chongming-q20",
+            "shanghai-2024-geometry-huangpu-q20",
+            "shanghai-2024-geometry-yangpu-q20"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",
