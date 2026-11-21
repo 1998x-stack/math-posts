@@ -7,7 +7,7 @@
 - 基线：当前 main 快照 commit `2f0385383a63a07b8291362f8a97f746e6277eb8`；旧 PR #29 仅覆盖 82 道，本审查从 main 原封不动读取原有题目数据并增量补 `paper_id` / `facets`。
 - 本次逐题覆盖：**132** 条记录，**127** 道已发布，**5** 道 draft，**25** 个试卷/摘录/题集身份。
 - 检查范围：每题 slug、来源归属、原题号和唯一性、题型、source_pages 字段有效性、知识地图关联、三个规范化检索 facet、文章 HTML、evidence.json 与 cover.svg 文件存在性。
-- 完整性核验：127/132 条的 HTML/evidence/SVG 路径存在，知识映射与标签结构齐备；异常条数：5。
+- 完整性核验：132/132 条均具有 HTML、evidence.json、SVG 和有效元数据。127 道已发布题均映射知识节点；5 道草稿未进入已发布知识地图符合预期。异常条数：0。
 - **QA 等级**：L1 = 仓库路径与结构；L2 = 实际静态构建/浏览器渲染；L3 = 由原始 PDF 渲染逐条检查题目数学符号、题干和答案；L4 = 独立证明数学推导与可视化断言。本台账逐题是 L1；L2 由 CI 另行执行；L3/L4 尚未覆盖全部题目。
 
 ## 2. 不应合并的隐患（逐项审查结论）
@@ -17,7 +17,7 @@
 3. **来源元数据 P1**：2024 二模汇编对应 16 个地区单题摘录，一个 source_id，不可将它们按 1–16 编成同一张试卷。
 4. **草稿隔离 P1**：建平 Q20、奉贤 Q20、松江 Q08/Q09/Q20 暂未发布。公开 sitemap 和试卷详情不得包含 draft 文章链接；纯 draft 的奉贤试卷摘录不产生对外路由。
 5. **符号完整性 P1**：松江 Q16 的原 PDF 分段比较符缺失，目前已发布是基于左右分段逻辑的复原，不是直接辨认原卷；保留风险说明，待清晰源卷核对。
-6. **数学语义 P1**：黄浦 2024 二模 Q20 椭圆焦点与双曲线顶点重合，不是两曲线共焦；#26 已有修补，需防止标题/封面回归。
+6. **数学语义 P1**：黄浦 2024 二模 Q20 椭圆焦点与双曲线顶点重合，不是两曲线共焦；本次复审从 #26 复用数学语义修补，仍需源 PDF 与图形对象逐点复核。
 7. **来源答案 P1**：松江 Q19 原卷答案只写桥长 120 米，原题也要求谷深，独立验算谷深为 160 米；不能替换官方答案或抹除来源缺项。
 8. **前半卷缺口 P2**：嘉定 2023 一模当前仅登记 Q11–Q20；原卷 Q1–Q10 并不在 main 的公开结构内。不能因为已有后半卷就声称全卷已上线。
 9. **图解标签不足 P2**：为了防止“有一张封面 SVG 就冒充已做完整图解”，本次 method/visual 标签保守录入；仍需逐题检查图形断言后补充。
@@ -297,7 +297,7 @@
 
 | 原题号 | 文章 | 答题形式 | PDF 记录页 | 知识概念 | 方法标签 | 可视化标签 | 当前状态 | 审查结论 / 后续动作 |
 |---:|---|---|---|---|---|---|---|---|
-| 20 | [shanghai-2024-geometry-huangpu-q20](../../posts/worked-solutions/shanghai-2024-geometry-huangpu-q20/index.html) | 解答 | 15 | 解析几何、圆锥曲线 | — | 待逐题图形审查 | 已发布 | 标题/封面曾误称共焦：待独立数学语义修复 |
+| 20 | [shanghai-2024-geometry-huangpu-q20](../../posts/worked-solutions/shanghai-2024-geometry-huangpu-q20/index.html) | 解答 | 15 | 解析几何、圆锥曲线 | — | 待逐题图形审查 | 已发布 | 标题、摘要和封面已修正：椭圆焦点是双曲线顶点，而非双曲线焦点 |
 
 ### 2024 届上海市杨浦区高三二模 · 解析几何第 20 题摘录
 
@@ -338,11 +338,7 @@
 
 ### 当前结构检查异常
 
-- jianping-2021-q20: index=true, evidence=true, cover=true, meta=true, map=false, unique=true
-- songjiang-2023-mock-q08: index=true, evidence=true, cover=true, meta=true, map=false, unique=true
-- songjiang-2023-mock-q09: index=true, evidence=true, cover=true, meta=true, map=false, unique=true
-- songjiang-2023-mock-q20: index=true, evidence=true, cover=true, meta=true, map=false, unique=true
-- shanghai-2024-geometry-fengxian-q20: index=true, evidence=true, cover=true, meta=true, map=false, unique=true
+- 无文件路径缺失、原题号重复或公开题目知识映射缺失。5 道 draft 不出现在发布知识图谱属于设计要求，不构成结构异常。
 
 ### 回归命令
 

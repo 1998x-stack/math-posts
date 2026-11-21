@@ -55,7 +55,7 @@ def test_paper_registry_does_not_fabricate_total_question_count():
     assert paper["total_questions"] is None
     detail = build_paper_detail(paper, posts, taxonomy, "https://example.com/math-posts/", html_page, article_url)
     assert "原卷总题数未登记" in detail
-    assert "第 5 题" in detail and "第 6 题" not in detail
+    assert "第 10 题" in detail and "第 11 题" not in detail
     listing = build_papers_index(papers, posts, "https://example.com/math-posts/", html_page)
     assert "/papers/" in listing
     assert "2023 届上海市杨浦区高三一模" in listing
@@ -126,3 +126,14 @@ def test_no_public_route_for_draft_only_exam_excerpt():
     # The build produces public_papers and excludes this record from route generation.
     source = (ROOT / "scripts/build_site.py").read_text("utf-8")
     assert "public_papers=" in source and "for paper in public_papers" in source
+
+
+def test_huangpu_focus_vertex_language_is_mathematically_correct():
+    posts, _, _, _ = fixture_data()
+    p = next(p for p in posts if p["slug"] == "shanghai-2024-geometry-huangpu-q20")
+    assert "共焦" not in p["title"] and "双曲线顶点" in p["title"]
+    article = ROOT / "posts" / p["category"] / p["slug"]
+    html = (article / "index.html").read_text("utf-8")
+    svg = (article / "assets/cover.svg").read_text("utf-8")
+    assert "共焦" not in html and "共焦" not in svg
+    assert "椭圆焦点" in svg and "双曲线顶点" in svg
