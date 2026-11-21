@@ -32,6 +32,10 @@
       {
         "slug": "complex-numbers",
         "title": "复数与复平面"
+      },
+      {
+        "slug": "probability-statistics",
+        "title": "概率与统计"
       }
     ]
   },
@@ -39,7 +43,7 @@
     "slug": "multiple-choice",
     "title": "选择题",
     "english": "Multiple Choice",
-    "description": "图形辨析、函数构造、圆锥曲线与几何轨迹：训练正确判断的理由。",
+    "description": "图形辨析、函数构造、圆锥曲线、向量投影和最值条件：训练选择的依据与反例。",
     "topics": [
       {
         "slug": "solid-geometry",
@@ -52,6 +56,22 @@
       {
         "slug": "analytic-geometry",
         "title": "解析几何与曲线"
+      },
+      {
+        "slug": "optimization",
+        "title": "函数最值与不等式"
+      },
+      {
+        "slug": "geometry-reasoning",
+        "title": "平面几何与逻辑推理"
+      },
+      {
+        "slug": "probability",
+        "title": "概率与公平决策"
+      },
+      {
+        "slug": "functions",
+        "title": "函数图像与指数对数"
       }
     ]
   },
@@ -76,6 +96,14 @@
       {
         "slug": "functions",
         "title": "函数与迭代"
+      },
+      {
+        "slug": "sequences",
+        "title": "数列与递推证明"
+      },
+      {
+        "slug": "trigonometry",
+        "title": "解三角形与三角函数"
       }
     ]
   }

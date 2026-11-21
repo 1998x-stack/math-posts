@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 13,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not printed"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "parabola x²=8y",
+      "A x=−4 B x=−2 C y=−4 D y=−2"
+    ]
+  },
+  "answer": {
+    "official": "照片未提供经认证的官方标准答案，手写选项不作为官方解析。",
+    "independent_result": "D (y=−2)",
+    "independent_check": "x²=4py yields p=2; focus=(0,2), directrix y=−2; M=(4,2) has equal distances 4"
+  },
+  "math_equations": [
+    "x²=4py",
+    "p=2",
+    "focus=(0,2)",
+    "directrix y=−2"
+  ],
+  "diagram_assertions": [
+    "focus and directrix symmetric about vertex",
+    "M=(4,2) equidistant from focus and directrix"
+  ],
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  },
+  "editorial_note": "原题四个备选项按照片逐项校核，独立判断 D。"
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 9,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "f(x)=x²",
+      "curve y=f(x)",
+      "point P(1,1)",
+      "reference answer y=2x−1"
+    ]
+  },
+  "answer": {
+    "official": "y=2x−1",
+    "independent_check": "f′(1)=2, y−1=2(x−1), x²−(2x−1)=(x−1)²≥0."
+  },
+  "math_equations": [
+    "f(1)=1",
+    "f′(1)=2",
+    "y−1=2(x−1)",
+    "y=2x−1"
+  ],
+  "figure_assertions": [
+    "Parabola and tangent intersect at (1,1), y distance (x−1)²"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原卷第1页题干和第7页答案表已核对；参考答案只列结果，本文推导为独立教学内容。"
+}

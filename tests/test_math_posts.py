@@ -235,7 +235,7 @@ def test_week12_q06_to_q10_math_and_source_traps():
 
 def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
     posts=manifest()
-    batch=[p for p in posts if p.get('source_exam')=='2023-shanghai-chongming-first-mock']
+    batch=[p for p in posts if p.get('source_exam')=='2023-shanghai-chongming-first-mock' and p['question_number']<=5]
     assert [p['question_number'] for p in batch]==[1,2,3,4,5]
     assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in batch)
     expected=['{2,3,4}','(−1/2,2)','6','2','−8']
@@ -260,7 +260,7 @@ def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
     assert first*ratio**3==-8
 
 def test_songjiang_2023_first_ten_sequential_with_glyph_caveats():
-    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock"]
+    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]<=10]
     assert [p["question_number"] for p in seq]==list(range(1,11))
     assert len(seq)==10
     assert [p["status"] for p in seq]==["published"]*7+["draft","draft","published"]
@@ -303,3 +303,139 @@ def test_songjiang_2023_math_invariants():
     assert 4<4.5<=5
     assert 3**2==1**2+8
     assert math.isclose(2*math.sqrt(2),math.sqrt(8))
+
+
+def test_week12_q11_to_q15_faithful_categorization_and_math_invariants():
+    import math
+    all_posts=manifest()
+    batch=[p for p in all_posts if p.get('source_exam')=='week12-gaosan-classroom-practice' and 11<=p['question_number']<=15]
+    assert [p['question_number'] for p in batch]==[11,12,13,14,15]
+    assert [p['category'] for p in batch]==['fill-in','fill-in','multiple-choice','multiple-choice','multiple-choice']
+    assert [p['source_pages'] for p in batch]==[[1],[1],[1],[1],[2]]
+    expected=['−1/2','[0,π/3]','D (y=−2)','D ((1/4)a)','B (0,∛2]']
+    for item,answer in zip(batch,expected):
+        article=ROOT/'posts'/item['category']/item['slug']
+        html=(article/'index.html').read_text('utf-8')
+        svg=(article/'assets/cover.svg').read_text('utf-8')
+        ev=json.loads((article/'evidence.json').read_text('utf-8'))
+        assert html.index('id="overview"') < html.index('id="question"')
+        assert html.count('<math display="block"')>=5
+        assert html.count('data-math-scroll')>=5
+        assert html.count('class="step-note"')>=5
+        assert '<svg' in html and 'viewBox' in svg and '<title' in svg and '<desc' in svg
+        assert ev['source']['pages']==item['source_pages']
+        assert ev['answer']['independent_result']==answer
+        assert ev['transcription']['status']=='checked-against-uploaded-photo'
+    b=(1.,0.);c=(-0.5,math.sqrt(3)/2)
+    assert math.isclose(b[0]*c[0]+b[1]*c[1],-.5)
+    av=(c[0]-b[0],c[1]-b[1])
+    assert math.isclose(av[0]**2+av[1]**2,3)
+    assert math.isclose(av[0]+2*b[0],b[0]+c[0])
+    assert math.isclose(av[1]+2*b[1],b[1]+c[1])
+    def first_is_max(phi):
+        samples=[math.sin(k*math.pi/3+phi) for k in range(1,7)]
+        return math.isclose(samples[0],max(samples),rel_tol=0,abs_tol=1e-10)
+    for phi in [0,math.pi/12,math.pi/6,math.pi/3]:
+        assert first_is_max(phi)
+    for phi in [math.pi/2,math.pi,2*math.pi-0.1]:
+        assert not first_is_max(phi)
+    assert 4**2==8*2
+    assert math.dist((4,2),(0,2))==abs(2-(-2))==4
+    aa=(2.,0.);bb=(.5,math.sqrt(3)/2)
+    dot=aa[0]*bb[0]+aa[1]*bb[1]
+    projection=(dot/(aa[0]**2+aa[1]**2)*aa[0],dot/(aa[0]**2+aa[1]**2)*aa[1])
+    assert math.isclose(dot,1) and math.isclose(projection[0],.5) and math.isclose(projection[1],0)
+    threshold=2**(1/3)
+    assert math.isclose(threshold**2,math.sqrt(2*threshold))
+    assert 1 < math.sqrt(2)
+    assert 1.5**2 > math.sqrt(3)
+    assert (ROOT/'posts/multiple-choice/week12-gaosan-q15/index.html').exists()
+
+
+def test_chongming_2023_next_five_visual_mathml_and_source_pages():
+    batch=[p for p in manifest() if p.get('source_exam')=='2023-shanghai-chongming-first-mock' and 6<=p['question_number']<=10]
+    assert [p['question_number'] for p in batch]==[6,7,8,9,10]
+    assert all(p['category']=='fill-in' and p['status']=='published' for p in batch)
+    expected=['−4','1/2','√3','y=2x−1','2']
+    for item,official in zip(batch,expected):
+        directory=ROOT/'posts'/item['category']/item['slug']
+        html=(directory/'index.html').read_text('utf-8')
+        svg=(directory/'assets/cover.svg').read_text('utf-8')
+        record=json.loads((directory/'evidence.json').read_text('utf-8'))
+        assert item['source_pages']==([1,2] if item['question_number']==10 else [1])
+        assert record['source']['pages']==item['source_pages']
+        assert record['source']['answer_pages']==[7]
+        assert record['answer']['official']==official
+        assert record['answer']['independent_check']
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in svg and '<desc' in svg
+        assert html.count('class="step-note"')>=4
+    assert 16-(-4)**2==0
+    assert (2*(-4)) != 8
+    assert math.isclose(math.sin(math.pi/2 + math.pi/3),math.cos(math.pi/3))
+    assert math.isclose((math.sqrt(3))**2+1,4)
+    assert 1**2==(2*1-1)
+    assert math.isclose(math.sin(2*math.pi/3-math.pi/6),1)
+    assert min(2+6*n for n in range(-20,21) if 2+6*n>0)==2
+
+def test_songjiang_second_ten_source_and_semantic_mathml():
+    from bs4 import BeautifulSoup
+    docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]>=11],key=lambda p:p["question_number"])
+    assert [p["question_number"] for p in docs]==list(range(11,21))
+    assert [p["status"] for p in docs]==["published"]*9+["draft"]
+    assert [p["category"] for p in docs]==["fill-in"]*2+["multiple-choice"]*4+["worked-solutions"]*4
+    assert [p["source_pages"] for p in docs]==[[2],[2],[2],[2],[2,3],[3],[3],[4],[4],[5]]
+    for p in docs:
+        root=ROOT/"posts"/p["category"]/p["slug"]
+        html=(root/"index.html").read_text(encoding="utf-8")
+        cover=(root/"assets/cover.svg").read_text(encoding="utf-8")
+        evidence=json.loads((root/"evidence.json").read_text(encoding="utf-8"))
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '先理解题目在问什么' in html and html.count('class="step-note"')>=3
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in cover and '<desc' in cover
+        assert evidence["source"]["question"]==p["question_number"]
+        assert evidence["source"]["answers_pages"]==[7]
+        assert evidence["answer"]["official_source"]
+        soup=BeautifulSoup(html,"html.parser")
+        for frac in soup.select("math mfrac"):
+            elements=[child for child in frac.children if getattr(child,"name",None)]
+            assert len(elements)==2, f"Invalid MathML mfrac in {p['slug']}"
+        assert '<mo>frac</mo>' not in html and '<mo>mathrm</mo>' not in html
+        assert '<mo>text</mo>' not in html and '<mo>cdots</mo>' not in html
+    source19=json.loads((ROOT/"posts/worked-solutions/songjiang-2023-mock-q19/evidence.json").read_text("utf-8"))
+    assert "120" in source19["answer"]["official"] and "160" in source19["answer"]["independent_result"]
+    q20=docs[-1]
+    assert q20["status"]=="draft" and "未定义" in q20["subtitle"]
+    issue=json.loads((ROOT/"posts/worked-solutions/songjiang-2023-mock-q20/evidence.json").read_text("utf-8"))
+    assert "k" in issue["transcription"]["uncertainty"]
+
+def test_songjiang_second_ten_independent_invariants():
+    import math
+    R=2*math.sqrt(3)/3
+    r=math.sqrt(3)/3
+    assert math.isclose(3*R*math.pi/6 + 3*r*math.pi/2,5*math.sqrt(3)*math.pi/6)
+    a=[2/3]
+    for n in range(1,12):a.append((1+math.sqrt(1+4*a[-1]))/2)
+    assert all(a[j+1]>a[j] and a[j+1]<2 for j in range(11))
+    for even in (2,4,6,10):
+        total=sum((-1)**(n-1)/(a[n-1]-1) for n in range(1,even+1))
+        assert math.isclose(total,-4.5-1/a[even-1],abs_tol=1e-12)
+        assert -6<total<-5
+    assert (-2)**3<1**3 and not((-2)**2<1**2)
+    f=lambda x:(x*x-1)*math.exp(x)
+    assert f(-1)==0 and f(1)==0 and f(0)==-1
+    assert math.isclose(((-1.45)-(-26.7))*2/5,10.1)
+    h=lambda x,k: abs(x+2)-k*x-1 if x<0 else x*x-(4+k)*x+1
+    assert h(-2,-1)<0<h(-0.1,-1) and h(1,-1)<0<h(3,-1)
+    assert math.isclose(math.sqrt(5)/3,math.cos(math.acos(math.sqrt(5)/3)))
+    aa=2/math.sqrt(3);bb=2;cc=2*aa
+    assert math.isclose(.5*aa*cc*math.sin(math.pi/3),2*math.sqrt(3)/3)
+    assert math.isclose(aa+bb+cc,2*math.sqrt(3)+2)
+    H=-40**3/800+6*40
+    assert H==160 and math.sqrt(H*40)==80 and math.sqrt(H*40)+40==120
+    CD=160-(80-20)**2/40
+    EF=160+20**3/800-6*20
+    assert CD==70 and EF==50 and 1.5*CD+EF==155
+    assert math.isclose(10*(-7/4)+.5+17,0)

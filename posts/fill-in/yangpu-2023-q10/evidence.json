@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 10,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and quantifiers",
+      "fractions, superscripts, signs, vector notation",
+      "source answer on page 8"
+    ]
+  },
+  "answer": {
+    "official": "3⁵（即 243）",
+    "independent_check": "独立展开可得到系数 1、10、40、80、80、32，其和为 1+10+40+80+80+32=243，验证代入法结果。"
+  },
+  "math_equations": [
+    "C n 取三 除以 C n 取二 等于 n 减二除三等于一，所以 n 为五",
+    "x 等于二时六个系数之和是三的五次方等于二百四十三",
+    "将二 x 减一写成一加二乘以 x 减一后，系数 a k 为组合数五取 k 乘以二的 k 次方"
+  ],
+  "figure_assertions": [
+    "六个柱分别表示 a₀,…,a₅ 的数值 1、10、40、80、80、32；合计为 243。",
+    "柱高按照展开系数的实际大小绘制，来自 aₖ=C₅ᵏ·2ᵏ。纵向对比说明手工展开可以验证结果，但代入 x=2 更快捷。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified",
+    "responsive_browser_test": "not verified"
+  },
+  "editorial_note": "题干对照用户上传 PDF 第 1 页渲染图核对；原卷第 8 页提供参考答案，但没有本题完整解题过程。逐步推导及专属 SVG 为独立编写；未声称浏览器渲染测试通过。"
+}

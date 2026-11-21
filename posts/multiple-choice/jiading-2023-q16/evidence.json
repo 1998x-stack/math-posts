@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 16,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "C",
+    "independent_check": "原卷选 C。独立代入 n=9、10 得 3.139820761 和 3.140157375。"
+  },
+  "math_equations": [
+    "圆内接正六 n 边形给出的下界",
+    "关键数值界"
+  ],
+  "editorial_note": "数值比较采用高精度三角计算；严格证明 π>3.14 不得循环预设 π 的下界。"
+}

@@ -2587,5 +2587,1500 @@
       "src": "assets/cover.svg",
       "caption": "cos二x在相邻长度派区间上的重复图像"
     }
+  },
+  {
+    "slug": "week12-gaosan-q11",
+    "title": "单位向量数量积的最小值：从存在性到正交分解",
+    "subtitle": "两个单位向量的和差正交，构造120°夹角得到最小数量积−1/2。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "fill-in",
+      "平面向量",
+      "数量积",
+      "正交分解",
+      "最小值"
+    ],
+    "summary": "写 a=(λ−1)(b+c)−(b−c)，由|a|²=3推出b·c≥−1/2，且a=c−b时取等。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两个单位向量成120度时用a等于c减b展示内积负二分之一的取等构造"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q12",
+    "title": "周期数列的集合包含：首项必须达到全局最大值",
+    "subtitle": "将P⊆Q归结为首项等于六项周期最大值，精确求得φ∈[0,π/3]。",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 13,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "fill-in",
+      "无限数列",
+      "集合包含",
+      "周期数列",
+      "正弦函数",
+      "严格比较"
+    ],
+    "summary": "对6周期正弦数列，P⊆Q当且仅当a₁达到最大值，六等分正弦峰值给φ∈[0,π/3]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "取phi为pi除以六绘制真实六项正弦离散数值及首项并列最大边界"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q13",
+    "title": "抛物线准线不是焦点：从 x²=8y 看出 y=−2",
+    "subtitle": "标准式x²=4py给p=2，焦点(0,2)、准线y=−2，选择D。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "抛物线",
+      "准线",
+      "焦点",
+      "等距定义"
+    ],
+    "summary": "抛物线x²=8y向上开口，准线是水平线y=−2，用点(4,2)的等距关系验证D。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "抛物线x平方等于八y的焦点与准线及点四二的等距验证图"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q14",
+    "title": "标量投影与向量投影：为什么答案不是 1/2",
+    "subtitle": "标量投影长度是1/2，而沿a方向投影向量是a/4，选择D。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "向量投影",
+      "标量投影",
+      "数量积",
+      "特殊角"
+    ],
+    "summary": "|a|=2、|b|=1、夹角π/3时，b的投影长度是1/2，投影向量为(1/4)a。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "向量b的投影脚长度为二分之一只占向量a长度的四分之一"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q15",
+    "title": "当且仅当 x=y 取最小值：为何上界是立方根 2",
+    "subtitle": "令t=xy∈(0,a²]，比较自由极小点√(2a)与区间右端a²，选B。",
+    "category": "multiple-choice",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "基本不等式",
+      "一元函数最值",
+      "导数",
+      "取等条件"
+    ],
+    "summary": "固定和x+y=2a，目标G(t)=t+2a/t仅在x=y最优当且仅当a²≤√(2a)，故a∈(0,∛2]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两种参数下乘积可行区间与自由极小点相对位置决定x等于y条件"
+    }
+  },
+  {
+    "slug": "chongming-2023-q06",
+    "title": "二元一次方程组无解：行列式为零为何还不够",
+    "subtitle": "m=4 两直线重合，m=−4 才是平行且不同",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "方程组",
+      "直线位置关系",
+      "无解",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "区分行列式为零时的无解与无穷多解：m=4 两方程重合，m=−4 两直线平行但不同，故答案为 −4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "m=4 两直线重合，m=−4 才是平行且不同"
+    }
+  },
+  {
+    "slug": "chongming-2023-q07",
+    "title": "单位圆横坐标：为什么不必求出角 α",
+    "subtitle": "诱导公式把 sin(π/2+α) 直接变为 cos α",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "单位圆",
+      "诱导公式",
+      "任意角",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "点 P 的纵坐标有正负两种可能，但 cos α 由横坐标 1/2 决定，故 sin(π/2+α)=1/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "诱导公式把 sin(π/2+α) 直接变为 cos α"
+    }
+  },
+  {
+    "slug": "chongming-2023-q08",
+    "title": "半圆纸片卷成圆锥：从弧长确定底面半径",
+    "subtitle": "母线长 2、底面半径 1，因此圆锥高为 √3",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "圆锥",
+      "展开图",
+      "弧长",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "半径2的半圆弧长2π变为底圆周长，底面半径1，母线2，勾股得高√3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "母线长 2、底面半径 1，因此圆锥高为 √3"
+    }
+  },
+  {
+    "slug": "chongming-2023-q09",
+    "title": "抛物线切线：导数确定斜率，平方差验证相切",
+    "subtitle": "在 P(1,1) 处切线斜率为 2，方程 y=2x−1",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "导数",
+      "切线方程",
+      "抛物线",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "由 f′(1)=2 写出 y−1=2(x−1)，再用 (x−1)²≥0 验证抛物线与切线在指定点相切。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "在 P(1,1) 处切线斜率为 2，方程 y=2x−1"
+    }
+  },
+  {
+    "slug": "chongming-2023-q10",
+    "title": "正弦函数全局最大值：为什么最小角频率是 2",
+    "subtitle": "让 x=π/3 成为波峰，得到 ω=2+6n 并筛出最小正值",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
+    "tags": [
+      "正弦函数",
+      "恒成立",
+      "角频率",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "利用全域条件要求 f(π/3) 恰好为正弦全局最大值，得到 ω=2+6n，结合 ω>0 求最小值 2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "让 x=π/3 成为波峰，得到 ω=2+6n 并筛出最小正值"
+    }
+  },
+  {
+    "slug": "jiading-2023-q11",
+    "title": "空间投影向量：点积如何决定方向与坐标",
+    "subtitle": "投影是向量而非一个长度；负点积意味着沿给定方向反向。",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "填空题",
+      "空间向量",
+      "数量积",
+      "向量投影",
+      "正交分解"
+    ],
+    "summary": "投影是向量而非一个长度；负点积意味着沿给定方向反向。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "将 AB 分解为沿 CA 所在直线的分量和正交残差；图是正交分解示意，不把二维屏幕坐标冒充三维坐标。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q12",
+    "title": "抛物线与瞬时速度：关联点的运动有多快",
+    "subtitle": "从 x²=3y 隐式求导，到 C 点速率 √3v/20。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "填空题",
+      "抛物线",
+      "隐函数求导",
+      "瞬时速度",
+      "链式法则"
+    ],
+    "summary": "从 x²=3y 隐式求导，到 C 点速率 √3v/20。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "右支示意：A、B 等高，B、C 等横坐标；C 的位置由 √(3y) 决定，速率需对时间求导。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q13",
+    "title": "余弦定理与充分必要条件：只锁定 A 角",
+    "subtitle": "给定不等式确保 A 为钝角，却覆盖不了钝角在 B 或 C 的情况。",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "余弦定理",
+      "充分条件",
+      "必要条件",
+      "反例"
+    ],
+    "summary": "给定不等式确保 A 为钝角，却覆盖不了钝角在 B 或 C 的情况。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左图 A 为钝角，满足不等式；右图 B 为钝角、A 为锐角，说明反向推导不成立。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q14",
+    "title": "双曲线开口比较：先统一到各自主轴",
+    "subtitle": "开口由相对主轴的渐近线斜率决定，不是只看 x²、y² 的分母。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "双曲线",
+      "渐近线",
+      "开口角",
+      "方程比较"
+    ],
+    "summary": "开口由相对主轴的渐近线斜率决定，不是只看 x²、y² 的分母。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "绿色双射线表示以各自主轴为参照的渐近线开口；Γ₃ 主轴竖直，其横向半轴比为 3/2，明显比其余三条更宽。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q15",
+    "title": "五局三胜提前中止：公平奖金应按胜率分",
+    "subtitle": "甲已 2:0 领先，只要后三局不全输，就能赢得整场。",
+    "category": "multiple-choice",
+    "topic": "probability",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "概率",
+      "五局三胜",
+      "独立事件",
+      "公平分配"
+    ],
+    "summary": "甲已 2:0 领先，只要后三局不全输，就能赢得整场。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "继续三局的八种等概率结局中，仅乙乙乙导致甲失冠，其余七种结局对应甲获胜。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q16",
+    "title": "割圆术与 π 下界：为什么 60 边形才跨过 3.14",
+    "subtitle": "比较内接正 54 边形与正 60 边形周长对圆周的逼近。",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "选择题",
+      "割圆术",
+      "圆周率",
+      "正多边形",
+      "三角函数",
+      "单调下界"
+    ],
+    "summary": "比较内接正 54 边形与正 60 边形周长对圆周的逼近。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 16,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "周长下界随 n 增大而上升；n=9 尚低于 3.14，n=10 对应 60 边形首次越过阈值。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q17",
+    "title": "正四棱柱：证两平面垂直并求点面距离",
+    "subtitle": "用底面对角线的垂直关系定位公共法向，再用体积等式求 3√22/11。",
+    "category": "worked-solutions",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 15,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "正四棱柱",
+      "线面垂直",
+      "面面垂直",
+      "点面距离",
+      "体积法"
+    ],
+    "summary": "用底面对角线的垂直关系定位公共法向，再用体积等式求 3√22/11。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 17,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "青色四边形表示竖直对角平面，橙色三角形表示 A₁BD；从同一四面体分别以 ABD 与 A₁BD 为底，可把未知距离变为体积的高。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q18",
+    "title": "调和数列：倒数化等差求中项与通项",
+    "subtitle": "把 aₙ 的倒数当成等差数列，两个条件立刻决定所有项。",
+    "category": "worked-solutions",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 15,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "调和数列",
+      "倒数",
+      "等差数列",
+      "通项公式"
+    ],
+    "summary": "把 aₙ 的倒数当成等差数列，两个条件立刻决定所有项。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 18,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左侧是严格线性增长的离散点列 1/aₙ，右侧是取倒数后的递减数列 aₙ；连线仅帮助读图，不表示 n 可取非整数。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q19",
+    "title": "十年通勤用车成本：分段建模、折旧与电池更换",
+    "subtitle": "按题设独立复算：前五年 B 更省，第六年起 A 更省；并指出标准答案中的油耗算式偏差。",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "实际应用",
+      "数学建模",
+      "折旧",
+      "总拥有成本",
+      "分段函数",
+      "电池更换"
+    ],
+    "summary": "按题设独立复算：前五年 B 更省，第六年起 A 更省；并指出标准答案中的油耗算式偏差。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 19,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3,
+      4
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "10 年成本曲线按题设准确油耗计算。B 车第 6 年因电池更换出现跃升，前五年的较低运行成本不应外推为十年始终较便宜。"
+    }
+  },
+  {
+    "slug": "jiading-2023-q20",
+    "title": "三段心形曲线：椭圆、半圆与距离的最值",
+    "subtitle": "同一曲线拆成下半椭圆与两侧上半圆，用三角不等式和参数化解答全部三问。",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 19,
+    "tags": [
+      "2023嘉定一模",
+      "嘉定区",
+      "解答题",
+      "椭圆",
+      "半圆",
+      "三角不等式",
+      "参数方程",
+      "距离最值"
+    ],
+    "summary": "同一曲线拆成下半椭圆与两侧上半圆，用三角不等式和参数化解答全部三问。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-jiading-2023-mock1",
+    "source_region": "嘉定区",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "橙色是两段半圆弧，青色是下半椭圆，B 为下顶点；P、Q 是第二问的等号点，N 是第三问的固定点。"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q06",
+    "title": "二项式展开：合并两部分的 x² 系数得到 16",
+    "subtitle": "分别求出四次方和五次方展开式里的 x² 系数，再把它们相加。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "二项式定理",
+      "组合数",
+      "系数"
+    ],
+    "summary": "C(4,2)+C(5,2)=6+10=16，两个展开式同次幂的系数必须合并。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四次方中 x² 系数六与五次方中 x² 系数十的合并示意"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q07",
+    "title": "双曲线渐近线：两条直线的锐角为 π/3",
+    "subtitle": "从标准式读出渐近线斜率 ±1/√3，再计算夹角。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "双曲线",
+      "渐近线",
+      "夹角"
+    ],
+    "summary": "渐近线 y=±x/√3 的方向角是 ±π/6，较小夹角为 π/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "双曲线两条斜率正负根号三分之一的渐近线六十度夹角"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q08",
+    "title": "抽两罐至少一罐中奖：概率为 3/5",
+    "subtitle": "15 种不区分顺序的抽法中有 9 种含有中奖饮料。",
+    "category": "fill-in",
+    "topic": "probability-statistics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "古典概型",
+      "组合计数",
+      "互补事件"
+    ],
+    "summary": "所有抽法 C(6,2)=15，全部未中奖 C(4,2)=6，中奖概率为 3/5。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "十五种无序饮料组合中九种包含至少一罐中奖饮料"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q09",
+    "title": "固定直线与参数圆恰有一个交点：m=0",
+    "subtitle": "用圆心到竖直直线的距离等于半径建立相切条件。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "直线与圆",
+      "相切",
+      "参数"
+    ],
+    "summary": "圆心到 x=−1 的距离为 1+m²/4，等于半径 1 仅当 m=0。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "参数为零时竖直直线负一与单位圆唯一切点的坐标模型"
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q10",
+    "title": "中位数和平均数都为 124：标准差等于 2",
+    "subtitle": "由均值确定两未知数据之和，再用中位数还原完整样本。",
+    "category": "fill-in",
+    "topic": "probability-statistics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "中位数",
+      "平均数",
+      "标准差"
+    ],
+    "summary": "由 a+b=247 且中位数为124，得样本 121、123、124、125、127；离差平方和20，标准差2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "五个水果质量样本相对均值一百二十四的五个离差"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q06",
+    "title": "无穷等比数列求和：首项 2、公比 1/3 为什么总和是 3",
+    "subtitle": "项按三分之一缩小，部分和从下方逼近极限 3",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "sequences",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "数列",
+      "等比数列",
+      "无穷级数"
+    ],
+    "summary": "bₙ=2(1/3)ⁿ⁻¹，Sₙ=3(1−3⁻ⁿ)；收敛条件 |q|<1 使总和为 3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "单项等比递减与前五个部分和逼近极限三"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q07",
+    "title": "导数与切线方程：在 y=ln x+2x 上寻找斜率为 3 的切线",
+    "subtitle": "斜率等于导数，唯一切点 (1,2) 决定切线方程",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "导数",
+      "切线",
+      "对数函数"
+    ],
+    "summary": "由 f′(x)=1/x+2=3 得 x=1，切点 (1,2)，切线 3x−y−1=0。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "自然对数曲线与斜率为三的切线在一二相切"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q08",
+    "title": "古典概型与相邻排列：甲参与连续两天活动的概率",
+    "subtitle": "五天选两天共有十种日期组合，其中四种相邻",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "combinatorics",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "概率",
+      "古典概型",
+      "组合数"
+    ],
+    "summary": "从 5 天选 2 天共有 10 种组合；相邻两天有 4 种，概率为 2/5。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "十组甲的参与日期中四组是相邻日期"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q09",
+    "title": "对数函数的奇偶性：为什么要先检查定义域的对称性",
+    "subtitle": "由对称的定义域缺口先确定 a，再求 b",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "奇函数",
+      "定义域",
+      "对数函数"
+    ],
+    "summary": "分母使 x=2 不可取；奇函数要求 x=−2 也不可取，得 a=−1、b=0，a+b=−1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "对数分式函数的对称定义域与互为相反的函数值"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q10",
+    "title": "余弦图像的轴心间距：由最小距离反求频率与相位",
+    "subtitle": "轴心最短距离 π/(2ω)=π/8 锁定 ω=4，轴位置锁定相位",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "functions",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "三角函数",
+      "余弦函数",
+      "图像对称性"
+    ],
+    "summary": "最小轴心距离为 π/(2ω)，得到 ω=4；x=π/6 为轴且 |φ|<π/2，得到 φ=π/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "余弦波谷对称轴到两侧最近对称中心的距离"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q06",
+    "title": "向量投影：为什么 (3,4) 投到横轴后是 (3,0)",
+    "subtitle": "投影保留沿目标向量方向的分量；b=(1,0) 的方向就是正 x 轴。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023杨浦一模",
+      "平面向量",
+      "数量积",
+      "投影向量",
+      "正交分解"
+    ],
+    "summary": "通过数量积公式与几何垂足双重验证，向量 (3,4) 在水平单位向量 (1,0) 上的投影为 (3,0)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "青色向量 OA=(3,4)，橙色向量 OH=(3,0)；虚线 AH 垂直于水平目标方向。"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q07",
+    "title": "分层抽样：84 人队伍中抽出 21 人，男运动员取几人",
+    "subtitle": "样本里的男女性别比例，应与总体 48:36 的比例一致。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "2023杨浦一模",
+      "分层抽样",
+      "统计",
+      "样本容量",
+      "比例"
+    ],
+    "summary": "田径队 48 名男运动员占总人数 84 的 4/7，容量 21 的分层样本应抽取 12 名男运动员。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "上条代表总体 84 人、下条代表样本 21 人；两条的男女性别比例均为 4:3。"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q08",
+    "title": "同一组渐近线，为什么双曲线有两种离心率",
+    "subtitle": "渐近线只固定两条直线，没有固定双曲线的开口方向。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023杨浦一模",
+      "双曲线",
+      "渐近线",
+      "离心率",
+      "分类讨论",
+      "解析几何"
+    ],
+    "summary": "相同渐近线 y=±3x/4 可对应左右或上下开口的双曲线，故离心率分别为 5/4 与 5/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左右两图共用相同斜率 ±3/4 的虚线渐近线，但左右开口型的离心率为 5/4，上下开口型为 5/3。"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q09",
+    "title": "基本不等式：把 x+3y=xy 化成可求最值的形式",
+    "subtitle": "将乘法约束整理成两个正数的乘积为 3，再对它们的和使用基本不等式。",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023杨浦一模",
+      "基本不等式",
+      "最值",
+      "换元",
+      "取等条件"
+    ],
+    "summary": "由 (x−3)(y−1)=3 化为 4+t+3/t，令 t=√3 得到可取到的最小值 4+2√3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "曲线 S(t)=4+t+3/t（t>0）在 t=√3 处达到最低点 4+2√3。"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q10",
+    "title": "二项式系数之和：从 Cₙ²=Cₙ³ 确定 n，再令 x=2",
+    "subtitle": "先用组合数恒等式确定 n=5，再利用 x=2 一次求出全部展开系数之和。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023杨浦一模",
+      "二项式定理",
+      "组合数",
+      "系数和",
+      "赋值法"
+    ],
+    "summary": "组合数等式确定 n=5；在关于 (x−1) 的展开恒等式中代入 x=2，得系数和 3⁵=243。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "六个柱分别表示 a₀,…,a₅ 的数值 1、10、40、80、80、32；合计为 243。"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q11",
+    "title": "正方体球面截线：六段圆弧的总长度",
+    "subtitle": "近三面与远三面两种不同半径和弧角，精确相加得5√3π/6",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 14,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "空间几何",
+      "球面截线",
+      "弧长",
+      "正方体"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第11题：近三面与远三面两种不同半径和弧角，精确相加得5√3π/6。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "三个相邻面的30°圆弧与三个对面的90°圆弧"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q12",
+    "title": "非线性递推与交错望远镜：首项区间及整数k",
+    "subtitle": "由正根固定点求a₁∈(0,2)，再由倒数望远镜求k=−6",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "数列递推",
+      "严格单调",
+      "交错求和",
+      "望远镜"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第12题：由正根固定点求a₁∈(0,2)，再由倒数望远镜求k=−6。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正项数列从2/3向2递增，2022项和只由两个端点倒数决定"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q13",
+    "title": "充分必要条件判断：为什么只有立方不等式等价",
+    "subtitle": "实数立方函数严格递增；平方不保序，其余两个条件不等价",
+    "category": "multiple-choice",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "充要条件",
+      "实数不等式",
+      "反例"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第13题：实数立方函数严格递增；平方不保序，其余两个条件不等价。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四个不等式条件中，只有B与a>b同强度"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q14",
+    "title": "函数图像四选一：零点、符号与两端极限",
+    "subtitle": "(x²−1)eˣ在±1处为零，左尾趋于0⁺，正确图像C",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "函数图像",
+      "指数函数",
+      "导数",
+      "零点"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第14题：(x²−1)eˣ在±1处为零，左尾趋于0⁺，正确图像C。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "原函数的真实曲线：零点−1与1、局部极大极小及左尾趋势"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q15",
+    "title": "星等与亮度：把对数差还原为10的指数",
+    "subtitle": "由星等差25.25计算对数比10.1，亮度比10¹⁰·¹，选A",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "对数",
+      "指数",
+      "天文学",
+      "数学建模"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第15题：由星等差25.25计算对数比10.1，亮度比10¹⁰·¹，选A。原卷第2、3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2,
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "横轴展示的是亮度比的常用对数，刻度差正好10.1"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q16",
+    "title": "分段函数减直线：跨越四个象限的斜率范围",
+    "subtitle": "分左右半轴分析h=f−g，得到−2<k<1/2，选择A",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "分段函数",
+      "四象限",
+      "抛物线",
+      "函数最值"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第16题：分左右半轴分析h=f−g，得到−2<k<1/2，选择A。原卷第3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 16,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "合法参数k=−1时，h在两侧各取正负值"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q17",
+    "title": "三棱锥线面角：从CD垂直到投影AC",
+    "subtitle": "证明两平面垂直，求出线面角arccos(√5/3)",
+    "category": "worked-solutions",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "立体几何",
+      "线面垂直",
+      "面面垂直",
+      "线面角"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第17题：证明两平面垂直，求出线面角arccos(√5/3)。原卷第3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 17,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "投影点C、投影线AC、线面角∠DAC在三棱锥中对应清晰"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q18",
+    "title": "正弦定理与三角面积：角B及三边周长",
+    "subtitle": "先求B=π/3，再由面积和边比得到周长2√3+2",
+    "category": "worked-solutions",
+    "topic": "trigonometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "正弦定理",
+      "余弦定理",
+      "三角面积",
+      "周长"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第18题：先求B=π/3，再由面积和边比得到周长2√3+2。原卷第4页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 18,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "精确边长比例构造的三角形，标出B=60°和三边"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q19",
+    "title": "山谷桥梁最优双桥墩：二次坡与三次坡的成本模型",
+    "subtitle": "谷深160米、桥长120米，双桥墩最优位置O′E=20米",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 23,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "函数建模",
+      "导数最值",
+      "工程桥梁",
+      "题源答案漏项"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第19题：谷深160米、桥长120米，双桥墩最优位置O′E=20米。原卷第4页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 19,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "按函数曲线精确绘制左右坡与最优桥墩，C=(-60,160)、E=(20,160)"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q20",
+    "title": "椭圆反射与外点割线对合：第20题及未定义k的题源审查",
+    "subtitle": "前两问独立核验；第三问k未定义，须假设指原弦斜率才可求k=2",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 26,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "解析几何",
+      "椭圆",
+      "反射",
+      "弦对合",
+      "题源问题"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第20题：前两问独立核验；第三问k未定义，须假设指原弦斜率才可求k=2。原卷第5页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      5
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "示例直线y=2x+1的割线像弦CD与固定Q共线，示意严格符合所写坐标"
+    }
   }
 ]
