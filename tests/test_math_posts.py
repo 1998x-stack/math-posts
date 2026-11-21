@@ -6,9 +6,9 @@ def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
 def test_original_21_problems_and_exam_types():
     posts=manifest()
     batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
-    original=[p for p in posts if p.get('source_exam')!=batch_id]
+    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice')]
     assert len(original)==21
-    assert len(posts)==31
+    assert len(posts)==36
     assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
     for p in original:counts[p['category']]=counts.get(p['category'],0)+1
@@ -142,3 +142,24 @@ def test_knowledge_map_prerequisites_are_acyclic():
         visiting.remove(node)
         visited.add(node)
     for node in graph:visit(node)
+
+
+def test_week12_photographed_first_five_are_complete_and_evidenced():
+    problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice']
+    assert [p['question_number'] for p in problems]==[1,2,3,4,5]
+    assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in problems)
+    for p in problems:
+        article=ROOT/'posts'/p['category']/p['slug']
+        html=(article/'index.html').read_text('utf-8')
+        svg=(article/'assets/cover.svg').read_text('utf-8')
+        evidence=json.loads((article/'evidence.json').read_text('utf-8'))
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert html.index('id="overview"') < html.index('id="question"')
+        assert '<svg' in html and '<title' in svg and '<desc' in svg
+        assert evidence['source']['pages']==[1]
+        assert '官方答案' in evidence['answer']['official']
+    assert 1j*complex(2,-1)==complex(1,2)
+    assert abs(complex(2,-1))**2==5
+    assert [x for x in (-2,0,1) if 2*x*x+x-1<0]==[0]
+    assert math.comb(6,2)*2**2==60
+    assert (1+3)**2==1*(1+5*3)
