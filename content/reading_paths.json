@@ -115,5 +115,20 @@
       "songjiang-2023-mock-q07",
       "songjiang-2023-mock-q10"
     ]
+  },
+  {
+    "id": "math-path-11",
+    "title": "2023松江一模第11–19题：曲线截线、数列到建模最值",
+    "posts": [
+      "songjiang-2023-mock-q11",
+      "songjiang-2023-mock-q12",
+      "songjiang-2023-mock-q13",
+      "songjiang-2023-mock-q14",
+      "songjiang-2023-mock-q15",
+      "songjiang-2023-mock-q16",
+      "songjiang-2023-mock-q17",
+      "songjiang-2023-mock-q18",
+      "songjiang-2023-mock-q19"
+    ]
   }
 ]

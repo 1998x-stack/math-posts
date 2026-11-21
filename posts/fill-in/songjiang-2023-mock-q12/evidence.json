@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 12,
+    "pages": [
+      2
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF: 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-PDF-and-answer-key",
+    "checked_elements": [
+      "full statement",
+      "mathematical operators",
+      "answer key",
+      "options if any"
+    ]
+  },
+  "answer": {
+    "official": "(0,2)，−6",
+    "official_source": "uploaded PDF p.7 reference key",
+    "independent_result": "(0,2)，−6",
+    "independent_check": "正根迭代满足0<a1<2时严格增趋近2；S2022=−9/2−1/a2022，且1<a2022<2，所以−11/2<S2022<−5，k必为−6；与PDF第7页两空答案一致。"
+  },
+  "math_equations": [
+    "a_{n+1}=\\frac{1+\\sqrt{1+4a_n}}2",
+    "a_1\\in(0,2)",
+    "\\frac1{a_{n+1}-1}=\\frac1{a_n}+\\frac1{a_{n+1}}",
+    "S_{2022}=-3-\\frac1{a_1}-\\frac1{a_{2022}}=-\\frac92-\\frac1{a_{2022}}",
+    "-6<S_{2022}<-5,\\quad k=-6"
+  ],
+  "visual_assertions": [
+    "正项数列从2/3向2递增，2022项和只由两个端点倒数决定"
+  ],
+  "editorial_note": "题干严格据用户提供的8页PDF转写；分步解析为独立推导，非原卷完整官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

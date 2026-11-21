@@ -3905,5 +3905,356 @@
       "src": "assets/cover.svg",
       "caption": "同值双交点中点与对数平均的严格逐项比较"
     }
+  },
+  {
+    "slug": "songjiang-2023-mock-q11",
+    "title": "正方体球面截线：六段圆弧的总长度",
+    "subtitle": "近三面与远三面两种不同半径和弧角，精确相加得5√3π/6",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 14,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "空间几何",
+      "球面截线",
+      "弧长",
+      "正方体"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第11题：近三面与远三面两种不同半径和弧角，精确相加得5√3π/6。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "三个相邻面的30°圆弧与三个对面的90°圆弧"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q12",
+    "title": "非线性递推与交错望远镜：首项区间及整数k",
+    "subtitle": "由正根固定点求a₁∈(0,2)，再由倒数望远镜求k=−6",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "数列递推",
+      "严格单调",
+      "交错求和",
+      "望远镜"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第12题：由正根固定点求a₁∈(0,2)，再由倒数望远镜求k=−6。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正项数列从2/3向2递增，2022项和只由两个端点倒数决定"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q13",
+    "title": "充分必要条件判断：为什么只有立方不等式等价",
+    "subtitle": "实数立方函数严格递增；平方不保序，其余两个条件不等价",
+    "category": "multiple-choice",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "充要条件",
+      "实数不等式",
+      "反例"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第13题：实数立方函数严格递增；平方不保序，其余两个条件不等价。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四个不等式条件中，只有B与a>b同强度"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q14",
+    "title": "函数图像四选一：零点、符号与两端极限",
+    "subtitle": "(x²−1)eˣ在±1处为零，左尾趋于0⁺，正确图像C",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "函数图像",
+      "指数函数",
+      "导数",
+      "零点"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第14题：(x²−1)eˣ在±1处为零，左尾趋于0⁺，正确图像C。原卷第2页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "原函数的真实曲线：零点−1与1、局部极大极小及左尾趋势"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q15",
+    "title": "星等与亮度：把对数差还原为10的指数",
+    "subtitle": "由星等差25.25计算对数比10.1，亮度比10¹⁰·¹，选A",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "对数",
+      "指数",
+      "天文学",
+      "数学建模"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第15题：由星等差25.25计算对数比10.1，亮度比10¹⁰·¹，选A。原卷第2、3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2,
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "横轴展示的是亮度比的常用对数，刻度差正好10.1"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q16",
+    "title": "分段函数减直线：跨越四个象限的斜率范围",
+    "subtitle": "分左右半轴分析h=f−g，得到−2<k<1/2，选择A",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "分段函数",
+      "四象限",
+      "抛物线",
+      "函数最值"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第16题：分左右半轴分析h=f−g，得到−2<k<1/2，选择A。原卷第3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 16,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "合法参数k=−1时，h在两侧各取正负值"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q17",
+    "title": "三棱锥线面角：从CD垂直到投影AC",
+    "subtitle": "证明两平面垂直，求出线面角arccos(√5/3)",
+    "category": "worked-solutions",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "立体几何",
+      "线面垂直",
+      "面面垂直",
+      "线面角"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第17题：证明两平面垂直，求出线面角arccos(√5/3)。原卷第3页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 17,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "投影点C、投影线AC、线面角∠DAC在三棱锥中对应清晰"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q18",
+    "title": "正弦定理与三角面积：角B及三边周长",
+    "subtitle": "先求B=π/3，再由面积和边比得到周长2√3+2",
+    "category": "worked-solutions",
+    "topic": "trigonometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "正弦定理",
+      "余弦定理",
+      "三角面积",
+      "周长"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第18题：先求B=π/3，再由面积和边比得到周长2√3+2。原卷第4页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 18,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "精确边长比例构造的三角形，标出B=60°和三边"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q19",
+    "title": "山谷桥梁最优双桥墩：二次坡与三次坡的成本模型",
+    "subtitle": "谷深160米、桥长120米，双桥墩最优位置O′E=20米",
+    "category": "worked-solutions",
+    "topic": "applied-math",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 23,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "函数建模",
+      "导数最值",
+      "工程桥梁",
+      "题源答案漏项"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第19题：谷深160米、桥长120米，双桥墩最优位置O′E=20米。原卷第4页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 19,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "按函数曲线精确绘制左右坡与最优桥墩，C=(-60,160)、E=(20,160)"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q20",
+    "title": "椭圆反射与外点割线对合：第20题及未定义k的题源审查",
+    "subtitle": "前两问独立核验；第三问k未定义，须假设指原弦斜率才可求k=2",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 26,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "解析几何",
+      "椭圆",
+      "反射",
+      "弦对合",
+      "题源问题"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第20题：前两问独立核验；第三问k未定义，须假设指原弦斜率才可求k=2。原卷第5页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      5
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "示例直线y=2x+1的割线像弦CD与固定Q共线，示意严格符合所写坐标"
+    }
   }
 ]

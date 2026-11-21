@@ -260,7 +260,7 @@ def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
     assert first*ratio**3==-8
 
 def test_songjiang_2023_first_ten_sequential_with_glyph_caveats():
-    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock"]
+    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]<=10]
     assert [p["question_number"] for p in seq]==list(range(1,11))
     assert len(seq)==10
     assert [p["status"] for p in seq]==["published"]*7+["draft","draft","published"]
@@ -378,3 +378,64 @@ def test_chongming_2023_next_five_visual_mathml_and_source_pages():
     assert 1**2==(2*1-1)
     assert math.isclose(math.sin(2*math.pi/3-math.pi/6),1)
     assert min(2+6*n for n in range(-20,21) if 2+6*n>0)==2
+
+def test_songjiang_second_ten_source_and_semantic_mathml():
+    from bs4 import BeautifulSoup
+    docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]>=11],key=lambda p:p["question_number"])
+    assert [p["question_number"] for p in docs]==list(range(11,21))
+    assert [p["status"] for p in docs]==["published"]*9+["draft"]
+    assert [p["category"] for p in docs]==["fill-in"]*2+["multiple-choice"]*4+["worked-solutions"]*4
+    assert [p["source_pages"] for p in docs]==[[2],[2],[2],[2],[2,3],[3],[3],[4],[4],[5]]
+    for p in docs:
+        root=ROOT/"posts"/p["category"]/p["slug"]
+        html=(root/"index.html").read_text(encoding="utf-8")
+        cover=(root/"assets/cover.svg").read_text(encoding="utf-8")
+        evidence=json.loads((root/"evidence.json").read_text(encoding="utf-8"))
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '先理解题目在问什么' in html and html.count('class="step-note"')>=3
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in cover and '<desc' in cover
+        assert evidence["source"]["question"]==p["question_number"]
+        assert evidence["source"]["answers_pages"]==[7]
+        assert evidence["answer"]["official_source"]
+        soup=BeautifulSoup(html,"html.parser")
+        for frac in soup.select("math mfrac"):
+            elements=[child for child in frac.children if getattr(child,"name",None)]
+            assert len(elements)==2, f"Invalid MathML mfrac in {p['slug']}"
+        assert '<mo>frac</mo>' not in html and '<mo>mathrm</mo>' not in html
+        assert '<mo>text</mo>' not in html and '<mo>cdots</mo>' not in html
+    source19=json.loads((ROOT/"posts/worked-solutions/songjiang-2023-mock-q19/evidence.json").read_text("utf-8"))
+    assert "120" in source19["answer"]["official"] and "160" in source19["answer"]["independent_result"]
+    q20=docs[-1]
+    assert q20["status"]=="draft" and "未定义" in q20["subtitle"]
+    issue=json.loads((ROOT/"posts/worked-solutions/songjiang-2023-mock-q20/evidence.json").read_text("utf-8"))
+    assert "k" in issue["transcription"]["uncertainty"]
+
+def test_songjiang_second_ten_independent_invariants():
+    import math
+    R=2*math.sqrt(3)/3
+    r=math.sqrt(3)/3
+    assert math.isclose(3*R*math.pi/6 + 3*r*math.pi/2,5*math.sqrt(3)*math.pi/6)
+    a=[2/3]
+    for n in range(1,12):a.append((1+math.sqrt(1+4*a[-1]))/2)
+    assert all(a[j+1]>a[j] and a[j+1]<2 for j in range(11))
+    for even in (2,4,6,10):
+        total=sum((-1)**(n-1)/(a[n-1]-1) for n in range(1,even+1))
+        assert math.isclose(total,-4.5-1/a[even-1],abs_tol=1e-12)
+        assert -6<total<-5
+    assert (-2)**3<1**3 and not((-2)**2<1**2)
+    f=lambda x:(x*x-1)*math.exp(x)
+    assert f(-1)==0 and f(1)==0 and f(0)==-1
+    assert math.isclose(((-1.45)-(-26.7))*2/5,10.1)
+    h=lambda x,k: abs(x+2)-k*x-1 if x<0 else x*x-(4+k)*x+1
+    assert h(-2,-1)<0<h(-0.1,-1) and h(1,-1)<0<h(3,-1)
+    assert math.isclose(math.sqrt(5)/3,math.cos(math.acos(math.sqrt(5)/3)))
+    aa=2/math.sqrt(3);bb=2;cc=2*aa
+    assert math.isclose(.5*aa*cc*math.sin(math.pi/3),2*math.sqrt(3)/3)
+    assert math.isclose(aa+bb+cc,2*math.sqrt(3)+2)
+    H=-40**3/800+6*40
+    assert H==160 and math.sqrt(H*40)==80 and math.sqrt(H*40)+40==120
+    CD=160-(80-20)**2/40
+    EF=160+20**3/800-6*20
+    assert CD==70 and EF==50 and 1.5*CD+EF==155
+    assert math.isclose(10*(-7/4)+.5+17,0)

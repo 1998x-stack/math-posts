@@ -31,7 +31,8 @@
             "jianping-2021-q01",
             "week12-gaosan-q08",
             "chongming-2023-q04",
-            "shanghai-putuo-2023-q03"
+            "shanghai-putuo-2023-q03",
+            "songjiang-2023-mock-q15"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
@@ -73,7 +74,8 @@
           ],
           "posts": [
             "yangpu-2023-q03",
-            "hongkou-2023-q09"
+            "hongkou-2023-q09",
+            "songjiang-2023-mock-q15"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -99,7 +101,8 @@
             "songjiang-2023-mock-q05",
             "yangpu-2023-q01",
             "hongkou-2023-q09",
-            "hongkou-2023-q10"
+            "hongkou-2023-q10",
+            "songjiang-2023-mock-q16"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -121,7 +124,9 @@
           ],
           "posts": [
             "jianping-2021-q21",
-            "week12-gaosan-q07"
+            "week12-gaosan-q07",
+            "songjiang-2023-mock-q14",
+            "songjiang-2023-mock-q16"
           ],
           "outcomes": [
             "分析分段表达式与图像变化",
@@ -152,7 +157,8 @@
             "hongkou-2023-q07",
             "derivative-classics-q06",
             "derivative-classics-q09",
-            "derivative-classics-q10"
+            "derivative-classics-q10",
+            "songjiang-2023-mock-q14"
           ],
           "outcomes": [
             "用平均变化率理解瞬时变化率",
@@ -182,7 +188,8 @@
             "derivative-classics-q07",
             "derivative-classics-q08",
             "derivative-classics-q09",
-            "derivative-classics-q10"
+            "derivative-classics-q10",
+            "songjiang-2023-mock-q19"
           ],
           "outcomes": [
             "用导数判断单调区间",
@@ -214,7 +221,8 @@
           "posts": [
             "yangpu-2023-q04",
             "shanghai-putuo-2023-q04",
-            "jiading-2023-q16"
+            "jiading-2023-q16",
+            "songjiang-2023-mock-q18"
           ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
@@ -262,7 +270,8 @@
           ],
           "posts": [
             "songjiang-2023-mock-q02",
-            "shanghai-putuo-2023-q05"
+            "shanghai-putuo-2023-q05",
+            "songjiang-2023-mock-q18"
           ],
           "outcomes": [
             "使用基本恒等关系化简表达式",
@@ -317,7 +326,8 @@
           "posts": [
             "jianping-2021-q14",
             "week12-gaosan-q12",
-            "jiading-2023-q18"
+            "jiading-2023-q18",
+            "songjiang-2023-mock-q12"
           ],
           "outcomes": [
             "从规律或递推关系表示数列",
@@ -386,7 +396,8 @@
           "posts": [
             "jianping-2021-q06",
             "jianping-2021-q10",
-            "week12-gaosan-q12"
+            "week12-gaosan-q12",
+            "songjiang-2023-mock-q12"
           ],
           "outcomes": [
             "区分连续顶点与整数 n 的取值",
@@ -415,7 +426,8 @@
           "posts": [
             "jianping-2021-q13",
             "jianping-2021-q17",
-            "jiading-2023-q17"
+            "jiading-2023-q17",
+            "songjiang-2023-mock-q17"
           ],
           "outcomes": [
             "辨认平行、相交与异面",
@@ -440,7 +452,8 @@
             "jianping-2021-q17",
             "songjiang-2023-mock-q06",
             "hongkou-2023-q03",
-            "shanghai-putuo-2023-q02"
+            "shanghai-putuo-2023-q02",
+            "songjiang-2023-mock-q11"
           ],
           "outcomes": [
             "理解常见几何体结构与截面",
@@ -507,7 +520,8 @@
           ],
           "posts": [
             "jianping-2021-q17",
-            "jiading-2023-q17"
+            "jiading-2023-q17",
+            "songjiang-2023-mock-q17"
           ],
           "outcomes": [
             "将空间角转化为向量夹角或平面角",
@@ -831,7 +845,8 @@
             "derivative-classics-q03",
             "chongming-2023-q02",
             "hongkou-2023-q01",
-            "shanghai-putuo-2023-q03"
+            "shanghai-putuo-2023-q03",
+            "songjiang-2023-mock-q13"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -907,7 +922,8 @@
             "jianping-2021-q19",
             "week12-gaosan-q15",
             "jiading-2023-q19",
-            "jiading-2023-q20"
+            "jiading-2023-q20",
+            "songjiang-2023-mock-q19"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",
@@ -938,7 +954,8 @@
             "jiading-2023-q13",
             "jiading-2023-q16",
             "derivative-classics-q07",
-            "derivative-classics-q10"
+            "derivative-classics-q10",
+            "songjiang-2023-mock-q13"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

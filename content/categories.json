@@ -68,6 +68,10 @@
       {
         "slug": "probability",
         "title": "概率与公平决策"
+      },
+      {
+        "slug": "functions",
+        "title": "函数图像与指数对数"
       }
     ]
   },
@@ -96,6 +100,10 @@
       {
         "slug": "sequences",
         "title": "数列与递推证明"
+      },
+      {
+        "slug": "trigonometry",
+        "title": "解三角形与三角函数"
       }
     ]
   }
