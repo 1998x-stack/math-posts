@@ -47,3 +47,35 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 
 
 新增题源：**《上海市杨浦区 2023 届高三一模数学试卷》**（2022.12），首批已转换前 5 道填空题。原题来自 PDF 第 1 页，答案核对 PDF 第 8 页；官方参考答案只列结果，逐步推导为独立验算。题源页码、答案来源与说明记录在 `content/source-notes.md` 及每篇 `evidence.json`。
+
+
+## 题库导航升级：按知识点、试卷、题型与解题方法
+
+- [按试卷浏览](https://1998x-stack.github.io/math-posts/papers/)：按学校、地区、年份和原卷题号阅读；支持整卷、地区题目摘录、课堂练习与专题题集。
+- [知识地图](https://1998x-stack.github.io/math-posts/topics/)：保持七大知识领域、先修依赖与学习路径。
+- [首页多维筛选](https://1998x-stack.github.io/math-posts/#discover)：组合使用答题形式、知识点、试卷、解题方法及图解方式，支持链接分享查询参数，例如 `?concept=vector&category=fill-in`。
+- 每道题只维护一个规范 HTML URL；试卷页和知识索引均引用它，不复制题目内容。
+
+### 内容数据
+
+| 文件 | 职责 |
+|---|---|
+| `content/posts.json` | 文章身份、原卷题号、`paper_id`、`facets`、发布状态；保持旧 `tags` 向后兼容 |
+| `content/papers.json` | 每张试卷/练习/题集的稳定 ID、来源文档 ID、学校/地区、年份和已知题量 |
+| `content/taxonomy.json` | 可检索的规范化概念/方法/图示标签和中文别名 |
+| `content/knowledge-map.json` | 知识领域、先修依赖、难度和已发布题目映射 |
+| `posts/**/evidence.json` | 真实原题与答案的来源、页码、核对边界、异常说明 |
+
+一次来源 PDF 可能包含多套地区题，必须区分**源文档 source_id** 与 **试卷 paper_id**。例如 2024 上海二模解析几何汇编中的各区第 20 题，各自归属单独的地区试卷摘录，不把它们错误排列成同一套试卷的第 1 至第 16 题。未知总题数使用 null；草稿不提供公开文章链接。
+
+### 教学与可视化规范
+
+以后新题按“题意导读 → 忠实原题 → 条件标注 → 思路地图 → 每一步的目标/理由/计算/检查 → 真实 SVG 或必要的三维 → 独立复核 → 方法迁移”建设。每题仍要求完整 MathML；视觉效果不能替代代数证明。
+
+详细 Reference：
+- [学生视角逐步解题](skills/math-visual-posts/references/student-solution-design.md)
+- [20 类数学问题可视化设计](skills/math-visual-posts/references/visualization-by-problem-type.md)
+- [多维标签体系](skills/math-visual-posts/references/taxonomy-and-tags.md)
+- [PDF / 试卷 / 题目 Schema](skills/math-visual-posts/references/exam-provenance-schema.md)
+
+初始标签由现有知识地图、明确的题目标签与来源结构迁移；对尚未逐篇核对的解题方法和图示形式，保持空列表，不为了筛选数量而误标。未来批次必须执行逐题人工审查和浏览器检查。

@@ -129,6 +129,39 @@ python -m pytest -q
 
 建立 topic branch，逐文件审查 diff；运行构建、静态校验、单元测试和浏览器检查。创建 PR，CI 通过后按仓库发布流程合并；确认 GitHub Pages workflow 成功，并抽查线上页面、SVG、公式和移动端。用户的下一轮反馈要先更新 canonical Skill，再同步 `.claude/.pi/.agent/.opencode` 四个镜像；不得手工让镜像漂移。
 
+
+## Gate 1.5：先登记试卷与检索语义，再制作正文
+
+这一关新增于多批次学校试卷和解析几何汇编的生产流程。每道新题必须：
+1. 分辨原始文档（`source_id`）与所属试卷（`paper_id`）。先查 `content/papers.json`，同卷沿用稳定 ID，跨地区汇编应拆分为不同的 `exam-excerpt`；完整题量未知填 `null`。
+2. 在 `content/posts.json` 登记原卷 `question_number` 和旧 URL 不变；同一试卷不得出现两个相同原题号。多小问优先属于同一题。
+3. 关联至少一个现有知识地图节点；在 `facets.concept` 选择最具体且可核实的知识概念。答题形式、年份、地区、学校、试卷名称不再混进知识标签。
+4. 只有当本题确实使用对应证明策略/图形时，才给 `facets.method` / `facets.visual` 加标签；未知或未审查时保持空数组。
+5. 更新 `evidence.json`，严格分开原卷答案、独立推导、编辑补充、来源题页与答案页；PDF 截断或原题条件不充分时保持 draft，不利用新索引绕过发布门槛。
+
+[多维标签体系](references/taxonomy-and-tags.md) · [试卷与 PDF 数据规范](references/exam-provenance-schema.md)
+
+## Gate 2.5：可教学解题 Step Schema 与题型图解选型
+
+以普通学生的真实认知疑问组织每道题，不用“公式密度高”代替“解释深”。每个关键步骤的讲解由**目标、依据、关键计算、具体疑问、边界检查、图形对应**六部分组成；不是每步都强制额外画图，但跳过必要计算、错把数值演示当证明不能发布。
+
+- 填空题：先说明答案形式，再解释取值、开闭区间、唯一性、单位与最短证明链。
+- 选择题：逐选项说明成立条件或反例，不只给出选项字母。
+- 解答题：按原卷小问分组，明确复用前问结论的逻辑。
+- 证明题：量词、充要、反证、构造、归纳等必须交代证明方向。
+- 应用题：变量、单位、约束、现实假设与可行性检查明确标记。
+- 图形必须服务于本题真实数学结构；优先静态 SVG，3D 仅适用于确需空间操作的对象。交互默认状态、临界/退化值、无 JS/无网回退都可验证。
+
+参考 [学生视角逐步解题](references/student-solution-design.md) 与 [20 类数学题可视化蓝图](references/visualization-by-problem-type.md)。首次使用新图形类型时，应在 PR 描述写出：要解释的疑问、图形断言、输入域、默认状态、错误/退化情况、与公式一致性的验证方法。
+
+## Gate 7.5：分类索引、试卷页与草稿隔离 QA
+
+- `python scripts/build_site.py` 必须生成 `/papers/` 与每套 `/papers/<paper_id>/`；试卷目录按**原卷题号**排序，不能按发布日期排序。
+- 首页筛选验证跨维度 AND：如 `concept=vector&category=fill-in`；URL 可复制，可用浏览器前后退恢复，清除筛选恢复默认列表。
+- 试卷页面可展示“暂未公开/尚未收录”，但绝不含 draft 文章链接、标题或答案；未知完整题量不标 100%。
+- 不将索引自动推断视为完整人工标签审核；复杂解题方法、图形形式均以正文和数学断言为准。
+- 增量数据注册需通过 `scripts/atlas.py` 验证，并运行 `tests/test_atlas.py` 与站点链接检查。
+
 ## 参考规范
 
 - [PDF 提取](references/pdf-question-extraction.md)
@@ -139,6 +172,10 @@ python -m pytest -q
 - [浏览器 QA](references/browser-qa.md)
 - [评分卡](references/scorecard.md)
 - [发布流程](references/publishing.md)
+- [学生视角解题步骤](references/student-solution-design.md)
+- [各数学题型图解](references/visualization-by-problem-type.md)
+- [标签与首页检索](references/taxonomy-and-tags.md)
+- [试卷 Schema 与来源](references/exam-provenance-schema.md)
 
 ### 数学题解页面的公式覆盖率（不可降级）
 
