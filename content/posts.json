@@ -606,5 +606,165 @@
       "src": "assets/cover.svg",
       "caption": "帐篷函数两次迭代产生四段折线，水平线高度决定交点个数"
     }
+  },
+  {
+    "slug": "shanghai-2024-geometry-pudong-q20",
+    "title": "椭圆焦点弦与向量组合：浦东新区第20题",
+    "subtitle": "从焦点处的弦参数化出发，把椭圆上的向量表示转成二次型约束",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "浦东新区",
+      "椭圆",
+      "焦点弦"
+    ],
+    "summary": "椭圆 x²/2+y²=1 中，先用垂直条件定位 P，再用距离平方确定右顶点何时为最近点，最后通过焦点弦参数化与二次型约束求出 max(λμ)=(m²+2)/4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      2
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "浦东新区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "焦点垂线定位 P，过右焦点的弦承载向量线性组合"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-jiading-q20",
+    "title": "椭圆弦中点轨迹与斜率恒等式：嘉定区第20题",
+    "subtitle": "固定弦斜率把中点限制在一条线段上；斜率和恒为零则锁定椭圆上的两个特殊点",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "嘉定区",
+      "椭圆",
+      "弦中点轨迹"
+    ],
+    "summary": "从椭圆四顶点面积出发，利用固定斜率弦的韦达关系求中点轨迹线段，再把斜率和条件化为截距恒等式，得到两个定点 P。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "嘉定区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "固定斜率弦的中点落在斜率为 −1/2 的轨迹线段上"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-changning-q20",
+    "title": "椭圆距离最值与平行弦定值：长宁区第20题",
+    "subtitle": "一个距离函数完成最近点与最远点；平行弦的数量积则化为根积",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "长宁区",
+      "椭圆",
+      "数量积"
+    ],
+    "summary": "用椭圆方程把点到 N 的距离平方化成一元二次函数，并通过平行弦参数化与韦达根积证明 |PA·PB|=(5/4)|PT|²。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      4
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "长宁区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆上的距离极值与沿 OT 方向的平行弦"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-minhang-q20",
+    "title": "焦点弦的向量积与面积比：闵行区第20题",
+    "subtitle": "抛物线焦点恰好落在椭圆顶点；焦点弦的根和、根积控制向量积与面积比",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "闵行区",
+      "椭圆",
+      "抛物线"
+    ],
+    "summary": "由焦点重合求出抛物线 x²=4y；焦点弦的韦达关系给出 OM·ON=−3，并将两个三角形面积比化为 2√(k²+1)。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      5
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "闵行区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "抛物线焦点弦与椭圆径向交点之间的面积映射"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-hongkou-q20",
+    "title": "椭圆上两条过 P 的弦：斜率乘积与直角三角形",
+    "subtitle": "从椭圆顶点出发参数化弦斜率，斜率乘积约束最终锁定两种直角弦方向",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "虹口区",
+      "椭圆",
+      "斜率关系"
+    ],
+    "summary": "由焦距和 P=(0,1) 确定椭圆 x²/4+y²=1；用过 P 的直线斜率求第二交点，再解出弦 AB 的斜率为 ±1/√2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "虹口区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "从椭圆顶点 P 出发的两条弦与连接弦 AB"
+    }
   }
 ]

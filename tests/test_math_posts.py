@@ -3,13 +3,31 @@ import json,math,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
-def test_all_21_problems_and_exam_types():
+def test_original_21_problems_and_exam_types():
     posts=manifest()
-    assert len(posts)==21
-    assert sorted(x['question_number'] for x in posts)==list(range(1,22))
+    batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
+    original=[p for p in posts if p.get('source_exam')!=batch_id]
+    assert len(original)==21
+    assert len(posts)==26
+    assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
-    for p in posts:counts[p['category']]=counts.get(p['category'],0)+1
+    for p in original:counts[p['category']]=counts.get(p['category'],0)+1
     assert counts=={'fill-in':12,'multiple-choice':4,'worked-solutions':5}
+
+
+def test_2024_geometry_first_five_are_registered_and_evidenced():
+    posts=manifest()
+    batch=[p for p in posts if p.get('source_exam')=='2024-shanghai-gaosan-second-mock-analytic-geometry']
+    assert len(batch)==5
+    assert [p['source_region'] for p in batch]==['浦东新区','嘉定区','长宁区','闵行区','虹口区']
+    assert [p['source_pages'] for p in batch]==[[2],[3],[4],[5],[6]]
+    for p in batch:
+        assert p['question_number']==20 and p['category']=='worked-solutions'
+        evidence=json.loads((ROOT/'posts'/p['category']/p['slug']/'evidence.json').read_text('utf-8'))
+        assert evidence['source']['region']==p['source_region']
+        assert evidence['source']['pages']==p['source_pages']
+        assert evidence['answer']['official']=='原卷未提供官方答案或解析。'
+        assert evidence['answer']['independent_check']
 def test_original_svg_cover_and_source():
     captions=set()
     for p in manifest():
