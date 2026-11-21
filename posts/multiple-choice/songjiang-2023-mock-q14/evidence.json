@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 14,
+    "pages": [
+      2
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF: 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-PDF-and-answer-key",
+    "checked_elements": [
+      "full statement",
+      "mathematical operators",
+      "answer key",
+      "options if any"
+    ]
+  },
+  "answer": {
+    "official": "C",
+    "official_source": "uploaded PDF p.7 reference key",
+    "independent_result": "C",
+    "independent_check": "函数在±1有零点、y(0)=−1、左尾趋于0⁺、右端→+∞、驻点−1±√2，与选项C相符且与原卷第7页C一致。"
+  },
+  "math_equations": [
+    "(x^2-1)e^x=0\\quad\\Rightarrow\\quad x=-1,1",
+    "y>0:\\ x<-1\\ {\\rm or}\\ x>1;\\quad y<0:\\ -1<x<1",
+    "\\lim_{x\\to-\\infty}(x^2-1)e^x=0",
+    "y'=e^x(x^2+2x-1),\\quad x=-1\\pm\\sqrt2"
+  ],
+  "visual_assertions": [
+    "原函数的真实曲线：零点−1与1、局部极大极小及左尾趋势"
+  ],
+  "editorial_note": "题干严格据用户提供的8页PDF转写；分步解析为独立推导，非原卷完整官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
