@@ -235,7 +235,7 @@ def test_week12_q06_to_q10_math_and_source_traps():
 
 def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
     posts=manifest()
-    batch=[p for p in posts if p.get('source_exam')=='2023-shanghai-chongming-first-mock']
+    batch=[p for p in posts if p.get('source_exam')=='2023-shanghai-chongming-first-mock' and p['question_number']<=5]
     assert [p['question_number'] for p in batch]==[1,2,3,4,5]
     assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in batch)
     expected=['{2,3,4}','(−1/2,2)','6','2','−8']
@@ -350,3 +350,31 @@ def test_week12_q11_to_q15_faithful_categorization_and_math_invariants():
     assert 1 < math.sqrt(2)
     assert 1.5**2 > math.sqrt(3)
     assert (ROOT/'posts/multiple-choice/week12-gaosan-q15/index.html').exists()
+
+
+def test_chongming_2023_next_five_visual_mathml_and_source_pages():
+    batch=[p for p in manifest() if p.get('source_exam')=='2023-shanghai-chongming-first-mock' and 6<=p['question_number']<=10]
+    assert [p['question_number'] for p in batch]==[6,7,8,9,10]
+    assert all(p['category']=='fill-in' and p['status']=='published' for p in batch)
+    expected=['−4','1/2','√3','y=2x−1','2']
+    for item,official in zip(batch,expected):
+        directory=ROOT/'posts'/item['category']/item['slug']
+        html=(directory/'index.html').read_text('utf-8')
+        svg=(directory/'assets/cover.svg').read_text('utf-8')
+        record=json.loads((directory/'evidence.json').read_text('utf-8'))
+        assert item['source_pages']==([1,2] if item['question_number']==10 else [1])
+        assert record['source']['pages']==item['source_pages']
+        assert record['source']['answer_pages']==[7]
+        assert record['answer']['official']==official
+        assert record['answer']['independent_check']
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in svg and '<desc' in svg
+        assert html.count('class="step-note"')>=4
+    assert 16-(-4)**2==0
+    assert (2*(-4)) != 8
+    assert math.isclose(math.sin(math.pi/2 + math.pi/3),math.cos(math.pi/3))
+    assert math.isclose((math.sqrt(3))**2+1,4)
+    assert 1**2==(2*1-1)
+    assert math.isclose(math.sin(2*math.pi/3-math.pi/6),1)
+    assert min(2+6*n for n in range(-20,21) if 2+6*n>0)==2

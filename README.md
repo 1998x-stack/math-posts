@@ -12,6 +12,8 @@
 
 第三批材料：用户上传的**《2023 届上海市虹口区高三一模数学试卷》**（2022.12），本次先完成前五道填空题，题干位于 PDF 第 1 页，官方答案表位于 PDF 第 7 页；官方只提供答案表，文章推导均标注为独立核验。题源页码和答案边界见 `content/source-notes.md` 与各篇 `evidence.json`。
 
+**崇明一模第 6–10 题**已继续逐题转换，新增线性方程组、单位圆、圆锥、切线和正弦全局最值5篇，均包含可访问 MathML、专属 SVG 及题源证据；第10题跨 PDF 第1–2页，答案见第7页。
+
 ## 仓库结构
 
 `skills/math-visual-posts/` 是 canonical 数学题解 Skill（PDF 校对、MathML、SVG、Three.js、浏览器 QA）。`posts/` 是逐题 Post；`content/` 定义试卷题型、七大领域知识地图（先修关系、难度、能力目标与例题映射）、发布状态和阅读路径；`scripts/` 生成静态站点；`site/assets/` 承载 CSS 与 JS。

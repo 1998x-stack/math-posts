@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="q6t q6d"><title id="q6t">无穷多解与无解的直线位置对照</title><desc id="q6d">左图 m 等于 4 两直线重合；右图 m 等于负 4 两条同斜率不同截距的直线互相平行、无交点。</desc><rect x="0" y="0" width="720" height="340" fill="#f5f9f7" rx="22"/>
+<rect x="28" y="47" width="320" height="242" rx="15" fill="#fff" stroke="#d6e5df"/><rect x="372" y="47" width="320" height="242" rx="15" fill="#fff" stroke="#d6e5df"/>
+<text x="188" y="29" text-anchor="middle" font-size="18" fill="#315866" font-weight="700" font-family="system-ui,sans-serif">m = 4：两直线重合</text>
+<text x="533" y="29" text-anchor="middle" font-size="18" fill="#315866" font-weight="700" font-family="system-ui,sans-serif">m = −4：平行且不同</text>
+<path d="M65 170H314M188 70V272M411 170H656M535 70V272" stroke="#b3c5c9" stroke-width="1.5"/>
+<path d="M70 103L308 236" stroke="#158b80" stroke-width="6" stroke-linecap="round"/>
+<path d="M70 103L308 236" stroke="#dc835d" stroke-width="2.5" stroke-dasharray="7 5" stroke-linecap="round"/>
+<path d="M417 230L651 146" stroke="#178b7f" stroke-width="4" stroke-linecap="round"/>
+<path d="M417 184L651 100" stroke="#d67e59" stroke-width="4" stroke-linecap="round"/>
+<text x="188" y="312" text-anchor="middle" font-size="14" fill="#416673" font-family="system-ui,sans-serif">x + 4y = 2：有无穷多个解</text>
+<text x="533" y="312" text-anchor="middle" font-size="14" fill="#416673" font-family="system-ui,sans-serif">x − 4y = ±2：无解</text>
+<text x="608" y="86" font-size="13" fill="#aa5c3b" font-family="system-ui,sans-serif">+1/2</text><text x="612" y="240" font-size="13" fill="#11796d" font-family="system-ui,sans-serif">−1/2</text>
+</svg>
