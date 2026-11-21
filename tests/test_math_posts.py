@@ -215,8 +215,10 @@ def test_every_math_post_has_real_mathml_coverage():
         for node in math_tags:
             assert node.get('aria-label') or node.get('aria-labelledby'), (p['slug'], str(node)[:120])
 
-        outside = re.sub(r'<math\b[\s\S]*?</math>', '', html, flags=re.I)
-        outside = re.sub(r'<(script|style|pre|code)\b[\s\S]*?</\1>', '', outside, flags=re.I)
+        visible_text = '\n'.join(
+            str(node) for node in soup.find_all(string=True)
+            if not (node.parent and node.parent.find_parent(['math', 'svg', 'script', 'style', 'code', 'pre']))
+        )
         slash = chr(92)
         for token in (slash + 'frac', slash + 'sqrt', slash + '(', '$$'):
-            assert token not in outside, (p['slug'], token)
+            assert token not in visible_text, (p['slug'], token)

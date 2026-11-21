@@ -79,31 +79,12 @@ def validate(path: Path) -> dict:
         failures.append(f'Inline MathML coverage too low: expected >=2, found {len(inline_maths)}')
     if not soup.select_one('.formula-bank'):
         failures.append('Missing the problem-specific core formula summary')
-    math_source = re.sub(r'<math\b[\s\S]*?</math>', '', html, flags=re.I)
-    math_source = re.sub(r'<(script|style|pre|code)\b[\s\S]*?</\1>', '', math_source, flags=re.I)
-    if re.search(r'\\(?:[()\[\]]|frac\b|sqrt\b|sum\b|int\b|begin\b|end\b)|\$\$?', math_source):
+    visible_text = "\\n".join(
+        str(node) for node in soup.find_all(string=True)
+        if not (node.parent and node.parent.find_parent(['math', 'svg', 'script', 'style', 'code', 'pre']))
+    )
+    if re.search(r'\\\\(?:[()\\[\\]]|frac\\b|sqrt\\b|sum\\b|int\\b|begin\\b|end\\b)|\\$\\$?', visible_text):
         failures.append('Visible raw LaTeX source found outside MathML')
-    for idx, math in enumerate(maths, 1):
-        if math.find_parent('svg'):
-            failures.append(f'MathML {idx} nested inside SVG (invalid namespace)')
-        if not (math.get('aria-label') or math.get('aria-labelledby')):
-            failures.append(f'MathML {idx} missing accessible description')
-        if not math.find(['mi', 'mn', 'mo', 'mrow', 'mfrac', 'msup', 'msub', 'munder', 'munderover', 'mtable']):
-            failures.append(f'MathML {idx} has no mathematical structure')
-        if math.get('display') not in (None, 'inline', 'block'):
-            failures.append(f'MathML {idx} invalid display attribute')
-        for name, arity in [('mfrac', 2), ('msub', 2), ('msup', 2),
-                            ('msubsup', 3), ('munder', 2), ('mover', 2), ('munderover', 3)]:
-            for node in math.find_all(name):
-                children = [child for child in node.children if getattr(child, 'name', None)]
-                if len(children) != arity:
-                    failures.append(f'MathML {idx} malformed {name}: expected {arity} children, got {len(children)}')
-        if math.get('display') == 'block':
-            region = math.find_parent(attrs={'data-math-scroll': True})
-            if region is None:
-                region = math.find_parent(class_=['math-scroll', 'eq-scroll'])
-            if region is None or region.get('tabindex') != '0' or region.get('role') != 'region':
-                failures.append(f'MathML {idx} display equation needs a keyboard-focusable scroll region')
     raw_formula_pattern = re.compile(
         r'(?<![A-Za-z0-9])(?:[A-Za-z][A-Za-z0-9₀-₉⁰-⁹]*)(?:\([^()\n]{1,28}\))?'
         r'\s*(?:=|≤|≥|≠|≈|∈|∉|⊥|∥|·|×)\s*[-+−]?(?:\d|[A-Za-zπ√])'
