@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 3,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF; source filename 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question text",
+      "math operators",
+      "parameters",
+      "page 7 reference answer"
+    ]
+  },
+  "answer": {
+    "official": "3+4i",
+    "official_source": "source PDF page 7, fill-in answer key",
+    "independent_result": "3+4i",
+    "independent_check": "(2−i) 与 (2+i) 确实互为共轭；(2+i)²=3+4i，并且 |2+i|²=5、|3+4i|=5，模长乘法检查一致。"
+  },
+  "math_equations": [
+    "\\overline{a-i}=a+i",
+    "a=2,\\quad b=1",
+    "(a+bi)^2=(2+i)^2=4+4i-1=3+4i"
+  ],
+  "editorial_note": "原题对照PDF第1页渲染图；参考答案取PDF第7页。后续逐步解法为独立推导。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
