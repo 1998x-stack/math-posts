@@ -7,8 +7,8 @@
     "topic": "functions",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "functions",
       "fill-in",
@@ -35,8 +35,8 @@
     "topic": "analytic-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "analytic-geometry",
       "fill-in",
@@ -64,8 +64,8 @@
     "topic": "optimization",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "optimization",
       "fill-in",
@@ -93,8 +93,8 @@
     "topic": "solid-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "solid-geometry",
       "fill-in",
@@ -122,8 +122,8 @@
     "topic": "solid-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "solid-geometry",
       "fill-in",
@@ -151,8 +151,8 @@
     "topic": "sequences",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "sequences",
       "fill-in",
@@ -180,15 +180,15 @@
     "topic": "combinatorics",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "combinatorics",
       "fill-in",
       "2021建平",
       "填空"
     ],
-    "summary": "四种颜色各四球：先数全部，再减去全同色和两红情形。先不限制颜色，16 选 3 共 560 种。",
+    "summary": "合法取法只可能有 0 个或 1 个红球：先分类计数，再用排除法复核，得到 472 种。",
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 7,
     "question_type": "fill-in",
@@ -197,7 +197,7 @@
     ],
     "cover": {
       "src": "assets/cover.svg",
-      "caption": "四种颜色各四球：先数全部，再减去全同色和两红情形"
+      "caption": "按红球个数分类：0 个红球 208 种，1 个红球 264 种"
     }
   },
   {
@@ -208,8 +208,8 @@
     "topic": "analytic-geometry",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
     "tags": [
       "analytic-geometry",
       "fill-in",
@@ -237,8 +237,8 @@
     "topic": "combinatorics",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "combinatorics",
       "fill-in",
@@ -265,8 +265,8 @@
     "topic": "sequences",
     "status": "published",
     "published": "2026-11-20",
-    "updated": "2026-11-20",
-    "reading_minutes": 8,
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
     "tags": [
       "sequences",
       "fill-in",
