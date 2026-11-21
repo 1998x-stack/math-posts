@@ -494,3 +494,45 @@
 @media(max-width:850px){.knowledge-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.knowledge-grid{grid-template-columns:1fr}.knowledge-area-heading{align-items:start;flex-direction:column}.knowledge-area-count{text-align:left}.knowledge-summary a{margin-left:0}.knowledge-overview{margin-bottom:38px}.knowledge-topic{padding:16px}}
 @media print{.knowledge-overview{display:none}.knowledge-topic{break-inside:avoid}}
+
+
+/* Question Atlas: paper discovery and independent filter facets. */
+#paper-entry{scroll-margin-top:24px}
+.paper-entry-section{padding-top:68px;padding-bottom:62px}
+.paper-highlight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.paper-highlight{display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:#fffdfa;border:1px solid #dce8dd;border-radius:8px;padding:18px;min-height:132px}
+.paper-highlight:hover,.paper-card:hover{border-color:#7cae9f;background:#f2f8f0}
+.paper-highlight strong{font-size:14px;line-height:1.6;color:#264f4b;overflow-wrap:anywhere}
+.paper-highlight span{font-size:11px;color:#487e76}
+.latest .browse-controls{align-items:stretch}
+.latest .filter-field{flex:0 1 auto;min-width:0}
+.latest .filter-field select{max-width:230px;min-width:110px}
+.facet-reset{border:1px solid #c9dcd1;background:#f7faf5;border-radius:6px;padding:10px 14px;color:#2c726b;font-weight:700;font-size:12px;cursor:pointer}
+.facet-reset:hover,.facet-reset:focus-visible{background:#e7f2e9;border-color:#77a69b}
+.facet-reset:focus-visible,.paper-browser a:focus-visible,.paper-highlight:focus-visible{outline:3px solid #4d9185;outline-offset:2px}
+.index-tags{flex-wrap:wrap;gap:6px 14px}
+.index-tags .paper-source{overflow-wrap:anywhere}
+.paper-browser{padding-top:43px;padding-bottom:100px;min-height:70vh}
+.paper-browser>h1{font-size:clamp(35px,5vw,60px);line-height:1.23;margin:15px 0}
+.paper-browser-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px}
+.paper-card{display:flex;flex-direction:column;align-items:start;gap:12px;min-width:0;background:#fffdfa;border:1px solid #dce8dd;border-radius:9px;padding:22px}
+.paper-card-top{display:flex;justify-content:space-between;gap:12px;width:100%;font:700 11px ui-monospace,monospace;color:#739086}
+.paper-card h2{font-size:19px;line-height:1.45;letter-spacing:-.025em;margin:0;overflow-wrap:anywhere}
+.paper-card h2 a,.paper-question h2 a{color:#255d56}
+.paper-card p{font-size:12px;color:#607b72;line-height:1.7;margin:0}
+.paper-card>a:last-child{margin-top:auto;color:#246d66;font-size:12px;font-weight:750}
+.paper-source-note{font-size:12px;line-height:1.85;background:#f2f6ef;padding:16px;border-left:3px solid #85aca1;color:#657b73}
+.paper-question-list{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:0}
+.paper-question{display:grid;grid-template-columns:90px minmax(0,1fr) auto;align-items:start;gap:18px;padding:20px 8px;border-top:1px solid #dce8dd}
+.paper-question:last-child{border-bottom:1px solid #dce8dd}
+.paper-question-number{font:700 13px ui-monospace,monospace;color:#387b71}
+.paper-question-meta{font-size:11px;color:#6f8a7d}
+.paper-question h2{font-size:18px;line-height:1.45;margin:7px 0}
+.paper-question p{font-size:12px;line-height:1.7;color:#70837c;margin:0}
+.paper-question>a:last-child{font-size:12px;color:#28756f;font-weight:700;white-space:nowrap}
+.paper-question--unavailable{background:#f7f8f3}
+.paper-question--unavailable .paper-question-meta{color:#87968a}
+@media(max-width:1100px){.entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.paper-highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.paper-browser-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.paper-entry-section{padding:40px 0}.paper-browser{padding:30px 0 70px}.paper-browser-grid{grid-template-columns:1fr}.paper-question{grid-template-columns:72px minmax(0,1fr);gap:10px}.paper-question>a:last-child{grid-column:2}.latest .filter-field{flex:1 1 145px;justify-content:space-between}.latest .filter-field select{min-width:0;max-width:160px}.paper-highlight-grid{grid-template-columns:1fr 1fr}.paper-highlight{padding:14px;min-height:120px}}
+@media(max-width:400px){.entry-grid{grid-template-columns:1fr}.paper-highlight-grid{grid-template-columns:1fr}.paper-question{grid-template-columns:1fr;gap:4px}.paper-question>a:last-child{grid-column:1}}
+@media print{.paper-card,.paper-question,.paper-highlight{break-inside:avoid}.facet-reset{display:none}}
