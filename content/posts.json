@@ -3731,5 +3731,179 @@
       "src": "assets/cover.svg",
       "caption": "六个柱分别表示 a₀,…,a₅ 的数值 1、10、40、80、80、32；合计为 243。"
     }
+  },
+  {
+    "slug": "derivative-classics-q06",
+    "title": "指数分式函数的完整单调性分类与含参恒成立",
+    "subtitle": "东北育才：5种参数单调区间，重根不形成极值，a∈[e/2,e²/4]。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 20,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "单调性分类",
+      "恒成立",
+      "驻点重合"
+    ],
+    "summary": "东北育才：5种参数单调区间，重根不形成极值，a∈[e/2,e²/4]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 6,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      7,
+      8,
+      9
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "指数分式函数在区间两端与峰顶的参数边界曲线"
+    }
+  },
+  {
+    "slug": "derivative-classics-q07",
+    "title": "严格凸性、伯努利不等式与有限幂和估计",
+    "subtitle": "重庆八中：严格凸性得唯一极小点，Bernoulli不等式导向幂和的几何级数上界。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 20,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "伯努利不等式",
+      "严格凸性",
+      "幂和"
+    ],
+    "summary": "重庆八中：严格凸性得唯一极小点，Bernoulli不等式导向幂和的几何级数上界。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 7,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      9,
+      10
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "正负参数的严格凸函数与第六项幂和放缩"
+    }
+  },
+  {
+    "slug": "derivative-classics-q08",
+    "title": "指数误差的双边严格界与调和和式夹逼",
+    "subtitle": "东北师大附中：证明0<1/x−1/(e^x−1)<1/2并得到对数调和和的双边严格界。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "指数不等式",
+      "对数",
+      "调和级数"
+    ],
+    "summary": "东北师大附中：证明0<1/x−1/(e^x−1)<1/2并得到对数调和和的双边严格界。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 8,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      10,
+      11
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "指数校正函数的严格双边界与对数望远镜夹逼"
+    }
+  },
+  {
+    "slug": "derivative-classics-q09",
+    "title": "三角与分式的唯一零点：反向推出正弦和的严格界",
+    "subtitle": "合肥一中：a=2，正半轴函数唯一零点，正弦级数严格夹逼并补齐原解的k=1边界。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 24,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "三角函数",
+      "唯一零点",
+      "严格和式",
+      "来源勘误"
+    ],
+    "summary": "合肥一中：a=2，正半轴函数唯一零点，正弦级数严格夹逼并补齐原解的k=1边界。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 9,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      11,
+      12,
+      13
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "三角分式函数唯一穿零与正弦部分和的严格下界"
+    }
+  },
+  {
+    "slug": "derivative-classics-q10",
+    "title": "双交点中点导数与对数平均：奇数倒数和的严格上界",
+    "subtitle": "山东师大附中：由等高双交点与对数平均严格小于算术平均，证明中点导数正及奇数倒数和上界。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 22,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "对数平均",
+      "双交点",
+      "中点导数",
+      "严格不等式"
+    ],
+    "summary": "山东师大附中：由等高双交点与对数平均严格小于算术平均，证明中点导数正及奇数倒数和上界。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 10,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      13,
+      14
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "同值双交点中点与对数平均的严格逐项比较"
+    }
   }
 ]

@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 7,
+    "pages": [
+      9,
+      10
+    ],
+    "school": "重庆第八中学 · 2024届强化考试（四）",
+    "material": "user-supplied PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "all_subquestions",
+      "math signs",
+      "source reference answer",
+      "source page boundaries"
+    ]
+  },
+  "answer": {
+    "official": "PDF 参考答案：第（1）—（3）问均为证明题，源卷给出了导数和幂级数放缩的参考证明。",
+    "independent_check": "n=6时(8/9)^6≈0.49327<1/2；对c=1与c=−1/2，f的极小点均在(0,1)。"
+  },
+  "editorial_note": "2026-11-21：重新查看PDF对应页图核对原题与参考答案；证明分步解释、SVG数学采样和验算为独立补充，参数取等条件已另检验。",
+  "math_equations": [
+    "二阶导数严格为正",
+    "伯努利不等式",
+    "幂和逐项界",
+    "几何级数上界严格小于一"
+  ]
+}

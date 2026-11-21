@@ -23,7 +23,7 @@ def bisect(fun,lo,hi):
 
 def test_source_and_artifact_registration():
     posts=json.loads((ROOT/'content/posts.json').read_text('utf-8'))
-    q=[p for p in posts if p.get('source_exam')==BATCH]
+    q=[p for p in posts if p.get('source_exam')==BATCH and p['question_number']<=5]
     assert [p['question_number'] for p in q]==[1,2,3,4,5]
     assert [p['source_pages'] for p in q]==[[2,3],[3,4,5],[5,6],[6],[6,7]]
     assert all(p['status']=='published' and p['category']=='worked-solutions' for p in q)

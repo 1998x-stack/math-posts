@@ -1,0 +1,33 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 6,
+    "pages": [
+      7,
+      8,
+      9
+    ],
+    "school": "辽宁东北育才学校 · 2025届高三第三次模拟",
+    "material": "user-supplied PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "all_subquestions",
+      "math signs",
+      "source reference answer",
+      "source page boundaries"
+    ]
+  },
+  "answer": {
+    "official": "PDF 参考答案：（1）2x−y−1=0；（2）见解析；（3）[e/2,e²/4]。",
+    "independent_check": "边界a=e/2在x=1取下界，a=e²/4在x=2取上界，x=3时均高于1/2。"
+  },
+  "editorial_note": "2026-11-21：重新查看PDF对应页图核对原题与参考答案；证明分步解释、SVG数学采样和验算为独立补充，参数取等条件已另检验。",
+  "math_equations": [
+    "导函数的正确因式分解",
+    "重根时导函数是非负平方",
+    "最高点取值",
+    "严格参数范围且包含边界"
+  ]
+}
