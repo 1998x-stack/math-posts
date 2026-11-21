@@ -79,3 +79,18 @@ def test_vector_analytic_geometry_and_fill_in_can_be_composed():
                 and "vector" in p["facets"]["concept"]]
     assert filtered
     assert all(p["paper_id"] and p["question_number"] >= 1 for p in filtered)
+
+
+def test_skill_stepper_example_is_accessible_without_javascript():
+    skill = ROOT / "skills/math-visual-posts"
+    demo = (skill / "assets/templates/stepwise-vector-example.html").read_text("utf-8")
+    script = (skill / "assets/js/stepwise-solution.js").read_text("utf-8")
+    svg = (skill / "assets/examples/vector-length.svg").read_text("utf-8")
+    assert demo.count("data-solution-step>") == 3
+    assert 'data-stepper-controls hidden' in demo
+    assert 'aria-live="polite"' in demo
+    assert 'display="block"' in demo and "MathML" in demo
+    assert "step.hidden = !showAll" in script
+    assert "controls.hidden = false" in script
+    assert "<title" in svg and "<desc" in svg and 'viewBox="0 0 480 360"' in svg
+    assert "A (1,2)" in svg and "B (4,6)" in svg and "Δx=3" in svg and "Δy=4" in svg

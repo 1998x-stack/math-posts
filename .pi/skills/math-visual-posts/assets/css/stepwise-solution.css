@@ -16,7 +16,7 @@
 .solution-stepper-demo figure{margin:18px 0}
 .solution-stepper-demo figure img{display:block;width:100%;max-width:620px;height:auto}
 .solution-stepper-demo figcaption{font-size:.9rem;color:#516c64}
-.solution-stepper-demo .math-scroll{overflow-x:auto;max-width:100%;tabindex:0}
+.solution-stepper-demo .math-scroll{overflow-x:auto;max-width:100%}
 @media(max-width:520px){.solution-stepper-demo{padding:12px}.solution-stepper-demo [data-solution-step]{padding:12px}.solution-stepper-demo .stepper-actions{gap:7px}}
 @media(prefers-reduced-motion:reduce){.solution-stepper-demo *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.solution-stepper-demo [data-stepper-controls]{display:none!important}.solution-stepper-demo [data-solution-step][hidden]{display:list-item!important}.solution-stepper-demo{margin:0;padding:0}}
