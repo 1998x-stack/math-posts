@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 5,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and endpoints",
+      "official answer",
+      "all subscripts"
+    ]
+  },
+  "answer": {
+    "official": "−8",
+    "independent_check": "q=−2、a₁=1 时，前四项依次 1、−2、4、−8；题设两式得到 −1 和 −3，完全相符。"
+  },
+  "math_equations": [
+    "a₁(1+q)=−1",
+    "a₁(1−q²)=−3",
+    "q=−2",
+    "a₄=−8"
+  ],
+  "figure_assertions": [
+    "前四项为一负二四负八。每项均将前项乘以负二；绿色在基线上方，橙色在基线下方。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "答案取自原 PDF 第 7 页；推导、图示、核验是独立编辑新增。未声称 PDF 有公开 URL。"
+}
