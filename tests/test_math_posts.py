@@ -5,10 +5,10 @@ ROOT=Path(__file__).resolve().parents[1]
 def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
 def test_original_21_problems_and_exam_types():
     posts=manifest()
-    batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
-    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice','derivatives-application-classics-2024-2025')]
+    # Keep Jianping coverage fixed while allowing independently sourced new exams.
+    original=[p for p in posts if p['slug'].startswith('jianping-2021-q')]
     assert len(original)==21
-    assert len(posts)==52
+    assert len(posts)>=52
     assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
     for p in original:counts[p['category']]=counts.get(p['category'],0)+1
@@ -231,3 +231,30 @@ def test_week12_q06_to_q10_math_and_source_traps():
     for v in ('2','4','6','8'):
         assert len([n for n in eligible if str(n).count(v)>=2])==27
     assert '相同偶数' in (ROOT/'posts/fill-in/week12-gaosan-q10/index.html').read_text('utf-8')
+
+
+def test_2023_chongming_first_five_are_registered_and_mathematically_checked():
+    posts=manifest()
+    batch=[p for p in posts if p.get('source_exam')=='2023-shanghai-chongming-first-mock']
+    assert [p['question_number'] for p in batch]==[1,2,3,4,5]
+    assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in batch)
+    expected=['{2,3,4}','(−1/2,2)','6','2','−8']
+    for p,answer in zip(batch,expected):
+        path=ROOT/'posts'/p['category']/p['slug']
+        html=(path/'index.html').read_text('utf-8')
+        cover=(path/'assets/cover.svg').read_text('utf-8')
+        evidence=json.loads((path/'evidence.json').read_text('utf-8'))
+        assert evidence['source']['pages']==[1]
+        assert evidence['source']['answer_pages']==[7]
+        assert evidence['answer']['official']==answer
+        assert evidence['answer']['independent_check']
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in cover and '<desc' in cover
+        assert html.count('class="step-note"')>=4
+    assert (2+6j)*(3+1j)==20j
+    assert [x for x in (-1,0,2,3) if x!=2 and (2*x+1)/(x-2)<0]==[0]
+    first,ratio=1,-2
+    assert first*(1+ratio)==-1
+    assert first*(1-ratio**2)==-3
+    assert first*ratio**3==-8
