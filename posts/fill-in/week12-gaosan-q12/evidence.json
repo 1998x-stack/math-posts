@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 12,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not printed"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "P later m>n and a_m>a_n",
+      "Q earlier m<n and a_m>a_n",
+      "P⊆Q",
+      "phi∈[0,2pi)",
+      "a_n=sin(npi/3+phi)"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案，照片中仅有手写痕迹。",
+    "independent_result": "[0,π/3]",
+    "independent_check": "period-6 sine sequence: P⊆Q iff a1 achieves global maximum; phase θ=φ+π/3 in [π/3,2π/3] modulo2π"
+  },
+  "math_equations": [
+    "a_(n+6)=a_n",
+    "P⊆Q iff a1=max(a1,...,a6)",
+    "phi∈[0,π/3]"
+  ],
+  "diagram_assertions": [
+    "at phi=pi/6 values 1,1/2,-1/2,-1,-1/2,1/2",
+    "endpoints both allow tied maxima"
+  ],
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  },
+  "editorial_note": "已区分P的后项和Q的前项、严格大于及两个闭端点；原题照片无官方答案。"
+}

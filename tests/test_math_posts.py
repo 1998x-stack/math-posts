@@ -303,3 +303,50 @@ def test_songjiang_2023_math_invariants():
     assert 4<4.5<=5
     assert 3**2==1**2+8
     assert math.isclose(2*math.sqrt(2),math.sqrt(8))
+
+
+def test_week12_q11_to_q15_faithful_categorization_and_math_invariants():
+    import math
+    all_posts=manifest()
+    batch=[p for p in all_posts if p.get('source_exam')=='week12-gaosan-classroom-practice' and 11<=p['question_number']<=15]
+    assert [p['question_number'] for p in batch]==[11,12,13,14,15]
+    assert [p['category'] for p in batch]==['fill-in','fill-in','multiple-choice','multiple-choice','multiple-choice']
+    assert [p['source_pages'] for p in batch]==[[1],[1],[1],[1],[2]]
+    expected=['−1/2','[0,π/3]','D (y=−2)','D ((1/4)a)','B (0,∛2]']
+    for item,answer in zip(batch,expected):
+        article=ROOT/'posts'/item['category']/item['slug']
+        html=(article/'index.html').read_text('utf-8')
+        svg=(article/'assets/cover.svg').read_text('utf-8')
+        ev=json.loads((article/'evidence.json').read_text('utf-8'))
+        assert html.index('id="overview"') < html.index('id="question"')
+        assert html.count('<math display="block"')>=5
+        assert html.count('data-math-scroll')>=5
+        assert html.count('class="step-note"')>=5
+        assert '<svg' in html and 'viewBox' in svg and '<title' in svg and '<desc' in svg
+        assert ev['source']['pages']==item['source_pages']
+        assert ev['answer']['independent_result']==answer
+        assert ev['transcription']['status']=='checked-against-uploaded-photo'
+    b=(1.,0.);c=(-0.5,math.sqrt(3)/2)
+    assert math.isclose(b[0]*c[0]+b[1]*c[1],-.5)
+    av=(c[0]-b[0],c[1]-b[1])
+    assert math.isclose(av[0]**2+av[1]**2,3)
+    assert math.isclose(av[0]+2*b[0],b[0]+c[0])
+    assert math.isclose(av[1]+2*b[1],b[1]+c[1])
+    def first_is_max(phi):
+        samples=[math.sin(k*math.pi/3+phi) for k in range(1,7)]
+        return math.isclose(samples[0],max(samples),rel_tol=0,abs_tol=1e-10)
+    for phi in [0,math.pi/12,math.pi/6,math.pi/3]:
+        assert first_is_max(phi)
+    for phi in [math.pi/2,math.pi,2*math.pi-0.1]:
+        assert not first_is_max(phi)
+    assert 4**2==8*2
+    assert math.dist((4,2),(0,2))==abs(2-(-2))==4
+    aa=(2.,0.);bb=(.5,math.sqrt(3)/2)
+    dot=aa[0]*bb[0]+aa[1]*bb[1]
+    projection=(dot/(aa[0]**2+aa[1]**2)*aa[0],dot/(aa[0]**2+aa[1]**2)*aa[1])
+    assert math.isclose(dot,1) and math.isclose(projection[0],.5) and math.isclose(projection[1],0)
+    threshold=2**(1/3)
+    assert math.isclose(threshold**2,math.sqrt(2*threshold))
+    assert 1 < math.sqrt(2)
+    assert 1.5**2 > math.sqrt(3)
+    assert (ROOT/'posts/multiple-choice/week12-gaosan-q15/index.html').exists()

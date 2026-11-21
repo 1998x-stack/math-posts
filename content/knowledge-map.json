@@ -228,6 +228,7 @@
             "songjiang-2023-mock-q02",
             "yangpu-2023-q04",
             "shanghai-putuo-2023-q05",
+            "week12-gaosan-q12",
             "hongkou-2023-q10"
           ],
           "outcomes": [
@@ -300,7 +301,8 @@
             "递推"
           ],
           "posts": [
-            "jianping-2021-q14"
+            "jianping-2021-q14",
+            "week12-gaosan-q12"
           ],
           "outcomes": [
             "从规律或递推关系表示数列",
@@ -367,7 +369,8 @@
           ],
           "posts": [
             "jianping-2021-q06",
-            "jianping-2021-q10"
+            "jianping-2021-q10",
+            "week12-gaosan-q12"
           ],
           "outcomes": [
             "区分连续顶点与整数 n 的取值",
@@ -521,6 +524,28 @@
           ]
         },
         {
+          "id": "plane-vector-dot-products",
+          "title": "平面向量数量积、正交分解与投影",
+          "difficulty": 2,
+          "prerequisites": [
+            "coordinate-basics"
+          ],
+          "tags": [
+            "平面向量",
+            "数量积",
+            "垂直",
+            "投影"
+          ],
+          "posts": [
+            "week12-gaosan-q11",
+            "week12-gaosan-q14"
+          ],
+          "outcomes": [
+            "利用单位向量夹角及内积建立等式和范围",
+            "区分标量投影与沿向量方向的投影向量"
+          ]
+        },
+        {
           "id": "complex-numbers",
           "title": "复数平面、复数模与旋转",
           "difficulty": 2,
@@ -599,7 +624,8 @@
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
             "shanghai-2024-geometry-yangpu-q20",
-            "songjiang-2023-mock-q10"
+            "songjiang-2023-mock-q10",
+            "week12-gaosan-q13"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -806,7 +832,8 @@
           ],
           "posts": [
             "jianping-2021-q03",
-            "hongkou-2023-q02"
+            "hongkou-2023-q02",
+            "week12-gaosan-q15"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",
@@ -828,7 +855,8 @@
           ],
           "posts": [
             "jianping-2021-q18",
-            "jianping-2021-q19"
+            "jianping-2021-q19",
+            "week12-gaosan-q15"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",
@@ -854,7 +882,8 @@
             "jianping-2021-q21",
             "derivative-classics-q01",
             "derivative-classics-q04",
-            "week12-gaosan-q09"
+            "week12-gaosan-q09",
+            "week12-gaosan-q11"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",
