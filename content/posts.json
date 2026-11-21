@@ -2262,5 +2262,165 @@
       "src": "assets/cover.svg",
       "caption": "实系数二次方程的非实根与共轭根成对出现"
     }
+  },
+  {
+    "slug": "yangpu-2023-q01",
+    "title": "立方函数的单调性：a > b 能推出 a³ > b³ 吗？",
+    "subtitle": "把立方差分解成两个正因子，就能证明这个命题对所有实数 a、b 都成立。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "立方函数",
+      "单调性",
+      "不等式",
+      "立方差"
+    ],
+    "summary": "利用立方差因式分解证明 a>b 时 a³>b³，关键是两个因子都严格为正。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "立方差分解成两个严格正因子"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q02",
+    "title": "集合交集：区间 [0,2] 与条件 x ≤ 1 的重合部分",
+    "subtitle": "先把集合 B 的条件改写成区间，再在数轴上取共同部分，两个端点都要保留。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "集合",
+      "交集",
+      "区间",
+      "数轴"
+    ],
+    "summary": "将 B 化为 (−∞,1]，与 A=[0,2] 取交集得到 [0,1]，端点均包含。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两个区间的共同部分是闭区间 [0,1]"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q03",
+    "title": "对数方程：先求定义域，再用同底对数的单调性",
+    "subtitle": "先把两个真数都限制为正数，再利用底数 3 大于 1 时的单调性求出唯一合法根。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "对数方程",
+      "定义域",
+      "对数函数",
+      "单调性"
+    ],
+    "summary": "共同定义域为 x>5；同底对数相等转为真数相等后，只保留合法根 x=6。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "定义域交集 x>5 筛去非法根 −1"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q04",
+    "title": "正弦值定位：在 (0, π) 中找出两个角",
+    "subtitle": "正弦在第一、第二象限都为正；参考角是 π/6，因此区间内有两个解。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "正弦函数",
+      "单位圆",
+      "特殊角",
+      "补角"
+    ],
+    "summary": "单位圆上 y=1/2 与上半圆交于两点，角为 π/6 与 5π/6。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "单位圆上 y=1/2 的两个交点"
+    }
+  },
+  {
+    "slug": "yangpu-2023-q05",
+    "title": "复数乘法：展开 2i(1−i)，读取虚部",
+    "subtitle": "先用 i²=−1 展开并整理成 a+bi 的标准形式，虚部就是 i 的系数。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 7,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "复数",
+      "虚数单位",
+      "复平面",
+      "虚部"
+    ],
+    "summary": "展开并使用 i²=−1 得 z=2+2i，因此虚部是实数 2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "复数 2+2i 在复平面中的坐标"
+    }
   }
 ]
