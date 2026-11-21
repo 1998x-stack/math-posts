@@ -1,0 +1,33 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 8,
+    "pages": [
+      10,
+      11
+    ],
+    "school": "东北师范大学附属中学 · 2024–2025学年高三摸底考试",
+    "material": "project PDF, not a public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "reference_answer",
+      "all_subquestions",
+      "page_breaks",
+      "endpoints_and_root_summation"
+    ]
+  },
+  "answer": {
+    "official": "PDF 参考答案：（1）两条严格不等式的导数证明；（2）逐项代入并求和，结论与题干一致。",
+    "independent_check": "例如 x=1 时 f(1)≈0.418，严格在0与1/2之间；k=1时 2/3<ln2<1。"
+  },
+  "editorial_note": "逐页核对题源 PDF 的题干及参考答案；逐步推导、取等检查、MathML 与题目 SVG 为独立验证。",
+  "math_equations": [
+    "原始函数",
+    "证明严格上界的辅助函数",
+    "每一项的对数双边界",
+    "对数和的端点"
+  ]
+}

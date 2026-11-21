@@ -155,6 +155,9 @@
             "chongming-2023-q09",
             "jiading-2023-q12",
             "hongkou-2023-q07",
+            "derivative-classics-q06",
+            "derivative-classics-q09",
+            "derivative-classics-q10",
             "songjiang-2023-mock-q14"
           ],
           "outcomes": [
@@ -181,6 +184,11 @@
             "derivative-classics-q03",
             "derivative-classics-q04",
             "derivative-classics-q05",
+            "derivative-classics-q06",
+            "derivative-classics-q07",
+            "derivative-classics-q08",
+            "derivative-classics-q09",
+            "derivative-classics-q10",
             "songjiang-2023-mock-q19"
           ],
           "outcomes": [
@@ -286,7 +294,8 @@
           "posts": [
             "jianping-2021-q12",
             "shanghai-putuo-2023-q04",
-            "chongming-2023-q10"
+            "chongming-2023-q10",
+            "derivative-classics-q09"
           ],
           "outcomes": [
             "结合周期性统计区间内交点",
@@ -884,7 +893,11 @@
             "jianping-2021-q03",
             "hongkou-2023-q02",
             "week12-gaosan-q15",
-            "yangpu-2023-q09"
+            "yangpu-2023-q09",
+            "derivative-classics-q07",
+            "derivative-classics-q08",
+            "derivative-classics-q09",
+            "derivative-classics-q10"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",
@@ -940,6 +953,8 @@
             "week12-gaosan-q11",
             "jiading-2023-q13",
             "jiading-2023-q16",
+            "derivative-classics-q07",
+            "derivative-classics-q10",
             "songjiang-2023-mock-q13"
           ],
           "outcomes": [
