@@ -19,11 +19,11 @@
   },
   "answer": {
     "official": "n(n−1)π/2",
-    "independent_check": "累加 π+2π+⋯+(n−1)π=n(n−1)π/2。"
+    "independent_check": "a_(n+1)−a_n=nπ；累加得 a_n=πn(n−1)/2，并检查 n=1、2 的初值与差分。"
   },
   "math_equations": [
     "a_(n+1)−a_n=nπ",
     "a_n=frac(n(n−1)π,2)"
   ],
-  "editorial_note": ""
+  "editorial_note": "用 m=0 得标准化区间长度 L≥π；再取 m 足够接近1，若 L>π 就出现第三个交点，故 L=π。"
 }

@@ -20,12 +20,12 @@
   },
   "answer": {
     "official": "（1）y=(x−200)/2；（2）P=(320,60)",
-    "independent_check": "由 AM–GM，5x/4+128000/x≥800，当且仅当 x=320；对应 y=60，得到最大视角。"
+    "independent_check": "x=320 时 P=(320,60)，分母取最小值440；回代直线 CD 方程成立。"
   },
   "math_equations": [
     "y=frac(1,2)(x−200)",
     "tan(∠APB)=frac(80,frac(5x,4)+frac(128000,x)−360)",
     "P=(320,60)"
   ],
-  "editorial_note": ""
+  "editorial_note": "tanθ=80/(5x/4+128000/x−360)；分母下界为440>0，故 θ∈(0,π/2)，最大化 tanθ 与最大化 θ 等价；等号 x=320。"
 }

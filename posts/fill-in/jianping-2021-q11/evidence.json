@@ -19,12 +19,12 @@
   },
   "answer": {
     "official": "3/4",
-    "independent_check": "比较相邻全局最大与最小横坐标，最近距离为 5/4−1/2=3/4。"
+    "independent_check": "最大值 2；最小值 −√2。最大点 x=2k 或 1/2+2k，最小点 x=5/4+2k，最近距离 3/4。"
   },
   "math_equations": [
     "f(x)=2max(sin(πx),cos(πx))",
     "x_min=frac(5,4), x_max=frac(1,2)",
     "min|x_2−x_1|=frac(3,4)"
   ],
-  "editorial_note": ""
+  "editorial_note": "上包络的最小值由 sin²(πx)+cos²(πx)=1 严格推出；最大点集合有两支，最近极值点横距为 3/4。"
 }

@@ -18,12 +18,12 @@
   },
   "answer": {
     "official": "A．√3",
-    "independent_check": "因此 PM²≥4−1=3，最短为 √3，选 A。"
+    "independent_check": "PF_min=a−c=2，且 PM²=PF²−1≥3；右顶点构型可达，故最小值为√3。"
   },
   "math_equations": [
     "F=(3,0)",
     "PF≥a−c=2",
     "PM^2=PF^2−MF^2≥3"
   ],
-  "editorial_note": ""
+  "editorial_note": "由椭圆定义 PF+PF₁=10 与三角不等式 PF₁≤PF+6 得 PF≥2；右顶点达到等号，勾股关系给出 PM=√3。"
 }

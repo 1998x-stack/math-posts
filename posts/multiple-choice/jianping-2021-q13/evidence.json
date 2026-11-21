@@ -19,12 +19,12 @@
   },
   "answer": {
     "official": "D．双曲线",
-    "independent_check": "令两距离相等得到双曲线型二次曲线，故选 D。"
+    "independent_check": "二次型矩阵 [[1,k],[k,−1]] 的行列式为 −(1+k²)，且 h>0，故非退化双曲线。"
   },
   "math_equations": [
     "d(P,l)=|x|",
     "d(P,m)^2=frac((y−kx)^2,1+k^2)+h^2",
     "frac((y−kx)^2,1+k^2)+h^2=x^2"
   ],
-  "editorial_note": ""
+  "editorial_note": "设 α 为 z=0，l:y轴，m′:y=kx，m 平移高度 h>0；等距式化为 x²+2kxy−y²=(1+k²)h²。二次型行列式为 −(1+k²)<0。"
 }
