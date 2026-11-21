@@ -40,7 +40,7 @@ description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教�
 ## Gate 1.5：先登记试卷与检索语义，再制作正文
 
 这一关新增于多批次学校试卷和解析几何汇编的生产流程。每道新题必须：
-1. 分辨原始文档（`source_id`）与所属试卷（`paper_id`）。先查 `content/papers.json`，同卷沿用稳定 ID，跨地区汇编应拆分为不同的 `exam-excerpt`；完整题量未知填 `null`。
+1. 分辨原始文档（`source_id`）与所属试卷（`paper_id`）。先查 `content/source_documents.json` 与 `content/papers.json`，先登记真实来源文档再关联具体试卷，同卷沿用稳定 ID，跨地区汇编应拆分为不同的 `exam-excerpt`；完整题量未知填 `null`。
 2. 在 `content/posts.json` 登记原卷 `question_number` 和旧 URL 不变；同一试卷不得出现两个相同原题号。多小问优先属于同一题。
 3. 关联至少一个现有知识地图节点；在 `facets.concept` 选择最具体且可核实的知识概念。答题形式、年份、地区、学校、试卷名称不再混进知识标签。
 4. 只有当本题确实使用对应证明策略/图形时，才给 `facets.method` / `facets.visual` 加标签；未知或未审查时保持空数组。

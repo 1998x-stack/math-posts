@@ -82,6 +82,7 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 |---|---|
 | `content/posts.json` | 文章身份、原卷题号、`paper_id`、`facets`、发布状态；保持旧 `tags` 向后兼容 |
 | `content/papers.json` | 每张试卷/练习/题集的稳定 ID、来源文档 ID、学校/地区、年份和已知题量 |
+| `content/source_documents.json` | 原始 PDF/照片的稳定来源 ID、共享关系、文件格式、访问边界和可选校验摘要 |
 | `content/taxonomy.json` | 可检索的规范化概念/方法/图示标签和中文别名 |
 | `content/knowledge-map.json` | 知识领域、先修依赖、难度和已发布题目映射 |
 | `posts/**/evidence.json` | 真实原题与答案的来源、页码、核对边界、异常说明 |

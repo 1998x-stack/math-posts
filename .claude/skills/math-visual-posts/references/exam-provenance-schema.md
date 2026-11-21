@@ -116,3 +116,31 @@ source_document（原始 PDF / 照片 / 专题汇编）
 ## 7. 向前兼容 / 回滚
 
 保持 `posts/<category>/<slug>/` 文章 URL 与旧 `tags` 不动；新增索引是纯加法。在未来确实需要对题目迁移目录时，先建立重定向；禁止批量修改分类直接造成文章死链。构建产物 `_site/` 不入库；CI 检查不可把 draft 排进 sitemap、RSS、搜索索引或公开试卷列表链接。
+
+
+## 8. 单独的 source_document Registry（新增硬约束）
+
+`content/source_documents.json` 保存用户上传的 PDF/图片本身的稳定身份；`papers.json` 的 `source_id` 必须引用它。同一份解析几何地区汇编的多个 `exam-excerpt` 共用一个 `source_id`。不在公开 GitHub 仓库捏造原始文件 URL。
+
+最小例子：
+
+```json
+{
+  "version": 1,
+  "documents": [{
+    "id": "shanghai-2024-geometry-compilation",
+    "title": "2024届高三二模数学汇编：解析几何",
+    "format": "pdf",
+    "access": "user-uploaded",
+    "page_count": null,
+    "checksum_sha256": null,
+    "public_url": null,
+    "notes": "用户上传；源文件本身不在公开仓库。"
+  }]
+}
+```
+
+- `page_count` 只有实际确认总页数后才填整数；没有源文件字节时 `checksum_sha256` 不能伪造。
+- 文件名可以用作显示参考，但真正去重应优先使用文件哈希和用户确认的源文档 ID。
+- 多张地区试卷对应一个源文件时，试卷页只展示地区题号摘录，不拼接为一套虚假试卷。
+- 同一个 `source_id` 的 paper 必须有一致的 `source_title` 和访问类型；构建前由 `scripts/atlas.py` 检查。

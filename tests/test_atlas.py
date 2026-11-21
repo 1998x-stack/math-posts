@@ -173,3 +173,15 @@ def test_skill_gates_follow_actual_execution_order():
     assert positions==sorted(positions)
     for name in ("student-solution-design","visualization-by-problem-type","taxonomy-and-tags","exam-provenance-schema"):
         assert "references/"+name+".md" in skill
+
+
+def test_source_document_registry_matches_all_paper_references():
+    posts, _, papers, _ = fixture_data()
+    sources=json.loads((ROOT/'content/source_documents.json').read_text('utf-8'))['documents']
+    by_id={src['id']:src for src in sources}
+    assert len(sources)==10
+    assert len(by_id)==len(sources)
+    assert all(p['source_id'] in by_id and p['source_title']==by_id[p['source_id']]['title'] for p in papers)
+    assert all(src['access']=='user-uploaded' and src['public_url'] is None for src in sources)
+    excerpt=[p for p in papers if p['kind']=='exam-excerpt']
+    assert len(excerpt)==16 and len({p['source_id'] for p in excerpt})==1

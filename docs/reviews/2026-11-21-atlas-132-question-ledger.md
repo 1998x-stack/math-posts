@@ -373,3 +373,21 @@ python scripts/browser_smoke.py
 - 典型修正：建平 Q08 通过函数奇偶性求平行四边形面积，额外标记解析几何与数形结合，并对照实际坐标 SVG；建平 Q03 的可行域最近点图加入数形结合与可行域；建平 Q02 的参数直线图加入坐标法与坐标图。
 - 纠正嘉定 Q19：按通勤成本、折旧和电池更换进行分段函数建模，不属于“统计量、抽样与数据分析”；删除该知识图谱误链和 `probability-statistics` 误标签，保留 optimization。
 - 对其他 19 条粗栏目不一致的题目，不自动添加不相关标签；仍按正文、知识节点和原题实际对象判断。
+
+
+## 7. 10 份真实原始来源文档的注册审查
+
+新增 `content/source_documents.json` 作为实际 PDF/照片的标准化注册表，共计 **10** 个 source_document，分别服务于 **25** 个 paper。所有 `source_id` 与 `source_title` 经过一致性比较；解析几何地区汇编的 16 个 paper 均引用同一个来源文档，未伪造公开文件地址或不存在的哈希值。原始 PDF 的真实页数未独立核实处保持 `null`。
+
+| Source ID | 类型 | 引用试卷/练习数 |
+|---|---|---:|
+| `jianping-2021-mock-03-source` | pdf | 1 |
+| `week12-gaosan-worksheet-source` | images | 1 |
+| `derivative-classics-collection-source` | pdf | 1 |
+| `chongming-2023-mock-source` | pdf | 1 |
+| `songjiang-2023-mock-source` | pdf | 1 |
+| `hongkou-2023-mock-source` | pdf | 1 |
+| `yangpu-2023-mock-source` | pdf | 1 |
+| `putuo-2023-mock-source` | pdf | 1 |
+| `shanghai-2024-geometry-compilation` | pdf | 16 |
+| `jiading-2023-first-mock-source` | pdf | 1 |

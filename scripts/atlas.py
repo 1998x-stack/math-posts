@@ -37,6 +37,17 @@ def load_atlas(root: Path, posts: list, knowledge_map: dict):
         tags[dim["id"]] = set(ids)
         for t in entries:
             assert isinstance(t.get("aliases", []), list), t
+    document_ledger=json.loads((root / "content/source_documents.json").read_text(encoding="utf-8"))
+    assert document_ledger.get("version")==1 and isinstance(document_ledger.get("documents"),list)
+    source_by_id={}
+    for doc in document_ledger["documents"]:
+        source_id=doc.get("id")
+        assert isinstance(source_id,str) and SLUG.fullmatch(source_id) and source_id not in source_by_id, "Invalid/duplicate source ID"
+        assert doc.get("title") and doc.get("format") in {"pdf","images"}, source_id
+        assert doc.get("access")=="user-uploaded" and doc.get("public_url") is None, source_id
+        count=doc.get("page_count")
+        assert count is None or (isinstance(count,int) and count>0), source_id
+        source_by_id[source_id]=doc
     paper_ids = set()
     for paper in papers:
         pid = paper.get("id", "")
@@ -45,6 +56,9 @@ def load_atlas(root: Path, posts: list, knowledge_map: dict):
         assert paper.get("kind") in KINDS, pid
         assert paper.get("source_access") == "user-uploaded", pid
         assert paper.get("source_id") and paper.get("source_title"), pid
+        assert paper["source_id"] in source_by_id, f"Unknown source document: {pid}"
+        assert source_by_id[paper["source_id"]]["title"] == paper["source_title"], f"Inconsistent source document title: {pid}"
+        assert source_by_id[paper["source_id"]]["access"] == paper["source_access"], f"Source access mismatch: {pid}"
         assert paper.get("title") and paper.get("exam_type"), pid
         assert paper.get("school") is None or isinstance(paper["school"], str), pid
         assert paper.get("region") is None or isinstance(paper["region"], str), pid
