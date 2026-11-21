@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 15,
+    "pages": [
+      2,
+      3
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-original-rendered-PDF",
+    "checked_elements": [
+      "question statement",
+      "symbols",
+      "options where present",
+      "official reference answer"
+    ],
+    "uncertainty": null
+  },
+  "answer": {
+    "official": "A（10^10.1）",
+    "official_source": "PDF p.7 reference answer",
+    "independent_result": "A（10^10.1）",
+    "independent_check": "m₂−m₁=25.25；(5/2)×10.1=25.25，故指数比还原完全吻合，PDF第7页标A。"
+  },
+  "math_equations": [
+    "m_2-m_1=25.25",
+    "\\lg\\frac{E_{\\mathrm{sun}}}{E_{\\mathrm{Sirius}}}=\\frac25\\cdot25.25=10.1",
+    "\\frac{E_1}{E_2}=10^{10.1}"
+  ],
+  "editorial_note": "按PDF原卷内容与参考答案逐项核对。推导和图解为独立教学写作，未伪称原卷官方过程。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
