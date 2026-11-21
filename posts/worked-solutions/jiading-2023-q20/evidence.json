@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 20,
+    "pages": [
+      4
+    ],
+    "answer_pages": [
+      9,
+      10
+    ],
+    "material": "user-uploaded PDF; no verified public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "all subquestions",
+      "math notation",
+      "official solution",
+      "figures"
+    ]
+  },
+  "answer": {
+    "official": "（1）x²/4+y²/3=1（y≤0）；（2）6，P(−3/2,√3/2)，Q(3/2,√3/2)；（3）[√3−1,√2+1]",
+    "independent_check": "与原卷第 9–10 页答案相同。代入 P、Q 圆方程验证半径为 1；椭圆端点 |NB|=√3−1；半圆最远点距离 1+√2。"
+  },
+  "math_equations": [
+    "下半椭圆的方程",
+    "距离和上界",
+    "上半圆距离平方",
+    "下半椭圆距离平方",
+    "最终区间"
+  ],
+  "editorial_note": ""
+}

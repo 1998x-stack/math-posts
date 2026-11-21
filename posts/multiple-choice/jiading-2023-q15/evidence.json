@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 15,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "C",
+    "independent_check": "原卷标准答案 C；以概率 7/8 乘奖金 200 元，得 175 元。"
+  },
+  "math_equations": [
+    "后续三连败概率",
+    "公平份额"
+  ],
+  "editorial_note": ""
+}

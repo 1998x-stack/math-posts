@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 6,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "page 1 question",
+      "page 6 reference answer",
+      "signs and superscripts",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "16",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "独立核算 C(4,2)=6、C(5,2)=10，两者相加等于 16，和 PDF 第 6 页参考答案吻合。",
+    "independent_result": "16"
+  },
+  "math_equations": [
+    "C(n,2)x²",
+    "C(4,2)=6",
+    "C(5,2)=10",
+    "6x²+10x²=16x²"
+  ],
+  "svg_assertion": "四次方贡献六，五次方贡献十，合并为十六。",
+  "editorial_note": "原卷仅有参考答案，没有官方详细解析；本站 SVG 与逐步教学解法为独立编写。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}

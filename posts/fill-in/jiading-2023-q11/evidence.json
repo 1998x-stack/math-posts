@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 11,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "(7/2,0,7/2)",
+    "independent_check": "投影向量与 CA 平行，且 AB 与残差之差的点积为 0；与原卷第 6 页标准答案一致。"
+  },
+  "math_equations": [
+    "投影向量公式",
+    "投影结果"
+  ],
+  "editorial_note": ""
+}

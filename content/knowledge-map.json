@@ -148,6 +148,7 @@
             "derivative-classics-q04",
             "derivative-classics-q05",
             "chongming-2023-q09",
+            "jiading-2023-q12",
             "hongkou-2023-q07"
           ],
           "outcomes": [
@@ -204,7 +205,8 @@
           ],
           "posts": [
             "yangpu-2023-q04",
-            "shanghai-putuo-2023-q04"
+            "shanghai-putuo-2023-q04",
+            "jiading-2023-q16"
           ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
@@ -305,7 +307,8 @@
           ],
           "posts": [
             "jianping-2021-q14",
-            "week12-gaosan-q12"
+            "week12-gaosan-q12",
+            "jiading-2023-q18"
           ],
           "outcomes": [
             "从规律或递推关系表示数列",
@@ -327,7 +330,8 @@
           "posts": [
             "jianping-2021-q10",
             "week12-gaosan-q05",
-            "songjiang-2023-mock-q04"
+            "songjiang-2023-mock-q04",
+            "jiading-2023-q18"
           ],
           "outcomes": [
             "使用等差数列通项和求和公式",
@@ -401,7 +405,8 @@
           ],
           "posts": [
             "jianping-2021-q13",
-            "jianping-2021-q17"
+            "jianping-2021-q17",
+            "jiading-2023-q17"
           ],
           "outcomes": [
             "辨认平行、相交与异面",
@@ -469,7 +474,9 @@
           ],
           "posts": [
             "jianping-2021-q04",
-            "jianping-2021-q17"
+            "jianping-2021-q17",
+            "jiading-2023-q11",
+            "jiading-2023-q17"
           ],
           "outcomes": [
             "建立空间坐标系并表示向量",
@@ -490,7 +497,8 @@
             "距离"
           ],
           "posts": [
-            "jianping-2021-q17"
+            "jianping-2021-q17",
+            "jiading-2023-q17"
           ],
           "outcomes": [
             "将空间角转化为向量夹角或平面角",
@@ -591,7 +599,8 @@
             "jianping-2021-q02",
             "shanghai-2024-geometry-jingan-q20",
             "week12-gaosan-q09",
-            "chongming-2023-q06"
+            "chongming-2023-q06",
+            "shanghai-putuo-2023-q09"
           ],
           "outcomes": [
             "在常见直线方程间转换",
@@ -630,7 +639,11 @@
             "shanghai-2024-geometry-huangpu-q20",
             "shanghai-2024-geometry-yangpu-q20",
             "songjiang-2023-mock-q10",
-            "week12-gaosan-q13"
+            "week12-gaosan-q13",
+            "jiading-2023-q12",
+            "jiading-2023-q14",
+            "jiading-2023-q20",
+            "shanghai-putuo-2023-q07"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -666,7 +679,8 @@
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
             "shanghai-2024-geometry-yangpu-q20",
-            "songjiang-2023-mock-q10"
+            "songjiang-2023-mock-q10",
+            "jiading-2023-q20"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",
@@ -701,6 +715,7 @@
             "week12-gaosan-q04",
             "week12-gaosan-q10",
             "hongkou-2023-q04",
+            "shanghai-putuo-2023-q06",
             "hongkou-2023-q08"
           ],
           "outcomes": [
@@ -722,6 +737,8 @@
             "概率"
           ],
           "posts": [
+            "jiading-2023-q15",
+            "shanghai-putuo-2023-q08",
             "hongkou-2023-q08"
           ],
           "outcomes": [
@@ -740,7 +757,9 @@
             "条件概率",
             "独立事件"
           ],
-          "posts": [],
+          "posts": [
+            "jiading-2023-q15"
+          ],
           "outcomes": [
             "区分互斥与独立",
             "使用条件概率解释信息更新"
@@ -757,7 +776,10 @@
             "平均数",
             "方差"
           ],
-          "posts": [],
+          "posts": [
+            "jiading-2023-q19",
+            "shanghai-putuo-2023-q10"
+          ],
           "outcomes": [
             "理解样本与总体的关系",
             "解释平均数和方差"
@@ -861,7 +883,9 @@
           "posts": [
             "jianping-2021-q18",
             "jianping-2021-q19",
-            "week12-gaosan-q15"
+            "week12-gaosan-q15",
+            "jiading-2023-q19",
+            "jiading-2023-q20"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",
@@ -888,7 +912,9 @@
             "derivative-classics-q01",
             "derivative-classics-q04",
             "week12-gaosan-q09",
-            "week12-gaosan-q11"
+            "week12-gaosan-q11",
+            "jiading-2023-q13",
+            "jiading-2023-q16"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

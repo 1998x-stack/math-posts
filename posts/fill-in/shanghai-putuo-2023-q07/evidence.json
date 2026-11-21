@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 7,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "page 1 question",
+      "page 6 reference answer",
+      "signs and superscripts",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "π/3",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "用斜率夹角公式可核验 tanθ=√3，锐角 θ=π/3，和参考答案相同。",
+    "independent_result": "π/3"
+  },
+  "math_equations": [
+    "a²=3,b²=1",
+    "y=±x/√3",
+    "α=π/6,β=−π/6",
+    "θ=π/6−(−π/6)=π/3"
+  ],
+  "svg_assertion": "两条经过原点的虚线与 x 轴形成正负三十度方向角，右侧开口六十度。",
+  "editorial_note": "原卷仅有参考答案，没有官方详细解析；本站 SVG 与逐步教学解法为独立编写。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}

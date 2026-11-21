@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 13,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "A",
+    "independent_check": "原卷第 6 页给出 A；代入 ∠A=30°、∠B=120° 的反例可独立否定必要性。"
+  },
+  "math_equations": [
+    "余弦定理转换",
+    "逻辑蕴含"
+  ],
+  "editorial_note": ""
+}

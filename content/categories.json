@@ -32,6 +32,10 @@
       {
         "slug": "complex-numbers",
         "title": "复数与复平面"
+      },
+      {
+        "slug": "probability-statistics",
+        "title": "概率与统计"
       }
     ]
   },
@@ -56,6 +60,14 @@
       {
         "slug": "optimization",
         "title": "函数最值与不等式"
+      },
+      {
+        "slug": "geometry-reasoning",
+        "title": "平面几何与逻辑推理"
+      },
+      {
+        "slug": "probability",
+        "title": "概率与公平决策"
       }
     ]
   },
@@ -80,6 +92,10 @@
       {
         "slug": "functions",
         "title": "函数与迭代"
+      },
+      {
+        "slug": "sequences",
+        "title": "数列与递推证明"
       }
     ]
   }

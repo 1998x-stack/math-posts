@@ -1,0 +1,34 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 17,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      6,
+      7
+    ],
+    "material": "user-uploaded PDF; no verified public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "all subquestions",
+      "math notation",
+      "official solution",
+      "figures"
+    ]
+  },
+  "answer": {
+    "official": "（1）两平面垂直；（2）3√22/11",
+    "independent_check": "官方解析利用 BD⊥平面 AA₁CC₁ 与体积换底，得到 d=3√22/11；坐标法代入平面 3x+3y+2z=6 也得到 6/√22。"
+  },
+  "math_equations": [
+    "线面垂直与面面垂直",
+    "三角形斜面面积",
+    "四面体的双底面积公式"
+  ],
+  "editorial_note": ""
+}
