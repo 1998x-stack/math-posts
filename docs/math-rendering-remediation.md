@@ -65,3 +65,14 @@ as independent.
 
 Only L0–L2 are machine-auditable in bulk. L3–L6 require actual source and rendering
 evidence. Do not mark an item complete just because CI is green.
+## PR #32 first audit snapshot
+
+The first successful run of the new scanner (commit ece141fbcc15955ca4af4e4623c758548d5cf3da)
+reported 13 original-question sections with formula candidates but no MathML,
+115 solution steps with formula candidates but no MathML, and 285 steps with mixed
+MathML plus raw formula candidates. It scanned all 132 registered articles.
+
+This is a candidate inventory, not a correctness score. The follow-up workflow run
+after the subsequent original-question notation cleanup is the current report;
+always use the latest run artifact rather than treating these snapshot counts as a
+permanent baseline.
