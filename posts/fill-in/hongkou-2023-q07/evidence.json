@@ -1,0 +1,34 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 7,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "y=ln(x)+2x",
+      "slope 3",
+      "3x-y-1=0"
+    ]
+  },
+  "answer": {
+    "official": "3x−y−1=0",
+    "independent_check": "f'(x)=1/x+2=3 -> x=1, f(1)=2; tangent y-2=3(x-1)"
+  },
+  "math_equations": [
+    "f'=1/x+2",
+    "f(1)=2",
+    "3x-y-1=0",
+    "f''=-1/x^2<0"
+  ],
+  "diagram_assertions": [
+    "curve sampled from ln(x)+2x on x>0",
+    "tangent y=3x-1 at (1,2)"
+  ],
+  "editorial_note": "第7页只列答案；全部推导与图示属于独立核验。"
+}

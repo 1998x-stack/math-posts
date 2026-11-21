@@ -1,0 +1,34 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 8,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "4 volunteers",
+      "5 consecutive days",
+      "one student 2 days, other three 1 day each",
+      "official fraction 2/5"
+    ]
+  },
+  "answer": {
+    "official": "2/5",
+    "independent_check": "4 adjacent date pairs among C(5,2)=10; alternatively 24 favorable among 60 distinguishable person-schedules"
+  },
+  "math_equations": [
+    "C(5,2)=10",
+    "adjacent pairs=4",
+    "P=4/10=24/60=2/5"
+  ],
+  "diagram_assertions": [
+    "ten unordered 2-day combinations",
+    "exactly four highlighted neighboring combinations"
+  ],
+  "editorial_note": "原卷第7页仅给答案。采用古典概型的等可能人员排班解释，独立推导、图示不代表原卷官方解析。"
+}

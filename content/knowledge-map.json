@@ -72,7 +72,8 @@
             "定义域"
           ],
           "posts": [
-            "yangpu-2023-q03"
+            "yangpu-2023-q03",
+            "hongkou-2023-q09"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -96,7 +97,9 @@
             "jianping-2021-q08",
             "week12-gaosan-q07",
             "songjiang-2023-mock-q05",
-            "yangpu-2023-q01"
+            "yangpu-2023-q01",
+            "hongkou-2023-q09",
+            "hongkou-2023-q10"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -145,7 +148,8 @@
             "derivative-classics-q04",
             "derivative-classics-q05",
             "chongming-2023-q09",
-            "jiading-2023-q12"
+            "jiading-2023-q12",
+            "hongkou-2023-q07"
           ],
           "outcomes": [
             "用平均变化率理解瞬时变化率",
@@ -228,7 +232,8 @@
             "yangpu-2023-q04",
             "shanghai-putuo-2023-q05",
             "week12-gaosan-q12",
-            "chongming-2023-q07"
+            "chongming-2023-q07",
+            "hongkou-2023-q10"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -348,7 +353,8 @@
           "posts": [
             "jianping-2021-q06",
             "week12-gaosan-q05",
-            "chongming-2023-q05"
+            "chongming-2023-q05",
+            "hongkou-2023-q06"
           ],
           "outcomes": [
             "从相邻项比值识别公比",
@@ -709,7 +715,8 @@
             "week12-gaosan-q04",
             "week12-gaosan-q10",
             "hongkou-2023-q04",
-            "shanghai-putuo-2023-q06"
+            "shanghai-putuo-2023-q06",
+            "hongkou-2023-q08"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -731,7 +738,8 @@
           ],
           "posts": [
             "jiading-2023-q15",
-            "shanghai-putuo-2023-q08"
+            "shanghai-putuo-2023-q08",
+            "hongkou-2023-q08"
           ],
           "outcomes": [
             "明确样本空间与事件集合",

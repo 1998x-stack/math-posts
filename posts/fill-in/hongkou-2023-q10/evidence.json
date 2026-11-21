@@ -1,0 +1,37 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 10,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "f(x)=cos(ωx+φ)",
+      "ω>0, |φ|<π/2",
+      "axis x=π/6",
+      "min distance π/8",
+      "official cos(4x+π/3)"
+    ]
+  },
+  "answer": {
+    "official": "cos(4x+π/3)",
+    "independent_check": "min center-axis distance π/(2ω)=π/8 -> ω=4; 4π/6+φ=kπ; |φ|<π/2 -> k=1, φ=π/3"
+  },
+  "math_equations": [
+    "axis phase=kπ, center phase=π/2+kπ",
+    "π/(2ω)=π/8",
+    "φ=kπ-2π/3",
+    "φ=π/3"
+  ],
+  "diagram_assertions": [
+    "axis at x=π/6 is a trough",
+    "centers at π/24 and 7π/24",
+    "curve sampled from cos(4x+π/3)"
+  ],
+  "editorial_note": "原卷第7页仅列参考答案；推导与图示均为独立编写。"
+}
