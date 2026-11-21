@@ -30,6 +30,8 @@
   if (!input || !grid) return;
 
   const select = document.querySelector('[data-category-filter]');
+  const facetSelects = [...document.querySelectorAll('[data-facet-filter]')];
+  const resetFilters = document.querySelector('[data-filter-reset]');
   const visibleCount = document.querySelector('[data-visible-count]');
   const empty = document.querySelector('[data-no-results]');
   const pager = document.querySelector('[data-home-pagination]');
@@ -41,6 +43,10 @@
   if (select && [...select.options].some(option => option.value === args.get('category'))) {
     select.value = args.get('category');
   }
+  facetSelects.forEach(control => {
+    const value = args.get(control.dataset.facetFilter) || '';
+    control.value = [...control.options].some(option => option.value === value) ? value : '';
+  });
   let page = Math.max(1, Number.parseInt(args.get('page'), 10) || 1);
   let catalogue = null;
   let pending = null;
@@ -64,7 +70,7 @@
     card.dataset.category = post.category;
     card.dataset.search = normalized([
       post.title, post.subtitle, post.summary, post.category, post.category_title,
-      post.topic, post.topic_title, ...(post.tags || [])
+      post.topic, post.topic_title, post.paper_title, post.question_number, post.facet_terms, ...(post.tags || [])
     ].join(' '));
 
     card.append(element('span', 'index-order', String(index + 1).padStart(2, '0')));
@@ -90,6 +96,10 @@
     const tags = element('div', 'index-tags');
     tags.append(element('span', '', post.reading_minutes + ' 分钟'));
     tags.append(element('span', '', post.published));
+    if (post.paper_title && post.paper_id) {
+      tags.append(link('第 ' + post.question_number + ' 题 · ' + post.paper_title,
+        'papers/' + post.paper_id + '/', 'paper-source'));
+    }
     if (post.paper) {
       const paper = link('题源说明 ↗', post.paper, 'paper-source');
       paper.target = '_blank';
@@ -112,6 +122,11 @@
     else url.searchParams.delete('q');
     if (select && select.value) url.searchParams.set('category', select.value);
     else url.searchParams.delete('category');
+    facetSelects.forEach(control => {
+      const key = control.dataset.facetFilter;
+      if (control.value) url.searchParams.set(key, control.value);
+      else url.searchParams.delete(key);
+    });
     if (page > 1) url.searchParams.set('page', String(page));
     else url.searchParams.delete('page');
     history[push ? 'pushState' : 'replaceState']({}, '', url);
@@ -157,9 +172,16 @@
     const matching = catalogue.filter(post => {
       const text = normalized([
         post.title, post.subtitle, post.summary, post.category, post.category_title,
-        post.topic, post.topic_title, ...(post.tags || [])
+        post.topic, post.topic_title, post.paper_title, post.question_number, post.facet_terms, ...(post.tags || [])
       ].join(' '));
-      return (!category || post.category === category) && terms.every(term => text.includes(term));
+      const facetMatch = facetSelects.every(control => {
+        if (!control.value) return true;
+        const dimension = control.dataset.facetFilter;
+        if (dimension === 'paper') return post.paper_id === control.value;
+        const values = post.facets && post.facets[dimension];
+        return Array.isArray(values) && values.includes(control.value);
+      });
+      return (!category || post.category === category) && facetMatch && terms.every(term => text.includes(term));
     });
     const totalPages = Math.max(1, Math.ceil(matching.length / pageSize));
     page = Math.min(page, totalPages);
@@ -207,10 +229,28 @@
     if (catalogue) { render(); writeLocation(false); }
     else loadIndex().then(() => writeLocation(false));
   });
+  facetSelects.forEach(control => control.addEventListener('change', () => {
+    page = 1;
+    if (catalogue) { render(); writeLocation(false); }
+    else loadIndex().then(() => writeLocation(false));
+  }));
+  if (resetFilters) resetFilters.addEventListener('click', () => {
+    input.value = '';
+    if (select) select.value = '';
+    facetSelects.forEach(control => { control.value = ''; });
+    page = 1;
+    if (catalogue) { render(); writeLocation(true); }
+    else loadIndex().then(() => writeLocation(true));
+    input.focus();
+  });
   window.addEventListener('popstate', () => {
     const state = new URLSearchParams(location.search);
     input.value = state.get('q') || '';
     if (select) select.value = state.get('category') || '';
+    facetSelects.forEach(control => {
+      const value = state.get(control.dataset.facetFilter) || '';
+      control.value = [...control.options].some(option => option.value === value) ? value : '';
+    });
     page = Math.max(1, Number.parseInt(state.get('page'), 10) || 1);
     render();
   });
