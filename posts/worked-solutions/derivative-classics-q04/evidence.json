@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 4,
+    "pages": [
+      6
+    ],
+    "school": "山东省实验中学（2024届高三高考定心卷）",
+    "material": "user-supplied PDF (62 pages; not publicly linked)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "subquestions",
+      "math_signs",
+      "PDF reference answer"
+    ]
+  },
+  "answer": {
+    "official": "题源 PDF 参考答案：（1）m∈(0,e]；（2）证明见解析（结论 x₁+x₂>2）。",
+    "independent_check": "取满足两根存在的示例 m=4，数值零点 x₁≈0.357403、x₂≈2.153292，和≈2.510695>2；符号证明并不依赖这些数值。"
+  },
+  "editorial_note": "原卷包含参考答案与解析；本文保留题源所载答案，独立补充的严格证明、取等、定义域和图解与原解区分。",
+  "math_equations": [
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动"
+  ]
+}

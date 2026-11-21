@@ -1282,5 +1282,167 @@
       "src": "assets/cover.svg",
       "caption": "等差点列与特定三项的等比中项关系"
     }
+  },
+  {
+    "slug": "derivative-classics-q01",
+    "title": "指数函数最小值与零点分类：为什么临界参数是 m=−1",
+    "subtitle": "利用辅助函数唯一谷底，完整讨论0、1、2个零点",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "零点分类"
+    ],
+    "summary": "衡水中学题源：求xe^x−1的最小值，并把含参零点转为辅助函数的最小值比较。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 1,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      2,
+      3
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "指数曲线的最小值与辅助函数的唯一谷底，决定参数零点数量"
+    }
+  },
+  {
+    "slug": "derivative-classics-q02",
+    "title": "切线与全域单调性：三角项如何限定三次函数的参数",
+    "subtitle": "切线条件与单调性临界值分开讨论，并证明全域导函数非负",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 20,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "三角函数",
+      "单调性"
+    ],
+    "summary": "华师附中题源：求切线经过原点时的参数和三次函数叠加余弦项的全域递增范围。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 2,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3,
+      4,
+      5
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "临界参数下导函数在零与圆周率处触轴但不为负"
+    }
+  },
+  {
+    "slug": "derivative-classics-q03",
+    "title": "对数函数切线与恒成立不等式：从切线到二阶临界值",
+    "subtitle": "通过切线、极值与二阶导数确定参数a不超过二分之一",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "恒成立不等式"
+    ],
+    "summary": "东北育才题源：确定对数函数切线、商函数的极值及全区间恒成立不等式的最佳参数。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 3,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      5,
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "切线商函数的唯一极大值与指数差函数在临界参数处非负"
+    }
+  },
+  {
+    "slug": "derivative-classics-q04",
+    "title": "对数函数的两个零点为何满足 x₁+x₂>2",
+    "subtitle": "先求对数函数最大值，再反射比较证明两零点严格右偏",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "零点偏移"
+    ],
+    "summary": "山东省实验中学题源：参数m控制对数曲线高度，以镜像差导数证明两个零点和大于2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 4,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "合法双零点实例中左根的对称点严格位于右根左侧"
+    }
+  },
+  {
+    "slug": "derivative-classics-q05",
+    "title": "指数与对数的驻点不等式：一个负参数为何带来严格增益",
+    "subtitle": "先写x等于1的切线，后用驻点方程将参数区间映为x₀小于1",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 14,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "切线",
+      "驻点"
+    ],
+    "summary": "南大附中题源：计算e^x+a ln x在1处的切线，并证明负参数下驻点函数值大于指数项。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 5,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "负参数时驻点处指数与指数加对数的函数值形成严格正差"
+    }
   }
 ]

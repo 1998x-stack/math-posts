@@ -90,7 +90,13 @@
             "切线",
             "变化率"
           ],
-          "posts": [],
+          "posts": [
+            "derivative-classics-q01",
+            "derivative-classics-q02",
+            "derivative-classics-q03",
+            "derivative-classics-q04",
+            "derivative-classics-q05"
+          ],
           "outcomes": [
             "用平均变化率理解瞬时变化率",
             "把导数解释为切线斜率"
@@ -109,7 +115,13 @@
             "单调区间",
             "最值"
           ],
-          "posts": [],
+          "posts": [
+            "derivative-classics-q01",
+            "derivative-classics-q02",
+            "derivative-classics-q03",
+            "derivative-classics-q04",
+            "derivative-classics-q05"
+          ],
           "outcomes": [
             "用导数判断单调区间",
             "结合定义域与端点求最值"
@@ -636,7 +648,9 @@
           "posts": [
             "jianping-2021-q03",
             "week12-gaosan-q01",
-            "week12-gaosan-q03"
+            "week12-gaosan-q03",
+            "derivative-classics-q02",
+            "derivative-classics-q03"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -722,7 +736,9 @@
           "posts": [
             "jianping-2021-q03",
             "jianping-2021-q13",
-            "jianping-2021-q21"
+            "jianping-2021-q21",
+            "derivative-classics-q01",
+            "derivative-classics-q04"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

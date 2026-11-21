@@ -6,9 +6,9 @@ def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
 def test_original_21_problems_and_exam_types():
     posts=manifest()
     batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
-    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice')]
+    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice','derivatives-application-classics-2024-2025')]
     assert len(original)==21
-    assert len(posts)==42
+    assert len(posts)==47
     assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
     for p in original:counts[p['category']]=counts.get(p['category'],0)+1
