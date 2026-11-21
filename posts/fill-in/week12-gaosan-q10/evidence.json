@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 10,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "at least two digits",
+      "same even digit",
+      "three-digit positive integer"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中手写结果存在涂改。",
+    "independent_result": "117",
+    "independent_check": "0 repeated: 9; each e∈{2,4,6,8}: 9+9+8+1=27; total 9+4×27=117; brute-force integers 100..999 confirms 117"
+  },
+  "math_equations": [
+    "N0=9",
+    "N_e=9+9+8+1=27",
+    "N=9+4×27=117"
+  ],
+  "diagram_assertions": [
+    "zero only repeated in tens and units",
+    "three distinct repeated-position patterns 9/9/8",
+    "triple repeated digit counted once"
+  ],
+  "qa": {
+    "source_checked": "passed",
+    "algebra_checked": "passed",
+    "brute_force": "passed",
+    "browser": "not verified"
+  },
+  "editorial_note": "重要转写：原题是至少两个数码为相同偶数；不是任意数码相同。照片手写答案不当作官方判分。"
+}

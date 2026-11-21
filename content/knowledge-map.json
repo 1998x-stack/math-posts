@@ -28,11 +28,32 @@
             "值域"
           ],
           "posts": [
-            "jianping-2021-q01"
+            "jianping-2021-q01",
+            "week12-gaosan-q08"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
             "分析复合函数的定义域和值域"
+          ]
+        },
+        {
+          "id": "logarithms-vieta",
+          "title": "对数换底与一元二次方程根的关系",
+          "difficulty": 2,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "对数",
+            "换底公式",
+            "韦达定理"
+          ],
+          "posts": [
+            "week12-gaosan-q08"
+          ],
+          "outcomes": [
+            "用自然对数换底写出不同底数的对数",
+            "通过根和根积计算根的比值与平方和"
           ]
         },
         {
@@ -49,7 +70,8 @@
           ],
           "posts": [
             "jianping-2021-q03",
-            "jianping-2021-q08"
+            "jianping-2021-q08",
+            "week12-gaosan-q07"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -70,7 +92,8 @@
             "迭代"
           ],
           "posts": [
-            "jianping-2021-q21"
+            "jianping-2021-q21",
+            "week12-gaosan-q07"
           ],
           "outcomes": [
             "分析分段表达式与图像变化",
@@ -359,6 +382,27 @@
           ]
         },
         {
+          "id": "cone-solids",
+          "title": "圆锥、旋转体与展开图",
+          "difficulty": 2,
+          "prerequisites": [
+            "spatial-relations"
+          ],
+          "tags": [
+            "圆锥",
+            "旋转体",
+            "侧面积",
+            "展开扇形"
+          ],
+          "posts": [
+            "week12-gaosan-q06"
+          ],
+          "outcomes": [
+            "区分圆锥母线、底面半径与垂直高",
+            "从扇形展开面积恢复圆锥尺寸及体积"
+          ]
+        },
+        {
           "id": "spatial-vectors",
           "title": "空间向量与坐标法",
           "difficulty": 3,
@@ -464,7 +508,8 @@
           ],
           "posts": [
             "jianping-2021-q02",
-            "shanghai-2024-geometry-jingan-q20"
+            "shanghai-2024-geometry-jingan-q20",
+            "week12-gaosan-q09"
           ],
           "outcomes": [
             "在常见直线方程间转换",
@@ -565,7 +610,8 @@
           "posts": [
             "jianping-2021-q07",
             "jianping-2021-q09",
-            "week12-gaosan-q04"
+            "week12-gaosan-q04",
+            "week12-gaosan-q10"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -738,7 +784,8 @@
             "jianping-2021-q13",
             "jianping-2021-q21",
             "derivative-classics-q01",
-            "derivative-classics-q04"
+            "derivative-classics-q04",
+            "week12-gaosan-q09"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

@@ -1444,5 +1444,173 @@
       "src": "assets/cover.svg",
       "caption": "负参数时驻点处指数与指数加对数的函数值形成严格正差"
     }
+  },
+  {
+    "slug": "week12-gaosan-q06",
+    "title": "圆锥展开图：侧面积求母线，再求垂直高与体积",
+    "subtitle": "侧面积 2π、底面半径 1，反推母线 2 与高 √3，求得体积 √3π/3。",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "圆锥",
+      "母线",
+      "侧面展开",
+      "体积",
+      "勾股定理"
+    ],
+    "summary": "展开扇形面积等于 πrl，母线 l=2，竖直高 h=√3，体积 π√3/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "圆锥的轴截面与半圆扇形展开图显示母线二、高根号三"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q07",
+    "title": "奇函数与分段偶函数：用两次对称得到 f(2)=-3",
+    "subtitle": "分段函数 g 的偶性确定 f(-2)=3，再由原函数 f 的奇性得 f(2)=-3。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "奇函数",
+      "偶函数",
+      "分段函数",
+      "函数图像"
+    ],
+    "summary": "分段函数整体是偶函数，原函数 f 是奇函数；分别使用两种对称性得 f(2)=-3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "偶函数g纵轴对称和奇函数f原点对称的双图对照"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q08",
+    "title": "对数换底与韦达定理：用根和、根积计算七",
+    "subtitle": "α=ln a、β=ln b，α+β=6、αβ=4，将对数和通分得到 7。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "自然对数",
+      "对数换底",
+      "韦达定理",
+      "二次方程"
+    ],
+    "summary": "对数换底得 β/α+α/β=((α+β)²−2αβ)/(αβ)，韦达定理算出 7。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两个自然对数根的和六积四决定换底对数和等于七"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q09",
+    "title": "圆上任意一点的锐角：由最短距离得到 0<a<4",
+    "subtitle": "利用 MA·MB=OM²−a² 和圆到原点的最短距离 4，证明锐角范围严格开区间。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "圆",
+      "数量积",
+      "锐角",
+      "最短距离",
+      "严格不等式"
+    ],
+    "summary": "圆上最近点 M0=(16/5,12/5) 到原点距离 4，所有角严格锐需要 0<a<4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "圆心四三半径一的最近点展示参数a等于四时直角边界"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q10",
+    "title": "至少两个相同偶数的三位数：正确分类得到 117",
+    "subtitle": "重复 0 有 9 种；每个非零偶数的重复方式有 27 种，合计 117。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "分类计数",
+      "数码问题",
+      "相同偶数",
+      "首位限制",
+      "不重不漏"
+    ],
+    "summary": "重复的偶数仅为 0、2、4、6、8；零重复 9 个，固定非零偶数重复 27 个，总计 117。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "重复零与四个非零偶数各自按数位计数的九加四乘二十七示意"
+    }
   }
 ]

@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 8,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "ln a and ln b are roots",
+      "quadratic x²−6x+4=0",
+      "log bases a and b are reversed"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片上的笔迹为作答痕迹。",
+    "independent_result": "7",
+    "independent_check": "α+β=6, αβ=4; (α²+β²)/(αβ)=(36−8)/4=7; both roots nonzero and positive"
+  },
+  "math_equations": [
+    "α=ln a; β=ln b",
+    "α+β=6; αβ=4",
+    "log_a(b)+log_b(a)=β/α+α/β",
+    "(36−8)/4=7"
+  ],
+  "diagram_assertions": [
+    "root α≈0.764 and β≈5.236",
+    "root sum 6, product 4"
+  ],
+  "qa": {
+    "source_checked": "passed",
+    "algebra_checked": "passed",
+    "browser": "not verified"
+  },
+  "editorial_note": "独立求根只用于核验；主解法按韦达定理和换底公式，无需计算 a 与 b。"
+}
