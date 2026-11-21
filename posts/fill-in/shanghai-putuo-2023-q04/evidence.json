@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 4,
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "printed question",
+      "mathematical symbols and exponents",
+      "domain and interval endpoints",
+      "official answer key",
+      "independent derivation"
+    ]
+  },
+  "answer": {
+    "official": "x=0",
+    "official_locator": "参考答案，第 6 页",
+    "independent_check": "令 θ=2x，则 θ∈(−π/2,π/2)；tanθ=0 当且仅当 θ=kπ，故 k=0、x=0。",
+    "independent_result": "x=0"
+  },
+  "math_equations": [
+    "tan(2x)=0",
+    "−π/2<2x<π/2",
+    "2x=kπ",
+    "x=0"
+  ],
+  "editorial_note": "原题转写依据 PDF 第1页渲染图；参考答案依据 PDF 第6页。页面推导和 SVG 为独立教学编写，未将参考答案扩写内容冒充原卷解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "pending CI"
+  }
+}
