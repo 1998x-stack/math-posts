@@ -29,7 +29,7 @@ A mathematical expression is a computational claim, not visual decoration. Write
 - 普通段落中出现的数学关系也要渲染：例如 f(x)=...、x²/a²+y²/b²=1、aₙ₊₁−aₙ=...、|u·v|、C(n,k)。不要只把公式放进末尾的公式清单，却让正文继续裸露原始表达式。
 - Unicode 上下标仅可用于不承担推导意义的短符号提及；幂、下标、分式、根式和绝对值关系必须使用 MathML 结构节点。
 - 每个 MathML 的 aria-label 应说明关系含义；display 公式必须处于 tabindex=0、role=region 且有可访问名称的横向滚动容器中。
-- 页面不能出现可见的 LaTeX 源码（如 \\frac、\\sqrt、\\(、$）。检查范围必须排除代码示例、脚本和样式，不能用排除规则掩盖正文中的源码。
+- 页面不能出现可见的 LaTeX 源码（如 frac、sqrt、math delimiter、$）。检查范围必须排除代码示例、脚本和样式，不能用排除规则掩盖正文中的源码。
 - 每次改动必须逐页核验公式的正负号、分母、根号范围、变量域、区间端点、向量方向、参数约束与等号条件。公式清单只能作为导航，不能替代正文逐步推导。
 
 scripts/validate.py 执行数量、结构和源码门禁；scripts/browser_check.py 检查真实浏览器中的 MathML namespace、非零尺寸、分式上下位置、滚动区和页面溢出。数量通过但内容错误，仍然失败。
