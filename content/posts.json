@@ -2587,5 +2587,171 @@
       "src": "assets/cover.svg",
       "caption": "cos二x在相邻长度派区间上的重复图像"
     }
+  },
+  {
+    "slug": "week12-gaosan-q11",
+    "title": "单位向量数量积的最小值：从存在性到正交分解",
+    "subtitle": "两个单位向量的和差正交，构造120°夹角得到最小数量积−1/2。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "fill-in",
+      "平面向量",
+      "数量积",
+      "正交分解",
+      "最小值"
+    ],
+    "summary": "写 a=(λ−1)(b+c)−(b−c)，由|a|²=3推出b·c≥−1/2，且a=c−b时取等。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两个单位向量成120度时用a等于c减b展示内积负二分之一的取等构造"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q12",
+    "title": "周期数列的集合包含：首项必须达到全局最大值",
+    "subtitle": "将P⊆Q归结为首项等于六项周期最大值，精确求得φ∈[0,π/3]。",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 13,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "fill-in",
+      "无限数列",
+      "集合包含",
+      "周期数列",
+      "正弦函数",
+      "严格比较"
+    ],
+    "summary": "对6周期正弦数列，P⊆Q当且仅当a₁达到最大值，六等分正弦峰值给φ∈[0,π/3]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "取phi为pi除以六绘制真实六项正弦离散数值及首项并列最大边界"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q13",
+    "title": "抛物线准线不是焦点：从 x²=8y 看出 y=−2",
+    "subtitle": "标准式x²=4py给p=2，焦点(0,2)、准线y=−2，选择D。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "抛物线",
+      "准线",
+      "焦点",
+      "等距定义"
+    ],
+    "summary": "抛物线x²=8y向上开口，准线是水平线y=−2，用点(4,2)的等距关系验证D。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "抛物线x平方等于八y的焦点与准线及点四二的等距验证图"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q14",
+    "title": "标量投影与向量投影：为什么答案不是 1/2",
+    "subtitle": "标量投影长度是1/2，而沿a方向投影向量是a/4，选择D。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "向量投影",
+      "标量投影",
+      "数量积",
+      "特殊角"
+    ],
+    "summary": "|a|=2、|b|=1、夹角π/3时，b的投影长度是1/2，投影向量为(1/4)a。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "向量b的投影脚长度为二分之一只占向量a长度的四分之一"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q15",
+    "title": "当且仅当 x=y 取最小值：为何上界是立方根 2",
+    "subtitle": "令t=xy∈(0,a²]，比较自由极小点√(2a)与区间右端a²，选B。",
+    "category": "multiple-choice",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "纸质照片转写",
+      "multiple-choice",
+      "基本不等式",
+      "一元函数最值",
+      "导数",
+      "取等条件"
+    ],
+    "summary": "固定和x+y=2a，目标G(t)=t+2a/t仅在x=y最优当且仅当a²≤√(2a)，故a∈(0,∛2]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两种参数下乘积可行区间与自由极小点相对位置决定x等于y条件"
+    }
   }
 ]
