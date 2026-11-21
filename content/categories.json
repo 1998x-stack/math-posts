@@ -28,6 +28,10 @@
       {
         "slug": "combinatorics",
         "title": "组合与集合"
+      },
+      {
+        "slug": "complex-numbers",
+        "title": "复数与复平面"
       }
     ]
   },

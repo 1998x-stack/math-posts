@@ -2112,5 +2112,155 @@
       "src": "assets/cover.svg",
       "caption": "反射使N成为F₁Q中点，中位线ON始终等于实半轴a"
     }
+  },
+  {
+    "slug": "hongkou-2023-q01",
+    "title": "分式不等式的符号分析：为什么 −2 不能取、0 可以取",
+    "subtitle": "分子零点与分母零点把数轴分成三个符号区间",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "inequalities",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "分式不等式"
+    ],
+    "summary": "分式不等式先排除分母零点，再用分子、分母的符号表判断区间；答案为 (−2,0]。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "分子零点与分母零点把数轴分成三个符号区间"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q02",
+    "title": "基本不等式求最值：x + 4/x 的最小值为何是 4",
+    "subtitle": "两项乘积恒为 4，等号在 x=2 时成立",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "inequalities",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "基本不等式"
+    ],
+    "summary": "对正数 x 与 4/x 使用基本不等式，得到下界 4；在 x=2 时取等，因此最小值确为 4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两项乘积恒为 4，等号在 x=2 时成立"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q03",
+    "title": "球的体积公式：半径为 3 时为什么是 36π",
+    "subtitle": "把半径 3 代入球体积公式，得到 36π",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "solid-geometry",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "球体积"
+    ],
+    "summary": "区分球的体积与表面积，使用 V=4πr³/3；当 r=3 时，体积为 36π。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "把半径 3 代入球体积公式，得到 36π"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q04",
+    "title": "二项式展开找指定项：七次展开中 x 项的系数",
+    "subtitle": "令第二项出现 k 次，用幂次条件定位 k=4",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "combinatorics",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "二项式定理"
+    ],
+    "summary": "二项式通项的 x 指数为 7−3k/2；令其等于 1 得 k=4，系数 C(7,4)=35。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "令第二项出现 k 次，用幂次条件定位 k=4"
+    }
+  },
+  {
+    "slug": "hongkou-2023-q05",
+    "title": "实系数二次方程的共轭根：由 1−√3i 求 m+n",
+    "subtitle": "实系数二次方程的非实根与共轭根成对出现",
+    "category": "fill-in",
+    "topic": "complex-numbers",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "complex-numbers",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "韦达定理"
+    ],
+    "summary": "实系数保证共轭根同时出现；两根之和为 2、积为 4，因此 m=−2、n=4，m+n=2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "实系数二次方程的非实根与共轭根成对出现"
+    }
   }
 ]

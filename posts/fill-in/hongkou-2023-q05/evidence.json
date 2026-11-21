@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 5,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question wording and mathematical notation",
+      "official answer on PDF page 7",
+      "independent derivation",
+      "endpoint, exponent, sign, or conjugate-root conditions"
+    ]
+  },
+  "answer": {
+    "official": "2",
+    "independent_check": "由 m=−2、n=4，方程为 x²−2x+4=0，判别式为 −12，根为 1±√3i，确实包含题设给出的根；m+n=2。"
+  },
+  "math_equations": [
+    "Roots: 1−√3i and 1+√3i",
+    "Sum of roots: 2=−m",
+    "Product of roots: 4=n",
+    "m+n=2"
+  ],
+  "editorial_note": "PDF 第 1 页为题干；PDF 第 7 页参考答案表列出本题官方答案，但没有提供本题完整解析。页面中的逐步推导与核验均为独立整理，不冒充原卷解析。"
+}

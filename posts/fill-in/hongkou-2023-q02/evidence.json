@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 2,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question wording and mathematical notation",
+      "official answer on PDF page 7",
+      "independent derivation",
+      "endpoint, exponent, sign, or conjugate-root conditions"
+    ]
+  },
+  "answer": {
+    "official": "4（当且仅当 x=2 时取得）",
+    "independent_check": "不等式给出对所有 x&gt;0 都有 x+4/x≥4；代入 x=2 恰好等于 4。下界既成立又可达到，因此最小值就是 4。"
+  },
+  "math_equations": [
+    "x+4/x ≥ 2√(x·4/x)=4",
+    "x+4/x−4=(x−2)^2/x ≥ 0",
+    "Equality at x=2"
+  ],
+  "editorial_note": "PDF 第 1 页为题干；PDF 第 7 页参考答案表列出本题官方答案，但没有提供本题完整解析。页面中的逐步推导与核验均为独立整理，不冒充原卷解析。"
+}
