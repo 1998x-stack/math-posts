@@ -43,6 +43,13 @@ jobs:
           name: validated-site
           path: _site/
           include-hidden-files: true
+      # Upload the Pages artifact once in the build job. Rerunning only deploy must
+      # never create a second github-pages artifact in the same workflow run.
+      - name: Upload Pages deployment artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site/
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -57,10 +64,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: validated-site
-          path: _site/
       - name: Enable GitHub Pages workflow source if absent
         env:
           GH_TOKEN: ${{ github.token }}
@@ -71,8 +74,5 @@ jobs:
             gh api --method POST "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow
           fi
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: _site/
       - uses: actions/deploy-pages@v4
         id: deployment
