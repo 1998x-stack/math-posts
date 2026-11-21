@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 3,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and exponents",
+      "official answer",
+      "domain and interval endpoints"
+    ]
+  },
+  "answer": {
+    "official": "6",
+    "independent_check": "x=6 时，左侧真数 36−24−5=7，右侧真数 6+1=7，原方程两边均为 log₃7；x=−1 不在定义域内。因此唯一解是 6。"
+  },
+  "math_equations": [
+    "(x−5)(x+1)>0",
+    "x+1>0",
+    "(x−6)(x+1)=0"
+  ],
+  "figure_assertions": [
+    "定义域交集 x>5 筛去非法根 −1"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "原题按 PDF 第 1 页渲染图逐字核对；参考答案按 PDF 第 8 页核对。第 8 页仅列标准答案，没有提供本题逐步解析；页面中的推导为独立推导。原卷为用户上传文件，没有公开下载链接。"
+}

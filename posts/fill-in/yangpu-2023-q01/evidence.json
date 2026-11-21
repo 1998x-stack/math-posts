@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 1,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and exponents",
+      "official answer",
+      "domain and interval endpoints"
+    ]
+  },
+  "answer": {
+    "official": "真",
+    "independent_check": "a³−b³=(a−b)(a²+ab+b²)。第一个因子由题设为正；第二个因子配方后非负，且不可能在 a>b 时取到 0，因此差严格为正。"
+  },
+  "math_equations": [
+    "a³−b³=(a−b)(a²+ab+b²)",
+    "a²+ab+b²=(a+b/2)²+3b²/4>0"
+  ],
+  "figure_assertions": [
+    "立方差分解成两个严格正因子"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "原题按 PDF 第 1 页渲染图逐字核对；参考答案按 PDF 第 8 页核对。第 8 页仅列标准答案，没有提供本题逐步解析；页面中的推导为独立推导。原卷为用户上传文件，没有公开下载链接。"
+}
