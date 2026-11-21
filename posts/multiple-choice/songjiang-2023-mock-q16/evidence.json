@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 16,
+    "pages": [
+      3
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-with-noted-missing-glyph",
+    "checked_elements": [
+      "question statement",
+      "symbols",
+      "options where present",
+      "official reference answer"
+    ],
+    "uncertainty": "右分支条件的≥在上传PDF渲染中缺失；依据左分支x<0与原卷选项判定右分支为x≥0"
+  },
+  "answer": {
+    "official": "A（−2,1/2）",
+    "official_source": "PDF p.7 reference answer",
+    "independent_result": "A（−2,1/2）",
+    "independent_check": "k=−1时左段h(−2)=−3、h(−0.1)=0.8；右段h(0.1)=0.71、h(1)=−1、h(3)=1，四象限皆有点。k=−2时右段为(x−1)²≥0，k=1/2时左段不为负；与标答A一致。"
+  },
+  "math_equations": [
+    "h(x)=x^2-(k+4)x+1,\\quad x\\ge0",
+    "h(-2)=2k-1<0\\quad\\Rightarrow\\quad k<\\frac12",
+    "x_{\\mathrm{vertex}}=\\frac{k+4}{2}>0,\\quad 1-\\frac{(k+4)^2}{4}<0",
+    "-2<k<\\frac12"
+  ],
+  "editorial_note": "第16题字形不完整：右分支条件的≥在上传PDF渲染中缺失；依据左分支x<0与原卷选项判定右分支为x≥0；参考答案与独立数学推导一致，但未把复原符号冒称源文件可读。",
+  "qa": {
+    "source_checked": false,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
