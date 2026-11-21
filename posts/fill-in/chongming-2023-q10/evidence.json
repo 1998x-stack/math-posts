@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 10,
+    "pages": [
+      1,
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "source starts PDF p.1 and continues PDF p.2",
+      "ω>0",
+      "global inequality for every real x",
+      "requested minimum frequency",
+      "official answer 2"
+    ]
+  },
+  "answer": {
+    "official": "2",
+    "independent_check": "sin(ωπ/3−π/6)=1 ⇒ ω=2+6n (n∈ℤ). ω>0 ⇒ n≥0; ωmin=2. Substitution gives f(π/3)=1+k as global maximum."
+  },
+  "math_equations": [
+    "max f(x)=1+k",
+    "sin(ωπ/3−π/6)=1",
+    "ωπ/3−π/6=π/2+2nπ",
+    "ω=2+6n, n≥0",
+    "min ω=2"
+  ],
+  "figure_assertions": [
+    "ω=2,k=0 sample function; first marked maximum at x=π/3; next at x=4π/3"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "第 10 题原题跨 PDF 第1、2页，答案在第7页。原卷仅列答案，本文证明与 SVG 是独立教学推导，图示 k=0 不构成对原题 k 的额外假设。"
+}

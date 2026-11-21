@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 7,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "complete question, including formulas and parameters",
+      "correct problem number and source page",
+      "official answer on PDF p.7",
+      "signs, subscripts, restrictions and relevant boundary cases"
+    ]
+  },
+  "answer": {
+    "official": "1/2",
+    "independent_check": "P 可以是 (1/2,√3/2) 或 (1/2,−√3/2)，两种情况下 cos α 都为 1/2；sin(π/2+α)=cos α。"
+  },
+  "math_equations": [
+    "cos α=1/2",
+    "sin(π/2+α)=cos α",
+    "P±=(1/2,±√3/2)"
+  ],
+  "figure_assertions": [
+    "单位圆中竖直直线 x=1/2 穿过上下两个终点，两点的横坐标均为1/2，因而 sin(π/2+α)都为1/2。"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "题干与答案对照 PDF 第 1、7 页。原卷第 7 页只列参考答案，不给出第 6–10 题详细解析；本页推导与 SVG 均为独立教学内容。"
+}

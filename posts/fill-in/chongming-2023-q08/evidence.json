@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 8,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "semicircle radius 2",
+      "cone without top lid",
+      "height requested",
+      "official answer √3"
+    ]
+  },
+  "answer": {
+    "official": "√3",
+    "independent_check": "s=π×2=2π ⇒ r=1; l=2; h=√(4−1)=√3."
+  },
+  "math_equations": [
+    "s=πR=2π",
+    "2πr=s ⇒ r=1",
+    "l=R=2",
+    "h=√(l²−r²)=√3"
+  ],
+  "figure_assertions": [
+    "半圆半径2;弧长2π;圆锥底半径1;母线2;高√3"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "用户上传原卷第1页题干、第7页标准答案；独立教学推导不属于官方解析。"
+}

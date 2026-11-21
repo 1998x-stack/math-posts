@@ -2755,6 +2755,177 @@
     }
   },
   {
+    "slug": "chongming-2023-q06",
+    "title": "二元一次方程组无解：行列式为零为何还不够",
+    "subtitle": "m=4 两直线重合，m=−4 才是平行且不同",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "方程组",
+      "直线位置关系",
+      "无解",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "区分行列式为零时的无解与无穷多解：m=4 两方程重合，m=−4 两直线平行但不同，故答案为 −4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "m=4 两直线重合，m=−4 才是平行且不同"
+    }
+  },
+  {
+    "slug": "chongming-2023-q07",
+    "title": "单位圆横坐标：为什么不必求出角 α",
+    "subtitle": "诱导公式把 sin(π/2+α) 直接变为 cos α",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 8,
+    "tags": [
+      "单位圆",
+      "诱导公式",
+      "任意角",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "点 P 的纵坐标有正负两种可能，但 cos α 由横坐标 1/2 决定，故 sin(π/2+α)=1/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "诱导公式把 sin(π/2+α) 直接变为 cos α"
+    }
+  },
+  {
+    "slug": "chongming-2023-q08",
+    "title": "半圆纸片卷成圆锥：从弧长确定底面半径",
+    "subtitle": "母线长 2、底面半径 1，因此圆锥高为 √3",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "圆锥",
+      "展开图",
+      "弧长",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "半径2的半圆弧长2π变为底圆周长，底面半径1，母线2，勾股得高√3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "母线长 2、底面半径 1，因此圆锥高为 √3"
+    }
+  },
+  {
+    "slug": "chongming-2023-q09",
+    "title": "抛物线切线：导数确定斜率，平方差验证相切",
+    "subtitle": "在 P(1,1) 处切线斜率为 2，方程 y=2x−1",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "导数",
+      "切线方程",
+      "抛物线",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "由 f′(1)=2 写出 y−1=2(x−1)，再用 (x−1)²≥0 验证抛物线与切线在指定点相切。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "在 P(1,1) 处切线斜率为 2，方程 y=2x−1"
+    }
+  },
+  {
+    "slug": "chongming-2023-q10",
+    "title": "正弦函数全局最大值：为什么最小角频率是 2",
+    "subtitle": "让 x=π/3 成为波峰，得到 ω=2+6n 并筛出最小正值",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
+    "tags": [
+      "正弦函数",
+      "恒成立",
+      "角频率",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "利用全域条件要求 f(π/3) 恰好为正弦全局最大值，得到 ω=2+6n，结合 ω>0 求最小值 2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "让 x=π/3 成为波峰，得到 ω=2+6n 并筛出最小正值"
+    }
+  },
+  {
     "slug": "hongkou-2023-q06",
     "title": "无穷等比数列求和：首项 2、公比 1/3 为什么总和是 3",
     "subtitle": "项按三分之一缩小，部分和从下方逼近极限 3",

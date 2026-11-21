@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="q7t q7d"><title id="q7t">单位圆两点同一横坐标</title><desc id="q7d">单位圆中竖直直线 x=1/2 穿过上下两个终点，两点的横坐标均为1/2，因而 sin(π/2+α)都为1/2。</desc><rect x="0" y="0" width="720" height="340" fill="#f5f9f7" rx="22"/>
+<path d="M95 176H646M356 33V311" stroke="#a5bdc0" stroke-width="1.5"/>
+<circle cx="356" cy="176" r="115" fill="#e1f2ec" stroke="#18877d" stroke-width="3"/>
+<path d="M413.5 48V303" stroke="#d17e59" stroke-width="2.5" stroke-dasharray="6 5"/>
+<path d="M356 176L413.5 76.41M356 176L413.5 275.59" stroke="#167c74" stroke-width="3"/>
+<circle cx="413.5" cy="76.41" r="8" fill="#d77d56" stroke="#fff" stroke-width="3"/><circle cx="413.5" cy="275.59" r="8" fill="#d77d56" stroke="#fff" stroke-width="3"/>
+<circle cx="356" cy="176" r="3.5" fill="#385e68"/>
+<text x="431" y="69" font-size="17" fill="#ac603e" font-weight="700" font-family="system-ui,sans-serif">P₊(1/2, √3/2)</text>
+<text x="431" y="292" font-size="17" fill="#ac603e" font-weight="700" font-family="system-ui,sans-serif">P₋(1/2, −√3/2)</text>
+<text x="416" y="164" font-size="15" fill="#aa5d3d" font-family="system-ui,sans-serif">x=1/2</text>
+<text x="649" y="170" font-size="17" fill="#416773" font-family="system-ui,sans-serif">x</text>
+<text x="363" y="40" font-size="17" fill="#416773" font-family="system-ui,sans-serif">y</text>
+<text x="92" y="68" font-size="19" fill="#22535e" font-weight="700" font-family="system-ui,sans-serif">sin(π/2+α)</text>
+<text x="92" y="94" font-size="19" fill="#22535e" font-weight="700" font-family="system-ui,sans-serif">= cos α</text>
+<text x="92" y="120" font-size="23" fill="#b56643" font-weight="700" font-family="system-ui,sans-serif">= 1/2</text>
+<text x="354" y="326" font-size="14" fill="#526d76" text-anchor="middle" font-family="system-ui,sans-serif">两条终边都指向横坐标 1/2</text>
+</svg>
