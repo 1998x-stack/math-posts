@@ -65,5 +65,20 @@
       "jianping-2021-q19",
       "jianping-2021-q21"
     ]
+  },
+  {
+    "id": "math-path-08",
+    "title": "圆锥曲线综合：椭圆、双曲线与弦的定点定值",
+    "posts": [
+      "shanghai-2024-geometry-pudong-q20",
+      "shanghai-2024-geometry-jiading-q20",
+      "shanghai-2024-geometry-changning-q20",
+      "shanghai-2024-geometry-minhang-q20",
+      "shanghai-2024-geometry-hongkou-q20",
+      "shanghai-2024-geometry-putuo-q20",
+      "shanghai-2024-geometry-xuhui-q20",
+      "shanghai-2024-geometry-baoshan-q20",
+      "shanghai-2024-geometry-songjiang-q20"
+    ]
   }
 ]

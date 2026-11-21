@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" role="img" aria-label="按相同坐标尺度绘制椭圆x²+y²/2=1，F₁=P，E=N，F₂QEP为矩形"><title>松江区：椭圆焦点弦与矩形F₂QEP</title><desc>按相同坐标尺度绘制椭圆x²+y²/2=1，F₁=P，E=N，F₂QEP为矩形</desc>
+<rect width="760" height="350" rx="22" fill="#f4f9f7"/><path d="M110 180H650M380 18V332" stroke="#70838a" stroke-width="1.8"/><ellipse cx="380" cy="180" rx="120" ry="169.7" fill="#dcefe9" fill-opacity=".55" stroke="#187e82" stroke-width="3"/>
+<path d="M295.1 60H464.9" stroke="#916c22" stroke-width="2.2" stroke-dasharray="6 5"/><path d="M380 60V300" stroke="#9aa9aa" stroke-width="1.8" stroke-dasharray="5 5"/>
+<circle cx="295.1" cy="60" r="5.5" fill="#d06d4d"/><text x="276" y="48" font-size="15" fill="#263b43">M</text><circle cx="464.9" cy="60" r="5.5" fill="#d06d4d"/><text x="472" y="48" font-size="15" fill="#263b43">N=E</text>
+<circle cx="380" cy="60" r="5.5" fill="#916c22"/><text x="337" y="43" font-size="15" fill="#263b43">F₁=P</text><circle cx="380" cy="300" r="5.5" fill="#916c22"/><text x="391" y="317" font-size="15" fill="#263b43">F₂</text>
+<path d="M380 60H464.9V300H380Z" fill="#147f80" fill-opacity=".08" stroke="#147f80" stroke-width="3"/><circle cx="464.9" cy="300" r="6" fill="#147f80"/><text x="475" y="317" font-size="16" fill="#263b43">Q</text><text x="28" y="332" font-size="14" fill="#53676d">矩形条件使P=F₁，E=N，Q_y=−1</text></svg>

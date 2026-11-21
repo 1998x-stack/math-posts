@@ -428,7 +428,8 @@
             "交点"
           ],
           "posts": [
-            "jianping-2021-q02"
+            "jianping-2021-q02",
+            "shanghai-2024-geometry-jingan-q20"
           ],
           "outcomes": [
             "在常见直线方程间转换",
@@ -456,7 +457,11 @@
             "shanghai-2024-geometry-jiading-q20",
             "shanghai-2024-geometry-changning-q20",
             "shanghai-2024-geometry-minhang-q20",
-            "shanghai-2024-geometry-hongkou-q20"
+            "shanghai-2024-geometry-hongkou-q20",
+            "shanghai-2024-geometry-putuo-q20",
+            "shanghai-2024-geometry-xuhui-q20",
+            "shanghai-2024-geometry-baoshan-q20",
+            "shanghai-2024-geometry-songjiang-q20"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -482,7 +487,11 @@
             "shanghai-2024-geometry-jiading-q20",
             "shanghai-2024-geometry-changning-q20",
             "shanghai-2024-geometry-minhang-q20",
-            "shanghai-2024-geometry-hongkou-q20"
+            "shanghai-2024-geometry-hongkou-q20",
+            "shanghai-2024-geometry-putuo-q20",
+            "shanghai-2024-geometry-xuhui-q20",
+            "shanghai-2024-geometry-baoshan-q20",
+            "shanghai-2024-geometry-songjiang-q20"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",

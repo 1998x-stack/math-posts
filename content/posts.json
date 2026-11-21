@@ -766,5 +766,170 @@
       "src": "assets/cover.svg",
       "caption": "从椭圆顶点 P 出发的两条弦与连接弦 AB"
     }
+  },
+  {
+    "slug": "shanghai-2024-geometry-jingan-q20",
+    "title": "半圆拱桥的切线坡道设计：从几何相切到圆弧长度",
+    "subtitle": "用切线确定左侧直线坡道，用半圆桥面与右侧圆弧构造一条平顺道路",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "静安区",
+      "圆锥曲线",
+      "圆弧设计",
+      "切线"
+    ],
+    "summary": "把拱桥外沿设为半径10米的上半圆，左侧坡道取给定坡度的切线；右侧圆弧在桥面处相切并在地面处水平落地，得到一套可复核的开放式设计方案。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      7
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "静安区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "直线坡道在T点与半圆相切；桥面沿半圆到U点，再由半径40米的圆弧平顺落到D点"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-putuo-q20",
+    "title": "椭圆右焦点弦与向量约束：普陀区第20题",
+    "subtitle": "从短轴和离心率确定椭圆，再用中心对称与韦达关系处理焦点弦",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "普陀区",
+      "圆锥曲线",
+      "椭圆",
+      "向量"
+    ],
+    "summary": "先由短轴长与离心率确定椭圆x²/2+y²=1，再用C、B关于原点对称和CF⊥AB求面积，最后将向量和条件转化为弦长范围。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      8
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "普陀区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "右焦点F、弦AB与中心对称点C；向量条件转化为直线斜率和截距"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-xuhui-q20",
+    "title": "椭圆斜率乘积与焦点向量：徐汇区第20题",
+    "subtitle": "用顶点斜率得到常数−3/4，再把焦点向量条件转化为定点F₂",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "徐汇区",
+      "圆锥曲线",
+      "椭圆",
+      "向量"
+    ],
+    "summary": "椭圆x²/4+y²/3=1上，任意点Q到左右顶点的斜率乘积恒为−3/4；焦点向量关系给出弦MN，第三问证明直线恒过右焦点。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      9
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "徐汇区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆左右顶点、焦点与弦MN；斜率乘积条件使MN恒过F₂"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-baoshan-q20",
+    "title": "双曲线渐近线与面积差最值：宝山区第20题",
+    "subtitle": "从双曲线点积得到距离范围，再用斜率参数把两个三角形面积化成一元函数",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 19,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "宝山区",
+      "圆锥曲线",
+      "双曲线",
+      "面积最值"
+    ],
+    "summary": "双曲线x²−y²/2=1的渐近线夹角余弦为1/3；向量点积给出|OP|∈(1,√10]；第三问证明S₁²−S₂²最小值为−1/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      10
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "宝山区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "双曲线与共顶点辅助椭圆；最值点P=(√2,√2)，辅助椭圆交点Q=(1/√2,1)"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-songjiang-q20",
+    "title": "椭圆焦点弦与矩形存在性：松江区第20题",
+    "subtitle": "焦点处水平弦长度固定；中点条件锁定Q的纵坐标，矩形条件再锁定P",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "松江区",
+      "圆锥曲线",
+      "椭圆",
+      "向量"
+    ],
+    "summary": "椭圆x²+y²/2=1的焦点为(0,±1)，过上焦点的水平弦长√2；中点条件给出Q_y=−1，面积1/√2；矩形存在且Q_y唯一为−1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      11
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "松江区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "上焦点水平弦MN，P在直线MN上；P=(0,1)时F₂QEP为矩形"
+    }
   }
 ]
