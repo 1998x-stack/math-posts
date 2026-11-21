@@ -67,8 +67,21 @@ def validate(path: Path) -> dict:
         if script['src'].startswith('http'): warnings.append('External JS dependency: ' + script['src'])
     for link in soup.find_all('link', href=True):
         if link['href'].startswith('http'): warnings.append('External stylesheet dependency: ' + link['href'])
-    # MathML is optional for legacy articles; whenever present it must be well formed.
+    # Formula coverage is a hard gate for reviewed math posts.
     maths = soup.find_all('math')
+    displays = [m for m in maths if m.get('display') == 'block']
+    inlines = [m for m in maths if 'math-inline' in (m.get('class') or [])]
+    if len(maths) < 10: warnings.append(f'MathML coverage review candidate: {len(maths)} < recommended 10')
+    if len(displays) < 4: warnings.append(f'Display MathML review candidate: {len(displays)} < recommended 4')
+    if len(inlines) < 2: warnings.append(f'Inline MathML review candidate: {len(inlines)} < recommended 2')
+    if not soup.select_one('.formula-bank'):
+        warnings.append('No optional formula bank; ensure formulas remain in their original reasoning steps')
+    raw_text = ' '.join(str(node) for node in soup.find_all(string=True)
+                        if not (node.parent and node.parent.find_parent(
+                          ['math','svg','script','style','pre','code'])))
+    slash = chr(92)
+    if any(s in raw_text for s in (slash+'frac',slash+'sqrt',slash+'(', '$')):
+        failures.append('Visible raw LaTeX in body')
     for idx, math in enumerate(maths, 1):
         if math.find_parent('svg'):
             failures.append(f'MathML {idx} nested inside SVG (invalid namespace)')
@@ -94,7 +107,7 @@ def validate(path: Path) -> dict:
         warnings.append('No source provenance hyperlink in article')
     return {
         'path': str(path), 'pass': not failures,
-        'counts': {'h2': len(soup.find_all('h2')), 'figures': len(figures), 'svg': len(svgs), 'buttons': len(soup.find_all('button')), 'mathml': len(maths)},
+        'counts': {'h2': len(soup.find_all('h2')), 'figures': len(figures), 'svg': len(svgs), 'buttons': len(soup.find_all('button')), 'mathml': len(maths), 'mathml_display': len(displays), 'mathml_inline': len(inlines)},
         'failures': failures, 'warnings': warnings,
     }
 

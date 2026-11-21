@@ -41,6 +41,13 @@ jobs:
         run: python scripts/build_site.py
       - name: Validate links, metadata and article pages
         run: python scripts/validate_site.py
+      - name: Audit SVG structure, accessibility and local references
+        run: python scripts/audit_svg.py --report _audit/svg-audit.json
+      - name: Upload complete SVG audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: svg-audit-report
+          path: _audit/svg-audit.json
       - name: Browser smoke and static 3D fallbacks
         run: python scripts/browser_smoke.py
       - name: Upload validated site

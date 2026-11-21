@@ -105,3 +105,11 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 ### 本轮复审核验边界
 
 [132 道题逐条来源/标签台账](docs/reviews/2026-11-21-atlas-132-question-ledger.md) 与 [CI 教学质量审计](https://github.com/1998x-stack/math-posts/actions/runs/44909575648) 明确区分静态结构和数学内容审核。当前扫描发现 34 篇原题没有 MathML、61 篇解题步骤没有原位 MathML；后续必须逐题按新的数学排版 Reference 精修，不应把它们当作已经完成全部教学可视化升级的文章。启发式裸公式候选仅作人工复核线索。
+
+
+### 本轮 MathML / SVG 复审整合
+
+- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留 132 道题完整索引；黄浦 Q20 旧页面因“共焦”概念错误不移植。
+- [81 篇公式回归清单](content/mathml-coverage.json)只约束已完成该批次改造的页面，不把固定公式数量推广到所有题目。
+- [MathML 排版规范](skills/math-visual-posts/references/math-typesetting.md)、[SVG 生产规范](skills/math-visual-posts/references/svg-production.md)与[浏览器 QA](skills/math-visual-posts/references/browser-qa.md)共同作为后续新题与旧文修复标准。
+- CI 运行 SVG 结构/引用审计并上传 JSON 工件；缺失描述先作为可见 warning 跟踪，结构错误阻断构建。
