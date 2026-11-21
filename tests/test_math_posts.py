@@ -309,7 +309,7 @@ def test_every_math_post_has_real_mathml_coverage():
     from bs4 import BeautifulSoup
 
     posts = manifest()
-    assert len(posts) >= 67
+    assert len(posts) >= 72
     for p in posts:
         html = (ROOT / 'posts' / p['category'] / p['slug'] / 'index.html').read_text('utf-8')
         soup = BeautifulSoup(html, 'html.parser')
@@ -342,3 +342,18 @@ def test_q08_area_math_matches_answer():
     assert len(formulas) == 1
     assert '26' in formulas[0].get_text()
     assert '26/3' in soup.select_one('#answer').get_text()
+
+
+def test_semantic_mathml_tokens_are_not_fused_or_undefined():
+    from bs4 import BeautifulSoup
+
+    # Browser visibility checks do not establish mathematical semantics.
+    # Check known failure modes from per-page review: x*e**x misread as (xe)**x,
+    # a*x**3 misread as (ax)**3, and old malformed fraction denominator.
+    bad = {'undefined', 'xe', 'ax', 'mx', 'sinx', 'cosx', 'lnx', 'alnx',
+           'sinxcosx', 'uvs', 'kPA', 'kPB', 'kTR', 'kTS', 'smn'}
+    for p in manifest():
+        page = ROOT / 'posts' / p['category'] / p['slug'] / 'index.html'
+        soup = BeautifulSoup(page.read_text('utf-8'), 'html.parser')
+        for mi in soup.select('math mi'):
+            assert mi.get_text(strip=True) not in bad, (p['slug'], mi.get_text(strip=True))

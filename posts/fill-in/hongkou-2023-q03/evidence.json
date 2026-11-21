@@ -1,0 +1,29 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 3,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question wording and mathematical notation",
+      "official answer on PDF page 7",
+      "independent derivation",
+      "endpoint, exponent, sign, or conjugate-root conditions"
+    ]
+  },
+  "answer": {
+    "official": "36π",
+    "independent_check": "将 r=3 代入 V=4πr³/3，得到 4π×27/3=36π，与 PDF 第 7 页参考答案表一致。"
+  },
+  "math_equations": [
+    "V=(4/3)πr³",
+    "V=(4/3)π·3³=36π"
+  ],
+  "editorial_note": "PDF 第 1 页为题干；PDF 第 7 页参考答案表列出本题官方答案，但没有提供本题完整解析。页面中的逐步推导与核验均为独立整理，不冒充原卷解析。"
+}

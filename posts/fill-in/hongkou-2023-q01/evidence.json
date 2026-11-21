@@ -1,0 +1,29 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 1,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question wording and mathematical notation",
+      "official answer on PDF page 7",
+      "independent derivation",
+      "endpoint, exponent, sign, or conjugate-root conditions"
+    ]
+  },
+  "answer": {
+    "official": "(−2, 0]",
+    "independent_check": "任取 −2 与 0 之间的数，例如 x=−1，分式为 −1；x=0 时分式为 0；x=−2 时分母为 0，因此不属于解集。区间外分式均为正。"
+  },
+  "math_equations": [
+    "x/(x+2) ≤ 0",
+    "Solution set: (−2,0]"
+  ],
+  "editorial_note": "PDF 第 1 页为题干；PDF 第 7 页参考答案表列出本题官方答案，但没有提供本题完整解析。页面中的逐步推导与核验均为独立整理，不冒充原卷解析。"
+}
