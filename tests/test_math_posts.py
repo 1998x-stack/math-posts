@@ -176,7 +176,7 @@ def test_geometry_independent_invariants():
     assert math.isclose(10/91,10/91) and (10/91)!=(-10/139)
 
 def test_week12_photographed_first_ten_are_complete_and_evidenced():
-    problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice']
+    problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice' and p['question_number']<=10]
     assert [p['question_number'] for p in problems]==list(range(1,11))
     assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in problems)
     for p in problems:
@@ -198,7 +198,7 @@ def test_week12_photographed_first_ten_are_complete_and_evidenced():
 
 def test_week12_q06_to_q10_math_and_source_traps():
     from collections import Counter
-    batch=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice' and p['question_number']>=6]
+    batch=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice' and 6 <= p['question_number'] <= 10]
     assert [p['question_number'] for p in batch]==[6,7,8,9,10]
     values=['√3π/3','−3','7','(0,4)','117']
     for p,value in zip(batch,values):
@@ -221,7 +221,7 @@ def test_week12_q06_to_q10_math_and_source_traps():
     xm,ym=16/5,12/5
     assert math.isclose((xm-4)**2+(ym-3)**2,1)
     assert math.isclose(xm*xm+ym*ym,16)
-    assert math.isclose(((-4-xm)*(4-xm)+ym*ym),0)
+    assert math.isclose(((-4-xm)*(4-xm)+ym*ym),0,abs_tol=1e-12)
     def repeated_even(n):
         digits=Counter(str(n))
         return any(digits[str(v)]>=2 for v in (0,2,4,6,8))
