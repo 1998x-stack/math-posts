@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 11,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet, not PDF",
+    "year": "not printed"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "two nonparallel unit vectors b,c",
+      "a+2b parallel to b+c",
+      "norm(a)=sqrt(3)",
+      "minimum b dot c"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中手写内容不能当作官方标准答案。",
+    "independent_result": "−1/2",
+    "independent_check": "|a|²=2(1+t)(λ−1)²+2(1−t)=3 ⇒ t≥−1/2; at t=−1/2, λ=1, a=c−b works"
+  },
+  "math_equations": [
+    "(b+c)·(b−c)=0",
+    "3=2(1+t)(λ−1)^2+2(1−t)",
+    "t≥−1/2",
+    "a=c−b"
+  ],
+  "diagram_assertions": [
+    "b and c each unit length and 120° apart",
+    "a=c−b has length sqrt(3)"
+  ],
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  },
+  "editorial_note": "向量符号在原卷转写说明中均明确，手写结果不视为官方。"
+}
