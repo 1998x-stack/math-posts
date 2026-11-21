@@ -83,7 +83,7 @@ def validate(path: Path) -> dict:
         str(node) for node in soup.find_all(string=True)
         if not (node.parent and node.parent.find_parent(['math', 'svg', 'script', 'style', 'code', 'pre']))
     )
-    if re.search(r'\\\\(?:[()\\[\\]]|frac\\b|sqrt\\b|sum\\b|int\\b|begin\\b|end\\b)|\\$\\$?', visible_text):
+    if re.search(r'\\(?:[()\[\]]|frac\b|sqrt\b|sum\b|int\b|begin\b|end\b)|\$\$?', visible_text):
         failures.append('Visible raw LaTeX source found outside MathML')
     raw_formula_pattern = re.compile(
         r'(?<![A-Za-z0-9])(?:[A-Za-z][A-Za-z0-9₀-₉⁰-⁹]*)(?:\([^()\n]{1,28}\))?'
