@@ -382,7 +382,8 @@
           "posts": [
             "jianping-2021-q05",
             "jianping-2021-q17",
-            "songjiang-2023-mock-q06"
+            "songjiang-2023-mock-q06",
+            "hongkou-2023-q03"
           ],
           "outcomes": [
             "理解常见几何体结构与截面",
@@ -498,7 +499,8 @@
           "posts": [
             "week12-gaosan-q02",
             "chongming-2023-q03",
-            "songjiang-2023-mock-q03"
+            "songjiang-2023-mock-q03",
+            "hongkou-2023-q05"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -612,23 +614,28 @@
       "subtopics": [
         {
           "id": "counting-principles",
-          "title": "分类计数、分步计数与排列组合",
+          "title": "组合计数、二项式系数与展开",
           "difficulty": 1,
           "prerequisites": [],
           "tags": [
             "计数原理",
             "排列组合",
-            "分类讨论"
+            "分类讨论",
+            "二项式定理",
+            "二项式系数",
+            "指定项"
           ],
           "posts": [
             "jianping-2021-q07",
             "jianping-2021-q09",
             "week12-gaosan-q04",
-            "week12-gaosan-q10"
+            "week12-gaosan-q10",
+            "hongkou-2023-q04"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
-            "使用组合数计算不计顺序的选取"
+            "使用组合数计算不计顺序的选取",
+            "用组合数解释二项式展开系数并定位指定项"
           ]
         },
         {
@@ -710,7 +717,8 @@
             "week12-gaosan-q03",
             "derivative-classics-q02",
             "derivative-classics-q03",
-            "chongming-2023-q02"
+            "chongming-2023-q02",
+            "hongkou-2023-q01"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -753,7 +761,8 @@
             "平方和"
           ],
           "posts": [
-            "jianping-2021-q03"
+            "jianping-2021-q03",
+            "hongkou-2023-q02"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",

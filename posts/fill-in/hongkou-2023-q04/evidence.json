@@ -1,0 +1,30 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 4,
+    "pages": [
+      1,
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question wording and mathematical notation",
+      "official answer on PDF page 7",
+      "independent derivation",
+      "endpoint, exponent, sign, or conjugate-root conditions"
+    ]
+  },
+  "answer": {
+    "official": "35",
+    "independent_check": "k=4 时，变量部分 x³(1/√x)⁴=x³·x⁻²=x；有 C(7,4)=35 种选取位置，故 x 项系数为 35，与 PDF 第 7 页参考答案表一致。"
+  },
+  "math_equations": [
+    "T_k=C(7,k)x^(7−k)(x^(−1/2))^k",
+    "Exponent: 7−3k/2=1, so k=4",
+    "C(7,4)=35"
+  ],
+  "editorial_note": "PDF 第 1 页为题干；PDF 第 7 页参考答案表列出本题官方答案，但没有提供本题完整解析。页面中的逐步推导与核验均为独立整理，不冒充原卷解析。"
+}
