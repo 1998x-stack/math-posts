@@ -20,8 +20,10 @@ from xml.etree import ElementTree as ET
 
 if __package__:
     from .related_posts import enrich_article_related, load_reading_paths
+    from .atlas import load_atlas, build_papers_index, build_paper_detail
 else:
     from related_posts import enrich_article_related, load_reading_paths
+    from atlas import load_atlas, build_papers_index, build_paper_detail
 
 ROOT=Path(__file__).resolve().parents[1]
 DEFAULT_URL='https://1998x-stack.github.io/math-posts/'
@@ -97,6 +99,7 @@ def data(root:Path):
     for node in topic_ids:visit_topic(node)
     cover_captions=[p['cover']['caption'] for p in posts if p['status']=='published']
     assert len(cover_captions)==len(set(cover_captions)),'Published cover explanations must be unique'
+    load_atlas(root,posts,knowledge_map)
     return categories,posts,knowledge_map
 
 
@@ -124,7 +127,7 @@ def html_page(*,title,description,canonical,body,depth=0,active='home',lang='zh-
 <title>{H(title)}</title></head><body>
 <a class="skip-link" href="#main">跳至正文</a>
 <header class="site-header"><div class="container header-row"><a class="wordmark" href="{rel}" aria-label="math.posts 首页">math<span>.</span>posts</a>
-<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span aria-hidden="true">☰</span><span class="menu-label">菜单</span></button><nav id="site-nav" class="top-nav" aria-label="主导航"><a {'aria-current="page"' if active=='home' else ''} href="{rel}">首页</a><a {'aria-current="page"' if active=='topics' else ''} href="{rel}topics/">知识地图</a><a href="{rel}#categories">数学题型</a><a href="{rel}#reading-paths">学习路径</a><a href="{rel}#discover">文章索引</a><a {'aria-current="page"' if active=='archive' else ''} href="{rel}archive/">归档</a><a href="https://github.com/1998x-stack/math-posts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></header>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span aria-hidden="true">☰</span><span class="menu-label">菜单</span></button><nav id="site-nav" class="top-nav" aria-label="主导航"><a {'aria-current="page"' if active=='home' else ''} href="{rel}">首页</a><a {'aria-current="page"' if active=='topics' else ''} href="{rel}topics/">知识地图</a><a href="{rel}#categories">数学题型</a><a {'aria-current="page"' if active=='papers' else ''} href="{rel}papers/">按试卷</a><a href="{rel}#reading-paths">学习路径</a><a href="{rel}#discover">文章索引</a><a {'aria-current="page"' if active=='archive' else ''} href="{rel}archive/">归档</a><a href="https://github.com/1998x-stack/math-posts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></header>
 <main id="main">{body}</main>
 <footer class="site-footer"><div class="container footer-main"><div><a class="wordmark" href="{rel}">math<span>.</span>posts</a><p>把问题画出来，把推导讲清楚。</p></div><div><p class="footer-label">EXPLORE</p><a href="{rel}archive/">所有文章</a><a href="{rel}feed.xml">RSS 订阅</a><a href="https://github.com/1998x-stack/math-posts">源代码</a></div></div><div class="container legal"><span>© math-posts · Independent technical notes</span><span>Think visually. Prove carefully.</span></div></footer>
 </body></html>'''
@@ -295,8 +298,9 @@ def build_home(categories,posts,base):
     </section>
     <nav class="entry-strip" aria-label="探索方式"><div class="container entry-grid">
       <a href="#categories"><span class="entry-index">01 / SUBJECTS</span><strong>按题型探索</strong><span>查看不同问题的完整分类 ↗</span></a>
-      <a href="#reading-paths"><span class="entry-index">02 / PATHS</span><strong>按学习顺序阅读</strong><span>沿题目知识点逐步进阶 ↗</span></a>
-      <a href="#discover"><span class="entry-index">03 / INDEX</span><strong>直接查找一篇文章</strong><span>按关键词与主题筛选 ↗</span></a>
+      <a href="papers/"><span class="entry-index">02 / PAPERS</span><strong>按试卷与题号浏览</strong><span>学校 · 地区 · 一模 / 二模 ↗</span></a>
+       <a href="#reading-paths"><span class="entry-index">03 / PATHS</span><strong>按学习顺序阅读</strong><span>沿题目知识点逐步进阶 ↗</span></a>
+      <a href="#discover"><span class="entry-index">04 / INDEX</span><strong>直接查找一篇文章</strong><span>按关键词与主题筛选 ↗</span></a>
     </div></nav>
     <section class="container spotlight-section" aria-labelledby="spotlight-title">
       <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三道值得先读的题</h2></div><p>从短题入手，再进入几何和综合证明；一题一图，不重复通用封面。</p></div>
@@ -558,7 +562,11 @@ def build(root:Path,out:Path,base:str):
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
     categories,posts,knowledge_map=data(root)
+    papers,taxonomy=load_atlas(root,posts,knowledge_map)
     write(out,'index.html',build_home(categories,posts,base))
+    write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
+    for paper in papers:
+        write(out,f'papers/{paper["id"]}/index.html',build_paper_detail(paper,posts,taxonomy,base,html_page,article_url))
     for archive_page in range(1,archive_page_count(posts)+1):
         write(out,archive_page_url(archive_page)+'index.html',build_archive(posts,categories,base,archive_page))
     write(out,'topics/index.html',build_topics(categories,posts,base,knowledge_map))
@@ -579,9 +587,17 @@ def build(root:Path,out:Path,base:str):
     labels=topic_labels(categories)
     category_names={c['slug']:c['title'] for c in categories}
     ordered=sorted(published,key=lambda p:(p['published'],p['slug']),reverse=True)
-    search=[{k:p[k] for k in ['title','slug','subtitle','summary','category','topic','tags','published','reading_minutes']}|{'url':article_url(p),'paper':p.get('paper',''),'cover_src':article_url(p)+p['cover']['src'],'category_title':category_names[p['category']],'topic_title':labels[(p['category'],p['topic'])]} for p in ordered]
+    paper_names={paper['id']:paper['title'] for paper in papers}
+    facet_tokens={tag['id']:' '.join([tag['title'],*tag.get('aliases',[])]) for dim in taxonomy['dimensions'] for tag in dim['tags']}
+    search=[{k:p[k] for k in ['title','slug','subtitle','summary','category','topic','tags','published','reading_minutes']}
+            |{'url':article_url(p),'paper':p.get('paper',''),'cover_src':article_url(p)+p['cover']['src'],
+              'category_title':category_names[p['category']],'topic_title':labels[(p['category'],p['topic'])],
+              'paper_id':p['paper_id'],'paper_title':paper_names[p['paper_id']],
+              'question_number':p['question_number'],'facets':p['facets'],
+              'facet_terms':' '.join(facet_tokens[tag] for values in p['facets'].values() for tag in values)}
+            for p in ordered]
     write(out,'posts.json',json.dumps(search,ensure_ascii=False,indent=2)+'\n')
-    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/')]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
+    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/'),url_join(base,'papers/')]+[url_join(base,f'papers/{paper["id"]}/') for paper in papers]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
     sitemap=''.join(f'<url><loc>{X(u)}</loc></url>' for u in urls)
     write(out,'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+sitemap+'</urlset>')
     write(out,'robots.txt',f'User-agent: *\nAllow: /\nSitemap: {url_join(base,"sitemap.xml")}\n')
