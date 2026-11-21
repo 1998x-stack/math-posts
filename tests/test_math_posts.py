@@ -6,9 +6,9 @@ def manifest():return json.loads((ROOT/'content/posts.json').read_text('utf-8'))
 def test_original_21_problems_and_exam_types():
     posts=manifest()
     batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
-    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice')]
+    original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice','derivatives-application-classics-2024-2025','songjiang-2023-first-mock')]
     assert len(original)==21
-    assert len(posts)==42
+    assert len(posts)==62
     assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
     for p in original:counts[p['category']]=counts.get(p['category'],0)+1
@@ -175,9 +175,9 @@ def test_geometry_independent_invariants():
     assert math.isclose((1+4*(1/4))/(4*(1/4)),2)
     assert math.isclose(10/91,10/91) and (10/91)!=(-10/139)
 
-def test_week12_photographed_first_five_are_complete_and_evidenced():
-    problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice']
-    assert [p['question_number'] for p in problems]==[1,2,3,4,5]
+def test_week12_photographed_first_ten_are_complete_and_evidenced():
+    problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice' and p['question_number']<=10]
+    assert [p['question_number'] for p in problems]==list(range(1,11))
     assert all(p['category']=='fill-in' and p['status']=='published' and p['source_pages']==[1] for p in problems)
     for p in problems:
         article=ROOT/'posts'/p['category']/p['slug']
@@ -194,3 +194,85 @@ def test_week12_photographed_first_five_are_complete_and_evidenced():
     assert [x for x in (-2,0,1) if 2*x*x+x-1<0]==[0]
     assert math.comb(6,2)*2**2==60
     assert (1+3)**2==1*(1+5*3)
+
+
+def test_week12_q06_to_q10_math_and_source_traps():
+    from collections import Counter
+    batch=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice' and 6 <= p['question_number'] <= 10]
+    assert [p['question_number'] for p in batch]==[6,7,8,9,10]
+    values=['√3π/3','−3','7','(0,4)','117']
+    for p,value in zip(batch,values):
+        base=ROOT/'posts'/'fill-in'/p['slug']
+        html=(base/'index.html').read_text('utf-8')
+        svg=(base/'assets/cover.svg').read_text('utf-8')
+        ev=json.loads((base/'evidence.json').read_text('utf-8'))
+        assert html.count('<math display="block"') >= 4
+        assert html.count('data-math-scroll') >= 4
+        assert html.count('class="step-note"') >= 4
+        assert 'MathJax' not in html and 'katex.min.js' not in html
+        assert '<title' in svg and '<desc' in svg and 'viewBox' in svg
+        assert ev['answer']['independent_result']==value
+        assert ev['transcription']['status']=='checked-against-uploaded-photo'
+    assert math.isclose(math.sqrt(3)*math.pi/3,1.8137993642342176)
+    assert (2**2-1)==3 and -(2**2-1)==-3
+    roots=(3-math.sqrt(5),3+math.sqrt(5))
+    assert math.isclose(roots[0]+roots[1],6) and math.isclose(roots[0]*roots[1],4)
+    assert math.isclose(roots[1]/roots[0]+roots[0]/roots[1],7)
+    xm,ym=16/5,12/5
+    assert math.isclose((xm-4)**2+(ym-3)**2,1)
+    assert math.isclose(xm*xm+ym*ym,16)
+    assert math.isclose(((-4-xm)*(4-xm)+ym*ym),0,abs_tol=1e-12)
+    def repeated_even(n):
+        digits=Counter(str(n))
+        return any(digits[str(v)]>=2 for v in (0,2,4,6,8))
+    eligible=[n for n in range(100,1000) if repeated_even(n)]
+    assert len(eligible)==117
+    assert len([n for n in eligible if str(n).count('0')>=2])==9
+    for v in ('2','4','6','8'):
+        assert len([n for n in eligible if str(n).count(v)>=2])==27
+    assert '相同偶数' in (ROOT/'posts/fill-in/week12-gaosan-q10/index.html').read_text('utf-8')
+
+def test_songjiang_2023_first_ten_sequential_with_glyph_caveats():
+    seq=[p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock"]
+    assert [p["question_number"] for p in seq]==list(range(1,11))
+    assert len(seq)==10
+    assert [p["status"] for p in seq]==["published"]*7+["draft","draft","published"]
+    for q,p in enumerate(seq,1):
+        assert p["category"]=="fill-in" and p["source_pages"]==[1]
+        assert p["reference_answer_pages"]==[7]
+        article=ROOT/"posts"/p["category"]/p["slug"]
+        html=(article/"index.html").read_text("utf-8")
+        svg=(article/"assets/cover.svg").read_text("utf-8")
+        ledger=json.loads((article/"evidence.json").read_text("utf-8"))
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '先理解题目在问什么' in html and 'data-math-scroll' in html
+        assert '<math display="block"' in html
+        assert '<svg' in html and '<title>' in svg and '<desc>' in svg
+        assert ledger["source"]["question"]==q and ledger["source"]["answers_pages"]==[7]
+        assert ledger["answer"]["official"]
+        if q in (8,9):
+            assert "operator-missing" in ledger["transcription"]["status"]
+            assert "≥" in ledger["editorial_note"]
+            assert not ledger["qa"]["source_checked"]
+        else:
+            assert ledger["qa"]["source_checked"]
+    assert [p["question_number"] for p in seq if p["status"]=="draft"]==[8,9]
+
+def test_songjiang_2023_math_invariants():
+    import cmath
+    assert [n for n in range(-3,3) if -2<n<=1]==[-1,0,1]
+    assert all(abs(math.sin(t)*math.cos(t)-0.5*math.sin(2*t))<1e-12 for t in [-2,-0.2,0,1,2])
+    assert (2+1j)**2==3+4j
+    assert 2*(3*1+3*2)-3*(2*1+2)==6
+    fun=lambda x:(2**x-1)/(2**x+1)
+    assert all(math.isclose(fun(-x),-fun(x)) for x in (-3,-1,0,1,3))
+    assert math.isclose(math.pi*4*5,20*math.pi)
+    assert math.isclose((math.pi*4*4*3/3),16*math.pi)
+    a,b=(5,3),(-1,2)
+    assert a[0]*b[0]+a[1]*b[1]==1 and b[0]**2+b[1]**2==5
+    assert math.isclose((a[0]+.2)*b[0]+(a[1]-.4)*b[1],0)
+    assert math.isclose(abs(2-2)+abs(2-3),1)
+    assert 2*(.5)**2+.5==1 and 2*(-1)**2-1==1
+    assert 4<4.5<=5
+    assert 3**2==1**2+8
+    assert math.isclose(2*math.sqrt(2),math.sqrt(8))

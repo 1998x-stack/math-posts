@@ -1,0 +1,43 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 9,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "a>0",
+      "A(−a,0) B(a,0)",
+      "circle (x−4)²+(y−3)²=1",
+      "every M gives acute angle"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中仅见手写作答与批注。",
+    "independent_result": "(0,4)",
+    "independent_check": "MA·MB=OM²−a², min OM=OC−1=4 at M0=(16/5,12/5); strict acute iff a<4"
+  },
+  "math_equations": [
+    "MA·MB=x²+y²−a²",
+    "min OM=4",
+    "a²<16",
+    "0<a<4"
+  ],
+  "diagram_assertions": [
+    "circle C(4,3) radius 1",
+    "closest point M0=(3.2,2.4)",
+    "at a=4 angle AM0B is 90 degrees"
+  ],
+  "qa": {
+    "source_checked": "passed",
+    "algebra_checked": "passed",
+    "browser": "not verified"
+  },
+  "editorial_note": "照片手写答案不能替代数学验证；严格锐角的上界为开端点，已用最近点构造反例。"
+}

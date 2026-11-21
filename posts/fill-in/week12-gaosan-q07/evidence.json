@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 7,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "f is odd on R",
+      "positive branch 2^x−1 for x≥0",
+      "negative branch f(x) for x<0",
+      "whole piecewise function is even"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供经认证的官方答案；照片中的手写作答不能视为官方解析。",
+    "independent_result": "−3",
+    "independent_check": "g(2)=3, g(−2)=3=f(−2), so f(2)=−3"
+  },
+  "math_equations": [
+    "g(2)=2²−1=3",
+    "g(−2)=g(2)=3",
+    "f(2)=−f(−2)=−3"
+  ],
+  "diagram_assertions": [
+    "even g has equal values ±2",
+    "odd f has opposite values ±2"
+  ],
+  "qa": {
+    "source_checked": "passed",
+    "algebra_checked": "passed",
+    "browser": "not verified"
+  },
+  "editorial_note": "第二个函数 g 是为了讲解而引入的辅助名称；原题保留 y 的写法，不改变分段表达式。"
+}

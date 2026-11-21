@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 1,
+    "pages": [
+      2,
+      3
+    ],
+    "school": "河北省衡水中学（2024届模拟押题一）",
+    "material": "user-supplied PDF (62 pages; not publicly linked)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question",
+      "subquestions",
+      "math_signs",
+      "PDF reference answer"
+    ]
+  },
+  "answer": {
+    "official": "题源 PDF 参考答案：第（1）问 −1−1/e；第（2）问 m>−1 为0个、m=−1为1个、m<−1为2个。",
+    "independent_check": "以 w≈0.567143 验算 w eʷ≈1；K₀(w)=1，所以 m=−1 时零点重合为唯一切触根。"
+  },
+  "editorial_note": "原卷包含参考答案与解析；本文保留题源所载答案，独立补充的严格证明、取等、定义域和图解与原解区分。",
+  "math_equations": [
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动",
+    "关键数学公式，可横向滚动"
+  ]
+}

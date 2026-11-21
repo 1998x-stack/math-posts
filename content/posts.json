@@ -1282,5 +1282,685 @@
       "src": "assets/cover.svg",
       "caption": "等差点列与特定三项的等比中项关系"
     }
+  },
+  {
+    "slug": "derivative-classics-q01",
+    "title": "指数函数最小值与零点分类：为什么临界参数是 m=−1",
+    "subtitle": "利用辅助函数唯一谷底，完整讨论0、1、2个零点",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "零点分类"
+    ],
+    "summary": "衡水中学题源：求xe^x−1的最小值，并把含参零点转为辅助函数的最小值比较。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 1,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      2,
+      3
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "指数曲线的最小值与辅助函数的唯一谷底，决定参数零点数量"
+    }
+  },
+  {
+    "slug": "derivative-classics-q02",
+    "title": "切线与全域单调性：三角项如何限定三次函数的参数",
+    "subtitle": "切线条件与单调性临界值分开讨论，并证明全域导函数非负",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 20,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "三角函数",
+      "单调性"
+    ],
+    "summary": "华师附中题源：求切线经过原点时的参数和三次函数叠加余弦项的全域递增范围。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 2,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      3,
+      4,
+      5
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "临界参数下导函数在零与圆周率处触轴但不为负"
+    }
+  },
+  {
+    "slug": "derivative-classics-q03",
+    "title": "对数函数切线与恒成立不等式：从切线到二阶临界值",
+    "subtitle": "通过切线、极值与二阶导数确定参数a不超过二分之一",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "恒成立不等式"
+    ],
+    "summary": "东北育才题源：确定对数函数切线、商函数的极值及全区间恒成立不等式的最佳参数。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 3,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      5,
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "切线商函数的唯一极大值与指数差函数在临界参数处非负"
+    }
+  },
+  {
+    "slug": "derivative-classics-q04",
+    "title": "对数函数的两个零点为何满足 x₁+x₂>2",
+    "subtitle": "先求对数函数最大值，再反射比较证明两零点严格右偏",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "零点偏移"
+    ],
+    "summary": "山东省实验中学题源：参数m控制对数曲线高度，以镜像差导数证明两个零点和大于2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 4,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "合法双零点实例中左根的对称点严格位于右根左侧"
+    }
+  },
+  {
+    "slug": "derivative-classics-q05",
+    "title": "指数与对数的驻点不等式：一个负参数为何带来严格增益",
+    "subtitle": "先写x等于1的切线，后用驻点方程将参数区间映为x₀小于1",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 14,
+    "tags": [
+      "导数及其应用",
+      "百强名校经典试题",
+      "函数与导数",
+      "解答题",
+      "切线",
+      "驻点"
+    ],
+    "summary": "南大附中题源：计算e^x+a ln x在1处的切线，并证明负参数下驻点函数值大于指数项。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 5,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "负参数时驻点处指数与指数加对数的函数值形成严格正差"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q06",
+    "title": "圆锥展开图：侧面积求母线，再求垂直高与体积",
+    "subtitle": "侧面积 2π、底面半径 1，反推母线 2 与高 √3，求得体积 √3π/3。",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "圆锥",
+      "母线",
+      "侧面展开",
+      "体积",
+      "勾股定理"
+    ],
+    "summary": "展开扇形面积等于 πrl，母线 l=2，竖直高 h=√3，体积 π√3/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "圆锥的轴截面与半圆扇形展开图显示母线二、高根号三"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q07",
+    "title": "奇函数与分段偶函数：用两次对称得到 f(2)=-3",
+    "subtitle": "分段函数 g 的偶性确定 f(-2)=3，再由原函数 f 的奇性得 f(2)=-3。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "奇函数",
+      "偶函数",
+      "分段函数",
+      "函数图像"
+    ],
+    "summary": "分段函数整体是偶函数，原函数 f 是奇函数；分别使用两种对称性得 f(2)=-3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "偶函数g纵轴对称和奇函数f原点对称的双图对照"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q08",
+    "title": "对数换底与韦达定理：用根和、根积计算七",
+    "subtitle": "α=ln a、β=ln b，α+β=6、αβ=4，将对数和通分得到 7。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "自然对数",
+      "对数换底",
+      "韦达定理",
+      "二次方程"
+    ],
+    "summary": "对数换底得 β/α+α/β=((α+β)²−2αβ)/(αβ)，韦达定理算出 7。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两个自然对数根的和六积四决定换底对数和等于七"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q09",
+    "title": "圆上任意一点的锐角：由最短距离得到 0<a<4",
+    "subtitle": "利用 MA·MB=OM²−a² 和圆到原点的最短距离 4，证明锐角范围严格开区间。",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "圆",
+      "数量积",
+      "锐角",
+      "最短距离",
+      "严格不等式"
+    ],
+    "summary": "圆上最近点 M0=(16/5,12/5) 到原点距离 4，所有角严格锐需要 0<a<4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "圆心四三半径一的最近点展示参数a等于四时直角边界"
+    }
+  },
+  {
+    "slug": "week12-gaosan-q10",
+    "title": "至少两个相同偶数的三位数：正确分类得到 117",
+    "subtitle": "重复 0 有 9 种；每个非零偶数的重复方式有 27 种，合计 117。",
+    "category": "fill-in",
+    "topic": "combinatorics",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "第12周高三数学课堂练习",
+      "照片转写",
+      "填空题",
+      "分类计数",
+      "数码问题",
+      "相同偶数",
+      "首位限制",
+      "不重不漏"
+    ],
+    "summary": "重复的偶数仅为 0、2、4、6、8；零重复 9 个，固定非零偶数重复 27 个，总计 117。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "week12-gaosan-classroom-practice",
+    "source_kind": "worksheet-photo",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "重复零与四个非零偶数各自按数位计数的九加四乘二十七示意"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q01",
+    "title": "集合交集：区间与整数集合的筛选",
+    "subtitle": "左开右闭的区间只有 −1、0、1 三个整数",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "集合",
+      "区间"
+    ],
+    "summary": "2023年松江区高三一模第1题：左开右闭的区间只有 −1、0、1 三个整数。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 1,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "数轴上的 (-2,1] 与整数点的精确交集"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q02",
+    "title": "正弦乘余弦：倍角恒等式与最小正周期",
+    "subtitle": "sin x cos x 等于二分之一 sin 2x，完整波形只需要 π",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 9,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "三角",
+      "周期"
+    ],
+    "summary": "2023年松江区高三一模第2题：sin x cos x 等于二分之一 sin 2x，完整波形只需要 π。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 2,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "y=sin x cos x 的一个周期和重复波形"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q03",
+    "title": "共轭复数：确定参数并计算复数的平方",
+    "subtitle": "共轭先比较实部虚部，再用 i²=−1 展开",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "复数",
+      "共轭"
+    ],
+    "summary": "2023年松江区高三一模第3题：共轭先比较实部虚部，再用 i²=−1 展开。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 3,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "复平面中的 z=2+i 与 z²=3+4i"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q04",
+    "title": "等差数列求和：用消去首项的方法求公差",
+    "subtitle": "2S₃−3S₂ 正好消去未知首项，只留下 3d",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "数列",
+      "等差数列"
+    ],
+    "summary": "2023年松江区高三一模第4题：2S₃−3S₂ 正好消去未知首项，只留下 3d。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 4,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "前二项和与前三项和消去首项后的公差关系"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q05",
+    "title": "奇函数定参数：指数分式的原点对称性",
+    "subtitle": "用 f(0)=0 锁定 a=1，再证明 f(−x)=−f(x)",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "奇函数",
+      "指数函数"
+    ],
+    "summary": "2023年松江区高三一模第5题：用 f(0)=0 锁定 a=1，再证明 f(−x)=−f(x)。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 5,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "当且仅当 a=1 时指数分式实现原点对称"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q06",
+    "title": "圆锥三四五直角三角形：侧面积反求体积",
+    "subtitle": "半径4，母线5，高3；最终体积16π",
+    "category": "fill-in",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 10,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "圆锥",
+      "体积"
+    ],
+    "summary": "2023年松江区高三一模第6题：半径4，母线5，高3；最终体积16π。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 6,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "轴截面呈3、4、5直角三角形，三种长度各司其职"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q07",
+    "title": "向量正交分解：求 a 在 b 上的投影向量",
+    "subtitle": "点积为1、方向向量平方模为5，投影坐标(−1/5,2/5)",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "向量",
+      "投影向量"
+    ],
+    "summary": "2023年松江区高三一模第7题：点积为1、方向向量平方模为5，投影坐标(−1/5,2/5)。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 7,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "向量a分解成沿b的微小投影与垂直于b的剩余向量"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q08",
+    "title": "绝对值距离和恒成立：从最小值求参数区间",
+    "subtitle": "三角不等式给出最小值 1，推出 a∈[−1,1/2]",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "绝对值",
+      "恒成立"
+    ],
+    "summary": "2023年松江区高三一模第8题：三角不等式给出最小值 1，推出 a∈[−1,1/2]。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 8,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "绝对值距离和的图像在[2,3]有高度为1的平台"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q09",
+    "title": "集合包含与对数值域：从开闭端点推出 4<a≤5",
+    "subtitle": "原集合 A=(2,4]，值域 B=[a−2,a−1)，端点决定最终严格性",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 13,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "集合包含",
+      "对数"
+    ],
+    "summary": "2023年松江区高三一模第9题：原集合 A=(2,4]，值域 B=[a−2,a−1)，端点决定最终严格性。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 9,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "a=4.5的样例中B完全嵌入A，正确反映两端开闭"
+    }
+  },
+  {
+    "slug": "songjiang-2023-mock-q10",
+    "title": "双曲线焦点反射与中位线：从ON求渐近线",
+    "subtitle": "角平分线构造使 ON 恰等于实半轴 a，进而得到离心率 e=3",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "2023届松江高三一模",
+      "一模",
+      "2022年12月",
+      "填空题",
+      "双曲线",
+      "渐近线"
+    ],
+    "summary": "2023年松江区高三一模第10题：角平分线构造使 ON 恰等于实半轴 a，进而得到离心率 e=3。原题PDF第1页，参考答案第7页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "question_number": 10,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "反射使N成为F₁Q中点，中位线ON始终等于实半轴a"
+    }
   }
 ]
