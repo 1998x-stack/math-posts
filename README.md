@@ -113,3 +113,11 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 - [81 篇公式回归清单](content/mathml-coverage.json)只约束已完成该批次改造的页面，不把固定公式数量推广到所有题目。
 - [MathML 排版规范](skills/math-visual-posts/references/math-typesetting.md)、[SVG 生产规范](skills/math-visual-posts/references/svg-production.md)与[浏览器 QA](skills/math-visual-posts/references/browser-qa.md)共同作为后续新题与旧文修复标准。
 - CI 运行 SVG 结构/引用审计并上传 JSON 工件；缺失描述先作为可见 warning 跟踪，结构错误阻断构建。
+
+## 全站公式与解析几何持续审计
+
+- 每次 PR、main push 与每周一自动扫描全部题解。
+- math-rendering-audit 工件逐篇列出原题区、每个解题步骤的裸公式候选、MathML 结构/无障碍问题，以及解析几何 SVG 覆盖情况。
+- 旧文优先修复题干原位公式和每一步推导公式；公式汇总区不能替代正文。
+- 解析几何图形必须与同一坐标模型一致，并核验交点、切线、焦点、弦、垂直和退化情况。
+- 自动审计只建立人工复核队列，不会擅自改写原题或宣称证明正确。详见 [公式与图形整改计划](docs/math-rendering-remediation.md) 与 [解析几何审计规范](skills/math-visual-posts/references/analytic-geometry-visual-audit.md)。

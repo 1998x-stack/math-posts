@@ -3,6 +3,8 @@ on:
   pull_request:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 2 * * 1'
   workflow_dispatch:
 
 concurrency:
@@ -37,6 +39,13 @@ jobs:
         with:
           name: question-teaching-quality-audit
           path: _audit/teaching-quality.json
+      - name: Audit formula placement in every question and solution step
+        run: python scripts/audit_math_rendering.py --output _audit/math-rendering.json
+      - name: Upload complete math-rendering and geometry audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: math-rendering-audit
+          path: _audit/math-rendering.json
       - name: Build site
         run: python scripts/build_site.py
       - name: Validate links, metadata and article pages
@@ -60,13 +69,13 @@ jobs:
       # Upload the Pages artifact once in the build job. Rerunning only deploy must
       # never create a second github-pages artifact in the same workflow run.
       - name: Upload Pages deployment artifact
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.event_name != 'schedule' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site/
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.event_name != 'schedule' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
