@@ -52,9 +52,27 @@ def test_q21_explanation_and_interaction_have_source_evidence():
     assert 'm&gt;2' in html or 'm>2' in html
     evidence=json.loads((p/'evidence.json').read_text('utf-8'))
     assert evidence['source']['question']==21
-    assert '未重新取得原始PDF' in evidence['editorial_note']
+    assert '没有重新取得原始PDF' in evidence['editorial_note']
     manifest=json.loads((ROOT/'content/posts.json').read_text('utf-8'))
     entry=next(x for x in manifest if x['slug']=='jianping-2021-q21')
     assert entry['status']=='published'
     q20=next(x for x in manifest if x['slug']=='jianping-2021-q20')
     assert q20['status']=='draft'
+
+
+def test_q20_midpoint_discriminant_correction():
+    from fractions import Fraction as Q
+    for k in [Q(-1,2),Q(-1,4),Q(0),Q(1,5),Q(1,2)]:
+        a=5+4*k*k
+        b=-32*k*k
+        c=64*k*k-20
+        delta=b*b-4*a*c
+        assert delta==400-960*k*k
+        if delta>0:
+            u=16*k*k/(5+4*k*k)
+            assert 0<=u<1
+    limit=Q(5,12)
+    assert Q(16)*limit/(5+4*limit)==1
+    text=(ROOT/'posts/worked-solutions/jianping-2021-q20'/'index.html').read_text('utf-8')
+    assert '400−960k²' in text
+    assert '严格范围是 0≤u&lt;1' in text
