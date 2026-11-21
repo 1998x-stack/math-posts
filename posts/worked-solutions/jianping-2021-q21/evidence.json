@@ -20,12 +20,14 @@
   },
   "answer": {
     "official": "（1）关于 x=1 对称。（2）m<0 或 m=2 时 2 个；m=0 时 3 个；0<m<2 时 4 个；补充：m>2 时 0 个。（3）2a/(a²+1)、2a²/(a²+1)。",
-    "independent_check": "解 f(f(x))=x 得候选 0、2a/(a²+1)、2a/(a+1)、2a²/(a²+1)；剔除固定点，最后两个真二阶周期点为 2a/(a²+1)、2a²/(a²+1)。"
+    "independent_check": "对 a=2，f∘f 的四段式依次为4x、4−4x、4x−4、8−4x；m在(−∞,0)、{0}、(0,2)、{2}、(2,∞)时的不同实根数分别为2、3、4、2、0。对a>1，四段求出候选0、2a/(a²+1)、2a/(a+1)、2a²/(a²+1)；删除一次不动点0与2a/(a+1)，并验证u=2a/(a²+1)<1<v=2a²/(a²+1)、f(u)=v、f(v)=u。"
   },
   "math_equations": [
     "f(2−x)=f(x)",
-    "f(x)=a(1−|x−1|)",
-    "x_0=frac(2a,a^2+1) 或 frac(2a^2,a^2+1)"
+    "f(x)=ax(x≤1),a(2−x)(x≥1)",
+    "a=2: f(f(x))=4x,4−4x,4x−4,8−4x (piecewise)",
+    "a>1: f(f(x))=a²x,2a−a²x,a²x+2a−2a²,a²(2−x) (piecewise)",
+    "u=2a/(a²+1),v=2a²/(a²+1), f(u)=v,f(v)=u"
   ],
-  "editorial_note": "Original answer list omits m>2; mathematically f(f(x))≤2, hence no solutions above 2."
+  "editorial_note": "沿用仓库此前已记录的第23–25页题干与官方解析校对状态；本轮没有重新取得原始PDF，不声称重新逐页校对。已有证据记录解析未列 m>2，本轮严格补充无解情形；a=2 时 m<0 仍有两个位于[0,2]之外的根，已配精确图示和独立代入。"
 }
