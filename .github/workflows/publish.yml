@@ -34,6 +34,8 @@ jobs:
         run: python scripts/build_site.py
       - name: Validate links, metadata and article pages
         run: python scripts/validate_site.py
+      - name: Validate SVG structure, descriptions and references
+        run: python scripts/audit_svg.py --strict-desc
       - name: Browser smoke and static 3D fallbacks
         run: python scripts/browser_smoke.py
       - name: Upload validated site

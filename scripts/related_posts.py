@@ -74,8 +74,12 @@ def choose_related(current: dict, published: list[dict], routes: list[dict],
                 offer(steps[other], 20 - distance * 4 + (1 if direction > 0 else 0),
                       kind, route['title'])
 
-    # Fallback needs a shared registered topic or a *specific* tag overlap.
-    # Never recommend merely because two articles share a broad top-level category.
+    # Rank exact knowledge-node overlap across exam formats, rather than
+    # accidentally limiting related conics or vectors to one response type.
+    # Editorial reading paths still have the higher scores above.
+    node_frequency = Counter(node for post in published
+                             for node in set(post.get('knowledge_nodes', [])))
+    our_nodes = set(current.get('knowledge_nodes', []))
     tag_frequency = Counter(tag.casefold().strip()
                             for post in published for tag in set(post['tags']))
     our_tags = {tag.casefold().strip() for tag in current['tags']}
@@ -85,14 +89,25 @@ def choose_related(current: dict, published: list[dict], routes: list[dict],
         same_topic = (current['category'] == other['category']
                       and current['topic'] == other['topic'])
         common = our_tags & {tag.casefold().strip() for tag in other['tags']}
+        shared_nodes = our_nodes & set(other.get('knowledge_nodes', []))
         specificity = sum(2.0 / max(1, tag_frequency[tag] - 1) for tag in common)
-        if not same_topic and specificity < 3.0:
+        node_score = sum(3.0 / max(1, node_frequency[node] ** 0.25)
+                         for node in shared_nodes)
+        if not same_topic and not shared_nodes and specificity < 3.0:
             continue
-        if current['category'] != other['category'] and specificity < 4.0:
+        if (current['category'] != other['category']
+                and not shared_nodes and specificity < 4.0):
             continue
-        offer(other['slug'], 4 + (4 if same_topic else 0) + min(specificity, 4.0),
-              '同主题延伸' if same_topic else '相关概念',
-              '同一个知识主题' if same_topic else '共享关键技术概念')
+        if shared_nodes:
+            node = sorted(shared_nodes,
+                          key=lambda n: (node_frequency[n], n))[0]
+            label = current.get('knowledge_node_titles', {}).get(node, node)
+            offer(other['slug'], 9 + min(node_score, 5.0) + (1 if same_topic else 0),
+                  '知识点衔接', '共同知识节点：' + label)
+        else:
+            offer(other['slug'], 4 + (4 if same_topic else 0) + min(specificity, 4.0),
+                  '同主题延伸' if same_topic else '相关概念',
+                  '同一题型内主题' if same_topic else '共享关键数学概念')
 
     ranking = sorted(candidates.values(),
                      key=lambda entry: (-entry['score'], entry['post']['slug']))

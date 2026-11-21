@@ -30,3 +30,10 @@ python skills/math-visual-posts/scripts/browser_check.py posts/architectures/tra
 ```
 
 A failing automated check must be repaired **or transparently flagged**, not bypassed by making the rule weaker. The final completion message should say which browser sizes and interactions were verified.
+
+## 专项 SVG 渲染回归
+
+- 在 1440、768、390、360px 检查内嵌图：`getBoundingClientRect()` 的几何尺寸非零，`<title>` 与 `<desc>` 都可用；图内文字是否超出 SVG 实际边界。
+- 对独立封面 `cover.svg` 用 Chromium 直接导航 SVG URL，验证 root、viewBox、文字与可访问描述。仅检查首页缩略图不足以覆盖所有文章。
+- 390/360px 检查滚动限于 `figure`，正文 `document.documentElement.scrollWidth` 不应越过视口；`figure` 需要键盘焦点，滚动后标签仍可读。
+- 无 JS/WebGL/CDN 的情况保留专属 SVG 场景，且标题、解题推导和数学结论不缺失。候选文字边界溢出须人工判定和修复，不能静默压掉内容。

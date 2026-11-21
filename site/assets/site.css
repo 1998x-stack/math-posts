@@ -494,3 +494,18 @@
 @media(max-width:850px){.knowledge-overview{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.knowledge-grid{grid-template-columns:1fr}.knowledge-area-heading{align-items:start;flex-direction:column}.knowledge-area-count{text-align:left}.knowledge-summary a{margin-left:0}.knowledge-overview{margin-bottom:38px}.knowledge-topic{padding:16px}}
 @media print{.knowledge-overview{display:none}.knowledge-topic{break-inside:avoid}}
+
+/* The two search dimensions are independent: exam format and knowledge area. */
+.index-main .index-subjects{font-size:11px;color:#56766f;line-height:1.5;margin:3px 0 5px}
+.browse-controls{flex-wrap:wrap;align-items:stretch}
+.browse-controls .search-field{flex:1 1 260px;min-width:min(100%,240px)}
+.browse-controls .filter-field{min-width:0;flex:0 1 auto}
+.browse-controls .filter-field select{max-width:min(210px,54vw)}
+.browse-controls .visible-count{align-self:center}
+@media(max-width:640px){
+ .browse-controls{gap:10px}
+ .browse-controls .search-field{flex-basis:100%}
+ .browse-controls .filter-field{flex:1 1 170px;justify-content:space-between}
+ .browse-controls .visible-count{margin-left:0;width:100%;white-space:normal}
+ .index-main .index-subjects{overflow-wrap:anywhere}
+}

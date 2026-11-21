@@ -1027,8 +1027,8 @@
   },
   {
     "slug": "shanghai-2024-geometry-huangpu-q20",
-    "title": "共焦椭圆与等轴双曲线：黄浦区第20题",
-    "subtitle": "共焦结构使两条焦点连线斜率乘积为一，两个焦点弦距离乘积形成定比",
+    "title": "椭圆焦点作为双曲线顶点：黄浦区第20题",
+    "subtitle": "椭圆焦点恰为双曲线顶点；在双曲线右支上，两条顶点连线的斜率乘积为一",
     "category": "worked-solutions",
     "topic": "analytic-geometry",
     "status": "published",

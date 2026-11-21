@@ -30,3 +30,12 @@ python skills/math-visual-posts/scripts/extract_svg.py posts/architectures/resne
 
 - Arrows that merely decorate a box: no scientific connection to described operation.
 - “Perfect-looking” shapes with wrong semantics (e.g. residual skip starting after the transform, or cross-attention K/V originating in Decoder).
+
+## 数学图示专项：坐标真值优先于视觉装饰
+
+1. 写下具体坐标或参数方程，明确 `world_to_svg(x,y)` 对应的缩放、原点与纵轴翻转。图例和刻度必须与所用的同一坐标映射一致。
+2. 对椭圆/抛物线/双曲线/圆，验证每一个标注点确实满足相应方程；焦点、渐近线、切线、弦中点、面积比或距离最值需要单独代数核验。
+3. 画反例时明确“草稿／反例／原条件不足”，避免 SVG 示意图看起来像对有争议原命题的证明。
+4. 移动端实际保证标签可读：在窄屏滚动 720px 左右的内在图示宽度，而不是把文字缩成 6px；焦点可达，打印恢复适页缩放。
+5. 每篇文章的 inline SVG 与独立 cover.svg 都要自带 `title`、`desc`，且图注解释可检验的数学结论。不能只写“函数图像”“示意图”。
+6. 将 `scripts/audit_svg.py --strict-desc` 和 Chromium 图形检查纳入 CI。对浏览器报告的 label clipping 候选复核，而不依赖固定正则判定有无视觉重叠。

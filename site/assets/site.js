@@ -30,6 +30,7 @@
   if (!input || !grid) return;
 
   const select = document.querySelector('[data-category-filter]');
+  const subject = document.querySelector('[data-subject-filter]');
   const visibleCount = document.querySelector('[data-visible-count]');
   const empty = document.querySelector('[data-no-results]');
   const pager = document.querySelector('[data-home-pagination]');
@@ -40,6 +41,9 @@
   input.value = args.get('q') || '';
   if (select && [...select.options].some(option => option.value === args.get('category'))) {
     select.value = args.get('category');
+  }
+  if (subject && [...subject.options].some(option => option.value === args.get('area'))) {
+    subject.value = args.get('area');
   }
   let page = Math.max(1, Number.parseInt(args.get('page'), 10) || 1);
   let catalogue = null;
@@ -62,9 +66,10 @@
     const card = element('article', 'index-card post-card');
     card.setAttribute('data-post-card', '');
     card.dataset.category = post.category;
+    card.dataset.subjects = (post.subjects || []).join(' ');
     card.dataset.search = normalized([
       post.title, post.subtitle, post.summary, post.category, post.category_title,
-      post.topic, post.topic_title, ...(post.tags || [])
+      post.topic, post.topic_title, ...(post.subject_titles || []), ...(post.tags || [])
     ].join(' '));
 
     card.append(element('span', 'index-order', String(index + 1).padStart(2, '0')));
@@ -84,6 +89,9 @@
     kicker.append(element('span', '', '/'));
     kicker.append(document.createTextNode(' ' + post.topic_title));
     main.append(kicker);
+    if (post.subject_titles && post.subject_titles.length) {
+      main.append(element('p', 'index-subjects', '知识领域 · ' + post.subject_titles.join('、')));
+    }
     const heading = element('h3');
     heading.append(link(post.title, post.url));
     main.append(heading, element('p', '', post.subtitle));
@@ -112,6 +120,8 @@
     else url.searchParams.delete('q');
     if (select && select.value) url.searchParams.set('category', select.value);
     else url.searchParams.delete('category');
+    if (subject && subject.value) url.searchParams.set('area', subject.value);
+    else url.searchParams.delete('area');
     if (page > 1) url.searchParams.set('page', String(page));
     else url.searchParams.delete('page');
     history[push ? 'pushState' : 'replaceState']({}, '', url);
@@ -154,12 +164,15 @@
     if (!catalogue) return;
     const terms = normalized(input.value).split(/\s+/).filter(Boolean);
     const category = select ? select.value : '';
+    const area = subject ? subject.value : '';
     const matching = catalogue.filter(post => {
       const text = normalized([
         post.title, post.subtitle, post.summary, post.category, post.category_title,
-        post.topic, post.topic_title, ...(post.tags || [])
+        post.topic, post.topic_title, ...(post.subject_titles || []), ...(post.tags || [])
       ].join(' '));
-      return (!category || post.category === category) && terms.every(term => text.includes(term));
+      return (!category || post.category === category)
+        && (!area || (post.subjects || []).includes(area))
+        && terms.every(term => text.includes(term));
     });
     const totalPages = Math.max(1, Math.ceil(matching.length / pageSize));
     page = Math.min(page, totalPages);
@@ -207,10 +220,16 @@
     if (catalogue) { render(); writeLocation(false); }
     else loadIndex().then(() => writeLocation(false));
   });
+  if (subject) subject.addEventListener('change', () => {
+    page = 1;
+    if (catalogue) { render(); writeLocation(false); }
+    else loadIndex().then(() => writeLocation(false));
+  });
   window.addEventListener('popstate', () => {
     const state = new URLSearchParams(location.search);
     input.value = state.get('q') || '';
     if (select) select.value = state.get('category') || '';
+    if (subject) subject.value = state.get('area') || '';
     page = Math.max(1, Number.parseInt(state.get('page'), 10) || 1);
     render();
   });
