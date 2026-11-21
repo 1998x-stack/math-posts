@@ -58,6 +58,27 @@
           ]
         },
         {
+          "id": "logarithmic-functions",
+          "title": "指数与对数函数",
+          "difficulty": 2,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "指数函数",
+            "对数函数",
+            "对数方程",
+            "定义域"
+          ],
+          "posts": [
+            "yangpu-2023-q03"
+          ],
+          "outcomes": [
+            "掌握对数函数的定义域与单调性",
+            "利用同底对数的单调性把对数方程转化为真数方程，并检查定义域"
+          ]
+        },
+        {
           "id": "function-properties",
           "title": "单调性、奇偶性与对称性",
           "difficulty": 2,
@@ -73,7 +94,8 @@
             "jianping-2021-q03",
             "jianping-2021-q08",
             "week12-gaosan-q07",
-            "songjiang-2023-mock-q05"
+            "songjiang-2023-mock-q05",
+            "yangpu-2023-q01"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -174,7 +196,9 @@
             "余弦",
             "正切"
           ],
-          "posts": [],
+          "posts": [
+            "yangpu-2023-q04"
+          ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
             "理解三角函数值的符号与范围"
@@ -195,7 +219,8 @@
           "posts": [
             "jianping-2021-q01",
             "jianping-2021-q11",
-            "songjiang-2023-mock-q02"
+            "songjiang-2023-mock-q02",
+            "yangpu-2023-q04"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -500,7 +525,8 @@
             "week12-gaosan-q02",
             "chongming-2023-q03",
             "songjiang-2023-mock-q03",
-            "hongkou-2023-q05"
+            "hongkou-2023-q05",
+            "yangpu-2023-q05"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -741,7 +767,8 @@
           "posts": [
             "week12-gaosan-q03",
             "chongming-2023-q01",
-            "songjiang-2023-mock-q01"
+            "songjiang-2023-mock-q01",
+            "yangpu-2023-q02"
           ],
           "outcomes": [
             "将条件集合转化成区间",

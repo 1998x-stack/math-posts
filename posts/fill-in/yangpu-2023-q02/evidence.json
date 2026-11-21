@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 2,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and exponents",
+      "official answer",
+      "domain and interval endpoints"
+    ]
+  },
+  "answer": {
+    "official": "[0,1]",
+    "independent_check": "若 x∈[0,1]，则 0≤x≤2 且 x−1≤0，所以 x 同时属于 A、B；反过来，若 x 同时属于 A、B，则 0≤x≤2 且 x≤1，合并即 0≤x≤1。"
+  },
+  "math_equations": [
+    "A=[0,2]",
+    "B=(−∞,1]",
+    "A∩B=[0,1]"
+  ],
+  "figure_assertions": [
+    "两个区间的共同部分是闭区间 [0,1]"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "原题按 PDF 第 1 页渲染图逐字核对；参考答案按 PDF 第 8 页核对。第 8 页仅列标准答案，没有提供本题逐步解析；页面中的推导为独立推导。原卷为用户上传文件，没有公开下载链接。"
+}
