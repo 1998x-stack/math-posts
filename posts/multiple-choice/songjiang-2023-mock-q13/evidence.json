@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 13,
+    "pages": [
+      2
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF: 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-PDF-and-answer-key",
+    "checked_elements": [
+      "full statement",
+      "mathematical operators",
+      "answer key",
+      "options if any"
+    ]
+  },
+  "answer": {
+    "official": "B",
+    "official_source": "uploaded PDF p.7 reference key",
+    "independent_result": "B",
+    "independent_check": "逐项构造A、C和D的反例，而B由立方函数的严格递增性在实数域上两向成立。PDF第7页标答为B。"
+  },
+  "math_equations": [
+    "(-2)^2>1^2,\\quad -2<1",
+    "a^3>b^3\\quad\\Leftrightarrow\\quad a>b",
+    "\\frac12>1-1,\\quad\\frac12<1",
+    "1>\\frac12,\\quad 1\\not>\\frac32"
+  ],
+  "visual_assertions": [
+    "四个不等式条件中，只有B与a>b同强度"
+  ],
+  "editorial_note": "题干严格据用户提供的8页PDF转写；分步解析为独立推导，非原卷完整官方解析。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
