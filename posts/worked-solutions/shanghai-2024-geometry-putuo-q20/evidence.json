@@ -1,0 +1,32 @@
+{
+  "source": {
+    "title": "2024届高三二模数学汇编：解析几何",
+    "question": 20,
+    "region": "普陀区",
+    "pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "题干文字",
+      "三个小问",
+      "分式、根号、向量箭头和数量积",
+      "原卷图示（静安区）"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供官方答案或解析。",
+    "independent_check": "独立推导已逐式验算，端点、参数范围、等号条件和退化情形均已检查。"
+  },
+  "math_equations": [
+    "e=√2/2; a²=2",
+    "Γ:x²/2+y²=1; F=(1,0)",
+    "C=−B; k=±1; S△CBF=1",
+    "m²=(1+2k²)/4",
+    "|AB|=√(6(1+k²)/(1+2k²))∈(√3,√6]"
+  ],
+  "editorial_note": "题干与符号已对照原PDF渲染页核对；原卷未附答案/解析，本文独立推导不冒充官方解答。"
+}

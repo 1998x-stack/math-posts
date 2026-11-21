@@ -1,0 +1,33 @@
+{
+  "source": {
+    "title": "2024届高三二模数学汇编：解析几何",
+    "question": 20,
+    "region": "静安区",
+    "pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "题干文字",
+      "三个小问",
+      "分式、根号、向量箭头和数量积",
+      "原卷图示（静安区）"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供官方答案或解析。",
+    "independent_check": "独立设计：T=(-10/3,20√2/3), C=(-30,0), U=(6,8), D=(30,0), R=(30,40)，右弧半径40；AC=BD=20，连接处切线连续，总长约63.9m。"
+  },
+  "math_equations": [
+    "x²+y²=100",
+    "T=(-10/3,20√2/3); tangent −x+2√2y=30",
+    "C=(-30,0); D=(30,0); AC=BD=20",
+    "U=(6,8); R=(30,40); radius=40",
+    "L=20√2+10(π−arctan(2√2)−arctan(4/3))+40arctan(3/4)≈63.9m",
+    "assumed pavement thickness 0.20m; V≈127.7m³"
+  ],
+  "editorial_note": "开放式设计题，原卷未给唯一方案。本文明确采用C→T直线、T→U半圆桥面、U→D圆弧；平顺定义为连接处切线连续，D点水平落地。C点外侧不假设水平接续；若要求C点也与水平地面相切，需要额外过渡曲线，原题数据不足以确定其长度。0.20m厚度是示例假设。"
+}
