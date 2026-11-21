@@ -391,3 +391,13 @@ python scripts/browser_smoke.py
 | `putuo-2023-mock-source` | pdf | 1 |
 | `shanghai-2024-geometry-compilation` | pdf | 16 |
 | `jiading-2023-first-mock-source` | pdf | 1 |
+
+
+## 8. 逐篇教学结构与公式原位置检查（自动报告）
+
+本轮新增 `scripts/audit_teaching_quality.py`：在 PR CI 运行时读取**全部 132 道源 HTML**，为每道题输出 JSON 记录，包含题意导读、原题/步骤的 MathML 数量、步骤解释数量、SVG `title`/`desc`、题干与步骤中的裸公式**疑点**（不是已证实的数学错误）。该报告单独上传为 GitHub Actions artifact `question-teaching-quality-audit`，避免依赖人工从 132 个 HTML 逐一抄录数值。
+
+- 报告路径：`_audit/teaching-quality.json`（CI 产物，不在公开站点，未纳入原题内容）。
+- **区分审查等级**：该报告属于静态结构与公式位置检查（L1–L2 的辅助信息）；不读取原 PDF 图像、不能证明题目推导正确、不能判定图形在数学上精确。
+- 对旧内容发现“关键公式集中展示，但原题/推导中的数学关系仍为裸文本”的情况，作为后续逐题整改队列；不能因为总 MathML 数达标而判定公式原位完全合格。
+- 零候选值并不证明百分之百数学语义准确；正则启发式会有漏检和误报。今后的新题应按 Skill 在正确位置呈现 MathML，而不只是添加公式汇总区。
