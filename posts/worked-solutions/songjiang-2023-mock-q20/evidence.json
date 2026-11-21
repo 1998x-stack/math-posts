@@ -1,0 +1,47 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 20,
+    "pages": [
+      5
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "source-undefined-variable-k; conditional-independent-solution",
+    "checked_elements": [
+      "full original statement",
+      "figure",
+      "mathematics",
+      "reference answer"
+    ],
+    "uncertainty": "用户上传PDF第5页第(3)问写“求k的值”，却未定义k；第(2)问的l:y=x+t斜率已固定为1，不能静默据此认定第三问。以下k表示l的斜率为编辑假设；需找到原卷勘误或确认后方可发布。"
+  },
+  "answer": {
+    "official": "(1) x²/3+y²=1; (2) 1/2; (3) 2",
+    "official_source": "PDF p.7 reference answer (result only)",
+    "independent_result": "（1）x²/3+y²=1；（2）t=1/2；（3）若k定义为l的斜率，则k=2（原题k未定义）",
+    "independent_check": "(a²,b²,c²)=(3,1,2)满足长轴2√3与离心率√6/3；t=1/2的镜像点(0,−1)在椭圆且与M不同。取例l:y=2x+1，A=(0,1)、B=(−12/13,−11/13)，映射得C=(−12/7,1/7)、D=(−72/43,−11/43)，两点都在10x+y+17=0上；Q=(-7/4,1/2)也在该直线。字母k在原题第三问确未定义，故需补充条件才能发布。"
+  },
+  "math_equations": [
+    "a^2=3,\\quad c^2=2,\\quad b^2=1",
+    "\\frac{x^2}{3}+y^2=1",
+    "N=(\\frac12-t,t-\\frac32)",
+    "(t-2)(2t-1)=0,\\quad t=\\frac12",
+    "l:y=kx+m",
+    "\\lambda=\\frac1{7+4x}",
+    "x'=\\frac{-12-7x}{7+4x},\\quad y'=\\frac{y}{7+4x}",
+    "(7k-4m)x'+y'+12k-7m=0",
+    "-\\frac{k}{4}+\\frac12=0,\\quad k=2"
+  ],
+  "editorial_note": "用户上传PDF第5页第(3)问写“求k的值”，却未定义k；第(2)问的l:y=x+t斜率已固定为1，不能静默据此认定第三问。以下k表示l的斜率为编辑假设；需找到原卷勘误或确认后方可发布。",
+  "qa": {
+    "source_checked": false,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
