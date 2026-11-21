@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" role="img" aria-label="椭圆 x²/4+y²=1，点 P=(0,1)，展示 PA 斜率 1/2、PB 斜率 2、以及弦 AB"><title>虹口区：椭圆上两条过 P 的弦</title><desc>椭圆 x²/4+y²=1，点 P=(0,1)，展示 PA 斜率 1/2、PB 斜率 2、以及弦 AB</desc>
+<rect width="760" height="350" rx="22" fill="#f4f9f7"/><path d="M90 180H670M380 25V325" stroke="#70838a" stroke-width="1.8"/><ellipse cx="380" cy="180" rx="215" ry="150" fill="#dcefe9" fill-opacity=".55" stroke="#187e82" stroke-width="3"/>
+<circle cx="380" cy="30" r="7" fill="#d06d4d"/><text x="393" y="26" font-size="17" fill="#263b43">P(0,1)</text><circle cx="165" cy="180" r="6" fill="#147f80"/><text x="140" y="202" font-size="16" fill="#263b43">A(−2,0)</text>
+<circle cx="279" cy="312" r="6" fill="#147f80"/><text x="290" y="327" font-size="16" fill="#263b43">B</text><path d="M380 30L165 180M380 30L279 312M165 180L279 312" fill="none" stroke="#916c22" stroke-width="3"/>
+<text x="240" y="82" font-size="15" fill="#916c22">kPA=1/2</text><text x="405" y="190" font-size="15" fill="#916c22">kPB=2</text><text x="22" y="330" font-size="14" fill="#53676d">斜率乘积约束两条过 P 的弦；弦 AB 的方向随之受限</text></svg>
