@@ -101,8 +101,7 @@
             "songjiang-2023-mock-q05",
             "yangpu-2023-q01",
             "hongkou-2023-q09",
-            "hongkou-2023-q10",
-            "songjiang-2023-mock-q16"
+            "hongkou-2023-q10"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -125,8 +124,7 @@
           "posts": [
             "jianping-2021-q21",
             "week12-gaosan-q07",
-            "songjiang-2023-mock-q14",
-            "songjiang-2023-mock-q16"
+            "songjiang-2023-mock-q14"
           ],
           "outcomes": [
             "分析分段表达式与图像变化",
@@ -806,7 +804,6 @@
             "分层抽样"
           ],
           "posts": [
-            "jiading-2023-q19",
             "shanghai-putuo-2023-q10",
             "yangpu-2023-q07"
           ],

@@ -37,6 +37,17 @@ description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教�
 
 明确区分“原卷原样”“独立核验”“编辑补充/勘误”。发现原卷疑似笔误时，不静默替换；先保留原样，再解释差异。任何未核实的题保持 `draft`，不能标为 `published`。
 
+## Gate 1.5：先登记试卷与检索语义，再制作正文
+
+这一关新增于多批次学校试卷和解析几何汇编的生产流程。每道新题必须：
+1. 分辨原始文档（`source_id`）与所属试卷（`paper_id`）。先查 `content/source_documents.json` 与 `content/papers.json`，先登记真实来源文档再关联具体试卷，同卷沿用稳定 ID，跨地区汇编应拆分为不同的 `exam-excerpt`；完整题量未知填 `null`。
+2. 在 `content/posts.json` 登记原卷 `question_number` 和旧 URL 不变；同一试卷不得出现两个相同原题号。多小问优先属于同一题。
+3. 关联至少一个现有知识地图节点；在 `facets.concept` 选择最具体且可核实的知识概念。答题形式、年份、地区、学校、试卷名称不再混进知识标签。
+4. 只有当本题确实使用对应证明策略/图形时，才给 `facets.method` / `facets.visual` 加标签；未知或未审查时保持空数组。
+5. 更新 `evidence.json`，严格分开原卷答案、独立推导、编辑补充、来源题页与答案页；PDF 截断或原题条件不充分时保持 draft，不利用新索引绕过发布门槛。
+
+[多维标签体系](references/taxonomy-and-tags.md) · [试卷与 PDF 数据规范](references/exam-provenance-schema.md)
+
 ## Gate 2：强制问题优先的页面叙事
 
 **每篇 HTML 必须在正式题干之前，先用通俗语言解释“这道题在问什么”。** 这不是可选摘要，也不能只重复标题。
@@ -67,6 +78,19 @@ description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教�
 
 先解释题目对象，再引入符号。新符号第一次出现时说明含义和范围。将复杂题拆成可检查的小问题；必要时用小数值、特殊点或极端情况建立直觉，再回到严格推导。语言要清楚，不为显得专业而堆术语。
 
+## Gate 2.5：可教学解题 Step Schema 与题型图解选型
+
+以普通学生的真实认知疑问组织每道题，不用“公式密度高”代替“解释深”。每个关键步骤的讲解由**目标、依据、关键计算、具体疑问、边界检查、图形对应**六部分组成；不是每步都强制额外画图，但跳过必要计算、错把数值演示当证明不能发布。
+
+- 填空题：先说明答案形式，再解释取值、开闭区间、唯一性、单位与最短证明链。
+- 选择题：逐选项说明成立条件或反例，不只给出选项字母。
+- 解答题：按原卷小问分组，明确复用前问结论的逻辑。
+- 证明题：量词、充要、反证、构造、归纳等必须交代证明方向。
+- 应用题：变量、单位、约束、现实假设与可行性检查明确标记。
+- 图形必须服务于本题真实数学结构；优先静态 SVG，3D 仅适用于确需空间操作的对象。交互默认状态、临界/退化值、无 JS/无网回退都可验证。
+
+参考 [学生视角逐步解题](references/student-solution-design.md) 与 [20 类数学题可视化蓝图](references/visualization-by-problem-type.md)。首次使用新图形类型时，应在 PR 描述写出：要解释的疑问、图形断言、输入域、默认状态、错误/退化情况、与公式一致性的验证方法。
+
 ## Gate 3：公式与数学排版
 
 数学公式优先使用语义正确的 MathML Core。遵循 [数学排版规范](references/math-typesetting.md)：
@@ -77,6 +101,16 @@ description: 把数学 PDF 原题转为可溯源、问题优先、逐步可教�
 - 用独立代入、边界值、等号条件或第二种方法复核答案。
 
 公式不能只“显示正确”：必须与题干、文字推导、SVG 标签和最终答案一致。禁止把复杂公式用 Unicode 伪排版，也禁止对整页 HTML 做盲目正则替换。
+
+### 公式必须在原题与推导的原位置呈现（不设机械数量指标）
+
+- 原题中的函数、方程、区间、向量、分式、根式、组合数、数列和不等式，凡构成数学关系，均应在原题所在位置使用语义 MathML；不能只在页面末尾增加公式汇总区。
+- 解题步骤中的关键中间式、等价变形、边界/等号条件和最终结论，应紧跟对应解释呈现。公式汇总区只能辅助复习，不能代替步骤内公式。
+- 不设适用于所有题目的固定 MathML 数量门槛；公式密度由题目实际数学结构决定，禁止重复公式凑数。对尚未完成的旧文章使用逐题审计清单追踪，不阻断与其无关的新批次。
+- 每个 MathML 节点必须有准确的可访问名称；分式、上下标、根式和矩阵等结构必须正确，display 公式置于可键盘聚焦的横向滚动区域。
+- 禁止在页面可见文本中暴露 LaTeX 源码；禁止全局正则替换 HTML。只允许对人工确认的精确文本片段做一次性转换，并对照原卷、推导、SVG 与答案逐条复核。
+- 对乘积/变量名歧义（如 xe、ax、sinx）必须人工判断，不得把相邻字母一律拆成乘积。来源符号不清楚时保留原始不确定性并维持 draft。
+- 细则见 [数学排版与验证](references/math-typesetting.md)；SVG 的移动端与独立文件检查见 [SVG 制作规范](references/svg-production.md) 和 [浏览器 QA](references/browser-qa.md)。
 
 ## Gate 4：SVG 必须解释本题的数学对象
 
@@ -125,6 +159,14 @@ python -m pytest -q
 
 未实际执行的浏览器或设备检查必须标记“未验证”，不能把静态 DOM 检查说成渲染通过。
 
+## Gate 7.5：分类索引、试卷页与草稿隔离 QA
+
+- `python scripts/build_site.py` 必须生成 `/papers/` 与每套 `/papers/<paper_id>/`；试卷目录按**原卷题号**排序，不能按发布日期排序。
+- 首页筛选验证跨维度 AND：如 `concept=vector&category=fill-in`；URL 可复制，可用浏览器前后退恢复，清除筛选恢复默认列表。
+- 试卷页面可展示“暂未公开/尚未收录”，但绝不含 draft 文章链接、标题或答案；未知完整题量不标 100%。
+- 不将索引自动推断视为完整人工标签审核；复杂解题方法、图形形式均以正文和数学断言为准。
+- 增量数据注册需通过 `scripts/atlas.py` 验证，并运行 `tests/test_atlas.py` 与站点链接检查。
+
 ## Gate 8：PR、部署与反馈闭环
 
 建立 topic branch，逐文件审查 diff；运行构建、静态校验、单元测试和浏览器检查。创建 PR，CI 通过后按仓库发布流程合并；确认 GitHub Pages workflow 成功，并抽查线上页面、SVG、公式和移动端。用户的下一轮反馈要先更新 canonical Skill，再同步 `.claude/.pi/.agent/.opencode` 四个镜像；不得手工让镜像漂移。
@@ -139,3 +181,7 @@ python -m pytest -q
 - [浏览器 QA](references/browser-qa.md)
 - [评分卡](references/scorecard.md)
 - [发布流程](references/publishing.md)
+- [学生视角解题步骤](references/student-solution-design.md)
+- [各数学题型图解](references/visualization-by-problem-type.md)
+- [标签与首页检索](references/taxonomy-and-tags.md)
+- [试卷 Schema 与来源](references/exam-provenance-schema.md)

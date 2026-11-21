@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "description": "原始上传材料身份注册表；一个源文档可承载多个地区试卷摘录。敏感原卷不公开，页数未知用 null。",
+  "documents": [
+    {
+      "id": "jianping-2021-mock-03-source",
+      "title": "2021 年上海市建平中学高考冲刺模拟试卷 3（解析版）",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "week12-gaosan-worksheet-source",
+      "title": "用户上传的第 12 周课堂练习照片",
+      "format": "images",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "derivative-classics-collection-source",
+      "title": "导数及其应用大题（解析版）",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "chongming-2023-mock-source",
+      "title": "139-2023崇明一模（含答案）.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "songjiang-2023-mock-source",
+      "title": "138-2023松江一模.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "hongkou-2023-mock-source",
+      "title": "140-2023虹口一模.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "yangpu-2023-mock-source",
+      "title": "141-2023杨浦一模.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "putuo-2023-mock-source",
+      "title": "143-2023普陀一模.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "shanghai-2024-geometry-compilation",
+      "title": "2024届高三二模数学汇编：解析几何",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    },
+    {
+      "id": "jiading-2023-first-mock-source",
+      "title": "142-2023嘉定一模.pdf",
+      "format": "pdf",
+      "access": "user-uploaded",
+      "page_count": null,
+      "checksum_sha256": null,
+      "public_url": null,
+      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+    }
+  ]
+}

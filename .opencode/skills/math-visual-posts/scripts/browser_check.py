@@ -60,6 +60,9 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
               .filter(s=>s.getBoundingClientRect().width<1||s.getBoundingClientRect().height<1).length,
             brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth<1).length,
             mathCount:math.length,
+            mathDisplayCount:math.filter(e=>e.getAttribute('display')==='block').length,
+            mathInlineCount:math.filter(e=>e.classList.contains('math-inline')).length,
+            mathCoverageWarning:math.length<10 || math.filter(e=>e.getAttribute('display')==='block').length<4 || math.filter(e=>e.classList.contains('math-inline')).length<2,
             mathWrongNamespace:math.filter(e=>e.namespaceURI!==ns).length,
             mathNestedInSVG:document.querySelectorAll('svg math').length,
             mathZeroSized:math.filter(e=>visible(e)

@@ -64,4 +64,52 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 
 ## 第八批：2023届松江区一模第11–20题
 
-按照题号 one by one 形成十篇独立题解（含原生MathML、逐步教学推导、与题目对应的SVG、参考答案及证据）。**第11–19题发布，第20题暂存draft**：后者原卷第(3)问没有定义所求的k。第19题原卷答案只写桥长120米，原题另要求的谷深为160米；本站并列呈现并作独立验证。详见 [题源记录](content/source-notes.md)。
+按照题号 one by one 形成十篇独立题解（含原生MathML、逐步教学推导、与题目对应的SVG、参考答案及证据）。**第11–15、17–19题已发布，第16、20题暂存draft**：后者原卷第(3)问没有定义所求的k。第19题原卷答案只写桥长120米，原题另要求的谷深为160米；本站并列呈现并作独立验证。详见 [题源记录](content/source-notes.md)。
+
+
+## 题库导航升级：按知识点、试卷、题型与解题方法
+
+> 以下新导航是本审查 PR 的实现目标，**只有合并至 main 且 Pages 部署成功后才在正式网站可用**。未完成部署时，以 PR 的代码和 CI 结果为准。
+
+- [按试卷浏览](https://1998x-stack.github.io/math-posts/papers/)：按学校、地区、年份和原卷题号阅读；支持整卷、地区题目摘录、课堂练习与专题题集。
+- [知识地图](https://1998x-stack.github.io/math-posts/topics/)：保持七大知识领域、先修依赖与学习路径。
+- [首页多维筛选](https://1998x-stack.github.io/math-posts/#discover)：组合使用答题形式、知识点、试卷、解题方法及图解方式，支持链接分享查询参数，例如 `?concept=vector&category=fill-in`。
+- 每道题只维护一个规范 HTML URL；试卷页和知识索引均引用它，不复制题目内容。
+
+### 内容数据
+
+| 文件 | 职责 |
+|---|---|
+| `content/posts.json` | 文章身份、原卷题号、`paper_id`、`facets`、发布状态；保持旧 `tags` 向后兼容 |
+| `content/papers.json` | 每张试卷/练习/题集的稳定 ID、来源文档 ID、学校/地区、年份和已知题量 |
+| `content/source_documents.json` | 原始 PDF/照片的稳定来源 ID、共享关系、文件格式、访问边界和可选校验摘要 |
+| `content/taxonomy.json` | 可检索的规范化概念/方法/图示标签和中文别名 |
+| `content/knowledge-map.json` | 知识领域、先修依赖、难度和已发布题目映射 |
+| `posts/**/evidence.json` | 真实原题与答案的来源、页码、核对边界、异常说明 |
+
+一次来源 PDF 可能包含多套地区题，必须区分**源文档 source_id** 与 **试卷 paper_id**。例如 2024 上海二模解析几何汇编中的各区第 20 题，各自归属单独的地区试卷摘录，不把它们错误排列成同一套试卷的第 1 至第 16 题。未知总题数使用 null；草稿不提供公开文章链接。
+
+### 教学与可视化规范
+
+以后新题按“题意导读 → 忠实原题 → 条件标注 → 思路地图 → 每一步的目标/理由/计算/检查 → 真实 SVG 或必要的三维 → 独立复核 → 方法迁移”建设。每题仍要求完整 MathML；视觉效果不能替代代数证明。
+
+详细 Reference：
+- [学生视角逐步解题](skills/math-visual-posts/references/student-solution-design.md)
+- [20 类数学问题可视化设计](skills/math-visual-posts/references/visualization-by-problem-type.md)
+- [多维标签体系](skills/math-visual-posts/references/taxonomy-and-tags.md)
+- [PDF / 试卷 / 题目 Schema](skills/math-visual-posts/references/exam-provenance-schema.md)
+
+初始标签由现有知识地图、明确的题目标签与来源结构迁移；对尚未逐篇核对的解题方法和图示形式，保持空列表，不为了筛选数量而误标。未来批次必须执行逐题人工审查和浏览器检查。
+
+
+### 本轮复审核验边界
+
+[132 道题逐条来源/标签台账](docs/reviews/2026-11-21-atlas-132-question-ledger.md) 与 [CI 教学质量审计](https://github.com/1998x-stack/math-posts/actions/runs/44909575648) 明确区分静态结构和数学内容审核。当前扫描发现 34 篇原题没有 MathML、61 篇解题步骤没有原位 MathML；后续必须逐题按新的数学排版 Reference 精修，不应把它们当作已经完成全部教学可视化升级的文章。启发式裸公式候选仅作人工复核线索。
+
+
+### 本轮 MathML / SVG 复审整合
+
+- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留 132 道题完整索引；黄浦 Q20 旧页面因“共焦”概念错误不移植。
+- [81 篇公式回归清单](content/mathml-coverage.json)只约束已完成该批次改造的页面，不把固定公式数量推广到所有题目。
+- [MathML 排版规范](skills/math-visual-posts/references/math-typesetting.md)、[SVG 生产规范](skills/math-visual-posts/references/svg-production.md)与[浏览器 QA](skills/math-visual-posts/references/browser-qa.md)共同作为后续新题与旧文修复标准。
+- CI 运行 SVG 结构/引用审计并上传 JSON 工件；缺失描述先作为可见 warning 跟踪，结构错误阻断构建。

@@ -52,10 +52,19 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
     pub=[p for p in posts if p['status']=='published']
     expect=['index.html','archive/index.html','topics/index.html','question-types/index.html','404.html','sitemap.xml','feed.xml','posts.json','robots.txt']+[f'categories/{c["slug"]}/index.html' for c in cats]+[article_url(p)+'index.html' for p in pub]
     expect += [archive_page_url(i)+'index.html' for i in range(2,archive_page_count(posts)+1)]
+    papers=json.loads((ROOT/'content/papers.json').read_text(encoding='utf-8'))
+    public_papers=[paper for paper in papers if any(p['paper_id']==paper['id'] and p['status']=='published' for p in posts)]
+    expect += ['papers/index.html']+[f'papers/{paper["id"]}/index.html' for paper in public_papers]
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'
     assert '/question-types/' in sitemap,'Question-type index absent from sitemap'
+    assert '/papers/' in sitemap,'Paper atlas absent from sitemap'
+    for paper in public_papers:
+        assert f'/papers/{paper["id"]}/' in sitemap,f'Paper route absent from sitemap: {paper["id"]}'
+    for paper in papers:
+        if paper not in public_papers:
+            assert f'/papers/{paper["id"]}/' not in sitemap,f'Draft-only paper leaked: {paper["id"]}'
     for p in pub:assert article_url(p) in sitemap,p
     for i in range(1,archive_page_count(posts)+1):
         assert archive_page_url(i) in sitemap,f'Missing archive page {i} in sitemap'
@@ -65,7 +74,11 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
     home=BeautifulSoup((out/'index.html').read_text(encoding='utf-8'),'html.parser')
     assert len(home.select('.index-card')) <= HOME_PAGE_SIZE,'Homepage embeds too many index thumbnails'
     for p in posts:
-        if p['status']=='draft':assert article_url(p) not in sitemap,f'Leaked draft {p}'
+        if p['status']=='draft':
+            assert article_url(p) not in sitemap,f'Leaked draft {p}'
+            for paper in public_papers:
+                public=(out/'papers'/paper['id']/'index.html').read_text(encoding='utf-8')
+                assert article_url(p) not in public,f'Leaked draft into paper page: {p["slug"]}'
     bad=[]
     anchor_cache={}
     def page_ids(page:Path):

@@ -16,7 +16,12 @@ def run():
     host=f'http://127.0.0.1:{server.server_address[1]}/'
     posts=json.loads((ROOT/'content/posts.json').read_text(encoding='utf-8'))
     articles=[f"posts/{item['category']}/{item['slug']}/" for item in posts if item['status']=='published']
-    pages=['','archive/','topics/']+articles
+    papers=json.loads((ROOT/'content/papers.json').read_text(encoding='utf-8'))
+    public_papers=[paper for paper in papers if any(
+        item['paper_id']==paper['id'] and item['status']=='published' for item in posts
+    )]
+    paper_paths=[f"papers/{paper['id']}/" for paper in public_papers]
+    pages=['','archive/','topics/','question-types/','papers/']+paper_paths+articles
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True,args=['--disable-dev-shm-usage'])
         try:
@@ -31,6 +36,13 @@ def run():
                     assert page.locator('h1').count()==1,(width,path,'H1')
                     assert page.locator('main').count()==1,(width,path,'main')
                     assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth+1'),(width,path,'overflow')
+                    if path.startswith('papers/') and path != 'papers/':
+                        assert page.locator('.paper-question').count() >= 1,(width,path,'paper entries')
+                        assert page.locator('.paper-question-number').evaluate_all(
+                            "(nodes)=>nodes.every(n=>/^第 \\d+ 题$/.test(n.textContent.trim()))"
+                        ),(width,path,'original numbering')
+                        for draft in (x for x in posts if x['status']=='draft'):
+                            assert page.locator(f'a[href*="{draft["slug"]}"]').count()==0,(width,path,'draft link exposed')
                     if '/posts/' in path:
                         assert page.locator('#overview').count()==1,(width,path,'problem-first overview')
                         assert page.locator('#question').count()==1,(width,path,'original question')
@@ -50,9 +62,31 @@ def run():
                             assert not scene.locator('canvas').is_visible(),(width,path,'canvas hidden when CDN unavailable')
                         if 'q17' in path:
                             assert page.locator('.scene-controls input').count()==0,(width,path,'no inert tetrahedron sliders')
+                # Actual facet interactions (not only static HTML) plus browser Back.
+                if width in (1440,390):
+                    page.goto(host,wait_until='domcontentloaded')
+                    page.locator('[data-facet-filter="concept"]').select_option('vector')
+                    page.locator('[data-category-filter]').select_option('fill-in')
+                    page.locator('[data-facet-filter="paper"]').select_option('yangpu-2023-mock')
+                    page.wait_for_function(
+                        "() => document.querySelector('[data-visible-count]')?.textContent.includes('全库')",
+                        timeout=15000
+                    )
+                    cards=page.locator('[data-post-grid] .index-card')
+                    assert cards.count()>=1,(width,'vector+fill-in+yangpu returned no results')
+                    assert page.url.find('concept=vector')!=-1 and page.url.find('paper=yangpu-2023-mock')!=-1
+                    assert cards.all_text_contents() and all('杨浦' in t for t in cards.all_text_contents())
+                    page.go_back(wait_until='domcontentloaded')
+                    assert page.locator('[data-facet-filter="paper"]').input_value()=='', (width,'Back did not restore paper filter')
+                    assert page.locator('[data-category-filter]').input_value()=='fill-in'
+                    page.locator('[data-facet-filter="paper"]').select_option('derivative-classics-collection')
+                    assert page.locator('[data-no-results]').is_visible(),(width,'zero-result feedback')
+                    page.locator('[data-filter-reset]').click()
+                    assert page.locator('[data-facet-filter="concept"]').input_value()==''
+                    assert page.locator('[data-category-filter]').input_value()==''
                 assert not failures,(width,failures)
                 page.close()
         finally:browser.close()
     server.shutdown()
-    print(f'Browser smoke OK: {len(pages)} pages ({len(articles)} articles) x 4 viewport widths')
+    print(f'Browser smoke OK: {len(pages)} pages ({len(articles)} articles, {len(public_papers)} public papers) x 4 viewport widths + facet navigation')
 if __name__=='__main__':run()

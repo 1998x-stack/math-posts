@@ -383,7 +383,7 @@ def test_songjiang_second_ten_source_and_semantic_mathml():
     from bs4 import BeautifulSoup
     docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]>=11],key=lambda p:p["question_number"])
     assert [p["question_number"] for p in docs]==list(range(11,21))
-    assert [p["status"] for p in docs]==["published"]*9+["draft"]
+    assert [p["status"] for p in docs]==["published"]*5+["draft"]+["published"]*3+["draft"]
     assert [p["category"] for p in docs]==["fill-in"]*2+["multiple-choice"]*4+["worked-solutions"]*4
     assert [p["source_pages"] for p in docs]==[[2],[2],[2],[2],[2,3],[3],[3],[4],[4],[5]]
     for p in docs:
@@ -439,3 +439,46 @@ def test_songjiang_second_ten_independent_invariants():
     EF=160+20**3/800-6*20
     assert CD==70 and EF==50 and 1.5*CD+EF==155
     assert math.isclose(10*(-7/4)+.5+17,0)
+
+
+def test_reviewed_mathml_batch_has_real_semantic_coverage():
+    from bs4 import BeautifulSoup
+    coverage=json.loads((ROOT/'content/mathml-coverage.json').read_text('utf-8'))
+    posts={p['slug']:p for p in manifest()}
+    assert len(coverage['slugs'])==81
+    assert 'shanghai-2024-geometry-huangpu-q20' not in coverage['slugs']
+    assert set(coverage['slugs']) <= set(posts)
+    for slug in coverage['slugs']:
+        p=posts[slug]
+        html=(ROOT/'posts'/p['category']/slug/'index.html').read_text('utf-8')
+        soup=BeautifulSoup(html,'html.parser')
+        math_tags=soup.find_all('math')
+        assert len(math_tags)>=10,(slug,len(math_tags))
+        assert sum(m.get('display')=='block' for m in math_tags)>=4,slug
+        assert sum('math-inline' in (m.get('class') or []) for m in math_tags)>=2,slug
+        assert soup.select_one('.formula-bank'),slug
+        for m in math_tags:
+            assert m.get('aria-label') or m.get('aria-labelledby'),(slug,str(m)[:120])
+
+
+def test_jianping_q08_visual_area_math_matches_answer():
+    from bs4 import BeautifulSoup
+    html=(ROOT/'posts/fill-in/jianping-2021-q08/index.html').read_text('utf-8')
+    soup=BeautifulSoup(html,'html.parser')
+    formulas=[m for m in soup.find_all('math') if '面积 S 等于二十六除以三' in (m.get('aria-label') or '')]
+    assert len(formulas)==1
+    assert '26' in formulas[0].get_text()
+    assert '26/3' in soup.select_one('#answer').get_text()
+
+
+def test_reviewed_mathml_has_no_known_fused_or_undefined_identifiers():
+    from bs4 import BeautifulSoup
+    coverage=json.loads((ROOT/'content/mathml-coverage.json').read_text('utf-8'))
+    bad={'undefined','xe','ax','mx','sinx','cosx','lnx','alnx','sinxcosx',
+         'uvs','kPA','kPB','kTR','kTS','smn'}
+    posts={p['slug']:p for p in manifest()}
+    for slug in coverage['slugs']:
+        p=posts[slug]
+        soup=BeautifulSoup((ROOT/'posts'/p['category']/slug/'index.html').read_text('utf-8'),'html.parser')
+        for mi in soup.select('math mi'):
+            assert mi.get_text(strip=True) not in bad,(slug,mi.get_text(strip=True))

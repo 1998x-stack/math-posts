@@ -74,6 +74,34 @@ def choose_related(current: dict, published: list[dict], routes: list[dict],
                 offer(steps[other], 20 - distance * 4 + (1 if direction > 0 else 0),
                       kind, route['title'])
 
+    # Prefer a rare, explicitly registered mathematical concept across exam formats.
+    concept_titles = {
+        'analytic-geometry':'解析几何','vector':'向量','conics':'圆锥曲线',
+        'functions':'函数','derivatives':'导数','trigonometry':'三角函数',
+        'sequences':'数列','solid-geometry':'立体几何','complex-numbers':'复数',
+        'sets':'集合与区间','inequalities':'不等式','optimization':'最值与优化',
+        'counting':'组合计数','probability-statistics':'概率统计','reasoning':'数学思想与证明',
+    }
+    concept_frequency = Counter(
+        concept for post in published
+        for concept in set(post.get('facets', {}).get('concept', []))
+    )
+    our_concepts = set(current.get('facets', {}).get('concept', []))
+    for other in published:
+        if other['slug'] == slug or other['slug'] in candidates:
+            continue
+        shared = our_concepts & set(other.get('facets', {}).get('concept', []))
+        if not shared:
+            continue
+        specificity = sum(3.0 / max(1, concept_frequency[tag] ** 0.5)
+                          for tag in shared)
+        if specificity < 1.15:
+            continue
+        concept = sorted(shared, key=lambda tag: (concept_frequency[tag], tag))[0]
+        label = concept_titles.get(concept, concept)
+        offer(other['slug'], 9 + min(specificity, 5.0),
+              '知识点衔接', '共同知识概念：' + label)
+
     # Fallback needs a shared registered topic or a *specific* tag overlap.
     # Never recommend merely because two articles share a broad top-level category.
     tag_frequency = Counter(tag.casefold().strip()

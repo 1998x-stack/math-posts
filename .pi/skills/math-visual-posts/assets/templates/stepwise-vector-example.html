@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>示例：向量长度的学生式逐步解题</title>
+<link rel="stylesheet" href="../css/stepwise-solution.css"><script src="../js/stepwise-solution.js" defer></script></head>
+<body><main class="solution-stepper-demo">
+<h1>示例题：向量长度为什么是 5？</h1>
+<p class="demo-note">这是 Skill 教学组件示例，不是任何已上传学校试卷的原题，也不作为 PDF 来源证据。</p>
+<section class="prompt" aria-labelledby="prompt-title"><h2 id="prompt-title">题意导读与示例题</h2>
+<p>给定点 A(1,2) 与 B(4,6)，求向量 AB 的模。我们要找的不是终点坐标，而是从 A 走到 B 的直线距离。</p></section>
+<figure><img src="../examples/vector-length.svg" alt="在坐标系中从 A 到 B，水平走 3 格、竖直走 4 格，斜边是向量的长度">
+<figcaption>坐标示意由实际点 A(1,2)、B(4,6) 生成：水平位移 3，竖直位移 4，长度 5。</figcaption></figure>
+<section data-solution-stepper aria-labelledby="steps-title"><h2 id="steps-title">逐步解题</h2>
+<div class="stepper-actions" data-stepper-controls hidden role="group" aria-label="解题步骤导航">
+<button type="button" data-stepper-prev>上一步</button><output data-stepper-status aria-live="polite">完整过程</output>
+<button type="button" data-stepper-next>下一步</button><button type="button" data-stepper-all aria-pressed="false">展开全部步骤</button>
+</div>
+<ol class="solution-step-list">
+<li data-solution-step><h3>步骤 1：从两个点得到位移向量</h3>
+<p><strong>为什么？</strong> 向量 AB 描述从起点 A 到终点 B 的位移，所以终点减起点。</p>
+<div class="step-proof" tabindex="0" aria-label="向量坐标计算">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="向量 AB 等于四减一、六减二，结果为三、四">
+<mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>→</mo></mover><mo>=</mo><mo>(</mo><mn>4</mn><mo>−</mo><mn>1</mn><mo>,</mo><mn>6</mn><mo>−</mo><mn>2</mn><mo>)</mo><mo>=</mo><mo>(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>)</mo></math></div>
+<p class="step-check"><strong>检查：</strong> x 从 1 变到 4 增加 3；y 从 2 变到 6 增加 4。</p></li>
+<li data-solution-step><h3>步骤 2：把斜线长度转成直角三角形</h3>
+<p><strong>学生疑问：</strong> 为什么要平方相加，而不是 3+4？因为图中 3 和 4 是互相垂直的两条直角边，所求是斜边。</p>
+<div class="step-proof" tabindex="0" aria-label="向量长度使用勾股定理">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="向量长度等于根号下三的平方加四的平方，等于五">
+<mo>|</mo><mover><mrow><mi>A</mi><mi>B</mi></mrow><mo>→</mo></mover><mo>|</mo><mo>=</mo><msqrt><msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><msup><mn>4</mn><mn>2</mn></msup></msqrt><mo>=</mo><mn>5</mn></math></div>
+<p class="step-check"><strong>检查：</strong> 距离不可能比任意一条直角边短；5 大于 3 和 4。</p></li>
+<li data-solution-step><h3>步骤 3：独立验证答案</h3>
+<p>把 3、4、5 代回勾股关系。即使改成从 B 指向 A，向量方向相反，<strong>长度仍是 5</strong>。</p>
+<div class="step-proof" tabindex="0">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="三的平方加四的平方等于二十五，也等于五的平方">
+<msup><mn>3</mn><mn>2</mn></msup><mo>+</mo><msup><mn>4</mn><mn>2</mn></msup><mo>=</mo><mn>25</mn><mo>=</mo><msup><mn>5</mn><mn>2</mn></msup></math></div>
+<p class="step-check"><strong>迁移问题：</strong> 如果把 B 改成 (4,−2)，水平位移仍为 3，竖直位移为 −4，长度为什么仍然为 5？</p></li>
+</ol></section></main></body></html>

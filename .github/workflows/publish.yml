@@ -30,10 +30,24 @@ jobs:
         run: python scripts/sync_skills.py --check
       - name: Unit tests
         run: python -m pytest -q
+      - name: Audit every question's teaching and formula placement
+        run: python scripts/audit_teaching_quality.py --output _audit/teaching-quality.json
+      - name: Upload complete per-question teaching quality inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: question-teaching-quality-audit
+          path: _audit/teaching-quality.json
       - name: Build site
         run: python scripts/build_site.py
       - name: Validate links, metadata and article pages
         run: python scripts/validate_site.py
+      - name: Audit SVG structure, accessibility and local references
+        run: python scripts/audit_svg.py --report _audit/svg-audit.json
+      - name: Upload complete SVG audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: svg-audit-report
+          path: _audit/svg-audit.json
       - name: Browser smoke and static 3D fallbacks
         run: python scripts/browser_smoke.py
       - name: Upload validated site
