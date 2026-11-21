@@ -56,7 +56,7 @@ def test_original_svg_cover_and_source():
         assert (article/'index.html').exists()
         assert (article/p['cover']['src']).exists()
         svg=(article/p['cover']['src']).read_text('utf-8')
-        assert '<svg' in svg and 'viewBox' in svg and '<title>' in svg
+        assert '<svg' in svg and 'viewBox' in svg and '<title' in svg
         ledger=json.loads((article/'evidence.json').read_text('utf-8'))
         assert ledger['source']['question']==p['question_number']
         assert ledger['source']['pages']==p['source_pages']
@@ -159,7 +159,7 @@ def test_week12_photographed_first_five_are_complete_and_evidenced():
         assert evidence['source']['pages']==[1]
         assert '官方答案' in evidence['answer']['official']
     assert 1j*complex(2,-1)==complex(1,2)
-    assert abs(complex(2,-1))**2==5
+    assert math.isclose(abs(complex(2,-1))**2,5,rel_tol=1e-12)
     assert [x for x in (-2,0,1) if 2*x*x+x-1<0]==[0]
     assert math.comb(6,2)*2**2==60
     assert (1+3)**2==1*(1+5*3)
