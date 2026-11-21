@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 5,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded file 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question",
+      "formula",
+      "page 7 answer"
+    ]
+  },
+  "answer": {
+    "official": "1",
+    "official_source": "PDF p.7 reference answer",
+    "independent_check": "x=2 得 3/5，x=−2 得 −3/5；f(0)=0，与原卷第7页参考答案1一致。",
+    "independent_result": "1"
+  },
+  "math_equations": [
+    "f(0)=0",
+    "a-1=0,\\quad a=1",
+    "f(x)=\\frac{2^x-1}{2^x+1}",
+    "f(-x)=\\frac{1-2^x}{1+2^x}=-f(x)"
+  ],
+  "editorial_note": "原卷第1页题干及第7页答案人工复核，推导和图解独立构建，不冒充官方步骤。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}
