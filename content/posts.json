@@ -933,6 +933,192 @@
     }
   },
   {
+    "slug": "shanghai-2024-geometry-qingpu-q20",
+    "title": "双曲线焦点、内切圆与等腰焦点弦：青浦区第20题",
+    "subtitle": "把内切圆半径转成焦点三角形面积，再用等角条件锁定焦点弦斜率",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 21,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "青浦区",
+      "双曲线"
+    ],
+    "summary": "双曲线渐近线、三角形内切圆半径及等腰焦点弦斜率",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      12
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "青浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "双曲线渐近线、三角形内切圆半径及等腰焦点弦斜率"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-jinshan-q20",
+    "title": "椭圆焦距线性化与圆的切线判定：金山区第20题",
+    "subtitle": "周长固定的焦点三角形，把椭圆弦变为圆的切线条件",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 21,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "金山区",
+      "椭圆"
+    ],
+    "summary": "焦点距离、向量和、周长约束与直线圆相切",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      13
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "金山区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "焦点距离、向量和、周长约束与直线圆相切"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-chongming-q20",
+    "title": "椭圆点弦与垂足定圆：崇明区第20题",
+    "subtitle": "斜率和恒等式迫使动弦过定点，垂足落在以定点连线为直径的圆上",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 20,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "崇明区",
+      "轨迹"
+    ],
+    "summary": "定点弦与垂足圆，固定圆心在 x 轴",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      14
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "定点弦与垂足圆，固定圆心在 x 轴"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-huangpu-q20",
+    "title": "共焦椭圆与等轴双曲线：黄浦区第20题",
+    "subtitle": "共焦结构使两条焦点连线斜率乘积为一，两个焦点弦距离乘积形成定比",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 22,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "黄浦区",
+      "双曲线"
+    ],
+    "summary": "椭圆与等轴双曲线、焦点弦与斜率倒数",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      15
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "黄浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆与等轴双曲线、焦点弦与斜率倒数"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-yangpu-q20",
+    "title": "椭圆顶点投影与面积比：杨浦区第20题",
+    "subtitle": "任意有效割线的 x 轴截点中点恒定，通过面积缩放找出唯一符合条件的斜率",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 21,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "杨浦区",
+      "椭圆"
+    ],
+    "summary": "椭圆弦、重心与两三角形面积比",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      16
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆弦、重心与两三角形面积比"
+    }
+  },
+  {
+    "slug": "shanghai-2024-geometry-fengxian-q20",
+    "title": "椭圆切线与双曲线斜率和：奉贤区第20题（原题边界核查）",
+    "subtitle": "前两问独立证明，第三问因允许竖直割线出现 n 不定的反例",
+    "category": "worked-solutions",
+    "topic": "analytic-geometry",
+    "status": "draft",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 22,
+    "tags": [
+      "analytic-geometry",
+      "worked-solutions",
+      "2024高三二模",
+      "奉贤区",
+      "反例"
+    ],
+    "summary": "导圆、椭圆切线与定值题源核查",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 20,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      17
+    ],
+    "source_exam": "2024-shanghai-gaosan-second-mock-analytic-geometry",
+    "source_region": "奉贤区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "导圆、椭圆切线与定值题源核查"
+    }
+  },
+  {
     "slug": "week12-gaosan-q01",
     "title": "绝对值不等式：从距离模型得到闭区间 [1,3]",
     "subtitle": "距离中心 2 不超过 1，两个边界点都属于解集。",

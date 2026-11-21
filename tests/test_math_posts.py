@@ -8,7 +8,7 @@ def test_original_21_problems_and_exam_types():
     batch_id='2024-shanghai-gaosan-second-mock-analytic-geometry'
     original=[p for p in posts if p.get('source_exam') not in (batch_id,'week12-gaosan-classroom-practice')]
     assert len(original)==21
-    assert len(posts)==36
+    assert len(posts)==42
     assert sorted(x['question_number'] for x in original)==list(range(1,22))
     counts={}
     for p in original:counts[p['category']]=counts.get(p['category'],0)+1
@@ -32,7 +32,7 @@ def test_2024_geometry_first_five_are_registered_and_evidenced():
 
 def test_2024_geometry_second_five_are_registered_and_evidenced():
     posts=manifest()
-    batch=[p for p in posts if p.get('source_exam')=='2024-shanghai-gaosan-second-mock-analytic-geometry' and p['source_pages'][0] >= 7]
+    batch=[p for p in posts if p.get('source_exam')=='2024-shanghai-gaosan-second-mock-analytic-geometry' and 7 <= p['source_pages'][0] <= 11]
     assert len(batch)==5
     assert [p['source_region'] for p in batch]==['静安区','普陀区','徐汇区','宝山区','松江区']
     assert [p['source_pages'] for p in batch]==[[7],[8],[9],[10],[11]]
@@ -143,6 +143,37 @@ def test_knowledge_map_prerequisites_are_acyclic():
         visited.add(node)
     for node in graph:visit(node)
 
+
+def test_2024_geometry_final_six_and_source_caveat():
+    posts=manifest()
+    part=[p for p in posts if p.get('source_exam')=='2024-shanghai-gaosan-second-mock-analytic-geometry' and p['source_pages'][0]>=12]
+    assert len(part)==6
+    assert [p['source_region'] for p in part]==['青浦区','金山区','崇明区','黄浦区','杨浦区','奉贤区']
+    assert [p['source_pages'] for p in part]==[[12],[13],[14],[15],[16],[17]]
+    assert [p['status'] for p in part]==['published']*5+['draft']
+    for p in part:
+        art=ROOT/'posts'/p['category']/p['slug']
+        html=(art/'index.html').read_text('utf-8')
+        svg=(art/'assets/cover.svg').read_text('utf-8')
+        ev=json.loads((art/'evidence.json').read_text('utf-8'))
+        assert '先理解题目在问什么' in html and '<math' in html and '<svg' in html
+        assert 'viewBox' in svg and '<title>' in svg and '<desc>' in svg
+        assert ev['source']['pages']==p['source_pages']
+        assert ev['answer']['official']=='原卷未提供官方答案或解析。'
+    fx=part[-1]
+    evidence=json.loads((ROOT/'posts'/fx['category']/fx['slug']/'evidence.json').read_text('utf-8'))
+    assert '竖直' in evidence['editorial_note']
+    assert 'draft'==fx['status']
+
+def test_geometry_independent_invariants():
+    import math
+    assert math.isclose((29+25+6)/2,30)
+    assert math.isclose((3*20)/30,2)
+    assert math.isclose(1/(2*math.sqrt(2)), math.sqrt(2)/4)
+    assert math.isclose((math.sqrt(5)/2)**2,1.25)
+    assert math.isclose((16*(1+1/3)/(4+5/3))**(-1) + (16*(1+3)/(4+15))**(-1),9/16)
+    assert math.isclose((1+4*(1/4))/(4*(1/4)),2)
+    assert math.isclose(10/91,10/91) and (10/91)!=(-10/139)
 
 def test_week12_photographed_first_five_are_complete_and_evidenced():
     problems=[p for p in manifest() if p.get('source_exam')=='week12-gaosan-classroom-practice']
