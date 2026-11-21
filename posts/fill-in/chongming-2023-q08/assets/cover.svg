@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="q8title q8desc"><title id="q8title">半圆扇形卷成圆锥的弧长与轴截面</title><desc id="q8desc">左图为半径二的半圆扇形，弧长二π；右图为母线长二、底面半径一、竖直高根号三的圆锥，轴截面构成直角三角形。</desc><rect width="720" height="340" rx="22" fill="#f5f9f7"/>
+<text x="188" y="27" text-anchor="middle" fill="#28515c" font-size="19" font-weight="700" font-family="system-ui,sans-serif">侧面展开图：半圆纸片</text>
+<path d="M67 195A116 116 0 0 1 299 195Z" fill="#d9eee8" stroke="#18867a" stroke-width="3"/>
+<path d="M67 195H299" stroke="#547079" stroke-width="2"/><circle cx="183" cy="195" r="4.5" fill="#dc805a"/>
+<path d="M183 195L265 113" stroke="#dc805a" stroke-width="3"/>
+<text x="238" y="149" fill="#ac6041" font-size="18" font-weight="700" font-family="system-ui,sans-serif">R = 2</text>
+<text x="182" y="66" text-anchor="middle" fill="#157f74" font-size="18" font-weight="700" font-family="system-ui,sans-serif">弧长 s = πR = 2π</text>
+<path d="M333 147H386" stroke="#9cafb5" stroke-width="3"/><path d="M374 138L386 147L374 156" fill="none" stroke="#9cafb5" stroke-width="3"/>
+<text x="548" y="27" text-anchor="middle" fill="#28515c" font-size="19" font-weight="700" font-family="system-ui,sans-serif">卷成圆锥：轴截面</text>
+<path d="M554 63L454 236A100 18 0 0 0 654 236Z" fill="#dceee9" stroke="#18867a" stroke-width="2"/>
+<path d="M454 236A100 18 0 0 1 654 236" fill="none" stroke="#8db6ae" stroke-dasharray="5 4" stroke-width="2"/>
+<path d="M554 63L454 236M554 63L654 236" fill="none" stroke="#176f69" stroke-width="3"/>
+<path d="M554 63V236H654" fill="none" stroke="#dc805a" stroke-width="3"/>
+<path d="M554 222H568V236" stroke="#dc805a" stroke-width="2" fill="none"/>
+<circle cx="554" cy="236" r="4" fill="#dc805a"/>
+<text x="569" y="155" fill="#a85c3d" font-size="18" font-weight="700" font-family="system-ui,sans-serif">h = √3</text>
+<text x="590" y="227" fill="#a85c3d" font-size="17" font-weight="700" font-family="system-ui,sans-serif">r = 1</text>
+<text x="472" y="147" fill="#176f69" font-size="17" font-weight="700" font-family="system-ui,sans-serif">l = 2</text>
+<text x="360" y="305" text-anchor="middle" fill="#365965" font-size="17" font-weight="700" font-family="system-ui,sans-serif">半圆弧长 2π = 圆锥底面周长 2π × 1</text>
+</svg>
