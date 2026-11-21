@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 4,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and endpoints",
+      "official answer",
+      "all subscripts"
+    ]
+  },
+  "answer": {
+    "official": "2",
+    "independent_check": "log₂4=2，因为 2²=4；负根 −2 不符合底数 a>0 的条件，故唯一解为 2。"
+  },
+  "math_equations": [
+    "log_a4=2",
+    "a²=4",
+    "a=2"
+  ],
+  "figure_assertions": [
+    "y 等于以二为底 x 的对数曲线经过四二，横坐标四对应纵坐标二，垂直与水平虚线定位该点。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "答案取自原 PDF 第 7 页；推导、图示、核验是独立编辑新增。未声称 PDF 有公开 URL。"
+}

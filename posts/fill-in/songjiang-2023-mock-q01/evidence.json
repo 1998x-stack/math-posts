@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 1,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF; source filename 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question text",
+      "math operators",
+      "parameters",
+      "page 7 reference answer"
+    ]
+  },
+  "answer": {
+    "official": "{−1,0,1}",
+    "official_source": "source PDF page 7, fill-in answer key",
+    "independent_result": "{−1,0,1}",
+    "independent_check": "代入 −1、0、1 均满足 −2<x≤1；−2 不满足严格不等式，2 超出上界。与第7页答案一致。"
+  },
+  "math_equations": [
+    "-2<x\\le1",
+    "x\\in\\mathbb{Z},\\quad-2<x\\le1",
+    "A\\cap B=\\{-1,0,1\\}"
+  ],
+  "editorial_note": "原题对照PDF第1页渲染图；参考答案取PDF第7页。后续逐步解法为独立推导。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

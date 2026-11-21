@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 1,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "question statement",
+      "math operators and endpoints",
+      "official answer",
+      "all subscripts"
+    ]
+  },
+  "answer": {
+    "official": "{2,3,4}",
+    "independent_check": "2、3、4 在 B 中且都满足 0<x≤4；−1 和 5 不满足，因此结果与原卷第 7 页答案一致。"
+  },
+  "math_equations": [
+    "A=(0,4]",
+    "B={−1,2,3,4,5}",
+    "A∩B={2,3,4}"
+  ],
+  "figure_assertions": [
+    "绿色线段是区间零到四左开右闭，橙色点二三四是有限集合 B 中同时位于 A 内的点。"
+  ],
+  "qa": {
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "not verified"
+  },
+  "editorial_note": "答案取自原 PDF 第 7 页；推导、图示、核验是独立编辑新增。未声称 PDF 有公开 URL。"
+}

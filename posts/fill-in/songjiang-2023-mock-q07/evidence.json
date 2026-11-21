@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市松江区 2023 届高三一模数学试卷",
+    "question": 7,
+    "pages": [
+      1
+    ],
+    "answers_pages": [
+      7
+    ],
+    "material": "user-uploaded file 138-2023松江一模.pdf",
+    "exam_date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pdf-pages",
+    "checked_elements": [
+      "original question",
+      "formula",
+      "page 7 answer"
+    ]
+  },
+  "answer": {
+    "official": "(−1/5,2/5)",
+    "official_source": "PDF p.7 reference answer",
+    "independent_check": "投影与 b 平行，余向量 (26/5,13/5) 与 b 点积为0，参考答案为 (−1/5,2/5)。",
+    "independent_result": "(−1/5,2/5)"
+  },
+  "math_equations": [
+    "\\vec{a}\\cdot\\vec{b}=5(-1)+3(2)=1",
+    "|\\vec{b}|^2=(-1)^2+2^2=5",
+    "\\frac{\\vec{a}\\cdot\\vec{b}}{|\\vec{b}|^2}\\vec{b}=\\frac15(-1,2)=(-\\frac15,\\frac25)",
+    "(\\frac{26}{5},\\frac{13}{5})\\cdot(-1,2)=0"
+  ],
+  "editorial_note": "原卷第1页题干及第7页答案人工复核，推导和图解独立构建，不冒充官方步骤。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "not verified"
+  }
+}

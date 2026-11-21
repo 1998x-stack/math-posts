@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "第 12 周高三数学课堂练习",
+    "question": 6,
+    "pages": [
+      1
+    ],
+    "image_number": 1,
+    "material": "user-uploaded photographed worksheet (not PDF)",
+    "year": "not specified"
+  },
+  "transcription": {
+    "status": "checked-against-uploaded-photo",
+    "checked_elements": [
+      "base radius is 1",
+      "area of flattened lateral surface equals 2π",
+      "asked quantity is volume"
+    ]
+  },
+  "answer": {
+    "official": "原卷未提供可认证的官方答案；照片中有手写批注。",
+    "independent_result": "√3π/3",
+    "independent_check": "πrl=2π -> l=2; h=√(2²−1²)=√3; V=πr²h/3=√3π/3"
+  },
+  "math_equations": [
+    "S_lateral=πrl=2π",
+    "l=2",
+    "h²=l²−r²=3",
+    "V=√3π/3"
+  ],
+  "diagram_assertions": [
+    "sector radius equals slant height 2",
+    "half-circle sector area is 2π"
+  ],
+  "qa": {
+    "source_checked": "passed",
+    "algebra_checked": "passed",
+    "browser": "not verified"
+  },
+  "editorial_note": "照片题干非官方 PDF；教学图分开显示圆锥侧面及扇形展开，手写答案不是权威依据。"
+}

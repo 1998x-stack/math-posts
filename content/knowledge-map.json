@@ -28,11 +28,33 @@
             "值域"
           ],
           "posts": [
-            "jianping-2021-q01"
+            "jianping-2021-q01",
+            "week12-gaosan-q08",
+            "chongming-2023-q04"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
             "分析复合函数的定义域和值域"
+          ]
+        },
+        {
+          "id": "logarithms-vieta",
+          "title": "对数换底与一元二次方程根的关系",
+          "difficulty": 2,
+          "prerequisites": [
+            "function-basics"
+          ],
+          "tags": [
+            "对数",
+            "换底公式",
+            "韦达定理"
+          ],
+          "posts": [
+            "week12-gaosan-q08"
+          ],
+          "outcomes": [
+            "用自然对数换底写出不同底数的对数",
+            "通过根和根积计算根的比值与平方和"
           ]
         },
         {
@@ -49,7 +71,9 @@
           ],
           "posts": [
             "jianping-2021-q03",
-            "jianping-2021-q08"
+            "jianping-2021-q08",
+            "week12-gaosan-q07",
+            "songjiang-2023-mock-q05"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -70,7 +94,8 @@
             "迭代"
           ],
           "posts": [
-            "jianping-2021-q21"
+            "jianping-2021-q21",
+            "week12-gaosan-q07"
           ],
           "outcomes": [
             "分析分段表达式与图像变化",
@@ -90,7 +115,13 @@
             "切线",
             "变化率"
           ],
-          "posts": [],
+          "posts": [
+            "derivative-classics-q01",
+            "derivative-classics-q02",
+            "derivative-classics-q03",
+            "derivative-classics-q04",
+            "derivative-classics-q05"
+          ],
           "outcomes": [
             "用平均变化率理解瞬时变化率",
             "把导数解释为切线斜率"
@@ -109,7 +140,13 @@
             "单调区间",
             "最值"
           ],
-          "posts": [],
+          "posts": [
+            "derivative-classics-q01",
+            "derivative-classics-q02",
+            "derivative-classics-q03",
+            "derivative-classics-q04",
+            "derivative-classics-q05"
+          ],
           "outcomes": [
             "用导数判断单调区间",
             "结合定义域与端点求最值"
@@ -157,7 +194,8 @@
           ],
           "posts": [
             "jianping-2021-q01",
-            "jianping-2021-q11"
+            "jianping-2021-q11",
+            "songjiang-2023-mock-q02"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -176,7 +214,9 @@
             "恒等式",
             "三角变换"
           ],
-          "posts": [],
+          "posts": [
+            "songjiang-2023-mock-q02"
+          ],
           "outcomes": [
             "使用基本恒等关系化简表达式",
             "辨别恒等变形的适用条件"
@@ -246,7 +286,8 @@
           ],
           "posts": [
             "jianping-2021-q10",
-            "week12-gaosan-q05"
+            "week12-gaosan-q05",
+            "songjiang-2023-mock-q04"
           ],
           "outcomes": [
             "使用等差数列通项和求和公式",
@@ -267,7 +308,8 @@
           ],
           "posts": [
             "jianping-2021-q06",
-            "week12-gaosan-q05"
+            "week12-gaosan-q05",
+            "chongming-2023-q05"
           ],
           "outcomes": [
             "从相邻项比值识别公比",
@@ -339,11 +381,33 @@
           ],
           "posts": [
             "jianping-2021-q05",
-            "jianping-2021-q17"
+            "jianping-2021-q17",
+            "songjiang-2023-mock-q06"
           ],
           "outcomes": [
             "理解常见几何体结构与截面",
             "区分长度、面积和体积量纲"
+          ]
+        },
+        {
+          "id": "cone-solids",
+          "title": "圆锥、旋转体与展开图",
+          "difficulty": 2,
+          "prerequisites": [
+            "spatial-relations"
+          ],
+          "tags": [
+            "圆锥",
+            "旋转体",
+            "侧面积",
+            "展开扇形"
+          ],
+          "posts": [
+            "week12-gaosan-q06"
+          ],
+          "outcomes": [
+            "区分圆锥母线、底面半径与垂直高",
+            "从扇形展开面积恢复圆锥尺寸及体积"
           ]
         },
         {
@@ -410,7 +474,8 @@
             "参数方程"
           ],
           "posts": [
-            "jianping-2021-q02"
+            "jianping-2021-q02",
+            "songjiang-2023-mock-q07"
           ],
           "outcomes": [
             "用坐标描述点和方向",
@@ -431,7 +496,9 @@
             "复平面"
           ],
           "posts": [
-            "week12-gaosan-q02"
+            "week12-gaosan-q02",
+            "chongming-2023-q03",
+            "songjiang-2023-mock-q03"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -452,7 +519,8 @@
           ],
           "posts": [
             "jianping-2021-q02",
-            "shanghai-2024-geometry-jingan-q20"
+            "shanghai-2024-geometry-jingan-q20",
+            "week12-gaosan-q09"
           ],
           "outcomes": [
             "在常见直线方程间转换",
@@ -489,7 +557,8 @@
             "shanghai-2024-geometry-jinshan-q20",
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
-            "shanghai-2024-geometry-yangpu-q20"
+            "shanghai-2024-geometry-yangpu-q20",
+            "songjiang-2023-mock-q10"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -524,7 +593,8 @@
             "shanghai-2024-geometry-jinshan-q20",
             "shanghai-2024-geometry-chongming-q20",
             "shanghai-2024-geometry-huangpu-q20",
-            "shanghai-2024-geometry-yangpu-q20"
+            "shanghai-2024-geometry-yangpu-q20",
+            "songjiang-2023-mock-q10"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",
@@ -553,7 +623,8 @@
           "posts": [
             "jianping-2021-q07",
             "jianping-2021-q09",
-            "week12-gaosan-q04"
+            "week12-gaosan-q04",
+            "week12-gaosan-q10"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -636,7 +707,10 @@
           "posts": [
             "jianping-2021-q03",
             "week12-gaosan-q01",
-            "week12-gaosan-q03"
+            "week12-gaosan-q03",
+            "derivative-classics-q02",
+            "derivative-classics-q03",
+            "chongming-2023-q02"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -657,7 +731,9 @@
             "数轴"
           ],
           "posts": [
-            "week12-gaosan-q03"
+            "week12-gaosan-q03",
+            "chongming-2023-q01",
+            "songjiang-2023-mock-q01"
           ],
           "outcomes": [
             "将条件集合转化成区间",
@@ -722,7 +798,10 @@
           "posts": [
             "jianping-2021-q03",
             "jianping-2021-q13",
-            "jianping-2021-q21"
+            "jianping-2021-q21",
+            "derivative-classics-q01",
+            "derivative-classics-q04",
+            "week12-gaosan-q09"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",
