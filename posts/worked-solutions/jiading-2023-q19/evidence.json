@@ -1,0 +1,37 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 19,
+    "pages": [
+      3,
+      4
+    ],
+    "answer_pages": [
+      7,
+      8,
+      9
+    ],
+    "material": "user-uploaded PDF; no verified public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "all subquestions",
+      "math notation",
+      "official solution",
+      "figures"
+    ]
+  },
+  "answer": {
+    "official": "官方分段结论：不超过5年选B、超过5年选A。官方表格5年A为227180元，但示例计算误写228243元。",
+    "independent_check": "原卷表格第 5 年 A=227180、B=208388；第 6 年 A=257279、B=336655。按表达式独立复算一致，5 年 A 的单独示例误用 16 km/L 算出 228243，需明确勘误。"
+  },
+  "math_equations": [
+    "燃油车 n 年净总成本",
+    "电动车 n 年净总成本",
+    "五年正确燃油用量和费用",
+    "第六年成本比较"
+  ],
+  "editorial_note": "原卷第8页标准答案表中 5 年 A 费用 227180 元与第8页示例算式结果 228243 元不一致；后者把 6 L/100km 误改成 16km/L 作为精确油耗。独立复算得到 227180 元。"
+}

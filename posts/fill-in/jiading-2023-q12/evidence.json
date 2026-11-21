@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 12,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "√3 v/20",
+    "independent_check": "x=10√3 时 2x(dx/dt)=3v；解得 √3v/20，与原卷答案一致。"
+  },
+  "math_equations": [
+    "导数关系",
+    "瞬时速率"
+  ],
+  "editorial_note": ""
+}

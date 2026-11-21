@@ -1,0 +1,31 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 14,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "material": "user-uploaded PDF; no verified public PDF URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "math notation",
+      "answer key",
+      "diagram or options"
+    ]
+  },
+  "answer": {
+    "official": "D",
+    "independent_check": "原卷答案为 D；Γ₃ 的相对开口比 3/2，Γ₂ 为 2/3，已经排除①②③。"
+  },
+  "math_equations": [
+    "开口比比较",
+    "结论判断"
+  ],
+  "editorial_note": ""
+}

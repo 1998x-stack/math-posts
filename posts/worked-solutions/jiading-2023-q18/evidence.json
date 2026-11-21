@@ -1,0 +1,33 @@
+{
+  "source": {
+    "title": "上海市嘉定区 2023 届高三一模数学试卷（2022.12）",
+    "question": 18,
+    "pages": [
+      3
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF; no verified public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original question",
+      "all subquestions",
+      "math notation",
+      "official solution",
+      "figures"
+    ]
+  },
+  "answer": {
+    "official": "（1）1/2；（2）aₙ=18/(2n+1)",
+    "independent_check": "标准答案为 1/2 和 18/(2n+1)；独立代入 n=1 得 6、n=4 得 2。"
+  },
+  "math_equations": [
+    "调和中项公式",
+    "等差倒数数列",
+    "调和通项"
+  ],
+  "editorial_note": ""
+}
