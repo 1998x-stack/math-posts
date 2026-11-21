@@ -129,7 +129,7 @@
     });
     if (page > 1) url.searchParams.set('page', String(page));
     else url.searchParams.delete('page');
-    history[push ? 'pushState' : 'replaceState']({}, '', url);
+    if (url.href !== location.href) history[push ? 'pushState' : 'replaceState']({}, '', url);
   }
 
   function renderPager(totalPages) {
@@ -226,13 +226,13 @@
   });
   if (select) select.addEventListener('change', () => {
     page = 1;
-    if (catalogue) { render(); writeLocation(false); }
-    else loadIndex().then(() => writeLocation(false));
+    if (catalogue) { render(); writeLocation(true); }
+    else loadIndex().then(() => writeLocation(true));
   });
   facetSelects.forEach(control => control.addEventListener('change', () => {
     page = 1;
-    if (catalogue) { render(); writeLocation(false); }
-    else loadIndex().then(() => writeLocation(false));
+    if (catalogue) { render(); writeLocation(true); }
+    else loadIndex().then(() => writeLocation(true));
   }));
   if (resetFilters) resetFilters.addEventListener('click', () => {
     input.value = '';

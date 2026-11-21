@@ -116,3 +116,13 @@ def test_all_132_questions_keep_original_titles_and_source_pages():
     assert all(p.get('question_number') and p.get('paper_id') for p in posts)
     for p in posts:
         assert p['facets']['concept'], p['slug']
+
+
+def test_no_public_route_for_draft_only_exam_excerpt():
+    posts, _, papers, _ = fixture_data()
+    draft_only = next(p for p in papers if p["id"] == "shanghai-2024-er-mo-fengxian")
+    assert not any(p["paper_id"] == draft_only["id"] and p["status"] == "published" for p in posts)
+    from build_site import ROOT
+    # The build produces public_papers and excludes this record from route generation.
+    source = (ROOT / "scripts/build_site.py").read_text("utf-8")
+    assert "public_papers=" in source and "for paper in public_papers" in source

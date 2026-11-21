@@ -609,7 +609,8 @@ def build(root:Path,out:Path,base:str):
     papers,taxonomy=load_atlas(root,posts,knowledge_map)
     write(out,'index.html',build_home(categories,posts,base,papers,taxonomy,knowledge_map))
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
-    for paper in papers:
+    public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]
+    for paper in public_papers:
         write(out,f'papers/{paper["id"]}/index.html',build_paper_detail(paper,posts,taxonomy,base,html_page,article_url))
     for archive_page in range(1,archive_page_count(posts)+1):
         write(out,archive_page_url(archive_page)+'index.html',build_archive(posts,categories,base,archive_page))
@@ -641,7 +642,7 @@ def build(root:Path,out:Path,base:str):
               'facet_terms':' '.join(facet_tokens[tag] for values in p['facets'].values() for tag in values)}
             for p in ordered]
     write(out,'posts.json',json.dumps(search,ensure_ascii=False,indent=2)+'\n')
-    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/'),url_join(base,'papers/')]+[url_join(base,f'papers/{paper["id"]}/') for paper in papers]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
+    urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/'),url_join(base,'papers/')]+[url_join(base,f'papers/{paper["id"]}/') for paper in public_papers]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
     sitemap=''.join(f'<url><loc>{X(u)}</loc></url>' for u in urls)
     write(out,'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+sitemap+'</urlset>')
     write(out,'robots.txt',f'User-agent: *\nAllow: /\nSitemap: {url_join(base,"sitemap.xml")}\n')
