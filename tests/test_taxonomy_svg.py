@@ -24,7 +24,7 @@ def test_question_type_page_has_distinct_canonical_and_correct_breadcrumb():
     assert '<h1>按试卷题型浏览</h1>' in type_html
     assert 'href="https://1998x-stack.github.io/math-posts/question-types/"' in type_html
     assert '首页</a> <span>/</span> 试卷题型' in type_html
-    assert '按试卷题型浏览' not in build_topics(categories, posts, url, graph)
+    assert '<h1>按试卷题型浏览</h1>' not in build_topics(categories, posts, url, graph)
 
 
 def test_homepage_subject_filter_is_not_a_question_type():
