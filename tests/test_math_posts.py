@@ -381,7 +381,7 @@ def test_chongming_2023_next_five_visual_mathml_and_source_pages():
 
 def test_songjiang_second_ten_source_and_semantic_mathml():
     from bs4 import BeautifulSoup
-    docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and p["question_number"]>=11],key=lambda p:p["question_number"])
+    docs=sorted([p for p in manifest() if p.get("source_exam")=="songjiang-2023-first-mock" and 11<=p["question_number"]<=20],key=lambda p:p["question_number"])
     assert [p["question_number"] for p in docs]==list(range(11,21))
     assert [p["status"] for p in docs]==["published"]*5+["draft"]+["published"]*3+["draft"]
     assert [p["category"] for p in docs]==["fill-in"]*2+["multiple-choice"]*4+["worked-solutions"]*4
@@ -482,3 +482,75 @@ def test_reviewed_mathml_has_no_known_fused_or_undefined_identifiers():
         soup=BeautifulSoup((ROOT/'posts'/p['category']/slug/'index.html').read_text('utf-8'),'html.parser')
         for mi in soup.select('math mi'):
             assert mi.get_text(strip=True) not in bad,(slug,mi.get_text(strip=True))
+
+def test_songjiang_q21_source_mathml_and_publication():
+    import xml.etree.ElementTree as ET
+    from bs4 import BeautifulSoup
+    post=next(p for p in manifest() if p["slug"]=="songjiang-2023-mock-q21")
+    assert post["paper_id"]=="songjiang-2023-mock"
+    assert post["source_id"]=="songjiang-2023-mock-source"
+    assert post["question_number"]==21 and post["status"]=="published"
+    assert post["category"]=="worked-solutions" and post["topic"]=="sequences"
+    assert post["source_pages"]==[6] and post["reference_answer_pages"]==[7,8]
+    assert {"functions","sequences","sets"} <= set(post["facets"]["concept"])
+    assert "casework" in post["facets"]["method"] and "number-line" in post["facets"]["visual"]
+    root=ROOT/"posts"/post["category"]/post["slug"]
+    html=(root/"index.html").read_text("utf-8")
+    evidence=json.loads((root/"evidence.json").read_text("utf-8"))
+    assert html.index('id="overview"') < html.index('id="question"') < html.index('id="solution"')
+    assert 'id="visual"' in html and 'src="assets/sequence-threshold.svg"' in html
+    assert html.count('class="step-note"')>=3 and html.count('<math')>=20
+    assert "H 是两支离散数列的并，不是连续区间" in html
+    assert "上确界，不是最大值" in html
+    assert evidence["source"]["pages"]==[6]
+    assert evidence["source"]["answers_pages"]==[7,8]
+    assert evidence["transcription"]["status"]=="checked-against-rendered-pages"
+    assert evidence["qa"]["source_checked"] is True and evidence["qa"]["algebra_checked"] is True
+    assert "e^4+1" in evidence["answer"]["official"] and "e^4−e" in evidence["answer"]["official"]
+    soup=BeautifulSoup(html,"html.parser")
+    for frac in soup.select("math mfrac"):
+        children=[child for child in frac.children if getattr(child,"name",None)]
+        assert len(children)==2, f"Invalid MathML fraction in Q21: {frac}"
+    for op in soup.select("math munderover"):
+        children=[child for child in op.children if getattr(child,"name",None)]
+        assert len(children)==3, f"Invalid MathML sum limits in Q21: {op}"
+    for path in [root/"assets/cover.svg",root/"assets/sequence-threshold.svg"]:
+        tree=ET.parse(path)
+        assert tree.find(".//{http://www.w3.org/2000/svg}title") is not None
+        assert tree.find(".//{http://www.w3.org/2000/svg}desc") is not None
+    assert '<mo>frac</mo>' not in html and '<mo>mathrm</mo>' not in html
+    assert '<mo>text</mo>' not in html and '<mo>cdots</mo>' not in html
+
+
+def test_songjiang_q21_independent_sequence_and_threshold_invariants():
+    import math
+    e=math.e
+    def g(n):
+        return (3*n-1)//2 if n%2 else (3*n-2)//2
+    assert [g(n) for n in range(1,9)]==[1,2,4,5,7,8,10,11]
+    terms=[math.exp(g(n)+1) for n in range(1,9)]
+    expected=[e**2,e**3,e**5,e**6,e**8,e**9,e**11,e**12]
+    assert all(math.isclose(x,y,rel_tol=1e-12) for x,y in zip(terms,expected))
+    C=(e**2+e**3)/(e**3-1)
+    A=(1+e**2)/(e**3-1)
+    assert math.isclose(C-A,1,rel_tol=1e-12)
+    for m in range(1,9):
+        direct_even=sum(math.exp(g(n)+1) for n in range(1,2*m+1))
+        T_even=C*(e**(3*m)-1)
+        assert math.isclose(direct_even,T_even,rel_tol=1e-12)
+        direct_odd=direct_even+e**(3*m+2)
+        T_odd=T_even+e**(3*m+2)
+        assert math.isclose(direct_odd,T_odd,rel_tol=1e-12)
+        w_even=T_even/e**(3*m)
+        assert math.isclose(w_even,C*(1-e**(-3*m)),rel_tol=1e-12)
+        assert w_even<C
+    assert math.isclose(A-C/e**3,1/e,rel_tol=1e-12)
+    for m in range(8):
+        w_odd=A-C/e**(3*m+3)
+        assert w_odd<A
+    diameter=C-1/e
+    answer=(e**4+1)/(e**4-e)
+    assert math.isclose(diameter,answer,rel_tol=1e-12)
+    assert diameter>0
+    assert math.isclose(C*(1-e**-3),(1+e)/e,rel_tol=1e-12)
+    assert C*(1-e**-60)-1/e > diameter-1e-6

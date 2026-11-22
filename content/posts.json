@@ -5473,5 +5473,60 @@
       "method": [],
       "visual": []
     }
+  },
+  {
+    "slug": "songjiang-2023-mock-q21",
+    "title": "指数函数、删项数列与集合阈度：从奇偶分组到直径",
+    "subtitle": "由 f=f′ 锁定 e^(x+1)，按奇偶项求删项数列的部分和，再用上确界求出 H 的全部阈度",
+    "category": "worked-solutions",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 25,
+    "tags": [
+      "2023届松江区一模",
+      "2022年12月",
+      "指数函数",
+      "删项数列",
+      "奇偶分类",
+      "等比数列求和",
+      "有界集合",
+      "上确界",
+      "集合直径"
+    ],
+    "summary": "《上海市松江区2023届高三一模数学试卷》第21题：先由 f=f′ 得 f(x)=e^(x+1)，再按奇偶新序号求部分和，最后以 H 的最小值和上确界求得全部阈度区间。原卷第6页，参考答案第7–8页。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "songjiang-2023-first-mock",
+    "source_kind": "exam-pdf",
+    "source_id": "songjiang-2023-mock-source",
+    "question_number": 21,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      6
+    ],
+    "reference_answer_pages": [
+      7,
+      8
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "删除原序号中3的倍数后，奇偶两支离散数列分别趋近A与C；集合直径由最小值1/e和上确界C决定"
+    },
+    "paper_id": "songjiang-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "sequences",
+        "sets"
+      ],
+      "method": [
+        "casework",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "number-line"
+      ]
+    }
   }
 ]
