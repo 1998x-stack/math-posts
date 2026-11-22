@@ -32,7 +32,8 @@
             "week12-gaosan-q08",
             "chongming-2023-q04",
             "shanghai-putuo-2023-q03",
-            "songjiang-2023-mock-q15"
+            "songjiang-2023-mock-q15",
+            "yangpu-2023-q12"
           ],
           "outcomes": [
             "读懂函数的输入、输出与对应关系",
@@ -222,7 +223,8 @@
             "yangpu-2023-q04",
             "shanghai-putuo-2023-q04",
             "jiading-2023-q16",
-            "songjiang-2023-mock-q18"
+            "songjiang-2023-mock-q18",
+            "yangpu-2023-q15"
           ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
@@ -350,7 +352,8 @@
             "jianping-2021-q10",
             "week12-gaosan-q05",
             "songjiang-2023-mock-q04",
-            "jiading-2023-q18"
+            "jiading-2023-q18",
+            "yangpu-2023-q11"
           ],
           "outcomes": [
             "使用等差数列通项和求和公式",
@@ -428,7 +431,8 @@
             "jianping-2021-q17",
             "jiading-2023-q17",
             "songjiang-2023-mock-q17",
-            "shanghai-putuo-2023-q13"
+            "shanghai-putuo-2023-q13",
+            "yangpu-2023-q14"
           ],
           "outcomes": [
             "辨认平行、相交与异面",
@@ -767,7 +771,8 @@
             "hongkou-2023-q04",
             "shanghai-putuo-2023-q06",
             "hongkou-2023-q08",
-            "yangpu-2023-q10"
+            "yangpu-2023-q10",
+            "yangpu-2023-q13"
           ],
           "outcomes": [
             "区分分类加法与分步乘法",
@@ -790,7 +795,8 @@
           "posts": [
             "jiading-2023-q15",
             "shanghai-putuo-2023-q08",
-            "hongkou-2023-q08"
+            "hongkou-2023-q08",
+            "yangpu-2023-q13"
           ],
           "outcomes": [
             "明确样本空间与事件集合",
@@ -981,7 +987,10 @@
             "jiading-2023-q16",
             "derivative-classics-q07",
             "derivative-classics-q10",
-            "songjiang-2023-mock-q13"
+            "songjiang-2023-mock-q13",
+            "yangpu-2023-q12",
+            "yangpu-2023-q14",
+            "yangpu-2023-q15"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

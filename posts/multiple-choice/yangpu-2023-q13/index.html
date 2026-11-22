@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="把三次抽取按顺序观察，指定学生可能首次出现在第 1、2、3 次。"><title>抽取三人：任意指定一名学生入样的概率都是 3/10 · math-posts</title>
+<link rel="stylesheet" href="../../../assets/article.css"><style>
+@media print{.toc{display:none!important}.layout{display:block}.fact-grid,.step-note,.question,figure{break-inside:avoid}.diagram-scroll{overflow:visible}.diagram-scroll svg{width:100%;max-width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+html,body,main,article,section,.layout{max-width:100%;min-width:0}
+.fact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.fact{padding:14px 16px;border:1px solid #d8e8e3;border-radius:12px;background:#f5f9f7}.fact strong{display:block;color:#167d80;font-size:.82rem;margin-bottom:5px}.fact p{margin:0;font-size:.94rem}
+.step-note{margin:.65rem 0 1rem;padding:12px 15px;border-left:3px solid #167d80;background:#f2f8f6;border-radius:0 9px 9px 0}
+.key-idea{padding:14px 18px;border:1px solid #d8e8e3;border-radius:12px;background:#f8faf6}.transfer{padding:14px 18px;background:#f7f6f0;border-radius:12px}
+.math-equation,.math-scroll{max-width:100%;min-width:0}.math-scroll{overflow-x:auto;overflow-y:hidden}.math-scroll:focus-visible{outline:3px solid #147f80;outline-offset:2px}.math-scroll math[display=block]{display:block;width:max-content;min-width:100%;font-size:1.11rem}
+.option-list{padding-left:2rem}.option-list li{margin:.6rem 0;line-height:1.8}.option-list math{vertical-align:middle}
+figure{min-width:0;margin:1.5rem 0}.diagram-scroll{max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}.diagram-scroll:focus-visible{outline:3px solid #147f80;outline-offset:2px}.diagram-scroll svg{display:block;width:760px;max-width:none;height:auto}.diagram-scroll--wide svg{width:900px}\n@media print{.diagram-scroll{overflow:visible}.diagram-scroll svg,.diagram-scroll--wide svg{width:100%;max-width:100%}}
+@media(max-width:640px){.fact-grid{grid-template-columns:1fr}.fact{padding:12px}.math-scroll math[display=block]{font-size:1rem}}
+</style></head><body><a class="skip-link" href="#content">跳至正文</a><div class="layout">
+<nav class="toc" aria-label="本文目录"><strong>YANGPU 2023 · Q13</strong><a href="#overview">01 题意拆解</a><a href="#question">02 原题</a><a href="#intuition">03 关键观察</a><a href="#solution">04 逐步推导</a><a href="#visual">05 数学图解</a><a href="#answer">06 答案核验</a><a href="#transfer">07 方法迁移</a></nav>
+<main id="content"><article><header><span class="eyebrow">选择题 · 第 13 题 · probability</span><h1>抽取三人：任意指定一名学生入样的概率都是 3/10</h1><p class="lead">把三次抽取按顺序观察，指定学生可能首次出现在第 1、2、3 次。</p><p class="meta">上海市杨浦区 2023 届高三一模数学试卷 · 题干 PDF 第 2 页 · 参考答案 PDF 第 8 页</p></header>
+<section id="overview"><h2>01 · 先理解题目在问什么</h2><div class="question problem-overview"><p>从 10 名学生中抽 3 名，每个三人组合机会相同。题目分别问 5 号和 6 号被抽到的概率，但两人没有任何不同待遇。可以直接数包含指定学生的三人组合，也可以把指定学生首次出现的位置拆成三个互斥事件；两种方法都得到 3/10。</p><div class="fact-grid"><div class="fact"><strong>样本空间</strong><p>从 10 人中选 3 人，共 120 个三人组</p></div><div class="fact"><strong>关注事件</strong><p>指定学生至少在三次抽取中出现一次</p></div><div class="fact"><strong>核心对称性</strong><p>5 号和 6 号的入样概率相同</p></div></div><p><strong>解题路线：</strong>数出所有三人组 → 固定一名学生再选两人 → 36/120=3/10 → 利用对称性得到 a=b</p></div></section>
+<section id="question"><h2>02 · 原题</h2><div class="question"><p>从学号为 1～10 的 10 名学生中，用抽签法抽取 3 名学生进行问卷调查。设 5 号同学被抽到的概率为 a，6 号同学被抽到的概率为 b，则（　　）</p><ol type="A" class="option-list">
+<li><math class="math-inline" aria-label="a 等于十分之三，b 等于九分之二"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>,</mo><mspace width="1em"/><mi>b</mi><mo>=</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math></li>
+<li><math class="math-inline" aria-label="a 等于十分之一，b 等于九分之一"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>,</mo><mspace width="1em"/><mi>b</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></mrow></math></li>
+<li><math class="math-inline" aria-label="a 等于十分之三，b 等于十分之三"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>,</mo><mspace width="1em"/><mi>b</mi><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></math></li>
+<li><math class="math-inline" aria-label="a 等于十分之一，b 等于十分之一"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>,</mo><mspace width="1em"/><mi>b</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></math></li>
+</ol></div></section>
+<section id="intuition"><h2>03 · 关键观察与方法选择</h2><div class="key-idea"><p>“抽签”保证每个学生完全等可能地进入样本。对指定学生而言，入样后只剩两个名额需要从其余 9 人中选；这比列举全部 120 个组合更直接。</p><p><strong>为什么 5 号与 6 号概率相同：</strong>交换两人的学号不会改变任何三人组合的可能性，二者在样本空间中具有完全对称的地位。</p></div></section>
+<section id="solution"><h2>04 · 逐步推导</h2><ol><li><strong>先确定所有可能的三人小组。</strong><p>不考虑抽取先后，10 人中任选 3 人，等可能样本共有</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="三人样本的总数"><math display="block" aria-label="三人样本的总数"><mrow><msubsup><mi>C</mi><mn>10</mn><mn>3</mn></msubsup><mo>=</mo><mn>120</mn></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>抽签法使每个三人组合机会相同；先后顺序不是问卷样本的不同类型，不能把同一组的排列重复计数。</p></li><li><strong>计算 5 号被抽到的组合数。</strong><p>若 5 号已经入样，剩下两个位置只需从另外 9 人中选择：</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="包含 5 号的三人组数量"><math display="block" aria-label="包含 5 号的三人组数量"><mrow><msubsup><mi>C</mi><mn>9</mn><mn>2</mn></msubsup><mo>=</mo><mn>36</mn></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>固定 5 号后，只剩两个名额；不能再从 10 人里选，否则会把 5 号重复选择。</p></li><li><strong>得到 a，并用对称性求 b。</strong><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="5 号的入样概率"><math display="block" aria-label="5 号的入样概率"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><msubsup><mi>C</mi><mn>9</mn><mn>2</mn></msubsup></mrow><mrow><msubsup><mi>C</mi><mn>10</mn><mn>3</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>36</mn></mrow><mrow><mn>120</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>3</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></math></div></div><p>6 号与 5 号处在完全相同的抽签地位，因此 b=a=3/10。</p><p class="step-note"><strong>为什么这样做：</strong>题目没有给任何学生额外权重，学号只用于区分身份，不改变抽签概率；所以两人的边际入样概率相等。</p></li><li><strong>核对选项，并用抽取位置作第二种验证。</strong><p>指定学生首次出现于第 1、2、3 次抽取的三个事件互斥，其概率分别为</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="按首次出现位置分解概率"><math display="block" aria-label="按首次出现位置分解概率"><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac><mo>,</mo><mspace width="0.5em"/><mfrac><mrow><mn>9</mn></mrow><mrow><mn>10</mn></mrow></mfrac>×<mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac><mo>,</mo><mspace width="0.5em"/><mfrac><mrow><mn>9</mn></mrow><mrow><mn>10</mn></mrow></mfrac>×<mfrac><mrow><mn>8</mn></mrow><mrow><mn>9</mn></mrow></mfrac>×<mfrac><mrow><mn>1</mn></mrow><mrow><mn>8</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></math></div></div><p>三项相加仍为 3/10，因此正确选项是 C。</p><p class="step-note"><strong>为什么这样做：</strong>把“是否入样”拆成首次出现的三个互斥位置，既检查了无放回抽取，也确认概率没有漏算或重复。</p></li></ol></section>
+<section id="visual"><h2>05 · 把本题的数学结构画出来</h2><figure tabindex="0" role="group" aria-label="三条路径分别表示指定学生首次在第 1、2、3 次抽取中出现；它们互斥且覆盖“被抽到”的全部情况，每条路径概率均为 1/10。"><div class="diagram-scroll" tabindex="0" role="region" aria-label="三条路径分别表示指定学生首次在第 1、2、3 次抽取中出现；它们互斥且覆盖“被抽到”的全部情况，每条路径概率均为 1/10。"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" role="img" aria-labelledby="q13-title q13-desc">
+<title id="q13-title">指定学生被抽到的三条互斥路径</title>
+<desc id="q13-desc">5号学生首次出现在第一次、第二次、第三次抽取的概率分别都是十分之一，三条路径互斥且穷尽，所以被抽到的概率是十分之三。6号学生由对称性相同。</desc>
+<rect width="760" height="390" rx="18" fill="#f5f9f7"/>
+<text x="28" y="38" font-size="22" font-weight="700" fill="#234352">5 号首次出现在哪一次？三条路径刚好覆盖所有情况</text>
+<rect x="255" y="62" width="250" height="52" rx="12" fill="#e6f1ed" stroke="#9dbfb5"/>
+<text x="380" y="94" text-anchor="middle" font-size="19" font-weight="700" fill="#234352">指定学生：5 号</text>
+<g stroke="#7ba9a2" stroke-width="2.5" fill="none"><path d="M380 114V142H130V177"/><path d="M380 142V177"/><path d="M380 142H630V177"/></g>
+<g>
+<rect x="28" y="177" width="204" height="118" rx="12" fill="#ffffff" stroke="#9dbfb5"/>
+<rect x="278" y="177" width="204" height="118" rx="12" fill="#ffffff" stroke="#9dbfb5"/>
+<rect x="528" y="177" width="204" height="118" rx="12" fill="#ffffff" stroke="#9dbfb5"/>
+<text x="130" y="207" text-anchor="middle" font-size="18" font-weight="700" fill="#167d80">第 1 次首次出现</text>
+<text x="130" y="240" text-anchor="middle" font-size="16" fill="#375360">5 号直接被抽中</text>
+<text x="130" y="272" text-anchor="middle" font-size="18" font-weight="700" fill="#234352">1/10</text>
+<text x="380" y="207" text-anchor="middle" font-size="18" font-weight="700" fill="#167d80">第 2 次首次出现</text>
+<text x="380" y="240" text-anchor="middle" font-size="15" fill="#375360">先未抽中，再抽中</text>
+<text x="380" y="272" text-anchor="middle" font-size="17" font-weight="700" fill="#234352">(9/10)×(1/9)=1/10</text>
+<text x="630" y="207" text-anchor="middle" font-size="18" font-weight="700" fill="#167d80">第 3 次首次出现</text>
+<text x="630" y="240" text-anchor="middle" font-size="15" fill="#375360">前两次均未抽中</text>
+<text x="630" y="272" text-anchor="middle" font-size="16" font-weight="700" fill="#234352">(9/10)×(8/9)×(1/8)</text>
+<text x="630" y="290" text-anchor="middle" font-size="14" fill="#234352">=1/10</text>
+</g>
+<path d="M130 295V320H630V295" stroke="#d9825c" stroke-width="2" fill="none"/>
+<text x="380" y="350" text-anchor="middle" font-size="22" font-weight="700" fill="#234352">a = 1/10 + 1/10 + 1/10 = 3/10</text>
+<text x="380" y="375" text-anchor="middle" font-size="15" fill="#375360">6 号与 5 号完全对称，所以 b 也等于 3/10</text>
+</svg></div><figcaption>三条路径分别表示指定学生首次在第 1、2、3 次抽取中出现；它们互斥且覆盖“被抽到”的全部情况，每条路径概率均为 1/10。</figcaption></figure><p>图中用抽取顺序作为计算工具，但原题抽取的是三人样本，最终样本仍不区分先后。组合计数与首次出现路径两种算法相互独立，均验证每位学生的入样概率是 3/10。</p></section>
+<section id="answer"><h2>06 · 答案与独立核验</h2><p class="answer"><strong>原卷参考答案：</strong>C。</p><p><strong>本站独立核验：</strong>组合计数得 a=C(9,2)/C(10,3)=36/120=3/10；同理 b=3/10。另一种验证把首次出现位置分成三个互斥事件，每项概率均为 1/10，合计 3/10。</p><p class="hint"><strong>易错点与边界：</strong>不要把 5 号被抽到与 6 号被抽到当成互斥事件；两人可以同时入样。题目分别求的是两个边际概率，不是“恰好抽到其中某一个”的概率。</p></section>
+<section id="transfer"><h2>07 · 方法迁移</h2><div class="transfer">从 N 人中等可能抽取 k 人时，任意指定一人的入样概率为 k/N。若需要严格计数，可用 C(N−1,k−1)/C(N,k)=k/N。</div></section>
+<footer class="article-footer"><p>题源：<a href="https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md" rel="noopener noreferrer">杨浦一模题源记录</a>（题干 PDF 第 2 页；参考答案第 8 页）。原 PDF 为用户上传材料，无经核实的公开下载链接。原卷只列参考答案，本文逐步推导为本站独立编写。</p><p><a href="../../../archive/">返回题目归档</a> · <a href="../../../topics/">查看知识地图</a> · <a href="../../../papers/yangpu-2023-mock/">按原卷浏览</a></p></footer>
+</article></main></div></body></html>
