@@ -88,7 +88,7 @@
 - [多维标签与检索](skills/math-visual-posts/references/taxonomy-and-tags.md)
 - [试卷与来源 Schema](skills/math-visual-posts/references/exam-provenance-schema.md)
 
-**过渡边界**：现有 132 道题已进行试卷 ID 与初步概念标签登记，但解题方法/可视化标签仍需按题人工复核和补全。不能把索引迁移等同于已逐篇重做教学图。
+**过渡边界**：现有题目已进行试卷 ID 与初步概念标签登记，但解题方法/可视化标签仍需按题人工复核和补全。不能把索引迁移等同于已逐篇重做教学图。
 
 
 ## MathML 与公式语义（2026-11-21）

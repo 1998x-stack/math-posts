@@ -109,7 +109,7 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 
 ### 本轮 MathML / SVG 复审整合
 
-- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留既有 132 道题完整索引并新增松江 Q21（现共 133 条记录）；黄浦 Q20 旧页面因“共焦”概念错误不移植。
+- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留既有题目索引并新增松江 Q21；黄浦 Q20 旧页面因“共焦”概念错误不移植。
 - [81 篇公式回归清单](content/mathml-coverage.json)只约束已完成该批次改造的页面，不把固定公式数量推广到所有题目。
 - [MathML 排版规范](skills/math-visual-posts/references/math-typesetting.md)、[SVG 生产规范](skills/math-visual-posts/references/svg-production.md)与[浏览器 QA](skills/math-visual-posts/references/browser-qa.md)共同作为后续新题与旧文修复标准。
 - CI 运行 SVG 结构/引用审计并上传 JSON 工件；缺失描述先作为可见 warning 跟踪，结构错误阻断构建。
