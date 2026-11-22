@@ -57,6 +57,7 @@
   "qa": {
     "source_checked": true,
     "algebra_checked": true,
-    "browser_render": "pending GitHub Actions Chromium smoke"
+    "browser_render": "passed: GitHub Actions run 45045944727; Chromium browser smoke and static fallback checks",
+    "site_validation": "passed: build, atlas, article links, MathML, SVG accessibility and local asset references"
   }
 }
