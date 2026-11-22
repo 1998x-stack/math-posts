@@ -77,7 +77,8 @@
             "yangpu-2023-q03",
             "hongkou-2023-q09",
             "songjiang-2023-mock-q15",
-            "shanghai-putuo-2023-q14"
+            "shanghai-putuo-2023-q14",
+            "songjiang-2023-mock-q21"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -329,7 +330,8 @@
             "jianping-2021-q14",
             "week12-gaosan-q12",
             "jiading-2023-q18",
-            "songjiang-2023-mock-q12"
+            "songjiang-2023-mock-q12",
+            "songjiang-2023-mock-q21"
           ],
           "outcomes": [
             "从规律或递推关系表示数列",
@@ -899,7 +901,8 @@
             "week12-gaosan-q03",
             "chongming-2023-q01",
             "songjiang-2023-mock-q01",
-            "yangpu-2023-q02"
+            "yangpu-2023-q02",
+            "songjiang-2023-mock-q21"
           ],
           "outcomes": [
             "将条件集合转化成区间",

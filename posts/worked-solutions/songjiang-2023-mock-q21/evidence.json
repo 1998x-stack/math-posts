@@ -1,0 +1,63 @@
+{
+  "source": {
+    "title": "上海市松江区2023届高三一模数学试卷",
+    "question": 21,
+    "pages": [
+      6
+    ],
+    "question_pages": [
+      6
+    ],
+    "answer_pages": [
+      7,
+      8
+    ],
+    "answers_pages": [
+      7,
+      8
+    ],
+    "material": "user-uploaded 138-2023松江一模.pdf",
+    "date": "2022-12"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "完整原题文字与三个小问",
+      "f(x)=e^(kx+b) 的指数及导数条件",
+      "删除第3、6、…、3n项的原序号含义",
+      "H 中分母的奇偶指数与括号",
+      "参考答案第7–8页的分段通项及阈度区间"
+    ],
+    "uncertainty": null
+  },
+  "answer": {
+    "official": "（1）f(x)=e^(x+1)；（2）g(n)=(3n−1)/2（n为奇数），g(n)=(3n−2)/2（n为偶数）；（3）a∈[(e^4+1)/(e^4−e),+∞)。",
+    "official_source": "用户上传PDF第7–8页参考答案（仅列结果式，不含逐步证明）",
+    "independent_result": "f(x)=e^(x+1)；删项后g(n)按奇偶分段；H的奇数分支从1/e递增趋近A=(1+e²)/(e³−1)，偶数分支从(1+e)/e递增趋近C=(e²+e³)/(e³−1)，且C=A+1；H的直径上确界C−1/e=(e⁴+1)/(e⁴−e)，全部阈度为该值及以上。",
+    "independent_check": "t1..t8=e²,e³,e⁵,e⁶,e⁸,e⁹,e¹¹,e¹²；T2m=(e²+e³)(e^(3m)−1)/(e³−1)，T2m+1=T2m+e^(3m+2)。奇数n=2m+1时分母为e^(3m+3)，偶数n=2m时分母为e^(3m)。数值核验A≈0.4395504372，C≈1.4395504372，C−1/e≈1.0716709960，与化简式(e⁴+1)/(e⁴−e)一致。"
+  },
+  "math_equations": [
+    "f'(x)=k e^{kx+b}",
+    "k=1, b=1",
+    "f(x)=e^{x+1}",
+    "g(n)=(3n-1)/2, n odd",
+    "g(n)=(3n-2)/2, n even",
+    "t_{2m-1}=e^{3m-1}",
+    "t_{2m}=e^{3m}",
+    "T_{2m}=(e^2+e^3)(e^{3m}-1)/(e^3-1)",
+    "T_{2m+1}=T_{2m}+e^{3m+2}",
+    "A=(1+e^2)/(e^3-1)",
+    "C=(e^2+e^3)/(e^3-1)",
+    "w_{2m+1}=A-C/e^{3m+3}",
+    "w_{2m}=C(1-e^{-3m})",
+    "C-A=1",
+    "diam(H)=C-1/e=(e^4+1)/(e^4-e)"
+  ],
+  "editorial_note": "本题题干与答案已分别对照用户上传PDF渲染页：题干在第6页，结果式参考答案在第7–8页。PDF未提供逐步官方证明；正文解法、数列求和、上确界与阈度证明均为本站独立推导，无题源符号缺失或条件补写。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "browser_render": "passed: GitHub Actions run 45045944727; Chromium browser smoke and static fallback checks",
+    "site_validation": "passed: build, atlas, article links, MathML, SVG accessibility and local asset references"
+  }
+}

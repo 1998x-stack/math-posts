@@ -109,7 +109,7 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 
 ### 本轮 MathML / SVG 复审整合
 
-- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留 132 道题完整索引；黄浦 Q20 旧页面因“共焦”概念错误不移植。
+- 从旧 MathML PR 安全移植 81 篇文章的公式原位排版，保留既有题目索引并新增松江 Q21；黄浦 Q20 旧页面因“共焦”概念错误不移植。
 - [81 篇公式回归清单](content/mathml-coverage.json)只约束已完成该批次改造的页面，不把固定公式数量推广到所有题目。
 - [MathML 排版规范](skills/math-visual-posts/references/math-typesetting.md)、[SVG 生产规范](skills/math-visual-posts/references/svg-production.md)与[浏览器 QA](skills/math-visual-posts/references/browser-qa.md)共同作为后续新题与旧文修复标准。
 - CI 运行 SVG 结构/引用审计并上传 JSON 工件；缺失描述先作为可见 warning 跟踪，结构错误阻断构建。
@@ -126,3 +126,10 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 ## 杨浦区 2023 届高三一模：第 11–15 题
 
 本批新增 2 道填空题与 3 道选择题：等差数列前项和去重、复合函数方程根数、抽样概率、线面位置关系、三角形充分必要条件。原题位于用户上传 PDF 第 1–2 页，参考答案在第 8 页；五篇文章均保留原题、原生 MathML、独立推导、专属 SVG 与 evidence.json。原卷仅提供参考答案，不把本站解答冒充官方解析。至此杨浦一模已按原卷顺序登记第 1–15 题，原卷共 21 题。
+
+
+## 松江区2023届高三一模 · 最后一题 Q21 完成
+
+已逐页复核完整用户上传PDF：题干第6页、答案第7–8页。第21题已加入 **指数函数 → 删项数列奇偶分组 → 集合直径/上确界** 的完整教学文章，含原题 MathML、逐步独立推导、两张可访问SVG和数学回归测试。结果与原卷参考答案一致：f(x)=e^(x+1)，g(n)按奇偶分段，全部阈度为 [(e⁴+1)/(e⁴−e),+∞)。
+
+至此松江原卷的21道题均已登记；第8、9、16、20题仍按各自来源疑点保持 draft，不会因补齐最后一题而放宽发布门槛。原卷总题数21、PDF页数8已核实登记。详见 [题源与核验记录](content/source-notes.md)。
