@@ -5927,10 +5927,7 @@
     "status": "published",
     "published": "2026-11-23",
     "updated": "2026-11-23",
-    "reading_minutes": [
-      1,
-      7
-    ],
+    "reading_minutes": 10,
     "tags": [
       "analytic-geometry",
       "fill-in",
@@ -5943,7 +5940,10 @@
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 11,
     "question_type": "fill-in",
-    "source_pages": 10,
+    "source_pages": [
+      1,
+      7
+    ],
     "cover": {
       "src": "assets/cover.svg",
       "caption": "外心三角形确定半径，向量参数矩形映射为平行四边形"
@@ -5969,10 +5969,7 @@
     "status": "published",
     "published": "2026-11-23",
     "updated": "2026-11-23",
-    "reading_minutes": [
-      2,
-      7
-    ],
+    "reading_minutes": 14,
     "tags": [
       "analytic-geometry",
       "fill-in",
@@ -5986,7 +5983,10 @@
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 12,
     "question_type": "fill-in",
-    "source_pages": 14,
+    "source_pages": [
+      2,
+      7
+    ],
     "cover": {
       "src": "assets/cover.svg",
       "caption": "双曲线焦点弦、距离比例与四项真假核验"
@@ -6014,10 +6014,7 @@
     "status": "published",
     "published": "2026-11-23",
     "updated": "2026-11-23",
-    "reading_minutes": [
-      2,
-      7
-    ],
+    "reading_minutes": 8,
     "tags": [
       "analytic-geometry",
       "multiple-choice",
@@ -6031,7 +6028,10 @@
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 13,
     "question_type": "multiple-choice",
-    "source_pages": 8,
+    "source_pages": [
+      2,
+      7
+    ],
     "cover": {
       "src": "assets/cover.svg",
       "caption": "m=1 与 m=−1 都是割线，m=0 为切线"
@@ -6060,10 +6060,7 @@
     "status": "published",
     "published": "2026-11-23",
     "updated": "2026-11-23",
-    "reading_minutes": [
-      2,
-      7
-    ],
+    "reading_minutes": 8,
     "tags": [
       "complex-numbers",
       "multiple-choice",
@@ -6076,7 +6073,10 @@
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 14,
     "question_type": "multiple-choice",
-    "source_pages": 8,
+    "source_pages": [
+      2,
+      7
+    ],
     "cover": {
       "src": "assets/cover.svg",
       "caption": "所有合法复数位于以原点为圆心、半径 1/2 的圆上"
@@ -6103,10 +6103,7 @@
     "status": "published",
     "published": "2026-11-23",
     "updated": "2026-11-23",
-    "reading_minutes": [
-      2,
-      7
-    ],
+    "reading_minutes": 9,
     "tags": [
       "analytic-geometry",
       "multiple-choice",
@@ -6121,7 +6118,10 @@
     "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
     "question_number": 15,
     "question_type": "multiple-choice",
-    "source_pages": 9,
+    "source_pages": [
+      2,
+      7
+    ],
     "cover": {
       "src": "assets/cover.svg",
       "caption": "椭圆与抛物线在 x=2/3 处相交形成竖直公共弦"
