@@ -105,7 +105,8 @@
             "yangpu-2023-q01",
             "hongkou-2023-q09",
             "hongkou-2023-q10",
-            "shanghai-putuo-2023-q11"
+            "shanghai-putuo-2023-q11",
+            "chongming-2023-q13"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -252,7 +253,8 @@
             "shanghai-putuo-2023-q05",
             "week12-gaosan-q12",
             "chongming-2023-q07",
-            "hongkou-2023-q10"
+            "hongkou-2023-q10",
+            "chongming-2023-q15"
           ],
           "outcomes": [
             "在单位圆上定位角与函数值",
@@ -583,7 +585,8 @@
           ],
           "posts": [
             "week12-gaosan-q11",
-            "week12-gaosan-q14"
+            "week12-gaosan-q14",
+            "chongming-2023-q11"
           ],
           "outcomes": [
             "利用单位向量夹角及内积建立等式和范围",
@@ -699,7 +702,8 @@
             "jiading-2023-q14",
             "jiading-2023-q20",
             "shanghai-putuo-2023-q07",
-            "yangpu-2023-q08"
+            "yangpu-2023-q08",
+            "chongming-2023-q12"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -877,7 +881,8 @@
             "hongkou-2023-q01",
             "shanghai-putuo-2023-q03",
             "songjiang-2023-mock-q13",
-            "shanghai-putuo-2023-q14"
+            "shanghai-putuo-2023-q14",
+            "chongming-2023-q14"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
