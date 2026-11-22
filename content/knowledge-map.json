@@ -577,12 +577,33 @@
           ],
           "posts": [
             "week12-gaosan-q11",
-            "week12-gaosan-q14",
-            "shanghai-putuo-2023-q15"
+            "week12-gaosan-q14"
           ],
           "outcomes": [
             "利用单位向量夹角及内积建立等式和范围",
             "区分标量投影与沿向量方向的投影向量"
+          ]
+        },
+        {
+          "id": "plane-vector-operations",
+          "title": "平面向量运算、模与三角不等式",
+          "difficulty": 3,
+          "prerequisites": [
+            "coordinate-basics"
+          ],
+          "tags": [
+            "平面向量",
+            "向量加法",
+            "向量模",
+            "三角不等式"
+          ],
+          "posts": [
+            "shanghai-putuo-2023-q15"
+          ],
+          "outcomes": [
+            "整理向量线性关系并转化为向量和",
+            "使用三角不等式与反三角不等式判断合向量模长范围",
+            "结合夹角构造验证模长取值的可实现性"
           ]
         },
         {
