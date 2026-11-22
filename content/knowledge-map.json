@@ -77,7 +77,9 @@
             "yangpu-2023-q03",
             "hongkou-2023-q09",
             "songjiang-2023-mock-q15",
-            "shanghai-putuo-2023-q14"
+            "shanghai-putuo-2023-q14",
+            "derivative-classics-q13",
+            "derivative-classics-q14"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -104,7 +106,9 @@
             "yangpu-2023-q01",
             "hongkou-2023-q09",
             "hongkou-2023-q10",
-            "shanghai-putuo-2023-q11"
+            "shanghai-putuo-2023-q11",
+            "derivative-classics-q11",
+            "derivative-classics-q13"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -159,7 +163,9 @@
             "derivative-classics-q06",
             "derivative-classics-q09",
             "derivative-classics-q10",
-            "songjiang-2023-mock-q14"
+            "songjiang-2023-mock-q14",
+            "derivative-classics-q11",
+            "derivative-classics-q12"
           ],
           "outcomes": [
             "用平均变化率理解瞬时变化率",
@@ -190,7 +196,12 @@
             "derivative-classics-q08",
             "derivative-classics-q09",
             "derivative-classics-q10",
-            "songjiang-2023-mock-q19"
+            "songjiang-2023-mock-q19",
+            "derivative-classics-q11",
+            "derivative-classics-q12",
+            "derivative-classics-q13",
+            "derivative-classics-q14",
+            "derivative-classics-q15"
           ],
           "outcomes": [
             "用导数判断单调区间",
@@ -224,7 +235,8 @@
             "shanghai-putuo-2023-q04",
             "jiading-2023-q16",
             "songjiang-2023-mock-q18",
-            "yangpu-2023-q15"
+            "yangpu-2023-q15",
+            "derivative-classics-q15"
           ],
           "outcomes": [
             "用单位圆解释正弦和余弦",
@@ -875,7 +887,9 @@
             "hongkou-2023-q01",
             "shanghai-putuo-2023-q03",
             "songjiang-2023-mock-q13",
-            "shanghai-putuo-2023-q14"
+            "shanghai-putuo-2023-q14",
+            "derivative-classics-q12",
+            "derivative-classics-q14"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -927,7 +941,10 @@
             "derivative-classics-q08",
             "derivative-classics-q09",
             "derivative-classics-q10",
-            "shanghai-putuo-2023-q12"
+            "shanghai-putuo-2023-q12",
+            "derivative-classics-q12",
+            "derivative-classics-q13",
+            "derivative-classics-q15"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",
@@ -955,7 +972,8 @@
             "jiading-2023-q20",
             "songjiang-2023-mock-q19",
             "shanghai-putuo-2023-q11",
-            "shanghai-putuo-2023-q12"
+            "shanghai-putuo-2023-q12",
+            "derivative-classics-q14"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",
@@ -990,7 +1008,10 @@
             "songjiang-2023-mock-q13",
             "yangpu-2023-q12",
             "yangpu-2023-q14",
-            "yangpu-2023-q15"
+            "yangpu-2023-q15",
+            "derivative-classics-q12",
+            "derivative-classics-q14",
+            "derivative-classics-q15"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

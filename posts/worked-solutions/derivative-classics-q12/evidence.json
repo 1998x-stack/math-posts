@@ -1,0 +1,52 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 12,
+    "pages": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "school": "湖北武汉华师一 · 2024届高三考前测试",
+    "material": "user-uploaded 62-page project PDF; not a public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "all_subquestions",
+      "function_definition",
+      "parameter_domain",
+      "inequality_signs",
+      "reference_answer",
+      "source_explanation",
+      "page_boundaries"
+    ]
+  },
+  "answer": {
+    "official": "原卷参考答案：（1）−e/2≤a≤0；（2）[(7−e²)/4,+∞)。",
+    "independent_check": "第一问 a=−e/2 时导数仅在 x=1 取零且不变号；第二问阈值处 φ(2)=0，阈值以下 φ(2)>0，辅助函数分类与原卷范围一致。"
+  },
+  "editorial_note": "原卷第15–18页跨页包含第12题的题干与完整详解；本文逐页保留参数分类，并独立复核边界与临界点。",
+  "qa": {
+    "source_checked": true,
+    "math_review": "independent-derivation-reviewed",
+    "visual_review": "SVG samples g_a and phi_a for threshold and out-of-range parameters.",
+    "source_pages_verified": [
+      15,
+      16,
+      17,
+      18
+    ]
+  }
+}

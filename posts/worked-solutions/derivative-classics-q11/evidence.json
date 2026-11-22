@@ -1,0 +1,43 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 11,
+    "pages": [
+      15
+    ],
+    "question_pages": [
+      15
+    ],
+    "answer_pages": [
+      15
+    ],
+    "school": "湖北武汉华师一 · 2024届高三五月适应性考试",
+    "material": "user-uploaded 62-page project PDF; not a public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "all_subquestions",
+      "function_definition",
+      "parameter_domain",
+      "inequality_signs",
+      "reference_answer",
+      "source_explanation",
+      "page_boundaries"
+    ]
+  },
+  "answer": {
+    "official": "原卷参考答案：（1）单调区间见原卷详解；（2）a=−2/e。",
+    "independent_check": "回代 a=−2/e，得到唯一峰顶 x*=e/4，f(x*)=1/2；函数在 x→0+ 与 x→+∞ 时趋近 0。"
+  },
+  "editorial_note": "原题与原卷答案/详解逐页对照；本站题意导读、MathML重排、SVG图解与独立核验属于补充教学内容。",
+  "qa": {
+    "source_checked": true,
+    "math_review": "independent-derivation-reviewed",
+    "visual_review": "SVG samples f(x)=sqrt(x)*exp(-2*x/e).",
+    "source_pages_verified": [
+      15
+    ]
+  }
+}

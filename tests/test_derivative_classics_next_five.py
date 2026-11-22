@@ -17,7 +17,7 @@ def bisect(fun,lo,hi):
 
 def test_original_source_pages_and_article_quality():
     posts=json.loads((ROOT/'content/posts.json').read_text('utf-8'))
-    part=[p for p in posts if p.get('source_exam')==SRC and p['question_number']>=6]
+    part=[p for p in posts if p.get('source_exam')==SRC and 6<=p['question_number']<=10]
     assert [p['question_number'] for p in part]==[6,7,8,9,10]
     assert [p['source_pages'] for p in part]==[[7,8,9],[9,10],[10,11],[11,12,13],[13,14]]
     for p in part:

@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 14,
+    "pages": [
+      19,
+      20
+    ],
+    "question_pages": [
+      19
+    ],
+    "answer_pages": [
+      19,
+      20
+    ],
+    "school": "湖南省长沙市长郡中学 · 2024届考前模拟",
+    "material": "user-uploaded 62-page project PDF; not a public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "all_subquestions",
+      "function_definition",
+      "parameter_domain",
+      "inequality_signs",
+      "reference_answer",
+      "source_explanation",
+      "page_boundaries"
+    ]
+  },
+  "answer": {
+    "official": "原卷参考答案：（1）在(−∞,−1)递增、(−1,0)递减、(0,+∞)递增；（2）(−∞,−1/e²]。",
+    "independent_check": "φ 的唯一零点 x₀≈3.1461932206；由 ln x₀=x₀−2 可严格推出 h(x₀)=−1/e²，且 h(1/e)=−e^(−2−1/e)>−1/e²。"
+  },
+  "editorial_note": "原卷第19–20页题干、区间与参考结论已逐页核对；本站独立重建 h′ 符号链并核验端点与内部极值比较。",
+  "qa": {
+    "source_checked": true,
+    "math_review": "independent-derivation-reviewed",
+    "visual_review": "SVG samples h and phi.",
+    "source_pages_verified": [
+      19,
+      20
+    ]
+  }
+}

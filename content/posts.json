@@ -5917,5 +5917,259 @@
         "function-plot"
       ]
     }
+  },
+  {
+    "slug": "derivative-classics-q11",
+    "title": "根式指数函数的单峰结构：最大值为 1/2 时参数为何是 −2/e",
+    "subtitle": "华师一题源：√x·e^(ax) 的导数符号由 1+2ax 决定，最大值 1/2 唯一锁定 a=−2/e。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 17,
+    "tags": [
+      "导数及其应用",
+      "函数与导数",
+      "解答题",
+      "根式函数",
+      "指数函数",
+      "单峰结构",
+      "参数最值"
+    ],
+    "summary": "研究根式指数函数的参数单调性，证明唯一峰顶并由最大值条件求出 a=−2/e。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 11,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      15
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "按 a=−2/e 采样的根式指数函数，在 x=e/4 处唯一达到 1/2 的全局最大值。"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "optimization"
+      ],
+      "method": [
+        "parameter-analysis",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot",
+        "sign-table"
+      ]
+    }
+  },
+  {
+    "slug": "derivative-classics-q12",
+    "title": "无极值点与恒成立不等式：同一参数的两道门槛",
+    "subtitle": "华师一考前测试：导数无变号零点的参数范围为 [−e/2,0]；三次多项式恒成立条件给出 a≥(7−e²)/4。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 28,
+    "tags": [
+      "导数及其应用",
+      "函数与导数",
+      "解答题",
+      "参数分类",
+      "极值点",
+      "恒成立不等式",
+      "辅助函数"
+    ],
+    "summary": "分两问研究参数：先判导函数的变号零点，再通过辅助函数的局部峰值确定恒成立参数下界。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 12,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "比较 f′ 的变号零点与辅助函数 φₐ 的参数阈值，两个问题各自保留闭端点。"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [
+        "parameter-analysis",
+        "casework",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot",
+        "sign-table"
+      ]
+    }
+  },
+  {
+    "slug": "derivative-classics-q13",
+    "title": "对数底数与幂函数竞争：恒成立条件为何锁定 a=1/e",
+    "subtitle": "衡水中学题源：对数幂函数的全局最小值把恒成立条件化为 a ln a≤−1/e，唯一解为 a=1/e。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 19,
+    "tags": [
+      "导数及其应用",
+      "函数与导数",
+      "解答题",
+      "对数函数",
+      "幂函数",
+      "恒成立",
+      "全局最小值"
+    ],
+    "summary": "先按对数底数 a 的范围讨论导数，再将全域下界化为参数函数 a ln a 的最小值。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 13,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      18,
+      19
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "对数幂函数在 a=1/e 时的全局最低值恰好等于 −1。"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities",
+        "optimization"
+      ],
+      "method": [
+        "parameter-analysis",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "derivative-classics-q14",
+    "title": "指数对数辅助函数的全局最小值：参数上界为何是 −1/e²",
+    "subtitle": "长郡中学题源：复杂指数对数不等式转化为 h(x) 的全局最小值，内部极小值精确等于 −1/e²。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 24,
+    "tags": [
+      "导数及其应用",
+      "函数与导数",
+      "解答题",
+      "指数函数",
+      "对数函数",
+      "辅助函数",
+      "全局最小值"
+    ],
+    "summary": "分离参数后研究 h(x) 的半无限区间最小值，用辅助函数 φ(x)=lnx−x+2 锁定唯一内部临界点。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 14,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      19,
+      20
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "h 的端点与内部极小值比较，φ 的唯一零点决定 h′ 的符号变化。"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "inequalities",
+        "optimization"
+      ],
+      "method": [
+        "parameter-analysis",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot",
+        "sign-table"
+      ]
+    }
+  },
+  {
+    "slug": "derivative-classics-q15",
+    "title": "余弦函数的最值与有限和放缩：从连续不等式到裂项相消",
+    "subtitle": "长郡中学题源：先证明 cosx>1−x²/2，再把 1/(2k²) 放宽为奇数倒数裂项，得到余弦和的严格下界。",
+    "category": "worked-solutions",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 22,
+    "tags": [
+      "导数及其应用",
+      "函数与导数",
+      "解答题",
+      "余弦函数",
+      "三角不等式",
+      "裂项求和",
+      "严格不等式"
+    ],
+    "summary": "用导数求偶函数最小值和余弦下界，再把连续不等式离散化为可望远镜求和的奇数倒数差。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "derivatives-application-classics-2024-2025",
+    "source_kind": "solved-math-pdf",
+    "question_number": 15,
+    "question_type": "worked-solutions",
+    "source_pages": [
+      21,
+      22
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "偶函数的对称最小点与余弦亏损的逐项裂项上界。"
+    },
+    "paper_id": "derivative-classics-collection",
+    "facets": {
+      "concept": [
+        "derivatives",
+        "functions",
+        "trigonometry",
+        "inequalities"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot",
+        "sign-table"
+      ]
+    }
   }
 ]
