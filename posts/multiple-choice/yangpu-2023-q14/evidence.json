@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 14,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and all symbols",
+      "all options A–D where applicable",
+      "question number and page location",
+      "answer key on PDF page 8"
+    ]
+  },
+  "answer": {
+    "official": "D",
+    "independent_check": "A 可取 α:z=0、m 为 z 轴、n 为平面内过原点的 x 轴；B 可取方向向量 (1,0,1) 与 (0,1,1)，它们与 z=0 平面都成 45° 但不平行；C 可取平面外分别沿 x、y 方向的两条直线；D 由线面平行判定定理成立。"
+  },
+  "math_equations": [
+    "m⊥α and m⊥n does not force n∥α",
+    "equal line-plane angles do not force parallel directions",
+    "m⊂α, n∥m, n⊄α ⇒ n∩α=∅"
+  ],
+  "figure_assertions": [
+    "左图 n 位于 α 内且垂直于 m，构成 A 的合法反例",
+    "右图 n∥m 且 n 不在 α 内，故 n∥α"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "passed",
+    "responsive_browser_test": "passed: Chromium 1440/768/390/360"
+  },
+  "editorial_note": "题干逐项对照用户上传 PDF 的页面渲染核验；PDF 第 8 页只列参考答案，没有给出本题完整推导。本文逐步证明和 SVG 均为本站独立编写，不冒充官方解析。"
+}

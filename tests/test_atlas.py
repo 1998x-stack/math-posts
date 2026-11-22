@@ -54,13 +54,14 @@ def test_paper_page_orders_questions_and_never_links_to_draft():
     assert "user-uploaded" in page
 
 
-def test_paper_registry_does_not_fabricate_total_question_count():
+def test_paper_registry_uses_verified_yangpu_question_count():
     posts, _, papers, taxonomy = fixture_data()
     paper = next(p for p in papers if p["id"] == "yangpu-2023-mock")
-    assert paper["total_questions"] is None
+    assert paper["total_questions"] == 21
     detail = build_paper_detail(paper, posts, taxonomy, "https://example.com/math-posts/", html_page, article_url)
-    assert "原卷总题数未登记" in detail
-    assert "第 10 题" in detail and "尚未收录" not in detail
+    assert "已公开 15 / 原卷 21 题" in detail
+    assert "第 10 题" in detail and "第 15 题" in detail
+    assert "第 16 题" in detail and "尚未收录" in detail
     listing = build_papers_index(papers, posts, "https://example.com/math-posts/", html_page)
     assert "/papers/" in listing
     assert "2023 届上海市杨浦区高三一模" in listing

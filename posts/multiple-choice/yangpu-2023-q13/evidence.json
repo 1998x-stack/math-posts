@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 13,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and all symbols",
+      "all options A–D where applicable",
+      "question number and page location",
+      "answer key on PDF page 8"
+    ]
+  },
+  "answer": {
+    "official": "C",
+    "independent_check": "组合计数得 a=C(9,2)/C(10,3)=36/120=3/10；同理 b=3/10。另一种验证把首次出现位置分成三个互斥事件，每项概率均为 1/10，合计 3/10。"
+  },
+  "math_equations": [
+    "C(10,3)=120",
+    "C(9,2)=36",
+    "a=b=36/120=3/10"
+  ],
+  "figure_assertions": [
+    "三条首次出现路径互斥且穷尽",
+    "每条路径概率均为 1/10，总概率为 3/10"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "passed",
+    "responsive_browser_test": "passed: Chromium 1440/768/390/360"
+  },
+  "editorial_note": "题干逐项对照用户上传 PDF 的页面渲染核验；PDF 第 8 页只列参考答案，没有给出本题完整推导。本文逐步证明和 SVG 均为本站独立编写，不冒充官方解析。"
+}

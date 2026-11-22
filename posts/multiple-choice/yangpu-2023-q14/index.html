@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="区分线面垂直、线面角相等，以及两条直线各自平行于同一平面的含义。"><title>线面平行判定：四个说法中为什么只有 D 正确 · math-posts</title>
+<link rel="stylesheet" href="../../../assets/article.css"><style>
+@media print{.toc{display:none!important}.layout{display:block}.fact-grid,.step-note,.question,figure{break-inside:avoid}.diagram-scroll{overflow:visible}.diagram-scroll svg{width:100%;max-width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+html,body,main,article,section,.layout{max-width:100%;min-width:0}
+.fact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.fact{padding:14px 16px;border:1px solid #d8e8e3;border-radius:12px;background:#f5f9f7}.fact strong{display:block;color:#167d80;font-size:.82rem;margin-bottom:5px}.fact p{margin:0;font-size:.94rem}
+.step-note{margin:.65rem 0 1rem;padding:12px 15px;border-left:3px solid #167d80;background:#f2f8f6;border-radius:0 9px 9px 0}
+.key-idea{padding:14px 18px;border:1px solid #d8e8e3;border-radius:12px;background:#f8faf6}.transfer{padding:14px 18px;background:#f7f6f0;border-radius:12px}
+.math-equation,.math-scroll{max-width:100%;min-width:0}.math-scroll{overflow-x:auto;overflow-y:hidden}.math-scroll:focus-visible{outline:3px solid #147f80;outline-offset:2px}.math-scroll math[display=block]{display:block;width:max-content;min-width:100%;font-size:1.11rem}
+.option-list{padding-left:2rem}.option-list li{margin:.6rem 0;line-height:1.8}.option-list math{vertical-align:middle}
+figure{min-width:0;margin:1.5rem 0}.diagram-scroll{max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}.diagram-scroll:focus-visible{outline:3px solid #147f80;outline-offset:2px}.diagram-scroll svg{display:block;width:760px;max-width:none;height:auto}.diagram-scroll--wide svg{width:900px}\n@media print{.diagram-scroll{overflow:visible}.diagram-scroll svg,.diagram-scroll--wide svg{width:100%;max-width:100%}}
+@media(max-width:640px){.fact-grid{grid-template-columns:1fr}.fact{padding:12px}.math-scroll math[display=block]{font-size:1rem}}
+</style></head><body><a class="skip-link" href="#content">跳至正文</a><div class="layout">
+<nav class="toc" aria-label="本文目录"><strong>YANGPU 2023 · Q14</strong><a href="#overview">01 题意拆解</a><a href="#question">02 原题</a><a href="#intuition">03 关键观察</a><a href="#solution">04 逐步推导</a><a href="#visual">05 数学图解</a><a href="#answer">06 答案核验</a><a href="#transfer">07 方法迁移</a></nav>
+<main id="content"><article><header><span class="eyebrow">选择题 · 第 14 题 · solid-geometry</span><h1>线面平行判定：四个说法中为什么只有 D 正确</h1><p class="lead">区分线面垂直、线面角相等，以及两条直线各自平行于同一平面的含义。</p><p class="meta">上海市杨浦区 2023 届高三一模数学试卷 · 题干 PDF 第 2 页 · 参考答案 PDF 第 8 页</p></header>
+<section id="overview"><h2>01 · 先理解题目在问什么</h2><div class="question problem-overview"><p>这道空间几何选择题考查直线与平面之间的平行、垂直关系。三个错误选项都把“方向关系”当成了“位置关系”：直线可能仍在平面内，两条线也可能只是与平面有相同倾斜角。D 额外说明 n 在平面外，因此才能由 n 平行于平面内的 m 推出 n 与平面 α 平行。</p><div class="fact-grid"><div class="fact"><strong>研究对象</strong><p>平面 α 与两条直线 m、n</p></div><div class="fact"><strong>判定重点</strong><p>线面平行要求直线在平面外且没有公共点</p></div><div class="fact"><strong>求解目标</strong><p>逐项判断 A、B、C、D 的真假</p></div></div><p><strong>解题路线：</strong>先写线面平行定义 → A/B/C 分别构造反例 → D 用平面内平行线判定定理证明</p></div></section>
+<section id="question"><h2>02 · 原题</h2><div class="question"><p>对于平面 α 和两条直线 m、n，下列说法正确的是（　　）</p><ol type="A" class="option-list">
+<li>若 <math class="math-inline" aria-label="m 垂直于平面 alpha"><mrow><mi>m</mi><mo>⊥</mo><mi>α</mi></mrow></math>，<math class="math-inline" aria-label="m 垂直于 n"><mrow><mi>m</mi><mo>⊥</mo><mi>n</mi></mrow></math>，则 <math class="math-inline" aria-label="n 平行于平面 alpha"><mrow><mi>n</mi><mo>∥</mo><mi>α</mi></mrow></math></li>
+<li>若 m、n 与平面 α 所成的角相等，则 <math class="math-inline" aria-label="m 平行于 n"><mrow><mi>m</mi><mo>∥</mo><mi>n</mi></mrow></math></li>
+<li>若 <math class="math-inline" aria-label="m 平行于平面 alpha"><mrow><mi>m</mi><mo>∥</mo><mi>α</mi></mrow></math>，<math class="math-inline" aria-label="n 平行于平面 alpha"><mrow><mi>n</mi><mo>∥</mo><mi>α</mi></mrow></math>，则 <math class="math-inline" aria-label="m 平行于 n"><mrow><mi>m</mi><mo>∥</mo><mi>n</mi></mrow></math></li>
+<li>若 <math class="math-inline" aria-label="m 包含于平面 alpha"><mrow><mi>m</mi><mo>⊂</mo><mi>α</mi></mrow></math>，<math class="math-inline" aria-label="m 平行于 n"><mrow><mi>m</mi><mo>∥</mo><mi>n</mi></mrow></math>，n 在平面 α 外，则 <math class="math-inline" aria-label="n 平行于平面 alpha"><mrow><mi>n</mi><mo>∥</mo><mi>α</mi></mrow></math></li>
+</ol></div></section>
+<section id="intuition"><h2>03 · 关键观察与方法选择</h2><div class="key-idea"><p>先不要急着找一个“看起来正确”的图形。空间关系必须拆成两个问题：两条线的方向是否平行？直线是否与平面相交或包含在平面内？只有把这两件事同时检查，才能避免把“平行于平面”误说成“落在平面里”。</p><p><strong>判定定理：</strong>平面外的一条直线，若平行于该平面内的一条直线，则它平行于这个平面。</p></div></section>
+<section id="solution"><h2>04 · 逐步推导</h2><ol><li><strong>先明确线面平行的含义。</strong><p>直线与平面平行，要求直线不在平面内，并且与该平面没有公共点。仅仅“方向与平面相容”还不够。</p><p class="step-note"><strong>为什么这样做：</strong>本题三个错误选项都利用了“方向关系”偷换“位置关系”；判断时必须同时看方向和交点。</p></li><li><strong>A 不成立：n 可以恰好落在平面 α 内。</strong><p>取平面 α 为 z=0，令 m 为过原点的法向直线，令 n 为平面内过原点的一条直线。此时 m⊥α 且 m⊥n，但 n⊂α，并不与 α 平行。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="A 的反例关系"><math display="block" aria-label="A 的反例关系"><mrow><mi>m</mi><mo>⊥</mo><mi>α</mi><mo>,</mo><mspace width="0.5em"/><mi>m</mi><mo>⊥</mo><mi>n</mi><mo>,</mo><mspace width="0.5em"/><mi>n</mi><mo>⊂</mo><mi>α</mi></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>m 垂直于平面，就垂直于平面内经过垂足的任意直线；题干却没有排除 n 本身就在 α 内。</p></li><li><strong>B 不成立：与平面所成角相等，不代表两条直线平行。</strong><p>例如平面取 z=0，方向向量分别为 (1,0,1) 与 (0,1,1)。两条直线与平面的夹角都为 45°，但方向不同，不平行。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="两条不同方向却有相同线面角"><math display="block" aria-label="两条不同方向却有相同线面角"><mrow><mi>u</mi><mo>=</mo><mo>(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>)</mo><mo>,</mo><mspace width="0.5em"/><mi>v</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>)</mo></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>线面角只描述方向相对平面的倾斜程度，不记录水平投影朝向；相同倾斜角可以对应很多不同方向。</p></li><li><strong>C 不成立：两条直线都平行于同一平面，彼此仍可能相交或异面。</strong><p>例如在平面 z=0 上方的平面 z=1 内，取两条都经过 (0,0,1) 的直线：m 沿 x 轴方向，n 沿 y 轴方向。它们都不与 z=0 相交，却在 (0,0,1) 相交，因此不平行。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="C 的反例方向"><math display="block" aria-label="C 的反例方向"><mrow><mi>u</mi><mo>=</mo><mo>(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>)</mo><mo>,</mo><mspace width="0.5em"/><mi>v</mi><mo>=</mo><mo>(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>)</mo></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>“都平行于 α”只约束每条线相对 α 的位置，不会把两条线的方向锁定成同一个方向。</p></li><li><strong>D 成立：反设 n 与 α 相交，就会推出 n 落在 α 内。</strong><p>已知 m⊂α 且 n∥m。若 n 与 α 交于点 P，那么过 P 且平行于 m 的直线必在平面 α 内；但这条直线就是 n，于是 n⊂α，与“n 在平面 α 外”矛盾。因此 n 与 α 无公共点，故 n∥α。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="D 的结论链"><math display="block" aria-label="D 的结论链"><mrow><mi>m</mi><mo>⊂</mo><mi>α</mi><mo>,</mo><mspace width="0.4em"/><mi>n</mi><mo>∥</mo><mi>m</mi><mo>,</mo><mspace width="0.4em"/><mi>n</mi><mo>⊄</mo><mi>α</mi><mo>⇒</mo><mi>n</mi><mo>∩</mo><mi>α</mi><mo>=</mo><mo>∅</mo><mo>⇒</mo><mi>n</mi><mo>∥</mo><mi>α</mi></mrow></math></div></div><p class="step-note"><strong>为什么这样做：</strong>这是线面平行的判定定理：平面外的一条直线平行于平面内的一条直线，则该直线平行于这个平面。</p></li></ol></section>
+<section id="visual"><h2>05 · 把本题的数学结构画出来</h2><figure tabindex="0" role="group" aria-label="左图构造 A 的反例：n 在 α 内仍可垂直于 m；右图展示 D：n 与平面内的 m 平行且不在 α 内，因而不与 α 相交。"><div class="diagram-scroll diagram-scroll--wide" tabindex="0" role="region" aria-label="左图构造 A 的反例：n 在 α 内仍可垂直于 m；右图展示 D：n 与平面内的 m 平行且不在 α 内，因而不与 α 相交。"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="q14-title q14-desc">
+<title id="q14-title">线面关系的反例与正确判定</title>
+<desc id="q14-desc">左图说明垂直于平面的直线 m 也垂直于平面内经过垂足的直线 n，但 n 位于平面内，故 A 的结论不成立。右图中 m 位于平面内，n 与 m 平行且不在平面内，因此 n 与平面平行。</desc>
+<rect width="900" height="430" rx="18" fill="#f5f9f7"/>
+<text x="28" y="38" font-size="22" font-weight="700" fill="#234352">关键不是“方向平行”，而是直线是否还落在平面内</text>
+<rect x="22" y="60" width="414" height="340" rx="14" fill="#ffffff" stroke="#d4e3de"/>
+<rect x="464" y="60" width="414" height="340" rx="14" fill="#ffffff" stroke="#d4e3de"/>
+<text x="42" y="91" font-size="19" font-weight="700" fill="#a85b3a">反例：A 缺少 n 不在 α 内</text>
+<polygon points="55,265 325,265 385,215 115,215" fill="#e8f0ed" stroke="#789b91" stroke-width="2"/>
+<text x="365" y="225" font-size="18" font-weight="700" fill="#375360">α</text>
+<path d="M205 112V265" stroke="#d9825c" stroke-width="4"/>
+<text x="220" y="128" font-size="18" font-weight="700" fill="#a85b3a">m ⟂ α</text>
+<path d="M92 242H322" stroke="#167d80" stroke-width="4"/>
+<text x="318" y="232" text-anchor="end" font-size="18" font-weight="700" fill="#167d80">n ⊂ α</text>
+<circle cx="205" cy="242" r="6" fill="#234352"/>
+<path d="M205 242h18v-18" fill="none" stroke="#234352" stroke-width="2"/>
+<text x="220" y="286" font-size="14" fill="#375360">垂足 P；m ⟂ n，但 n 不与 α 平行</text>
+<text x="484" y="91" font-size="19" font-weight="700" fill="#35764e">正确：D 中 n 与 α 无交点</text>
+<polygon points="505,270 775,270 835,220 565,220" fill="#e8f0ed" stroke="#789b91" stroke-width="2"/>
+<text x="814" y="230" font-size="18" font-weight="700" fill="#375360">α</text>
+<path d="M550 244H800" stroke="#167d80" stroke-width="4"/>
+<text x="785" y="236" text-anchor="end" font-size="18" font-weight="700" fill="#167d80">m ⊂ α</text>
+<path d="M550 142H800" stroke="#d9825c" stroke-width="4"/>
+<text x="785" y="132" text-anchor="end" font-size="18" font-weight="700" fill="#a85b3a">n ∥ m，且 n 在 α 外</text>
+<path d="M620 142V244M730 142V244" stroke="#a9b9b3" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="670" y="310" text-anchor="middle" font-size="16" fill="#375360">同方向 + 不在平面内</text>
+<text x="670" y="338" text-anchor="middle" font-size="19" font-weight="700" fill="#35764e">⇒ n ∥ α</text>
+<text x="450" y="420" text-anchor="middle" font-size="14" fill="#657d80">空间关系图为透视示意；严格判断由平面与直线的定义完成。</text>
+</svg></div><figcaption>左图构造 A 的反例：n 在 α 内仍可垂直于 m；右图展示 D：n 与平面内的 m 平行且不在 α 内，因而不与 α 相交。</figcaption></figure><p>空间图采用透视投影，只用于识别线与平面的位置关系；B、C 的反例由正文给出的方向向量精确描述，不能把二维投影中的视觉角度当作空间证明。</p></section>
+<section id="answer"><h2>06 · 答案与独立核验</h2><p class="answer"><strong>原卷参考答案：</strong>D。</p><p><strong>本站独立核验：</strong>A 可取 α:z=0、m 为 z 轴、n 为平面内过原点的 x 轴；B 可取方向向量 (1,0,1) 与 (0,1,1)，它们与 z=0 平面都成 45° 但不平行；C 可取平面外分别沿 x、y 方向的两条直线；D 由线面平行判定定理成立。</p><p class="hint"><strong>易错点与边界：</strong>A 选项没有排除 n⊂α；B 中“与平面所成角相等”不锁定水平方向；C 中两条直线分别平行同一平面，不代表它们彼此平行。</p></section>
+<section id="transfer"><h2>07 · 方法迁移</h2><div class="transfer">判断空间线面关系时，优先使用“平面内有一条直线与已知直线平行”这一判定定理；同时检查直线是否在平面外。遇到错误命题，先尝试让直线通过垂足或让两条线取不同水平投影方向。</div></section>
+<footer class="article-footer"><p>题源：<a href="https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md" rel="noopener noreferrer">杨浦一模题源记录</a>（题干 PDF 第 2 页；参考答案第 8 页）。原 PDF 为用户上传材料，无经核实的公开下载链接。原卷只列参考答案，本文逐步推导为本站独立编写。</p><p><a href="../../../archive/">返回题目归档</a> · <a href="../../../topics/">查看知识地图</a> · <a href="../../../papers/yangpu-2023-mock/">按原卷浏览</a></p></footer>
+</article></main></div></body></html>
