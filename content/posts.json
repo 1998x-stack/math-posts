@@ -5691,5 +5691,231 @@
         "coordinate-plane"
       ]
     }
+  },
+  {
+    "slug": "yangpu-2023-q11",
+    "title": "等差数列前项和：为什么 2022 项中只有 2018 个不同值",
+    "subtitle": "由 S₁₀=0 把前 n 项和写成对称二次式；只有四组下标会产生重复值。",
+    "category": "fill-in",
+    "topic": "sequences",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "等差数列",
+      "前n项和",
+      "数列对称",
+      "重复值"
+    ],
+    "summary": "由 S₁₀=0 把前 n 项和写成对称二次式；只有四组下标会产生重复值。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "纵轴采用归一化值 2Sₙ/d=n(n−10)，图中四对镜像下标分别落在同一高度；n=5 是对称轴上的单独一项。"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "sequences"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
+  },
+  {
+    "slug": "yangpu-2023-q12",
+    "title": "复合函数方程的实根个数：用抛物线值域筛选参数",
+    "subtitle": "先把 f(x) 写成顶点式，再比较 f 的两个零点是否落在 f 的值域里。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 12,
+    "tags": [
+      "2023杨浦一模",
+      "填空题",
+      "复合函数",
+      "二次函数",
+      "实根个数",
+      "参数范围"
+    ],
+    "summary": "先把 f(x) 写成顶点式，再比较 f 的两个零点是否落在 f 的值域里。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "取 a=−1/2 作示例：r₊ 高于抛物线最大值，没有原像；r₋ 低于最大值，与曲线相交两次。图用于解释根数机制，参数区间仍由后续不等式严格求出。"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "reasoning"
+      ],
+      "method": [
+        "parameter-analysis",
+        "casework"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "yangpu-2023-q13",
+    "title": "抽取三人：任意指定一名学生入样的概率都是 3/10",
+    "subtitle": "把三次抽取按顺序观察，指定学生可能首次出现在第 1、2、3 次。",
+    "category": "multiple-choice",
+    "topic": "probability",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 8,
+    "tags": [
+      "2023杨浦一模",
+      "选择题",
+      "古典概型",
+      "抽样",
+      "组合数",
+      "等可能"
+    ],
+    "summary": "把三次抽取按顺序观察，指定学生可能首次出现在第 1、2、3 次。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "三条路径分别表示指定学生首次在第 1、2、3 次抽取中出现；它们互斥且覆盖“被抽到”的全部情况，每条路径概率均为 1/10。"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "probability-statistics",
+        "counting"
+      ],
+      "method": [
+        "casework"
+      ],
+      "visual": [
+        "tree-diagram"
+      ]
+    }
+  },
+  {
+    "slug": "yangpu-2023-q14",
+    "title": "线面平行判定：四个说法中为什么只有 D 正确",
+    "subtitle": "区分线面垂直、线面角相等，以及两条直线各自平行于同一平面的含义。",
+    "category": "multiple-choice",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 10,
+    "tags": [
+      "2023杨浦一模",
+      "选择题",
+      "立体几何",
+      "线面平行",
+      "线面垂直",
+      "反例"
+    ],
+    "summary": "区分线面垂直、线面角相等，以及两条直线各自平行于同一平面的含义。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左图构造 A 的反例：n 在 α 内仍可垂直于 m；右图展示 D：n 与平面内的 m 平行且不在 α 内，因而不与 α 相交。"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "solid-geometry",
+        "reasoning"
+      ],
+      "method": [
+        "counterexample"
+      ],
+      "visual": [
+        "spatial-3d"
+      ]
+    }
+  },
+  {
+    "slug": "yangpu-2023-q15",
+    "title": "充分不必要：sin B<1/2 能推出钝角三角形，但反过来不成立",
+    "subtitle": "由 A=60° 得 B+C=120°，比较正弦条件和钝角三角形的两个角度区间。",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023杨浦一模",
+      "选择题",
+      "三角形",
+      "钝角三角形",
+      "充分必要条件",
+      "正弦"
+    ],
+    "summary": "由 A=60° 得 B+C=120°，比较正弦条件和钝角三角形的两个角度区间。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "source_exam": "2023-shanghai-yangpu-first-mock",
+    "source_region": "杨浦区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "曲线为 y=sinB。绿色区间是 sinB<1/2 对应的 B∈(0°,30°)；橙色区间 B∈(90°,120°) 也能形成钝角三角形，却不满足正弦条件。"
+    },
+    "paper_id": "yangpu-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry",
+        "reasoning"
+      ],
+      "method": [
+        "casework",
+        "counterexample"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
   }
 ]

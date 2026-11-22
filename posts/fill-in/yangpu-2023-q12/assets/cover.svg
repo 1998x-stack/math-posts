@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" role="img" aria-labelledby="q12-title q12-desc">
+<title id="q12-title">复合函数零点：一个目标值在抛物线值域外，一个有两个原像</title>
+<desc id="q12-desc">以 a 等于负二分之一为示例，向下开口抛物线 f(x) 的最高点为 0.5。较高目标 r 正约为 1.207 高于最大值，没有原像；较低目标 r 负约为负 0.207 与抛物线相交两次。</desc>
+<rect width="760" height="390" rx="18" fill="#f5f9f7"/>
+<text x="28" y="36" font-size="22" font-weight="700" fill="#234352">示例参数 a=−1/2：看 f(x) 能否取到两个零点</text>
+<g stroke="#d9e5e1" stroke-width="1"><path d="M90 90H680"/><path d="M90 160H680"/><path d="M90 230H680"/><path d="M90 300H680"/></g>
+<path d="M90 124H680" stroke="#657d80" stroke-width="1.6"/><path d="M296 70V320" stroke="#657d80" stroke-width="1.6"/>
+<text x="686" y="119" font-size="14" fill="#657d80">x</text><text x="305" y="76" font-size="14" fill="#657d80">y</text>
+<path d="M110 255.5 Q373.5 -62.5 637 255.5" fill="none" stroke="#167d80" stroke-width="4"/>
+<circle cx="373.5" cy="96.5" r="6" fill="#167d80" stroke="white" stroke-width="2"/>
+<text x="385" y="91" font-size="15" fill="#167d80">顶点 (0.5, 0.5)</text>
+<path d="M90 57.6H680" stroke="#d9825c" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="675" y="49" text-anchor="end" font-size="16" font-weight="700" fill="#a85b3a">r₊≈1.207：高于最大值，无交点</text>
+<path d="M90 135.4H680" stroke="#5a9b73" stroke-width="2.5" stroke-dasharray="8 5"/>
+<circle cx="243" cy="135.4" r="6" fill="#5a9b73" stroke="white" stroke-width="2"/><circle cx="504" cy="135.4" r="6" fill="#5a9b73" stroke="white" stroke-width="2"/>
+<text x="675" y="157" text-anchor="end" font-size="16" font-weight="700" fill="#35764e">r₋≈−0.207：与曲线相交两次</text>
+<text x="110" y="340" font-size="15" fill="#375360">f(x)=0 的两个根是 r₋、r₊；复合方程要求 f(x) 等于这两个目标值之一。</text>
+<text x="110" y="367" font-size="15" fill="#375360">因此恰有两个不同原像时，r₋ 必须低于顶点，r₊ 必须高于顶点。</text>
+</svg>

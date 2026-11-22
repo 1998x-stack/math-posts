@@ -1,0 +1,44 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 11,
+    "pages": [
+      1
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and all symbols",
+      "all options A–D where applicable",
+      "question number and page location",
+      "answer key on PDF page 8"
+    ]
+  },
+  "answer": {
+    "official": "2018",
+    "independent_check": "对 1≤n≤2022 直接计算归一化整数 n(n−10)，其不同取值集合恰有 2018 个元素。重复值仅来自 (1,9)、(2,8)、(3,7)、(4,6) 四对；d≠0 的缩放不改变相等关系。"
+  },
+  "math_equations": [
+    "S_n=n/2[2a_1+(n−1)d]",
+    "S_n=(d/2)n(n−10)",
+    "S_i=S_j ⇔ (i−j)(i+j−10)=0"
+  ],
+  "figure_assertions": [
+    "纵轴为归一化值 2S_n/d=n(n−10)，横轴只标离散整数下标",
+    "四组重复下标为 (1,9)、(2,8)、(3,7)、(4,6)，对称轴为 n=5"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "passed",
+    "responsive_browser_test": "passed: Chromium 1440/768/390/360"
+  },
+  "editorial_note": "题干逐项对照用户上传 PDF 的页面渲染核验；PDF 第 8 页只列参考答案，没有给出本题完整推导。本文逐步证明和 SVG 均为本站独立编写，不冒充官方解析。"
+}

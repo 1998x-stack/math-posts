@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市杨浦区 2023 届高三一模数学试卷",
+    "region": "杨浦区",
+    "question": 12,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      8
+    ],
+    "material": "user-uploaded PDF (no verified public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "original statement and all symbols",
+      "all options A–D where applicable",
+      "question number and page location",
+      "answer key on PDF page 8"
+    ]
+  },
+  "answer": {
+    "official": "(−3/4, 0)",
+    "independent_check": "令 t=√(a+1)>0。复合方程恰有两个不同根等价于 2a+1−t<0 且 2a+1+t>0，代入 a=t²−1 得 1/2<t<1，故 −3/4<a<0。端点处根数分别为 1 和 3，均不满足题意。"
+  },
+  "math_equations": [
+    "f(x)=a+1−(x+a)^2",
+    "r_±=−a±√(a+1)",
+    "(x+a)^2=2a+1∓√(a+1)",
+    "−3/4<a<0"
+  ],
+  "figure_assertions": [
+    "示例参数 a=−1/2，顶点为 (1/2,1/2)",
+    "r+≈1.207 高于最大值 1/2；r−≈−0.207 低于最大值并产生两个交点"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "pdf_render_verified": true,
+    "browser_visual_test": "passed",
+    "responsive_browser_test": "passed: Chromium 1440/768/390/360"
+  },
+  "editorial_note": "题干逐项对照用户上传 PDF 的页面渲染核验；PDF 第 8 页只列参考答案，没有给出本题完整推导。本文逐步证明和 SVG 均为本站独立编写，不冒充官方解析。"
+}

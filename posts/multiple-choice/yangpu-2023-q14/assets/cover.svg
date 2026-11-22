@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-labelledby="q14-title q14-desc">
+<title id="q14-title">线面关系的反例与正确判定</title>
+<desc id="q14-desc">左图说明垂直于平面的直线 m 也垂直于平面内经过垂足的直线 n，但 n 位于平面内，故 A 的结论不成立。右图中 m 位于平面内，n 与 m 平行且不在平面内，因此 n 与平面平行。</desc>
+<rect width="900" height="430" rx="18" fill="#f5f9f7"/>
+<text x="28" y="38" font-size="22" font-weight="700" fill="#234352">关键不是“方向平行”，而是直线是否还落在平面内</text>
+<rect x="22" y="60" width="414" height="340" rx="14" fill="#ffffff" stroke="#d4e3de"/>
+<rect x="464" y="60" width="414" height="340" rx="14" fill="#ffffff" stroke="#d4e3de"/>
+<text x="42" y="91" font-size="19" font-weight="700" fill="#a85b3a">反例：A 缺少 n 不在 α 内</text>
+<polygon points="55,265 325,265 385,215 115,215" fill="#e8f0ed" stroke="#789b91" stroke-width="2"/>
+<text x="365" y="225" font-size="18" font-weight="700" fill="#375360">α</text>
+<path d="M205 112V265" stroke="#d9825c" stroke-width="4"/>
+<text x="220" y="128" font-size="18" font-weight="700" fill="#a85b3a">m ⟂ α</text>
+<path d="M92 242H322" stroke="#167d80" stroke-width="4"/>
+<text x="318" y="232" text-anchor="end" font-size="18" font-weight="700" fill="#167d80">n ⊂ α</text>
+<circle cx="205" cy="242" r="6" fill="#234352"/>
+<path d="M205 242h18v-18" fill="none" stroke="#234352" stroke-width="2"/>
+<text x="220" y="286" font-size="14" fill="#375360">垂足 P；m ⟂ n，但 n 不与 α 平行</text>
+<text x="484" y="91" font-size="19" font-weight="700" fill="#35764e">正确：D 中 n 与 α 无交点</text>
+<polygon points="505,270 775,270 835,220 565,220" fill="#e8f0ed" stroke="#789b91" stroke-width="2"/>
+<text x="814" y="230" font-size="18" font-weight="700" fill="#375360">α</text>
+<path d="M550 244H800" stroke="#167d80" stroke-width="4"/>
+<text x="785" y="236" text-anchor="end" font-size="18" font-weight="700" fill="#167d80">m ⊂ α</text>
+<path d="M550 142H800" stroke="#d9825c" stroke-width="4"/>
+<text x="785" y="132" text-anchor="end" font-size="18" font-weight="700" fill="#a85b3a">n ∥ m，且 n 在 α 外</text>
+<path d="M620 142V244M730 142V244" stroke="#a9b9b3" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="670" y="310" text-anchor="middle" font-size="16" fill="#375360">同方向 + 不在平面内</text>
+<text x="670" y="338" text-anchor="middle" font-size="19" font-weight="700" fill="#35764e">⇒ n ∥ α</text>
+<text x="450" y="420" text-anchor="middle" font-size="14" fill="#657d80">空间关系图为透视示意；严格判断由平面与直线的定义完成。</text>
+</svg>
