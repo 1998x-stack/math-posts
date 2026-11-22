@@ -1,0 +1,52 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 14,
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "pages": [
+      2
+    ],
+    "question_page": 2,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "putuo-2023-mock-source",
+    "paper_id": "putuo-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "PDF page 2 rendered question page",
+      "question number 14",
+      "PDF page 6 rendered answer key",
+      "mathematical symbols, subscripts, superscripts, relation signs and options",
+      "independent derivation and equality/feasibility checks"
+    ]
+  },
+  "answer": {
+    "official": "D",
+    "official_locator": "参考答案图片，第 6 页",
+    "independent_check": "换底与符号判断得到 0<x<1，且 x=1 时两者相等；x>1 时不等号反向。与第 6 页参考答案 14.D 一致。",
+    "independent_result": "D（0<x<1）"
+  },
+  "math_equations": [
+    "x>0",
+    "lg x = ln x / ln 10",
+    "(1/ln10−1)ln x>0  ⇔  ln x<0",
+    "0<x<1"
+  ],
+  "svg_assertion": "两条曲线在 (1,0) 相交；在 0<x<1 时 lg x 曲线位于 ln x 上方，在 x>1 时 ln x 位于 lg x 上方。",
+  "editorial_note": "原卷仅列参考答案，没有逐步官方解析；本站推导、选项反例/存在性构造与 SVG 为独立编写。原始 PDF 由用户上传，不在公开仓库提供下载链接。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "svg_assertion_checked": true,
+    "mathml_static": "pending CI",
+    "browser_render": "pending CI"
+  }
+}

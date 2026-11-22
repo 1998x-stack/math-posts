@@ -75,7 +75,8 @@
           "posts": [
             "yangpu-2023-q03",
             "hongkou-2023-q09",
-            "songjiang-2023-mock-q15"
+            "songjiang-2023-mock-q15",
+            "shanghai-putuo-2023-q14"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -101,7 +102,8 @@
             "songjiang-2023-mock-q05",
             "yangpu-2023-q01",
             "hongkou-2023-q09",
-            "hongkou-2023-q10"
+            "hongkou-2023-q10",
+            "shanghai-putuo-2023-q11"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -425,7 +427,8 @@
             "jianping-2021-q13",
             "jianping-2021-q17",
             "jiading-2023-q17",
-            "songjiang-2023-mock-q17"
+            "songjiang-2023-mock-q17",
+            "shanghai-putuo-2023-q13"
           ],
           "outcomes": [
             "辨认平行、相交与异面",
@@ -580,6 +583,29 @@
           "outcomes": [
             "利用单位向量夹角及内积建立等式和范围",
             "区分标量投影与沿向量方向的投影向量"
+          ]
+        },
+        {
+          "id": "plane-vector-operations",
+          "title": "平面向量运算、模与三角不等式",
+          "difficulty": 3,
+          "prerequisites": [
+            "coordinate-basics"
+          ],
+          "tags": [
+            "平面向量",
+            "向量加法",
+            "向量模",
+            "三角不等式"
+          ],
+          "posts": [
+            "shanghai-putuo-2023-q15",
+            "hongkou-2023-q11"
+          ],
+          "outcomes": [
+            "整理向量线性关系并转化为向量和",
+            "使用三角不等式与反三角不等式判断合向量模长范围",
+            "结合夹角构造验证模长取值的可实现性"
           ]
         },
         {
@@ -850,7 +876,8 @@
             "chongming-2023-q02",
             "hongkou-2023-q01",
             "shanghai-putuo-2023-q03",
-            "songjiang-2023-mock-q13"
+            "songjiang-2023-mock-q13",
+            "shanghai-putuo-2023-q14"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -901,7 +928,8 @@
             "derivative-classics-q07",
             "derivative-classics-q08",
             "derivative-classics-q09",
-            "derivative-classics-q10"
+            "derivative-classics-q10",
+            "shanghai-putuo-2023-q12"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",
@@ -927,7 +955,9 @@
             "week12-gaosan-q15",
             "jiading-2023-q19",
             "jiading-2023-q20",
-            "songjiang-2023-mock-q19"
+            "songjiang-2023-mock-q19",
+            "shanghai-putuo-2023-q11",
+            "shanghai-putuo-2023-q12"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",
@@ -959,7 +989,8 @@
             "jiading-2023-q16",
             "derivative-classics-q07",
             "derivative-classics-q10",
-            "songjiang-2023-mock-q13"
+            "songjiang-2023-mock-q13",
+            "hongkou-2023-q13"
           ],
           "outcomes": [
             "在代数式、图像和几何对象间切换",

@@ -121,8 +121,3 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 - 旧文优先修复题干原位公式和每一步推导公式；公式汇总区不能替代正文。
 - 解析几何图形必须与同一坐标模型一致，并核验交点、切线、焦点、弦、垂直和退化情况。
 - 自动审计只建立人工复核队列，不会擅自改写原题或宣称证明正确。详见 [公式与图形整改计划](docs/math-rendering-remediation.md) 与 [解析几何审计规范](skills/math-visual-posts/references/analytic-geometry-visual-audit.md)。
-
-
-## 虹口区 2023 届一模 · 第三批（第 11–15 题）
-
-继续按原卷题号逐题建设：Q11 向量参数轨迹面积，Q12 双曲线焦点弦与离心率，Q13 直线与单位圆的充分必要条件，Q14 复数共轭与倒数的模，Q15 椭圆与抛物线的公共焦点和公共弦。题干分别位于上传 PDF 第 1–2 页，参考答案在第 7 页；原卷只列结果，本站推导和 SVG 为独立补充。已登记到 content/posts.json、content/knowledge-map.json 和试卷页，选择题分类增加“复数与复平面”入口。

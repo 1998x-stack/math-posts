@@ -1,0 +1,52 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 12,
+    "question_pages": [
+      1
+    ],
+    "answer_pages": [
+      6
+    ],
+    "pages": [
+      1
+    ],
+    "question_page": 1,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "putuo-2023-mock-source",
+    "paper_id": "putuo-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "PDF page 1 rendered question page",
+      "question number 12",
+      "PDF page 6 rendered answer key",
+      "mathematical symbols, subscripts, superscripts, relation signs and options",
+      "independent derivation and equality/feasibility checks"
+    ]
+  },
+  "answer": {
+    "official": "(-∞, 3√2+5]",
+    "official_locator": "参考答案图片，第 6 页",
+    "independent_check": "取 a₁=a₂、a₃=√2a₁ 时，乘积恰为 5+3√2，故 k 不能更大；而对任意正数三元组，乘积都不小于这个值，所以所有 k≤5+3√2 均使原不等式恒成立。",
+    "independent_result": "(−∞, 5+3√2]"
+  },
+  "math_equations": [
+    "k ≤ (a₁+a₂+a₃)(1/a₁+1/a₂+1/a₃)",
+    "x²+y²=1,   s=x+y,   1<s≤√2",
+    "P=(s+1)(1+s/(xy))=s+3+2/(s−1)",
+    "P_min=P(√2)=√2+3+2/(√2−1)=5+3√2"
+  ],
+  "svg_assertion": "P(s)=s+3+2/(s−1) 在 1<s≤√2 上严格递减；右端点 s=√2 对应 a₁=a₂，并取得最小值 5+3√2。",
+  "editorial_note": "原卷仅列参考答案，没有逐步官方解析；本站推导、选项反例/存在性构造与 SVG 为独立编写。原始 PDF 由用户上传，不在公开仓库提供下载链接。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "svg_assertion_checked": true,
+    "mathml_static": "pending CI",
+    "browser_render": "pending CI"
+  }
+}
