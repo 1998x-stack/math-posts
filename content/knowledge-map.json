@@ -551,7 +551,8 @@
           "posts": [
             "jianping-2021-q02",
             "songjiang-2023-mock-q07",
-            "yangpu-2023-q06"
+            "yangpu-2023-q06",
+            "hongkou-2023-q11"
           ],
           "outcomes": [
             "用坐标描述点和方向",
@@ -600,7 +601,8 @@
             "songjiang-2023-mock-q03",
             "hongkou-2023-q05",
             "yangpu-2023-q05",
-            "shanghai-putuo-2023-q01"
+            "shanghai-putuo-2023-q01",
+            "hongkou-2023-q14"
           ],
           "outcomes": [
             "将复数 a+bi 对应到平面点 (a,b)",
@@ -624,7 +626,8 @@
             "shanghai-2024-geometry-jingan-q20",
             "week12-gaosan-q09",
             "chongming-2023-q06",
-            "shanghai-putuo-2023-q09"
+            "shanghai-putuo-2023-q09",
+            "hongkou-2023-q13"
           ],
           "outcomes": [
             "在常见直线方程间转换",
@@ -668,7 +671,9 @@
             "jiading-2023-q14",
             "jiading-2023-q20",
             "shanghai-putuo-2023-q07",
-            "yangpu-2023-q08"
+            "yangpu-2023-q08",
+            "hongkou-2023-q12",
+            "hongkou-2023-q15"
           ],
           "outcomes": [
             "从定义和标准方程识别圆锥曲线",
@@ -705,7 +710,9 @@
             "shanghai-2024-geometry-huangpu-q20",
             "shanghai-2024-geometry-yangpu-q20",
             "songjiang-2023-mock-q10",
-            "jiading-2023-q20"
+            "jiading-2023-q20",
+            "hongkou-2023-q12",
+            "hongkou-2023-q15"
           ],
           "outcomes": [
             "用联立与韦达关系处理弦问题",

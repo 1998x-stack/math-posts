@@ -71,7 +71,7 @@
   },
   {
     "source_access": "user-uploaded",
-    "description": "仅展示已登记且经过公开校验的题目；未收录并不代表原卷不存在。",
+    "description": "完整试卷共 21 题（填空 12、选择 4、解答 5）；按原卷题号顺序展示本站已登记且经过校验的题目。未收录不代表原卷不存在。",
     "id": "hongkou-2023-mock",
     "title": "2023 届上海市虹口区高三一模数学试卷",
     "kind": "exam",
@@ -80,7 +80,7 @@
     "year": 2023,
     "exam_type": "一模",
     "source_id": "hongkou-2023-mock-source",
-    "total_questions": null,
+    "total_questions": 21,
     "source_title": "140-2023虹口一模.pdf"
   },
   {

@@ -5473,5 +5473,228 @@
       "method": [],
       "visual": []
     }
+  },
+  {
+    "slug": "hongkou-2023-q11",
+    "title": "向量线性组合与平行四边形面积：外心条件如何确定轨迹面积",
+    "subtitle": "向量系数 x、y 独立取 [0,1]，P 扫过以 OB、OC 为邻边的平行四边形",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 10,
+    "tags": [
+      "analytic-geometry",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "向量",
+      "轨迹面积"
+    ],
+    "summary": "先用余弦定理求 BC=7，再求外接圆半径 R=35/(4√6)；轨迹面积为 R²sin2A=49√6/24。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "外心三角形确定半径，向量参数矩形映射为平行四边形"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "vector",
+        "analytic-geometry"
+      ],
+      "method": [],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
+  },
+  {
+    "slug": "hongkou-2023-q12",
+    "title": "双曲线焦点弦与角度关系：由四个结论筛出①④",
+    "subtitle": "焦点距离比与角相等关系确定 e=2，四个命题中仅 ①④ 正确",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 14,
+    "tags": [
+      "analytic-geometry",
+      "fill-in",
+      "2023虹口一模",
+      "填空",
+      "双曲线",
+      "焦点弦",
+      "离心率"
+    ],
+    "summary": "由双曲线距离差求 AF₁=4a、AF₂=2a；再由正弦定理求 BF₂=6a，得到 e=2、AB=8a、面积 √15a²。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      2,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "双曲线焦点弦、距离比例与四项真假核验"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "conics",
+        "analytic-geometry"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
+  },
+  {
+    "slug": "hongkou-2023-q13",
+    "title": "直线与单位圆的位置关系：充分条件不等于必要条件",
+    "subtitle": "直线与单位圆相交的充要条件是 m≠0，因此 m>0 充分但不必要",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 8,
+    "tags": [
+      "analytic-geometry",
+      "multiple-choice",
+      "2023虹口一模",
+      "选择题",
+      "直线与圆",
+      "充分必要条件",
+      "反例"
+    ],
+    "summary": "代入圆方程得两个根 0 和 −2m/(1+m²)，两根相异当且仅当 m≠0；取 m=−1 证明不必要。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "m=1 与 m=−1 都是割线，m=0 为切线"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "analytic-geometry",
+        "reasoning"
+      ],
+      "method": [
+        "coordinate-method",
+        "counterexample"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
+  },
+  {
+    "slug": "hongkou-2023-q14",
+    "title": "复数共轭与倒数的模：用极形式锁定 |z|",
+    "subtitle": "写成 z=re^(iθ)，共轭 z 与 1/z 共享辐角 −θ，模方程化为 r+1/r=5/2",
+    "category": "multiple-choice",
+    "topic": "complex-numbers",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 8,
+    "tags": [
+      "complex-numbers",
+      "multiple-choice",
+      "2023虹口一模",
+      "选择题",
+      "共轭复数",
+      "复数模"
+    ],
+    "summary": "由 0<r<1 和 r+1/r=5/2，解得 r=1/2；另一个根 2 不满足题设范围。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "所有合法复数位于以原点为圆心、半径 1/2 的圆上"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "complex-numbers"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "complex-plane"
+      ]
+    }
+  },
+  {
+    "slug": "hongkou-2023-q15",
+    "title": "椭圆与抛物线的公共焦点：先定参数，再求公共弦",
+    "subtitle": "椭圆焦点为 (±1,0)，共同焦点使 p=2；公共弦长为 4√6/3",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "analytic-geometry",
+      "multiple-choice",
+      "2023虹口一模",
+      "选择题",
+      "圆锥曲线",
+      "椭圆",
+      "抛物线",
+      "公共弦"
+    ],
+    "summary": "代入 p=2 得 y²=4x，与椭圆联立后取合法根 x=2/3，交点纵坐标为 ±2√6/3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2,
+      7
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "椭圆与抛物线在 x=2/3 处相交形成竖直公共弦"
+    },
+    "paper_id": "hongkou-2023-mock",
+    "facets": {
+      "concept": [
+        "conics",
+        "analytic-geometry"
+      ],
+      "method": [
+        "coordinate-method",
+        "algebraic-transform"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
   }
 ]
