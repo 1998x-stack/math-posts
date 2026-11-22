@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 15,
+    "pages": [
+      21,
+      22
+    ],
+    "question_pages": [
+      21
+    ],
+    "answer_pages": [
+      21,
+      22
+    ],
+    "school": "湖南长沙长郡中学 · 2024届高考适应",
+    "material": "user-uploaded 62-page project PDF; not a public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "all_subquestions",
+      "function_definition",
+      "parameter_domain",
+      "inequality_signs",
+      "reference_answer",
+      "source_explanation",
+      "page_boundaries"
+    ]
+  },
+  "answer": {
+    "official": "原卷参考答案：（1）π/4−1；（2）证明见解析；（3）证明见解析。",
+    "independent_check": "a=1/2 时 f(x)≥0 且 x>0 时严格大于；对 k≥2，cos(1/k)>1−[1/(2k−1)−1/(2k+1)]，求和得到 n−4/3+1/(2n+1)>n−4/3。"
+  },
+  "editorial_note": "原卷第21–22页题干和三问详解已逐页核对；本站独立强调 x>0 时的严格号及求和下标 k=2…n。",
+  "qa": {
+    "source_checked": true,
+    "math_review": "independent-derivation-reviewed",
+    "visual_review": "SVG depicts the even-function minimum and numerical per-term deficit comparison.",
+    "source_pages_verified": [
+      21,
+      22
+    ]
+  }
+}

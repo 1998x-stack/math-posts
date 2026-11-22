@@ -126,3 +126,14 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 ## 杨浦区 2023 届高三一模：第 11–15 题
 
 本批新增 2 道填空题与 3 道选择题：等差数列前项和去重、复合函数方程根数、抽样概率、线面位置关系、三角形充分必要条件。原题位于用户上传 PDF 第 1–2 页，参考答案在第 8 页；五篇文章均保留原题、原生 MathML、独立推导、专属 SVG 与 evidence.json。原卷仅提供参考答案，不把本站解答冒充官方解析。至此杨浦一模已按原卷顺序登记第 1–15 题，原卷共 21 题。
+
+
+## 导数专题第九批：原卷第 11–15 题
+
+新增华师一、衡水中学与长郡中学五篇题解，覆盖根式指数函数单峰、无极值点与恒成立参数、对数底数与幂指数、指数对数辅助函数全局最小值，以及余弦和的裂项估计。每篇包含原题 MathML、逐步证明、独立核验、专属 SVG 与来源 evidence；同一题集继续沿原卷题号登记。
+
+- [Q11 根式指数函数的单峰结构](https://1998x-stack.github.io/math-posts/posts/worked-solutions/derivative-classics-q11/)
+- [Q12 无极值点与恒成立不等式](https://1998x-stack.github.io/math-posts/posts/worked-solutions/derivative-classics-q12/)
+- [Q13 对数底数与幂函数竞争](https://1998x-stack.github.io/math-posts/posts/worked-solutions/derivative-classics-q13/)
+- [Q14 指数对数辅助函数的全局最小值](https://1998x-stack.github.io/math-posts/posts/worked-solutions/derivative-classics-q14/)
+- [Q15 余弦函数最值与有限和放缩](https://1998x-stack.github.io/math-posts/posts/worked-solutions/derivative-classics-q15/)

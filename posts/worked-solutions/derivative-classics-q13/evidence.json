@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "导数及其应用大题（解析版）",
+    "question": 13,
+    "pages": [
+      18,
+      19
+    ],
+    "question_pages": [
+      18
+    ],
+    "answer_pages": [
+      18,
+      19
+    ],
+    "school": "河北省衡水中学 · 2024届高三下学期押题",
+    "material": "user-uploaded 62-page project PDF; not a public URL"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "full_question",
+      "all_subquestions",
+      "function_definition",
+      "parameter_domain",
+      "inequality_signs",
+      "reference_answer",
+      "source_explanation",
+      "page_boundaries"
+    ]
+  },
+  "answer": {
+    "official": "原卷参考答案：（1）(0,√e) 上递增、(√e,+∞) 上递减；（2）a=1/e。",
+    "independent_check": "a=1/e 时 x*=e^e，f(x*)=−1；对 a>1，x→0+ 时 f(x)→−∞；对 0<a<1，最小值条件等价于 a ln a≤−1/e，仅 a=1/e 取等。"
+  },
+  "editorial_note": "原题条件 a>0、a≠1 与原卷参考答案逐页核对；本站补充说明对数底数变化时导数分母符号的影响。",
+  "qa": {
+    "source_checked": true,
+    "math_review": "independent-derivation-reviewed",
+    "visual_review": "SVG samples f_a for a=1/e and a=1/2.",
+    "source_pages_verified": [
+      18,
+      19
+    ]
+  }
+}
