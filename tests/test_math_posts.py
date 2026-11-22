@@ -498,7 +498,7 @@ def test_songjiang_q21_source_mathml_and_publication():
     html=(root/"index.html").read_text("utf-8")
     evidence=json.loads((root/"evidence.json").read_text("utf-8"))
     assert html.index('id="overview"') < html.index('id="question"') < html.index('id="solution"')
-    assert 'id="visual"' in html and 'src="assets/sequence-threshold.svg"' in html
+    assert 'id="visual"' in html and '<svg' in html and 'threshold-title' in html
     assert html.count('class="step-note"')>=3 and html.count('<math')>=20
     assert "H 是两支离散数列的并，不是连续区间" in html
     assert "上确界，不是最大值" in html
