@@ -1,0 +1,46 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 13,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "A y=√x",
+      "B y=−x³",
+      "C y=lg x",
+      "D y=sin x",
+      "要求既为奇函数又在(0,1)严格递增"
+    ]
+  },
+  "answer": {
+    "official": "D",
+    "official_source": "原 PDF 第7页选择题参考答案",
+    "independent_check": "A和C的实数定义域不关于原点对称；B是奇函数但f′(x)=−3x²<0于(0,1)；D满足sin(−x)=−sinx且cosx>0于(0,1)。"
+  },
+  "math_equations": [
+    "f(−x)=−f(x)",
+    "(0,1)⊂(0,π/2)",
+    "(−x³)′=−3x²<0",
+    "(sin x)′=cos x>0"
+  ],
+  "figure_assertions": [
+    "sqrt x and lg x are only plotted on positive-domain side",
+    "−x³ decreases on (0,1)",
+    "sin x increases on (0,1) and is odd"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原题 PDF 第2页、答案第7页。原卷仅列选项答案，逐项分析和SVG为独立教学补充。"
+}
