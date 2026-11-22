@@ -1,0 +1,38 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 15,
+    "pages": [
+      2,
+      7
+    ],
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "hongkou-2023-mock-source",
+    "paper_id": "hongkou-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "ellipse x²/4+y²/3=1",
+      "parabola y²=2px, p>0",
+      "common focus",
+      "four chord-length options"
+    ]
+  },
+  "answer": {
+    "official": "B (4√6/3)",
+    "independent_check": "Ellipse foci are (±1,0), parabola focus (p/2,0), so p=2; valid intersection x=2/3, y=±2√6/3; chord length 4√6/3."
+  },
+  "diagram_assertions": [
+    "Ellipse and parabola share focus F=(1,0)",
+    "intersections x=2/3, y=±2√6/3",
+    "vertical chord length 4√6/3"
+  ],
+  "editorial_note": "原卷第7页仅给选择题答案 B；本站的联立推导、合法根筛选与坐标图为独立补充。"
+}
