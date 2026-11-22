@@ -1,0 +1,47 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 12,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "椭圆 Γ1 与双曲线 Γ2",
+      "两者离心率互为倒数",
+      "共同焦点 F1、F2",
+      "P为第一象限交点",
+      "∠F1PF2=π/6"
+    ]
+  },
+  "answer": {
+    "official": "2+√3",
+    "official_source": "原 PDF 第7页填空题参考答案",
+    "independent_check": "设椭圆半长轴a、双曲线半实轴b、公共焦距c。e1=c/a,e2=c/b,e1e2=1⇒c²=ab。P在右支，PF1=a+b、PF2=a−b。余弦定理给 cosπ/6=(a−b)/(a+b)=√3/2，故 b/a=(2−√3)/(2+√3)，e2=√(a/b)=2+√3。"
+  },
+  "math_equations": [
+    "e1=c/a, e2=c/b, c²=ab",
+    "PF1+PF2=2a, PF1−PF2=2b",
+    "PF1=a+b, PF2=a−b",
+    "cos(π/6)=(a−b)/(a+b)=√3/2",
+    "e2=√(a/b)=2+√3"
+  ],
+  "figure_assertions": [
+    "共焦椭圆和双曲线使用 c=2、a=4+2√3、b=4−2√3",
+    "交点P=(2,4√3)",
+    "PF1=8, PF2=4√3, F1F2=4, angle π/6"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原题 PDF 第2页、参考答案第7页。原卷未提供逐步解析，本文焦点距离法与 SVG 是独立教学补充；图中参数 c=2 仅用于选取与推导比例一致的可视化示例。"
+}

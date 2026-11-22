@@ -5972,5 +5972,240 @@
         "number-line"
       ]
     }
+  },
+  {
+    "slug": "chongming-2023-q11",
+    "title": "正六边形中的向量数量积：把几何范围变成线性函数",
+    "subtitle": "线性函数在六边形顶点取极值，完整范围为 [−4,12]",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 10,
+    "tags": [
+      "平面向量",
+      "数量积",
+      "正六边形",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "建立正六边形坐标，将 AD·BP 化为线性函数；六个顶点值给出极值，沿 AD 边连续移动证明区间完整。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "线性函数在六边形顶点取极值，完整范围为 [−4,12]"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "vector"
+      ],
+      "method": [
+        "coordinate-method"
+      ],
+      "visual": [
+        "vector-projection"
+      ]
+    }
+  },
+  {
+    "slug": "chongming-2023-q12",
+    "title": "共焦椭圆与双曲线：由焦点夹角求双曲线离心率",
+    "subtitle": "焦点距离和差、余弦定理联立，得到 e₂=2+√3",
+    "category": "fill-in",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 12,
+    "tags": [
+      "椭圆",
+      "双曲线",
+      "离心率",
+      "焦点三角形",
+      "2023崇明一模",
+      "填空题"
+    ],
+    "summary": "利用共焦椭圆的焦点距离和、双曲线右支的距离差，再用余弦定理求得双曲线离心率 2+√3。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "焦点距离和差、余弦定理联立，得到 e₂=2+√3"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "conics"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
+  },
+  {
+    "slug": "chongming-2023-q13",
+    "title": "奇函数与严格单调：四个函数中为什么选 sin x",
+    "subtitle": "奇偶性看定义域与对称，单调性看 (0,1) 上的变化方向",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 10,
+    "tags": [
+      "奇函数",
+      "函数单调性",
+      "函数图像",
+      "2023崇明一模",
+      "选择题"
+    ],
+    "summary": "先检查定义域是否关于原点对称，再比较单调方向；只有 sin x 同时是奇函数并在 (0,1) 严格递增。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "奇偶性看定义域与对称，单调性看 (0,1) 上的变化方向"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "functions"
+      ],
+      "method": [
+        "casework"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "chongming-2023-q14",
+    "title": "充分条件与必要条件：用解集包含关系判断",
+    "subtitle": "x+1/x>2 的解集是 (0,1)∪(1,+∞)，因此它是 x≠1 的充分不必要条件",
+    "category": "multiple-choice",
+    "topic": "geometry-reasoning",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 10,
+    "tags": [
+      "充分必要条件",
+      "分式不等式",
+      "解集包含",
+      "2023崇明一模",
+      "选择题"
+    ],
+    "summary": "在原式定义域 R\\{0} 上求出两个命题的解集，P 真包含于 Q；x=−1 否定逆推，答案为充分不必要。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "x+1/x>2 的解集是 (0,1)∪(1,+∞)，因此它是 x≠1 的充分不必要条件"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "reasoning"
+      ],
+      "method": [
+        "algebraic-transform",
+        "counterexample"
+      ],
+      "visual": [
+        "number-line"
+      ]
+    }
+  },
+  {
+    "slug": "chongming-2023-q15",
+    "title": "正弦函数的唯一反解：为什么最小区间端点是 π/2",
+    "subtitle": "把 f(α) 的值域转为目标值，再用正弦的单调分支确定最小 m",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 12,
+    "tags": [
+      "正弦函数",
+      "函数单调性",
+      "存在唯一",
+      "2023崇明一模",
+      "选择题"
+    ],
+    "summary": "先求 −f(α)∈[0,√3/2]，再利用 f 在 [π/6,π/2] 上严格递增覆盖目标值，端点证明最小 m=π/2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "reference_answer_pages": [
+      7
+    ],
+    "source_exam": "2023-shanghai-chongming-first-mock",
+    "source_region": "崇明区",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "把 f(α) 的值域转为目标值，再用正弦的单调分支确定最小 m"
+    },
+    "paper_id": "chongming-2023-mock",
+    "facets": {
+      "concept": [
+        "trigonometry",
+        "functions"
+      ],
+      "method": [
+        "number-shape",
+        "parameter-analysis"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
   }
 ]

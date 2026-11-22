@@ -1,0 +1,47 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 15,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "f(x)=sin(x−π/6)",
+      "α∈[−5π/6,−π/2]",
+      "β∈[0,m]",
+      "f(α)+f(β)=0",
+      "选项 π/6、π/2、7π/6、π"
+    ]
+  },
+  "answer": {
+    "official": "B（π/2）",
+    "official_source": "原 PDF 第7页选择题参考答案",
+    "independent_check": "令 t=−f(α)。α−π/6∈[−π,−2π/3]，故 t∈[0,√3/2]。在 β∈[π/6,π/2] 上，f(β)=sin(β−π/6)严格递增并从0取到√3/2，故每个t恰有一个β。α=−π/2时t=√3/2，首次达到该值的β=π/2，故m≥π/2且最小值为π/2。"
+  },
+  "math_equations": [
+    "α−π/6∈[−π,−2π/3]",
+    "−f(α)∈[0,√3/2]",
+    "f(β)=sin(β−π/6)",
+    "f′(β)=cos(β−π/6)>0 on [0,π/2]",
+    "m_min=π/2"
+  ],
+  "figure_assertions": [
+    "f(beta)=sin(beta−π/6) sampled over beta∈[0,π]",
+    "first target maximum sqrt3/2 at beta=pi/2",
+    "later repeat at beta=5pi/6 lies beyond the minimal interval"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原题 PDF 第2页、答案第7页。原卷仅列选择题答案；本文通过正弦值域、单调区间与端点必要性独立证明最小 m。"
+}

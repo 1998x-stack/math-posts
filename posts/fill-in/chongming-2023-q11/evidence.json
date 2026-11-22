@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 11,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "正六边形边长2",
+      "顶点顺序 ABCDEF",
+      "P在内部或边界",
+      "向量 AD 与向量 BP 的数量积",
+      "官方答案区间端点"
+    ]
+  },
+  "answer": {
+    "official": "[−4,12]",
+    "official_source": "原 PDF 第7页填空题参考答案",
+    "independent_check": "取 A=(0,0),B=(2,0),C=(3,√3),D=(2,2√3),E=(0,2√3),F=(−1,√3)。AD·BP=2x+2√3y−4。六顶点值为−4,0,8,12,8,0；沿 AD 线段取 P=A+tAD 可取到−4+16t，t∈[0,1]。"
+  },
+  "math_equations": [
+    "AD=(2,2√3)",
+    "BP=(x−2,y)",
+    "AD·BP=2x+2√3y−4",
+    "vertex values (−4,0,8,12,8,0)",
+    "AD·BP|P=A+tAD=−4+16t"
+  ],
+  "figure_assertions": [
+    "A与D分别是线性点积的最小和最大支撑顶点；虚线垂直于AD；P示意在六边形中心"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原卷题干 PDF 第2页、官方答案第7页。原卷只列答案，不含此题逐步推导；本文坐标法、连续性论证和SVG均为本站独立补充。"
+}

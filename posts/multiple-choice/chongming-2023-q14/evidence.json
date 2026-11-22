@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "上海市崇明区2023届高三一模数学试卷（2022年12月，含参考答案）",
+    "question": 14,
+    "pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "x∈R",
+      "x+1/x>2",
+      "x≠1",
+      "四个条件选项 A–D"
+    ]
+  },
+  "answer": {
+    "official": "A（充分不必要）",
+    "official_source": "原 PDF 第7页选择题参考答案",
+    "independent_check": "表达式定义域 D=R\\{0}。P:x+1/x>2 ⇔ (x−1)^2/x>0 ⇔ x∈(0,1)∪(1,+∞)。Q:x≠1 在 D 上的解集为(−∞,0)∪(0,1)∪(1,+∞)。故P⇒Q而Q不⇒P；x=−1是反例。"
+  },
+  "math_equations": [
+    "x+1/x>2",
+    "(x−1)²/x>0",
+    "P=(0,1)∪(1,+∞)",
+    "Q=(−∞,0)∪(0,1)∪(1,+∞)"
+  ],
+  "figure_assertions": [
+    "P解集为正半轴去掉0和1",
+    "Q解集为实数轴去掉0和1",
+    "x=−1在Q但不在P"
+  ],
+  "qa": {
+    "source_checked": true,
+    "math_verified": true,
+    "browser_visual_test": "not verified",
+    "pages_pdf_generation": "not verified"
+  },
+  "editorial_note": "原题字面写 x∈R，但分式 1/x 在 x=0 无定义。正文明确采用原表达式的共同定义域 R\\{0}，不将x=0代入任何命题；原卷仅列选项答案，本文解集比较为独立补充。"
+}
