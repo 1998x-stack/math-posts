@@ -1,0 +1,41 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 11,
+    "pages": [
+      1,
+      7
+    ],
+    "question_pages": [
+      1
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "hongkou-2023-mock-source",
+    "paper_id": "hongkou-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "AB=5",
+      "AC=6",
+      "cos A=1/5",
+      "O is circumcenter",
+      "vector OP=x vector OB+y vector OC",
+      "x,y in [0,1]"
+    ]
+  },
+  "answer": {
+    "official": "49√6/24",
+    "independent_check": "BC=7; sinA=2√6/5; R=35/(4√6); sin∠BOC=4√6/25; parallelogram area |det(OB,OC)|=49√6/24."
+  },
+  "diagram_assertions": [
+    "Triangle coordinates A=(0,0), B=(5,0), C=(6/5,12√6/5)",
+    "Circumcenter O=(5/2,25√6/24), R=35/(4√6)",
+    "Vector image is the parallelogram spanned by OB and OC",
+    "Area equals |det(OB,OC)|=49√6/24"
+  ],
+  "editorial_note": "原卷第7页只列参考答案，不提供本题完整推导。页面中的证明、图示与独立坐标核验均为本站原创补充，不标记为官方解析。"
+}

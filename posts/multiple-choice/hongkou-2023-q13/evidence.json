@@ -1,0 +1,39 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 13,
+    "pages": [
+      2,
+      7
+    ],
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "hongkou-2023-mock-source",
+    "paper_id": "hongkou-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "m∈R",
+      "line y=mx+1",
+      "circle x²+y²=1",
+      "condition m>0",
+      "four implication-condition options"
+    ]
+  },
+  "answer": {
+    "official": "A",
+    "independent_check": "Intersection roots are x=0 and x=-2m/(1+m²); distinct iff m≠0. m>0 implies it, but m=-1 is a counterexample to necessity."
+  },
+  "diagram_assertions": [
+    "Unit circle radius 1",
+    "m=1 and m=-1 give two distinct intersections",
+    "m=0 gives tangent at (0,1)"
+  ],
+  "editorial_note": "原卷第7页仅给选择题答案 A；本站的代数推导和反例图解为独立补充。"
+}

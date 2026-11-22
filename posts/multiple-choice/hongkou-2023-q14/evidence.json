@@ -1,0 +1,36 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 14,
+    "pages": [
+      2,
+      7
+    ],
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "hongkou-2023-mock-source",
+    "paper_id": "hongkou-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "|z|<1",
+      "|conjugate(z)+1/z|=5/2",
+      "four modulus options"
+    ]
+  },
+  "answer": {
+    "official": "D (1/2)",
+    "independent_check": "z=r e^(iθ); conjugate(z)+1/z=(r+1/r)e^(-iθ); r+1/r=5/2 gives r=1/2 or 2; 0<r<1 selects 1/2."
+  },
+  "diagram_assertions": [
+    "Circle |z|=1/2 in complex plane",
+    "point direction θ is arbitrary; radius fixed"
+  ],
+  "editorial_note": "原卷第7页仅给选择题答案 D；本站的极形式推导与复平面图解为独立补充。"
+}

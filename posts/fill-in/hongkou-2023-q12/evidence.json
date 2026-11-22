@@ -1,0 +1,40 @@
+{
+  "source": {
+    "title": "上海市虹口区 2023 届高三一模数学试卷（2022.12）",
+    "question": 12,
+    "pages": [
+      2,
+      7
+    ],
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      7
+    ],
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "hongkou-2023-mock-source",
+    "paper_id": "hongkou-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "hyperbola x²/a²-y²/b²=1, a,b>0",
+      "line through F2 intersects right branch at A,B",
+      "AF1=2AF2",
+      "angle AF1F2=angle F1BF2",
+      "four propositions transcribed"
+    ]
+  },
+  "answer": {
+    "official": "①④",
+    "independent_check": "AF1=4a, AF2=2a; angle/sine-rule gives BF2=6a; collinearity gives e=2; b/a=√3, AB=8a, area(A F1 F2)=√15 a²."
+  },
+  "diagram_assertions": [
+    "Normalized hyperbola x²-y²/3=1 with foci ±2",
+    "A=(3/2,√15/2), B=(7/2,-3√15/2) lie on the right branch",
+    "F2 lies between A and B; AB=8a",
+    "asymptote slopes ±√3; triangle area √15 a²"
+  ],
+  "editorial_note": "原卷第7页只列参考答案，不提供本题完整推导。页面中的证明、图示与独立坐标核验均为本站原创补充，不标记为官方解析。"
+}

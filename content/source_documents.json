@@ -57,10 +57,10 @@
       "title": "140-2023虹口一模.pdf",
       "format": "pdf",
       "access": "user-uploaded",
-      "page_count": null,
-      "checksum_sha256": null,
+      "page_count": 12,
+      "checksum_sha256": "0a41c81f5264b470a6f6d298147bfb85fcd558583fa4bbd0a02c06b7cce8b5c9",
       "public_url": null,
-      "notes": "来源由用户上传；仅登记元数据，不在公开站点伪造 PDF 下载链接。"
+      "notes": "来源由用户上传；PDF 共 12 页，已核对渲染页与答案页。仅登记元数据，不在公开站点伪造 PDF 下载链接。"
     },
     {
       "id": "yangpu-2023-mock-source",
