@@ -5473,5 +5473,223 @@
       "method": [],
       "visual": []
     }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q11",
+    "title": "绝对值函数的对称性：乘积最大值为 3/4",
+    "subtitle": "先由两个函数值相等锁定 a+b，再在约束范围内求二次函数最大值。",
+    "category": "fill-in",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "绝对值函数",
+      "对称性",
+      "二次函数最值"
+    ],
+    "summary": "由 a≤b 和 f(a)=f(b+1) 得 a+b=1、a≤1/2；a(b+1)=a(2−a) 在 a=1/2 时取最大值 3/4。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 11,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左图的两点关于竖直对称轴 x=1 成对出现；右图只保留 a≤1/2 的可行部分，最大值在闭端点 a=1/2 取得。"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "optimization"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q12",
+    "title": "直角三角形边长约束：恒成立参数上界为 5+3√2",
+    "subtitle": "把三边按斜边归一化，用 s=x+y 将三变量问题化为单变量最小值。",
+    "category": "fill-in",
+    "topic": "optimization",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023普陀一模",
+      "填空题",
+      "均值不等式",
+      "直角三角形",
+      "恒成立参数"
+    ],
+    "summary": "令 x=a₁/a₃、y=a₂/a₃、s=x+y，则 1<s≤√2，目标乘积化为 s+3+2/(s−1)，在 s=√2 取最小值 5+3√2。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 12,
+    "question_type": "fill-in",
+    "source_pages": [
+      1
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "曲线只在 (1,√2] 上讨论；s=1 是不可取的开端，s=√2 是可以达到的闭端点，也是乘积最小处。"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "inequalities",
+        "optimization"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q13",
+    "title": "线面垂直与平面平行：只有命题 C 必然成立",
+    "subtitle": "区分“直线平行于平面”和“直线垂直于平面”，用法向方向检验四个选项。",
+    "category": "multiple-choice",
+    "topic": "solid-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023普陀一模",
+      "选择题",
+      "空间点线面",
+      "线面垂直",
+      "平面平行"
+    ],
+    "summary": "若 l⊥α 且 α∥β，则 l 也垂直于 β；其余选项都缺少必要条件，可用坐标方向构造反例。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 13,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左侧反例说明 D 的前提不足；右侧说明 C 的法向方向传递关系。图为透视示意，线面关系由代数方向和定理保证。"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "solid-geometry"
+      ],
+      "method": [
+        "counterexample"
+      ],
+      "visual": [
+        "spatial-3d"
+      ]
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q14",
+    "title": "常用对数与自然对数比较：lg x 大于 ln x 当且仅当 0<x<1",
+    "subtitle": "利用换底公式比较两个对数的系数，并用图像核验不等号方向。",
+    "category": "multiple-choice",
+    "topic": "functions",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023普陀一模",
+      "选择题",
+      "常用对数",
+      "自然对数",
+      "对数不等式"
+    ],
+    "summary": "lg x=ln x/ln 10，且 0<1/ln 10<1；因此 lg x>ln x 等价于 ln x<0，即 0<x<1。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 14,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "阴影标出 0<x<1 的定义域内区间，此处 lg x>ln x；x=1 为两曲线的相等点，不属于严格不等式解集。"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "functions",
+        "inequalities"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "function-plot"
+      ]
+    }
+  },
+  {
+    "slug": "shanghai-putuo-2023-q15",
+    "title": "向量差关系与模的三角不等式：k=2 可以取到",
+    "subtitle": "把向量等式整理成 3b=a+2c，再由两向量合成的长度范围筛选选项。",
+    "category": "multiple-choice",
+    "topic": "analytic-geometry",
+    "status": "published",
+    "published": "2026-11-23",
+    "updated": "2026-11-23",
+    "reading_minutes": 9,
+    "tags": [
+      "2023普陀一模",
+      "选择题",
+      "平面向量",
+      "向量模",
+      "三角不等式"
+    ],
+    "summary": "由 3b=a+2c 及 |a|:|b|:|c|=1:k:3，得 5≤3k≤7，即 5/3≤k≤7/3；四个选项中只有 2 可取。",
+    "paper": "https://github.com/1998x-stack/math-posts/blob/main/content/source-notes.md",
+    "source_exam": "shanghai-putuo-2023-mock1",
+    "source_region": "普陀区",
+    "question_number": 15,
+    "question_type": "multiple-choice",
+    "source_pages": [
+      2
+    ],
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左侧矢量图给出一个可行构造：|a|=1、|2c|=6、|a+2c|=6；下方区间显示 3k∈[5,7]，k=2 落在可行范围内。"
+    },
+    "paper_id": "putuo-2023-mock",
+    "facets": {
+      "concept": [
+        "vector"
+      ],
+      "method": [
+        "algebraic-transform"
+      ],
+      "visual": [
+        "coordinate-plane"
+      ]
+    }
   }
 ]

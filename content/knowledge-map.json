@@ -75,7 +75,8 @@
           "posts": [
             "yangpu-2023-q03",
             "hongkou-2023-q09",
-            "songjiang-2023-mock-q15"
+            "songjiang-2023-mock-q15",
+            "shanghai-putuo-2023-q14"
           ],
           "outcomes": [
             "掌握对数函数的定义域与单调性",
@@ -101,7 +102,8 @@
             "songjiang-2023-mock-q05",
             "yangpu-2023-q01",
             "hongkou-2023-q09",
-            "hongkou-2023-q10"
+            "hongkou-2023-q10",
+            "shanghai-putuo-2023-q11"
           ],
           "outcomes": [
             "判断单调性与奇偶性",
@@ -425,7 +427,8 @@
             "jianping-2021-q13",
             "jianping-2021-q17",
             "jiading-2023-q17",
-            "songjiang-2023-mock-q17"
+            "songjiang-2023-mock-q17",
+            "shanghai-putuo-2023-q13"
           ],
           "outcomes": [
             "辨认平行、相交与异面",
@@ -574,7 +577,8 @@
           ],
           "posts": [
             "week12-gaosan-q11",
-            "week12-gaosan-q14"
+            "week12-gaosan-q14",
+            "shanghai-putuo-2023-q15"
           ],
           "outcomes": [
             "利用单位向量夹角及内积建立等式和范围",
@@ -843,7 +847,8 @@
             "chongming-2023-q02",
             "hongkou-2023-q01",
             "shanghai-putuo-2023-q03",
-            "songjiang-2023-mock-q13"
+            "songjiang-2023-mock-q13",
+            "shanghai-putuo-2023-q14"
           ],
           "outcomes": [
             "判断不等式变形是否保持方向",
@@ -894,7 +899,8 @@
             "derivative-classics-q07",
             "derivative-classics-q08",
             "derivative-classics-q09",
-            "derivative-classics-q10"
+            "derivative-classics-q10",
+            "shanghai-putuo-2023-q12"
           ],
           "outcomes": [
             "识别基本不等式和平方和下界",
@@ -920,7 +926,9 @@
             "week12-gaosan-q15",
             "jiading-2023-q19",
             "jiading-2023-q20",
-            "songjiang-2023-mock-q19"
+            "songjiang-2023-mock-q19",
+            "shanghai-putuo-2023-q11",
+            "shanghai-putuo-2023-q12"
           ],
           "outcomes": [
             "把文字条件转成变量、约束和目标",

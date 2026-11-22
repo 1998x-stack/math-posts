@@ -1,0 +1,52 @@
+{
+  "source": {
+    "title": "上海市普陀区 2023 届高三一模数学试卷",
+    "exam_date": "2022.12",
+    "question": 15,
+    "question_pages": [
+      2
+    ],
+    "answer_pages": [
+      6
+    ],
+    "pages": [
+      2
+    ],
+    "question_page": 2,
+    "answer_key_page": 6,
+    "material": "user-uploaded PDF (not a public URL)",
+    "source_id": "putuo-2023-mock-source",
+    "paper_id": "putuo-2023-mock"
+  },
+  "transcription": {
+    "status": "checked-against-rendered-pages",
+    "checked_elements": [
+      "PDF page 2 rendered question page",
+      "question number 15",
+      "PDF page 6 rendered answer key",
+      "mathematical symbols, subscripts, superscripts, relation signs and options",
+      "independent derivation and equality/feasibility checks"
+    ]
+  },
+  "answer": {
+    "official": "B",
+    "official_locator": "参考答案图片，第 6 页",
+    "independent_check": "必要范围为 5/3≤k≤7/3；k=2 可由夹角满足 cosθ=−1/12 的两个向量实现。参考答案第 6 页为 15.B。",
+    "independent_result": "B（2）"
+  },
+  "math_equations": [
+    "b−a=2c−2b  ⇒  3b=a+2c",
+    "|a|=t, |b|=kt, |2c|=6t",
+    "|6t−t|≤|a+2c|=3kt≤6t+t",
+    "cosθ=−1/12  ⇒  |a+2c|=6  ⇒  k=2"
+  ],
+  "svg_assertion": "向量 2c 的长度为 6，向量 a 的长度为 1；它们的合向量长度可以介于 5 与 7 之间。图示构造使合向量长度等于 6，因此 3|b|=6、k=2。",
+  "editorial_note": "原卷仅列参考答案，没有逐步官方解析；本站推导、选项反例/存在性构造与 SVG 为独立编写。原始 PDF 由用户上传，不在公开仓库提供下载链接。",
+  "qa": {
+    "source_checked": true,
+    "algebra_checked": true,
+    "svg_assertion_checked": true,
+    "mathml_static": "pending CI",
+    "browser_render": "pending CI"
+  }
+}
