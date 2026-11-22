@@ -554,3 +554,68 @@ def test_songjiang_q21_independent_sequence_and_threshold_invariants():
     assert diameter>0
     assert math.isclose(C*(1-e**-3),(1+e)/e,rel_tol=1e-12)
     assert C*(1-e**-60)-1/e > diameter-1e-6
+
+
+def test_chongming_2023_q11_q15_source_mathml_svg_and_taxonomy():
+    from bs4 import BeautifulSoup
+    batch=sorted([p for p in manifest() if p.get('source_exam')=='2023-shanghai-chongming-first-mock' and 11<=p['question_number']<=15],key=lambda p:p['question_number'])
+    assert [p['question_number'] for p in batch]==[11,12,13,14,15]
+    assert [p['category'] for p in batch]==['fill-in','fill-in','multiple-choice','multiple-choice','multiple-choice']
+    expected=['[−4,12]','2+√3','D','A（充分不必要）','B（π/2）']
+    for item,official in zip(batch,expected):
+        directory=ROOT/'posts'/item['category']/item['slug']
+        html=(directory/'index.html').read_text('utf-8')
+        cover=(directory/'assets/cover.svg').read_text('utf-8')
+        evidence=json.loads((directory/'evidence.json').read_text('utf-8'))
+        assert item['source_pages']==[2] and item['reference_answer_pages']==[7]
+        assert evidence['source']['pages']==[2] and evidence['source']['answer_pages']==[7]
+        assert evidence['answer']['official']==official
+        assert evidence['answer']['independent_check']
+        assert html.index('id="overview"')<html.index('id="question"')
+        assert '<math display="block"' in html and 'data-math-scroll' in html
+        assert '<svg' in html and '<title' in cover and '<desc' in cover
+        assert html.count('class="step-note"')>=4
+        soup=BeautifulSoup(html,'html.parser')
+        assert len(soup.select('h1'))==1
+        assert not any(p.find('div') for p in soup.find_all('p'))
+        for frac in soup.select('math mfrac'):
+            assert len([x for x in frac.children if getattr(x,'name',None)])==2
+        for sub in soup.select('math msub'):
+            assert len([x for x in sub.children if getattr(x,'name',None)])==2
+            assert [x for x in sub.children if getattr(x,'name',None)][0].get_text(strip=True)
+    assert all(x in batch[2]['facets']['concept'] for x in ['functions'])
+    assert batch[3]['facets']['method']==['algebraic-transform','counterexample']
+    assert batch[4]['facets']['visual']==['function-plot']
+
+
+def test_chongming_2023_q11_q15_independent_math_invariants_and_paper_registry():
+    # Q11: linear functional at all vertices and full interval along AD.
+    rt3=math.sqrt(3)
+    vertices=[(0,0),(2,0),(3,rt3),(2,2*rt3),(0,2*rt3),(-1,rt3)]
+    values=[2*x+2*rt3*y-4 for x,y in vertices]
+    assert all(math.isclose(a,b,abs_tol=1e-10) for a,b in zip(values,[-4,0,8,12,8,0]))
+    assert math.isclose(min(values),-4,abs_tol=1e-10) and math.isclose(max(values),12,abs_tol=1e-10)
+    assert [(-4+16*t) for t in (0,.25,.5,.75,1)]==[-4,0,4,8,12]
+    # Q12: a*b=c², focus distances and the angle all agree with e=2+sqrt(3).
+    c=2; a=4+2*rt3; b=4-2*rt3; px,py=2,4*rt3
+    d1=math.dist((px,py),(-c,0)); d2=math.dist((px,py),(c,0))
+    assert math.isclose(a*b,c*c,abs_tol=1e-10)
+    assert math.isclose(d1,a+b,abs_tol=1e-10) and math.isclose(d2,a-b,abs_tol=1e-10)
+    cosine=(d1*d1+d2*d2-(2*c)**2)/(2*d1*d2)
+    assert math.isclose(cosine,math.sqrt(3)/2,abs_tol=1e-10)
+    assert math.isclose(c/b,2+rt3,abs_tol=1e-10)
+    # Q13: sin is odd and increasing on (0,1); -x^3 decreases there.
+    assert math.isclose(math.sin(-.4),-math.sin(.4),abs_tol=1e-12)
+    assert math.cos(.9)>0 and -3*(.9**2)<0
+    # Q14: x=-1 satisfies x!=1 but not the strict rational inequality.
+    assert -1!=1 and -1+1/(-1)<=2
+    # Q15: target range endpoints and first beta attaining the maximum.
+    assert math.isclose(math.sin(-5*math.pi/6-math.pi/6),0,abs_tol=1e-12)
+    assert math.isclose(math.sin(-math.pi/2-math.pi/6),-math.sqrt(3)/2,abs_tol=1e-12)
+    assert math.isclose(math.sin(math.pi/2-math.pi/6),math.sqrt(3)/2,abs_tol=1e-12)
+    assert math.cos(math.pi/3)>0
+    docs=json.loads((ROOT/'content/source_documents.json').read_text('utf-8'))['documents']
+    source=next(x for x in docs if x['id']=='chongming-2023-mock-source')
+    paper=json.loads((ROOT/'content/papers.json').read_text('utf-8'))
+    exam=next(x for x in paper if x['id']=='chongming-2023-mock')
+    assert source['page_count']==13 and exam['total_questions']==21
