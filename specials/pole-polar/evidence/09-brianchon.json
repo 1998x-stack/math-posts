@@ -1,0 +1,12 @@
+{
+  "title": "布里昂雄定理",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "polar(X)∩polar(Y)∩polar(Z)={K}",
+  "assumptions": "一般外切六边形未必凸；平行切线和无穷远共点需用射影语言。",
+  "example": "圆上六点均匀分布时，外切正六边形的长对角线通过圆心。",
+  "figure": "svg/09-brianchon.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

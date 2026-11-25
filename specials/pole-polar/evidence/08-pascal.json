@@ -1,0 +1,12 @@
+{
+  "title": "帕斯卡定理",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "det(X,Y,Z)=0",
+  "assumptions": "六点互异、非退化；特殊平行情形在齐次坐标下处理。",
+  "example": "拖动六边形的一个顶点，三个对边交点仍共线。",
+  "figure": "svg/08-pascal.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

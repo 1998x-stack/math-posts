@@ -1,0 +1,12 @@
+{
+  "title": "完全四点形（完全四边形）",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "polar(P)=MN",
+  "assumptions": "严格术语为 complete quadrangle（四点六线）；其对偶 complete quadrilateral 是四线六点。平行对边交于无穷远点。",
+  "example": "改变四个圆周点，仍可从三组对边得到同一关系。",
+  "figure": "svg/06-quadrangle.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

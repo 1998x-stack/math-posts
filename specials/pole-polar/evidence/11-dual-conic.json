@@ -1,0 +1,12 @@
+{
+  "title": "对偶圆锥曲线",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "a²A²+b²B²=C²",
+  "assumptions": "必须包含竖直切线 x=±a；斜截式只是直线空间的一张坐标图。",
+  "example": "a=2,b=1,k=1 时截距 m=±√5。",
+  "figure": "svg/11-dual-conic.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

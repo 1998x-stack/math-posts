@@ -621,6 +621,13 @@ def build(root:Path,out:Path,base:str):
         marker='<section id="categories"'
         assert marker in home
         home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="special-title"><div class="section-header"><div><div class="eyebrow muted">MATHEMATICAL EXPLORATIONS</div><h2 id="special-title">数学专题 · 一题多解</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/ellipse-triangle/">椭圆内接三角形：七种证明</a></h3><p>从仿射变换到共轭直径，七篇独立图解与交互实验。</p><a class="route-start" href="specials/ellipse-triangle/">进入专题 →</a></article></div></section>'+marker,1)
+    pole_special=root/'specials/pole-polar'
+    if pole_special.is_dir():
+        pole_target=out/'specials/pole-polar'
+        shutil.copytree(pole_special,pole_target,ignore=shutil.ignore_patterns('README.md','evidence'))
+        for page in sorted(pole_special.glob('*.html')):
+            special_urls.append(url_join(base,'specials/pole-polar/'+('' if page.name=='index.html' else page.name)))
+        home=home.replace('<section id="categories"', '<section class="container spotlight-section"><h2>数学专题 · 极点—极线</h2><p><a href="specials/pole-polar/">从圆反演到射影对偶：十一讲</a></p></section><section id="categories"',1)
     write(out,'index.html',home)
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]
