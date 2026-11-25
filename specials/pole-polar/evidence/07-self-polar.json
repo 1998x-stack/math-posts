@@ -1,0 +1,12 @@
+{
+  "title": "自极三角形",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "pᵀMq=0",
+  "assumptions": "实椭圆的自极三角形不可能三个顶点全在椭圆上；示例 N 是无穷远点。",
+  "example": "P 的极线是 x=1/2；M 的极线是 x=2；N 的极线是 y=0。",
+  "figure": "svg/07-self-polar.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

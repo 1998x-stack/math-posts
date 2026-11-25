@@ -1,0 +1,12 @@
+{
+  "title": "切点弦方程",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "ux+vy=1",
+  "assumptions": "只有圆外点有两个不同的实切点；圆上点的极线为切线。",
+  "example": "P=(2,0) 时切点横坐标均为 1/2，纵坐标为 ±√3/2。",
+  "figure": "svg/02-contact.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

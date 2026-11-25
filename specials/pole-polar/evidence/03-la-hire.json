@@ -1,0 +1,12 @@
+{
+  "title": "拉伊尔定理",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "P·Q=Q·P=1",
+  "assumptions": "若要把极线解释为真实切点弦，还需 Q 在圆外。",
+  "example": "取 t=1，Q 的极线为 x/2+y=1；代入 P=(2,0) 成立。",
+  "figure": "svg/03-la-hire.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

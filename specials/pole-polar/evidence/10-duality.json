@@ -1,0 +1,12 @@
+{
+  "title": "射影对偶",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "lᵀp=0",
+  "assumptions": "对偶是点线互换；极性是具有互反性质的一种特定对偶。不能把一般对偶误认为普通垂直投影。",
+  "example": "单位圆极性下，无穷远点 (1,0,0) 对应直径 x=0。",
+  "figure": "svg/10-duality.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

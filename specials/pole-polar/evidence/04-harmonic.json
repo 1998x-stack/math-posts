@@ -1,0 +1,12 @@
+{
+  "title": "调和共轭",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "(A,B;P,Q)=−1",
+  "assumptions": "要求两个不同交点；分母为零时用射影无穷远点解释。",
+  "example": "d=2 时 PA/PB=3，QA/QB=3；有向线段的符号相反。",
+  "figure": "svg/04-harmonic.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

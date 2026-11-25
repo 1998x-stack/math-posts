@@ -1,0 +1,12 @@
+{
+  "title": "圆反演",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "d·h=1",
+  "assumptions": "圆心没有有限反演像；反演不是一般的线性变换。",
+  "example": "当 d=2 时 h=1/2；当 d=1/2 时 h=2。",
+  "figure": "svg/01-inversion.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}

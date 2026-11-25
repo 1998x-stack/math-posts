@@ -1,0 +1,12 @@
+{
+  "title": "共轭直径",
+  "source": "独立数学推导；用户指定专题",
+  "claim": "⟨p,q⟩=0",
+  "assumptions": "共轭方向的条件为零；有限共轭点的极线关联条件为一，二者不可混淆。",
+  "example": "a=2,b=1,θ=45° 时两半径的普通内积为 −3/2，带权内积却为零。",
+  "figure": "svg/05-conjugate.svg",
+  "qa": {
+    "browser": "not run",
+    "static": "not run"
+  }
+}
