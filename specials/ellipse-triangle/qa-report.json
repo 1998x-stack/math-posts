@@ -1,0 +1,430 @@
+{
+  "math": {
+    "status": "passed",
+    "random_trials": 1000,
+    "seed": 20261124,
+    "scope": "七种证明的面积恒等式、上界、取等条件"
+  },
+  "articles": {
+    "01-affine.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 13,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "01-affine-f1.svg": true,
+        "01-affine-f2.svg": true,
+        "01-affine-f3.svg": true,
+        "01-affine-f4.svg": true,
+        "01-affine-f5.svg": true,
+        "01-affine-f6.svg": true,
+        "01-affine-f7.svg": true
+      }
+    },
+    "02-trigonometry.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 17,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "02-trigonometry-f1.svg": true,
+        "02-trigonometry-f2.svg": true,
+        "02-trigonometry-f3.svg": true,
+        "02-trigonometry-f4.svg": true,
+        "02-trigonometry-f5.svg": true,
+        "02-trigonometry-f6.svg": true,
+        "02-trigonometry-f7.svg": true
+      }
+    },
+    "03-vieta.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 14,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "03-vieta-f1.svg": true,
+        "03-vieta-f2.svg": true,
+        "03-vieta-f3.svg": true,
+        "03-vieta-f4.svg": true,
+        "03-vieta-f5.svg": true,
+        "03-vieta-f6.svg": true,
+        "03-vieta-f7.svg": true
+      }
+    },
+    "04-cauchy.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 13,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "04-cauchy-f1.svg": true,
+        "04-cauchy-f2.svg": true,
+        "04-cauchy-f3.svg": true,
+        "04-cauchy-f4.svg": true,
+        "04-cauchy-f5.svg": true,
+        "04-cauchy-f6.svg": true,
+        "04-cauchy-f7.svg": true
+      }
+    },
+    "05-hadamard.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 13,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "05-hadamard-f1.svg": true,
+        "05-hadamard-f2.svg": true,
+        "05-hadamard-f3.svg": true,
+        "05-hadamard-f4.svg": true,
+        "05-hadamard-f5.svg": true,
+        "05-hadamard-f6.svg": true,
+        "05-hadamard-f7.svg": true
+      }
+    },
+    "06-tangent.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 12,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "06-tangent-f1.svg": true,
+        "06-tangent-f2.svg": true,
+        "06-tangent-f3.svg": true,
+        "06-tangent-f4.svg": true,
+        "06-tangent-f5.svg": true,
+        "06-tangent-f6.svg": true,
+        "06-tangent-f7.svg": true
+      }
+    },
+    "07-conjugate.html": {
+      "static": "passed",
+      "figures": 7,
+      "mathml": 12,
+      "viewports": {
+        "1440": {
+          "width": 1440,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "768": {
+          "width": 768,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "390": {
+          "width": 390,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        },
+        "360": {
+          "width": 360,
+          "mathBad": 0,
+          "badFractions": 0,
+          "blankSVG": 0,
+          "clipped": [],
+          "errors": [],
+          "network": [],
+          "pass_": true
+        }
+      },
+      "interaction": {
+        "reset_ratio": 1.299,
+        "keyboard": "passed"
+      },
+      "svg_standalone": {
+        "07-conjugate-f1.svg": true,
+        "07-conjugate-f2.svg": true,
+        "07-conjugate-f3.svg": true,
+        "07-conjugate-f4.svg": true,
+        "07-conjugate-f5.svg": true,
+        "07-conjugate-f6.svg": true,
+        "07-conjugate-f7.svg": true
+      }
+    }
+  }
+}

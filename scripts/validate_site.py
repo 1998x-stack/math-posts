@@ -55,6 +55,18 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
     papers=json.loads((ROOT/'content/papers.json').read_text(encoding='utf-8'))
     public_papers=[paper for paper in papers if any(p['paper_id']==paper['id'] and p['status']=='published' for p in posts)]
     expect += ['papers/index.html']+[f'papers/{paper["id"]}/index.html' for paper in public_papers]
+    special=ROOT/'specials/ellipse-triangle'
+    if special.is_dir():
+        pages=['index.html','01-affine.html','02-trigonometry.html','03-vieta.html','04-cauchy.html','05-hadamard.html','06-tangent.html','07-conjugate.html']
+        for name in pages:
+            path='specials/ellipse-triangle/'+name
+            expect.append(path)
+            assert (out/path).read_bytes()==(ROOT/path).read_bytes(),f'Special page altered: {path}'
+        assert len(list((out/'specials/ellipse-triangle/svg').rglob('*.svg')))==49
+        assert 'specials/ellipse-triangle/' in (out/'index.html').read_text(encoding='utf-8')
+        for name in pages:
+            route='specials/ellipse-triangle/'+('' if name=='index.html' else name)
+            assert route in (out/'sitemap.xml').read_text(encoding='utf-8')
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'

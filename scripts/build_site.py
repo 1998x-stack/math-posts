@@ -607,7 +607,21 @@ def build(root:Path,out:Path,base:str):
     out.mkdir(parents=True)
     categories,posts,knowledge_map=data(root)
     papers,taxonomy=load_atlas(root,posts,knowledge_map)
-    write(out,'index.html',build_home(categories,posts,base,papers,taxonomy,knowledge_map))
+    home=build_home(categories,posts,base,papers,taxonomy,knowledge_map)
+    special=root/'specials/ellipse-triangle'
+    special_urls=[]
+    if special.is_dir():
+        target=out/'specials/ellipse-triangle'
+        target.mkdir(parents=True,exist_ok=True)
+        pages=['index.html','01-affine.html','02-trigonometry.html','03-vieta.html','04-cauchy.html','05-hadamard.html','06-tangent.html','07-conjugate.html']
+        for name in pages:
+            shutil.copy2(special/name,target/name)
+            special_urls.append(url_join(base,'specials/ellipse-triangle/'+('' if name=='index.html' else name)))
+        shutil.copytree(special/'svg',target/'svg')
+        marker='<section id="categories"'
+        assert marker in home
+        home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="special-title"><div class="section-header"><div><div class="eyebrow muted">MATHEMATICAL EXPLORATIONS</div><h2 id="special-title">数学专题 · 一题多解</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/ellipse-triangle/">椭圆内接三角形：七种证明</a></h3><p>从仿射变换到共轭直径，七篇独立图解与交互实验。</p><a class="route-start" href="specials/ellipse-triangle/">进入专题 →</a></article></div></section>'+marker,1)
+    write(out,'index.html',home)
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]
     for paper in public_papers:
@@ -643,6 +657,7 @@ def build(root:Path,out:Path,base:str):
             for p in ordered]
     write(out,'posts.json',json.dumps(search,ensure_ascii=False,indent=2)+'\n')
     urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/'),url_join(base,'question-types/'),url_join(base,'papers/')]+[url_join(base,f'papers/{paper["id"]}/') for paper in public_papers]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
+    urls.extend(special_urls)
     sitemap=''.join(f'<url><loc>{X(u)}</loc></url>' for u in urls)
     write(out,'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+sitemap+'</urlset>')
     write(out,'robots.txt',f'User-agent: *\nAllow: /\nSitemap: {url_join(base,"sitemap.xml")}\n')

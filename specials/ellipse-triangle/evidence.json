@@ -1,0 +1,300 @@
+{
+  "source": "本会话中的数学问题与七种证明；无外部论文数据。",
+  "theorem": "Smax = 3√3 ab/4 iff A+B+C=0",
+  "articles": [
+    {
+      "article": "01-affine.html",
+      "method": "仿射变换法",
+      "equations": 13,
+      "figures": [
+        {
+          "file": "svg/01-affine/01-affine-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f2.svg",
+          "caption": "圆和椭圆中的同一个三角形：顶点一一对应，形状不要求保持。",
+          "kind": "affine"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f3.svg",
+          "caption": "同一对边向量张成的平行四边形；两个面积同步按 ab 缩放。",
+          "kind": "parallelogram"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f4.svg",
+          "caption": "正三角形的三条弦长度相等，向量和为零；圆心即重心。",
+          "kind": "circle"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f5.svg",
+          "caption": "等面积族中的一个成员：切线平行于对应对边，中心为重心。",
+          "kind": "tangents"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f6.svg",
+          "caption": "改变纵向伸缩，检查面积缩放因子；此处固定圆上的正三角形，a=5。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/01-affine/01-affine-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "02-trigonometry.html",
+      "method": "三角变换法",
+      "equations": 17,
+      "figures": [
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f2.svg",
+          "caption": "在椭圆上标出三个按顺序排列的参数角差，不能把它们当成实际中心角。",
+          "kind": "angles"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f3.svg",
+          "caption": "把一周的三个参数角差折半，就得到总和为 π 的三个正角。",
+          "kind": "half"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f4.svg",
+          "caption": "固定 z 时，交换 x、y 不改变乘积；二者均衡时乘积最大。",
+          "kind": "balance"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f5.svg",
+          "caption": "归一化面积上界 4t(1−t²)^(3/2) 在 t=1/2 取得唯一峰值。",
+          "kind": "trigplot"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f6.svg",
+          "caption": "保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/02-trigonometry/02-trigonometry-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "03-vieta.html",
+      "method": "直线与韦达定理法",
+      "equations": 14,
+      "figures": [
+        {
+          "file": "svg/03-vieta/03-vieta-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f2.svg",
+          "caption": "直线移动时，两根就是弦端点的横坐标；割线必须在两条平行切线之间。",
+          "kind": "chord"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f3.svg",
+          "caption": "弦长由横坐标根差乘以斜率修正因子得到。",
+          "kind": "roots"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f4.svg",
+          "caption": "最远的平行切线与底边之间的垂直距离就是最大高。",
+          "kind": "height"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f5.svg",
+          "caption": "每种斜率的归一化最大高面积曲线相同；峰值在 t=1/2。",
+          "kind": "chordplot"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f6.svg",
+          "caption": "移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/03-vieta/03-vieta-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "04-cauchy.html",
+      "method": "柯西不等式法",
+      "equations": 13,
+      "figures": [
+        {
+          "file": "svg/04-cauchy/04-cauchy-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f2.svg",
+          "caption": "从三个二维顶点中抽出横坐标列 u 和纵坐标列 v。",
+          "kind": "coords"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f3.svg",
+          "caption": "柯西不等式比较内积与模长乘积，平行或反平行时取等。",
+          "kind": "projection"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f4.svg",
+          "caption": "总预算 X+Y=3，只有两部分各占一半时 XY 最大。",
+          "kind": "energy"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f5.svg",
+          "caption": "当 X=Y=1.5 时上界最大，但还需满足柯西和差分恒等式的取等条件。",
+          "kind": "energyplot"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f6.svg",
+          "caption": "扰动一个顶点，同时观察柯西上界、差分上界和均值上界。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/04-cauchy/04-cauchy-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "05-hadamard.html",
+      "method": "哈达玛行列式不等式法",
+      "equations": 13,
+      "figures": [
+        {
+          "file": "svg/05-hadamard/05-hadamard-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f2.svg",
+          "caption": "将单位圆上的三个点升到同一水平面 z=t；从原点连出三个向量。",
+          "kind": "lift"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f3.svg",
+          "caption": "三个行向量拥有相同的第三分量，模长相同。",
+          "kind": "matrix"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f4.svg",
+          "caption": "棱长给出体积上界；斜棱正交化只会减小可用长度。",
+          "kind": "volume"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f5.svg",
+          "caption": "上界函数随高度先减后增，在 t=1/√2 时最紧。",
+          "kind": "hadplot"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f6.svg",
+          "caption": "固定最优三角形，改变辅助高度；观察行向量内积和面积上界如何变化。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/05-hadamard/05-hadamard-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "06-tangent.html",
+      "method": "切线极值原理法",
+      "equations": 12,
+      "figures": [
+        {
+          "file": "svg/06-tangent/06-tangent-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f2.svg",
+          "caption": "固定弦时，最大距离由与弦平行的支撑切线取得。",
+          "kind": "height"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f3.svg",
+          "caption": "三个顶点处的切线分别平行于各自对边。",
+          "kind": "tangents"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f4.svg",
+          "caption": "两个独立的边方向构成平面；同时带权正交于二者的向量只能是零。",
+          "kind": "centroid"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f5.svg",
+          "caption": "参数角均匀分布时重心在中心，且三条切线均平行对边。",
+          "kind": "opt"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f6.svg",
+          "caption": "改变 B 的位置，观察三个顶点处切线与相应对边的平行残差。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/06-tangent/06-tangent-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    },
+    {
+      "article": "07-conjugate.html",
+      "method": "共轭直径法",
+      "equations": 12,
+      "figures": [
+        {
+          "file": "svg/07-conjugate/07-conjugate-f1.svg",
+          "caption": "同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。",
+          "kind": "problem"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f2.svg",
+          "caption": "共轭半直径随参数角转动，通常不垂直，但其行列式恒定。",
+          "kind": "conjugate"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f3.svg",
+          "caption": "平行于 q 的弦，中点沿 p 移动；两端点在 q 方向对称。",
+          "kind": "conjchord"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f4.svg",
+          "caption": "斜坐标中的 MC 不一定垂直 AB；面积用行列式，而不是把 MC 误当成高。",
+          "kind": "conjheight"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f5.svg",
+          "caption": "无论共轭直径的方向如何，最佳弦中点比例均为 1/2。",
+          "kind": "chordplot"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f6.svg",
+          "caption": "沿共轭直径移动弦中点，检查 t=1/2 时的重心关系；旋转方向验证面积不变量。",
+          "kind": "experiment"
+        },
+        {
+          "file": "svg/07-conjugate/07-conjugate-f7.svg",
+          "caption": "一种取等构型；将参数角同时旋转，得到其他最大面积三角形。",
+          "kind": "opt"
+        }
+      ]
+    }
+  ]
+}
