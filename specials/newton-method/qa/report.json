@@ -1,0 +1,56 @@
+{
+  "static": "passed",
+  "numeric": "5 assertions passed",
+  "viewports": {
+    "1440": {
+      "width": 1440,
+      "viewport": 1440,
+      "math": true,
+      "fractions": true,
+      "svg": true
+    },
+    "768": {
+      "width": 768,
+      "viewport": 768,
+      "math": true,
+      "fractions": true,
+      "svg": true
+    },
+    "390": {
+      "width": 390,
+      "viewport": 390,
+      "math": true,
+      "fractions": true,
+      "svg": true
+    },
+    "360": {
+      "width": 360,
+      "viewport": 360,
+      "math": true,
+      "fractions": true,
+      "svg": true
+    }
+  },
+  "browser_errors": [],
+  "interactions": {
+    "tangent": "step/reset/keyboard slider passed",
+    "sqrt": "停止：残差达到 10⁻¹² 阈值（非真误差保证）",
+    "cos": "停止：残差达到 10⁻¹² 阈值（非真误差保证）",
+    "cycle": "停止：检测到二周期振荡",
+    "flat": "停止：导数为零或太小",
+    "multiple": "停止：残差达到 10⁻¹² 阈值（非真误差保证）",
+    "focus": "passed"
+  },
+  "svg": {
+    "01-root.svg": "XML parse and standalone browser render passed",
+    "02-tangent.svg": "XML parse and standalone browser render passed",
+    "03-steps.svg": "XML parse and standalone browser render passed",
+    "04-local.svg": "XML parse and standalone browser render passed",
+    "05-error.svg": "XML parse and standalone browser render passed",
+    "06-cycle.svg": "XML parse and standalone browser render passed",
+    "07-multiple.svg": "XML parse and standalone browser render passed",
+    "08-safe.svg": "XML parse and standalone browser render passed"
+  },
+  "print": "media emulation passed",
+  "offline": "all browser tests performed offline via in-memory HTML; file URL blocked by environment policy"
+}
