@@ -136,3 +136,8 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 
 
 **崇明一模第 11–15 题**已完成并登记：第11题向量数量积、第12题共焦椭圆双曲线、第13题奇偶性与单调性、第14题充分必要条件、第15题正弦函数唯一反解。五篇均含原题 MathML、逐步独立推导、专属 SVG 与 PDF 第2页题干/第7页答案证据；完整21题试卷元数据及13页源文件页数已核实。第16题留待下一批。
+
+
+## 数学专题：椭圆内接三角形的七种证明
+
+[专题源码](specials/ellipse-triangle/) · [专题阅读入口](https://1998x-stack.github.io/math-posts/specials/ellipse-triangle/)。七篇独立 HTML、49 幅 SVG、94 条编号 MathML 公式及交互实验，附数学验证脚本与此前的 Chromium QA 报告。本专题为独立数学教学推导，不是考试原卷，不计入试卷题目统计。部署状态以 Actions 与实际页面为准。

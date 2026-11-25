@@ -1,0 +1,557 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>椭圆内接三角形 · 三角变换法</title><style>
+:root{color-scheme:light;--paper:#fffdf9;--ink:#203035;--subtle:#53676d;--accent:#147f80;--border:#dce8e4;--surface:#f3f9f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}a{color:var(--accent);text-underline-offset:.2em}a:focus-visible,button:focus-visible,input:focus-visible,.math-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.skip-link{position:absolute;left:1rem;top:-5rem;padding:.5rem 1rem;background:white;z-index:10}.skip-link:focus{top:1rem}.layout{max-width:1200px;margin:auto;display:grid;grid-template-columns:195px minmax(0,1fr);gap:clamp(2rem,5vw,5rem);padding:3.5rem 2rem 6rem}.toc{position:sticky;top:2rem;align-self:start;font-size:.86rem;line-height:1.6}.toc strong{display:block;margin:1rem 0}.toc a{display:block;text-decoration:none;color:var(--subtle);border-left:2px solid var(--border);padding:.38rem .65rem}.toc a:hover{color:var(--accent);border-color:var(--accent)}main,article{min-width:0}article{max-width:820px;margin:auto}.kicker{font-size:.83rem;color:var(--accent);letter-spacing:.12em;font-weight:700}.article-header{border-bottom:1px solid var(--border);padding-bottom:1.1rem}.article-header h1{font-size:clamp(2.25rem,5.4vw,4rem);line-height:1.16;letter-spacing:-.035em;margin:.55rem 0 1rem}.dek{font-size:1.2rem;color:var(--subtle);line-height:1.65}section{scroll-margin-top:1.5rem;margin-top:3.5rem}h2{font-size:clamp(1.45rem,3vw,1.95rem);line-height:1.4;margin:0 0 1.1rem}p{margin:1rem 0}figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--border);border-radius:.8rem;background:#fff}figure svg{width:100%;height:auto;display:block}figcaption{font-size:.88rem;color:var(--subtle);line-height:1.65;border-top:1px solid var(--border);margin-top:.8rem;padding-top:.8rem}.math-equation{margin:1.1rem 0;border-block:1px solid var(--border);padding:.55rem 0;min-width:0}.math-scroll{overflow-x:auto;overflow-y:hidden;max-width:100%;min-width:0}.math-scroll math{width:max-content;min-width:100%;font-size:clamp(1.04rem,2.1vw,1.28rem)}.eqno{text-align:right;color:var(--subtle);font-size:.73rem}.note{border-left:3px solid var(--accent);padding:.65rem 1rem;background:var(--surface)}.controls{display:grid;gap:.55rem;margin:1rem 0}.controls label{display:flex;justify-content:space-between;font-size:.94rem;gap:.5rem}.controls input{width:100%;accent-color:var(--accent)}button{background:white;border:1px solid var(--accent);border-radius:5px;padding:.45rem .8rem;color:var(--accent);font:inherit;cursor:pointer;justify-self:start}output{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0}.metrics div{padding:.7rem;background:var(--surface);border-radius:.4rem;font-size:.85rem}.metrics strong{display:block;font-size:1.25rem;color:var(--accent);font-variant-numeric:tabular-nums}.series{display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:3rem;font-size:.92rem}.legend{color:var(--subtle);font-size:.87rem}.answer{margin-top:1rem;padding:1rem 1.2rem;background:var(--surface);border-left:4px solid var(--accent)}details{margin:1.2rem 0}summary{cursor:pointer;color:var(--accent)}pre{white-space:pre;overflow:auto;background:#edf3f1;padding:1rem;border-radius:.5rem;font-size:.85rem} @media(max-width:900px){.layout{display:block;padding:1.7rem 1.2rem 4rem}.toc{position:static;margin-bottom:2rem;border-bottom:1px solid var(--border);padding-bottom:1rem}.toc a{display:inline-block;border:0;padding:.3rem .45rem}.toc strong{margin:.4rem 0}}@media(max-width:480px){body{font-size:16px}.layout{padding:1.2rem 1rem 3rem}figure{padding:.55rem}section{margin-top:2.6rem}.metrics strong{font-size:1.05rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;font-size:11pt}.layout{display:block;padding:0}.toc,.controls,.skip-link,.series{display:none}figure,.math-equation{break-inside:avoid}section{margin-top:1.5rem}.math-scroll{overflow:visible}.math-scroll math{font-size:1rem}}
+</style></head><body data-mode="02-trigonometry"><a class="skip-link" href="#content">跳转至正文</a><div class="layout"><nav class="toc" aria-label="文章目录"><a href="index.html">← 七种解法总览</a><strong>本篇目录</strong><a href="#problem">01 · 问题与猜想</a><a href="#s1">02 · 把顶点写成参数角</a><a href="#s2">03 · 为什么引入半角</a><a href="#s3">04 · 固定一个角，让另外两个相等</a><a href="#s4">05 · 最后的单变量最值</a><a href="#experiment">06 · 交互实验</a><a href="#summary">07 · 结论与检验</a></nav><main id="content"><article><header class="article-header"><div class="kicker">椭圆内接三角形 · 02 / 07</div><h1>三角变换法</h1><p class="dek">三个角如何合成一个最值？从正弦差到三角函数乘积。</p></header><section id="problem"><h2>问题与猜想</h2><p>给定长半轴 a、短半轴 b 的椭圆。在椭圆上任取三个不同的点 A、B、C，求三角形面积的最大值，并刻画全部取等情况。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 1，可横向滚动"><math aria-label="\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,\quad a\geq b&gt;0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>b</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>a</mi>
+  <mo>&#x2265;</mo>
+  <mi>b</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(01)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f1-title 02-trigonometry-f1-desc" data-export="02-trigonometry-f1.svg"><title id="02-trigonometry-f1-title">同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</title><desc id="02-trigonometry-f1-desc">同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</desc><ellipse cx="260" cy="142" rx="140" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="98.000" y1="142.000" x2="422.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="397.209,123.722 201.739,58.345 230.489,231.933" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="397.209" cy="123.722" r="4" fill="#147f80" /><text x="405.209" y="113.722" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><line x1="397.209" y1="123.722" x2="216.114" y2="145.139" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="201.739" cy="58.345" r="4" fill="#147f80" /><text x="179.739" y="48.345" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><line x1="201.739" y1="58.345" x2="313.849" y2="177.828" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="230.489" cy="231.933" r="4" fill="#147f80" /><text x="208.489" y="248.933" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><line x1="230.489" y1="231.933" x2="299.474" y2="91.034" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><circle cx="276.479" cy="138.000" r="4" fill="#d06d4d" /><text x="284.479" y="128.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#d06d4d" >G</text></svg><figcaption>图 1 · 同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</figcaption></figure><p>直觉上，三个点应尽量分散。但如何把“分散”转化为可证明的数学条件？</p></section><section id="s1"><h2>把顶点写成参数角</h2><p>按照逆时针顺序选取三个参数角 α、β、γ，使 α&lt;β&lt;γ&lt;α+2π。注意参数角是单位圆上的角，不是椭圆中 OA 与 x 轴之间的实际夹角。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 2，可横向滚动"><math aria-label="A=(a\cos\alpha,b\sin\alpha),\ B=(a\cos\beta,b\sin\beta),\ C=(a\cos\gamma,b\sin\gamma)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B1;</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B1;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mtext>&#xA0;</mtext>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B2;</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B2;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mtext>&#xA0;</mtext>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B3;</mi>
+  <mo>,</mo>
+  <mi>b</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>&#x3B3;</mi>
+  <mo stretchy="false">)</mo>
+</math></div><div class="eqno">(02)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 3，可横向滚动"><math aria-label="2S=ab|\sin(\beta-\alpha)+\sin(\gamma-\beta)+\sin(\alpha-\gamma)|" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>2</mn>
+  <mi>S</mi>
+  <mo>=</mo>
+  <mi>a</mi>
+  <mi>b</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B2;</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B1;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B3;</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B2;</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>&#x3B1;</mi>
+  <mo>&#x2212;</mo>
+  <mi>&#x3B3;</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">|</mo>
+</math></div><div class="eqno">(03)</div></div><p>面积公式来自三个位置向量的二维行列式之和。即使原点位于三角形外，有向面积仍然正确。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f2-title 02-trigonometry-f2-desc" data-export="02-trigonometry-f2.svg"><title id="02-trigonometry-f2-title">在椭圆上标出三个按顺序排列的参数角差，不能把它们当成实际中心角。</title><desc id="02-trigonometry-f2-desc">在椭圆上标出三个按顺序排列的参数角差，不能把它们当成实际中心角。</desc><ellipse cx="260" cy="142" rx="140" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="98.000" y1="142.000" x2="422.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="397.738,125.529 218.734,54.087 198.804,224.745" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="397.738" cy="125.529" r="4" fill="#147f80" /><text x="405.738" y="115.529" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="218.734" cy="54.087" r="4" fill="#147f80" /><text x="196.734" y="44.087" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="198.804" cy="224.745" r="4" fill="#147f80" /><text x="176.804" y="241.745" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><path d="M397.738,125.529 A140,92 0 0 0 218.734,54.087" fill="none" stroke="#147f80" stroke-width="5"/><text x="345.651" y="47.127" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#147f80" >2x</text><path d="M218.734,54.087 A140,92 0 0 0 198.804,224.745" fill="none" stroke="#d06d4d" stroke-width="5"/><text x="95.484" y="133.507" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#d06d4d" >2y</text><path d="M198.804,224.745 A140,92 0 0 0 397.738,125.529" fill="none" stroke="#7461ba" stroke-width="5"/><text x="359.751" y="230.419" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#7461ba" >2z</text><text x="260.000" y="275.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >参数角差总和 = 2π</text></svg><figcaption>图 2 · 在椭圆上标出三个按顺序排列的参数角差，不能把它们当成实际中心角。</figcaption></figure></section><section id="s2"><h2>为什么引入半角</h2><p>令三个相邻参数角差的一半分别为 x、y、z。因为绕行一周，这三个数正好组成一个三角形的内角和。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 4，可横向滚动"><math aria-label="x=\frac{\beta-\alpha}{2},\ y=\frac{\gamma-\beta}{2},\ z=\frac{2\pi+\alpha-\gamma}{2}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x3B2;</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B1;</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>,</mo>
+  <mtext>&#xA0;</mtext>
+  <mi>y</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>&#x3B3;</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B2;</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>,</mo>
+  <mtext>&#xA0;</mtext>
+  <mi>z</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>&#x3C0;</mi>
+      <mo>+</mo>
+      <mi>&#x3B1;</mi>
+      <mo>&#x2212;</mo>
+      <mi>&#x3B3;</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+</math></div><div class="eqno">(04)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 5，可横向滚动"><math aria-label="x+y+z=\pi,\qquad x,y,z&gt;0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>y</mi>
+  <mo>+</mo>
+  <mi>z</mi>
+  <mo>=</mo>
+  <mi>&#x3C0;</mi>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi>x</mi>
+  <mo>,</mo>
+  <mi>y</mi>
+  <mo>,</mo>
+  <mi>z</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(05)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 6，可横向滚动"><math aria-label="\sin2x+\sin2y=2\sin z\cos(x-y)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mn>2</mn>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mn>2</mn>
+  <mi>y</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>z</mi>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+</math></div><div class="eqno">(06)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 7，可横向滚动"><math aria-label="\sin2x+\sin2y+\sin2z=2\sin z[\cos(x-y)-\cos(x+y)]=4\sin x\sin y\sin z" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mn>2</mn>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mn>2</mn>
+  <mi>y</mi>
+  <mo>+</mo>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mn>2</mn>
+  <mi>z</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>z</mi>
+  <mo stretchy="false">[</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>&#x2212;</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2212;</mo>
+  <mi>cos</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mo stretchy="false">(</mo>
+  <mi>x</mi>
+  <mo>+</mo>
+  <mi>y</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">]</mo>
+  <mo>=</mo>
+  <mn>4</mn>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>y</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>z</mi>
+</math></div><div class="eqno">(07)</div></div><p>因三个正弦均为正，绝对值可以去掉。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f3-title 02-trigonometry-f3-desc" data-export="02-trigonometry-f3.svg"><title id="02-trigonometry-f3-title">把一周的三个参数角差折半，就得到总和为 π 的三个正角。</title><desc id="02-trigonometry-f3-desc">把一周的三个参数角差折半，就得到总和为 π 的三个正角。</desc><ellipse cx="260" cy="142" rx="106" ry="106" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="132.000" y1="142.000" x2="388.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="16.000" x2="260.000" y2="268.000" stroke="#dce8e4" stroke-width="1" /><polygon points="364.287,123.023 228.756,40.709 213.666,237.337" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="364.287" cy="123.023" r="4" fill="#147f80" /><text x="372.287" y="113.023" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="228.756" cy="40.709" r="4" fill="#147f80" /><text x="206.756" y="30.709" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="213.666" cy="237.337" r="4" fill="#147f80" /><text x="191.666" y="254.337" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><path d="M364.287,123.023 A106,106 0 0 0 228.756,40.709" fill="none" stroke="#147f80" stroke-width="5"/><text x="328.002" y="35.161" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#147f80" >2x</text><path d="M228.756,40.709 A106,106 0 0 0 213.666,237.337" fill="none" stroke="#d06d4d" stroke-width="5"/><text x="129.384" y="132.435" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#d06d4d" >2y</text><path d="M213.666,237.337 A106,106 0 0 0 364.287,123.023" fill="none" stroke="#7461ba" stroke-width="5"/><text x="339.196" y="241.571" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#7461ba" >2z</text><text x="260.000" y="275.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >参数角差总和 = 2π</text></svg><figcaption>图 3 · 把一周的三个参数角差折半，就得到总和为 π 的三个正角。</figcaption></figure></section><section id="s3"><h2>固定一个角，让另外两个相等</h2><p>面积化为三个正弦的乘积。固定 z 之后，x+y 不变，而 cos(x−y) 的最大值为 1。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 8，可横向滚动"><math aria-label="S=2ab\sin x\sin y\sin z" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>=</mo>
+  <mn>2</mn>
+  <mi>a</mi>
+  <mi>b</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>y</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>z</mi>
+</math></div><div class="eqno">(08)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 9，可横向滚动"><math aria-label="\sin x\sin y=\frac{\cos(x-y)+\cos z}{2}\leq\frac{1+\cos z}{2}=\cos^2\frac z2" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>x</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mi>y</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mo stretchy="false">(</mo>
+      <mi>x</mi>
+      <mo>&#x2212;</mo>
+      <mi>y</mi>
+      <mo stretchy="false">)</mo>
+      <mo>+</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>z</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>+</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">&#x2061;</mo>
+      <mi>z</mi>
+    </mrow>
+    <mn>2</mn>
+  </mfrac>
+  <mo>=</mo>
+  <msup>
+    <mi>cos</mi>
+    <mn>2</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mi>z</mi>
+    <mn>2</mn>
+  </mfrac>
+</math></div><div class="eqno">(09)</div></div><p>等号当且仅当 x=y，因为 x−y 在 (−π,π) 内。现在只剩 z 一个自由变量。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 10，可横向滚动"><math aria-label="S\leq4ab\sin\frac z2\cos^3\frac z2" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>&#x2264;</mo>
+  <mn>4</mn>
+  <mi>a</mi>
+  <mi>b</mi>
+  <mi>sin</mi>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mi>z</mi>
+    <mn>2</mn>
+  </mfrac>
+  <msup>
+    <mi>cos</mi>
+    <mn>3</mn>
+  </msup>
+  <mo data-mjx-texclass="NONE">&#x2061;</mo>
+  <mfrac>
+    <mi>z</mi>
+    <mn>2</mn>
+  </mfrac>
+</math></div><div class="eqno">(10)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f4-title 02-trigonometry-f4-desc" data-export="02-trigonometry-f4.svg"><title id="02-trigonometry-f4-title">固定 z 时，交换 x、y 不改变乘积；二者均衡时乘积最大。</title><desc id="02-trigonometry-f4-desc">固定 z 时，交换 x、y 不改变乘积；二者均衡时乘积最大。</desc><ellipse cx="120" cy="130" rx="83" ry="62" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="15.000" y1="130.000" x2="225.000" y2="130.000" stroke="#dce8e4" stroke-width="1" /><line x1="120.000" y1="48.000" x2="120.000" y2="212.000" stroke="#dce8e4" stroke-width="1" /><polygon points="203.000,130.000 161.500,76.306 78.500,183.694" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="203.000" cy="130.000" r="4" fill="#147f80" /><text x="211.000" y="120.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="161.500" cy="76.306" r="4" fill="#147f80" /><text x="169.500" y="66.306" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="78.500" cy="183.694" r="4" fill="#147f80" /><text x="56.500" y="200.694" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="120.000" cy="130.000" r="4" fill="#53676d" /><text x="127.000" y="146.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><text x="120.000" y="232.000" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle" fill="#53676d" >不均衡 · 乘积 0.500</text><ellipse cx="400" cy="130" rx="83" ry="62" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="295.000" y1="130.000" x2="505.000" y2="130.000" stroke="#dce8e4" stroke-width="1" /><line x1="400.000" y1="48.000" x2="400.000" y2="212.000" stroke="#dce8e4" stroke-width="1" /><polygon points="483.000,130.000 358.500,76.306 358.500,183.694" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="483.000" cy="130.000" r="4" fill="#147f80" /><text x="491.000" y="120.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="358.500" cy="76.306" r="4" fill="#147f80" /><text x="336.500" y="66.306" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="358.500" cy="183.694" r="4" fill="#147f80" /><text x="336.500" y="200.694" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="400.000" cy="130.000" r="4" fill="#53676d" /><text x="407.000" y="146.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><text x="400.000" y="232.000" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle" fill="#147f80" >均衡 · 乘积 0.750</text></svg><figcaption>图 4 · 固定 z 时，交换 x、y 不改变乘积；二者均衡时乘积最大。</figcaption></figure></section><section id="s4"><h2>最后的单变量最值</h2><p>令 t=sin(z/2)，则 0&lt;t&lt;1。可以使用导数，也可以对平方使用四项均值不等式，完全避免微积分。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 11，可横向滚动"><math aria-label="S\leq4ab\,t(1-t^2)^{3/2}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>&#x2264;</mo>
+  <mn>4</mn>
+  <mi>a</mi>
+  <mi>b</mi>
+  <mstyle scriptlevel="0">
+    <mspace width="0.167em"></mspace>
+  </mstyle>
+  <mi>t</mi>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mrow data-mjx-texclass="ORD">
+      <mn>3</mn>
+      <mrow data-mjx-texclass="ORD">
+        <mo>/</mo>
+      </mrow>
+      <mn>2</mn>
+    </mrow>
+  </msup>
+</math></div><div class="eqno">(11)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 12，可横向滚动"><math aria-label="t^2(1-t^2)^3=27t^2\left(\frac{1-t^2}{3}\right)^3\leq\frac{27}{256}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>3</mn>
+  </msup>
+  <mo>=</mo>
+  <mn>27</mn>
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mn>1</mn>
+          <mo>&#x2212;</mo>
+          <msup>
+            <mi>t</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mn>3</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>3</mn>
+  </msup>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mn>27</mn>
+    <mn>256</mn>
+  </mfrac>
+</math></div><div class="eqno">(12)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 13，可横向滚动"><math aria-label="t^2=\frac{1-t^2}{3}\Longrightarrow t=\frac12" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+    <mi>t</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+    <mn>3</mn>
+  </mfrac>
+  <mo stretchy="false">&#x27F9;</mo>
+  <mi>t</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>2</mn>
+  </mfrac>
+</math></div><div class="eqno">(13)</div></div><p>因此 z=π/3，再结合 x=y 和三角约束，三个半角均为 π/3。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 14，可横向滚动"><math aria-label="S_{\max}=\frac{3\sqrt3}{4}ab" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+    </mrow>
+    <mn>4</mn>
+  </mfrac>
+  <mi>a</mi>
+  <mi>b</mi>
+</math></div><div class="eqno">(14)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f5-title 02-trigonometry-f5-desc" data-export="02-trigonometry-f5.svg"><title id="02-trigonometry-f5-title">归一化面积上界 4t(1−t²)^(3/2) 在 t=1/2 取得唯一峰值。</title><desc id="02-trigonometry-f5-desc">归一化面积上界 4t(1−t²)^(3/2) 在 t=1/2 取得唯一峰值。</desc><line x1="58.000" y1="38.000" x2="58.000" y2="236.000" stroke="#53676d" stroke-width="1.4" /><line x1="58.000" y1="236.000" x2="478.000" y2="236.000" stroke="#53676d" stroke-width="1.4" /><line x1="58.000" y1="198.000" x2="468.000" y2="198.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="203.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.29</text><line x1="58.000" y1="160.000" x2="468.000" y2="160.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="165.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.58</text><line x1="58.000" y1="122.000" x2="468.000" y2="122.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="127.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.87</text><line x1="58.000" y1="84.000" x2="468.000" y2="84.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="89.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >1.16</text><polyline points="58.000,236.000 60.562,232.724 63.125,229.450 65.688,226.178 68.250,222.909 70.812,219.645 73.375,216.386 75.938,213.135 78.500,209.891 81.062,206.657 83.625,203.433 86.188,200.221 88.750,197.021 91.312,193.835 93.875,190.664 96.438,187.508 99.000,184.370 101.562,181.251 104.125,178.150 106.688,175.071 109.250,172.012 111.812,168.977 114.375,165.965 116.938,162.978 119.500,160.018 122.062,157.084 124.625,154.179 127.188,151.303 129.750,148.457 132.312,145.643 134.875,142.861 137.438,140.113 140.000,137.399 142.562,134.721 145.125,132.079 147.688,129.475 150.250,126.910 152.812,124.385 155.375,121.900 157.938,119.457 160.500,117.056 163.062,114.699 165.625,112.387 168.188,110.120 170.750,107.900 173.312,105.727 175.875,103.602 178.438,101.527 181.000,99.501 183.562,97.527 186.125,95.604 188.688,93.735 191.250,91.918 193.812,90.157 196.375,88.450 198.938,86.800 201.500,85.206 204.062,83.670 206.625,82.192 209.188,80.773 211.750,79.415 214.312,78.117 216.875,76.880 219.438,75.705 222.000,74.592 224.562,73.543 227.125,72.558 229.688,71.637 232.250,70.782 234.812,69.992 237.375,69.268 239.938,68.611 242.500,68.021 245.062,67.499 247.625,67.046 250.188,66.661 252.750,66.345 255.312,66.099 257.875,65.923 260.438,65.817 263.000,65.781 265.562,65.817 268.125,65.923 270.688,66.102 273.250,66.351 275.812,66.673 278.375,67.067 280.938,67.533 283.500,68.071 286.062,68.682 288.625,69.365 291.188,70.121 293.750,70.949 296.312,71.850 298.875,72.823 301.438,73.868 304.000,74.985 306.562,76.174 309.125,77.434 311.688,78.766 314.250,80.169 316.812,81.643 319.375,83.187 321.938,84.801 324.500,86.484 327.062,88.236 329.625,90.057 332.188,91.944 334.750,93.899 337.312,95.920 339.875,98.006 342.438,100.157 345.000,102.372 347.562,104.649 350.125,106.987 352.688,109.386 355.250,111.844 357.812,114.361 360.375,116.934 362.938,119.562 365.500,122.244 368.062,124.978 370.625,127.763 373.188,130.597 375.750,133.478 378.312,136.403 380.875,139.372 383.438,142.381 386.000,145.429 388.562,148.513 391.125,151.630 393.688,154.778 396.250,157.954 398.812,161.155 401.375,164.377 403.938,167.618 406.500,170.873 409.062,174.140 411.625,177.413 414.188,180.688 416.750,183.962 419.312,187.229 421.875,190.483 424.438,193.720 427.000,196.932 429.562,200.114 432.125,203.259 434.688,206.358 437.250,209.403 439.812,212.386 442.375,215.294 444.938,218.117 447.500,220.841 450.062,223.451 452.625,225.928 455.188,228.251 457.750,230.393 460.312,232.318 462.875,233.973 465.438,235.275 468.000,236.000" fill="none" stroke="#147f80" stroke-width="3"/><line x1="263.000" y1="65.781" x2="263.000" y2="236.000" stroke="#d06d4d" stroke-width="1.8" stroke-dasharray="6 5" /><circle cx="263.000" cy="65.781" r="4" fill="#d06d4d" /><text x="263.000" y="53.781" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#d06d4d" >最大值 1.299</text><text x="58.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >0</text><text x="263.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >0.5</text><text x="468.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >1</text><text x="490.000" y="237.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#53676d" >t</text><text x="60.000" y="25.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="start" fill="#53676d" >面积上界 / ab</text></svg><figcaption>图 5 · 归一化面积上界 4t(1−t²)^(3/2) 在 t=1/2 取得唯一峰值。</figcaption></figure></section><section id="experiment"><h2>亲手检验：改变参数，观察面积</h2><p>保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f6-title 02-trigonometry-f6-desc" data-export="02-trigonometry-f6.svg"><title id="02-trigonometry-f6-title">保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。</title><desc id="02-trigonometry-f6-desc">保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。</desc><g id="demo-geometry"><ellipse cx="260" cy="142" rx="150" ry="90" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="88.000" y1="142.000" x2="432.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="32.000" x2="260.000" y2="252.000" stroke="#dce8e4" stroke-width="1" /><polygon points="410.000,142.000 112.279,126.372 185.000,219.942" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="410.000" cy="142.000" r="4" fill="#147f80" /><text x="418.000" y="132.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="112.279" cy="126.372" r="4" fill="#147f80" /><text x="90.279" y="116.372" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="185.000" cy="219.942" r="4" fill="#147f80" /><text x="163.000" y="236.942" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><circle cx="235.760" cy="162.771" r="4" fill="#d06d4d" /><text x="243.760" y="152.771" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#d06d4d" >G</text></g></svg><div class="controls"><label for="rotation">初始参数角 θ <output id="rval">0°</output></label><input id="rotation" type="range" min="0" max="360" step="1" value="0"><label for="variation">半角偏差（度） <output id="vval">25</output></label><input id="variation" type="range" min="-50" max="50" step="1" value="25"><button id="reset" type="button">恢复取等状态</button></div><div class="metrics"><div>当前面积<strong id="area">14.8452</strong></div><div>理论最大面积<strong id="optimum">19.4856</strong></div><div>当前面积 / ab<strong id="ratio">0.9897</strong></div></div><p id="demo-status" class="note" aria-live="polite">保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。</p><figcaption>图 6 · 保持 z=60°，让 x 和 y 一增一减；观察乘积如何随不均衡程度下降。</figcaption></figure></section><section id="summary"><h2>结论、边界与自测</h2><div class="answer"><strong>最大面积</strong><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 15，可横向滚动"><math aria-label="S_{\max}=\frac{3\sqrt3}{4}ab" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+    </mrow>
+    <mn>4</mn>
+  </mfrac>
+  <mi>a</mi>
+  <mi>b</mi>
+</math></div><div class="eqno">(15)</div></div><p>当且仅当三个顶点的位置向量之和为零，即三角形重心与椭圆中心重合。等价地，三个椭圆参数角相隔 120°。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 16，可横向滚动"><math aria-label="A+B+C=0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>+</mo>
+  <mi>B</mi>
+  <mo>+</mo>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(16)</div></div></div><p>一个可直接代入验证的取等例：</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 17，可横向滚动"><math aria-label="A=(a,0),\quad B=\left(-\frac a2,\frac{\sqrt3 b}{2}\right),\quad C=\left(-\frac a2,-\frac{\sqrt3 b}{2}\right)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo>,</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mi>b</mi>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo>,</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mi>b</mi>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math></div><div class="eqno">(17)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="02-trigonometry-f7-title 02-trigonometry-f7-desc" data-export="02-trigonometry-f7.svg"><title id="02-trigonometry-f7-title">一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</title><desc id="02-trigonometry-f7-desc">一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</desc><ellipse cx="260" cy="142" rx="140" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="98.000" y1="142.000" x2="422.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="400.000,142.000 190.000,62.326 190.000,221.674" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="400.000" cy="142.000" r="4" fill="#147f80" /><text x="408.000" y="132.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="190.000" cy="62.326" r="4" fill="#147f80" /><text x="168.000" y="52.326" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="190.000" cy="221.674" r="4" fill="#147f80" /><text x="168.000" y="238.674" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></svg><figcaption>图 7 · 一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</figcaption></figure><p>上述结论假设 a、b 均为正；退化椭圆不属于本题。若 a=b，最大三角形是实际的正三角形；若 a≠b，则通常不是。</p><details><summary>固定 z 时，为什么不能直接令三个半角相等？</summary><p>固定 z 不一定是 π/3，只能先令 x=y；再对 z 求最值，才得到三角相等。</p></details><details><summary>可运行的数值检查（Python 标准库）</summary><p>以下计算只检验一个取等构型，不能替代前面的严格证明。</p><pre><code>from math import sin, cos, pi, sqrt, isclose
+
+def area(points):
+    return abs(sum(x*v-y*u for (x,y),(u,v)
+               in zip(points, points[1:]+points[:1])))/2
+
+a, b, theta = 5, 3, 0.37
+points = [(a*cos(theta+2*pi*i/3),
+           b*sin(theta+2*pi*i/3)) for i in range(3)]
+assert isclose(area(points), 3*sqrt(3)*a*b/4)
+assert all(abs(sum(p[j] for p in points)) &lt; 1e-12
+           for j in range(2))
+print(area(points))</code></pre></details></section><div class="series"><a href="index.html">七种解法总览</a><a href="01-affine.html">← 仿射变换法</a><a href="03-vieta.html">直线与韦达定理法 →</a></div></article></main></div><script>(()=>{
+const mode=document.body.dataset.mode, $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', tau=2*Math.PI, max=3*Math.sqrt(3)/4;
+const rot=$('rotation'), change=$('variation'), st=$('demo-status'), geom=$('demo-geometry');
+const fmt=x=>Number(x).toFixed(4), det=(a,b)=>a[0]*b[1]-a[1]*b[0], sum=(a,b)=>[a[0]+b[0],a[1]+b[1]], scale=(a,s)=>a.map(x=>x*s), norm=a=>Math.hypot(...a), inner=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0);
+function create(tag,attr,text){let n=document.createElementNS(NS,tag);for(let [k,v] of Object.entries(attr))n.setAttribute(k,v);if(text)n.textContent=text;geom.append(n);return n;}
+function ln(a,b,col='#53676d',dash=false){create('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:col,'stroke-width':1.8,...(dash?{'stroke-dasharray':'5 4'}:{})});}
+function label(p,s,col='#147f80'){create('circle',{cx:p[0],cy:p[1],r:4,fill:col});create('text',{x:p[0]+(p[0]>260?8:-8),y:p[1]+(p[1]>142?17:-9),fill:col,'font-size':16,'text-anchor':p[0]>260?'start':'end','font-family':'system-ui,sans-serif'},s);}
+function plot(pts,rx,ry,c,showTangent=false,showMid=false,showPara=false){let P=pts.map(p=>[c[0]+rx*p[0],c[1]-ry*p[1]]);create('ellipse',{cx:c[0],cy:c[1],rx,ry,fill:'none',stroke:'#53676d','stroke-width':1.8});ln([c[0]-rx-10,c[1]],[c[0]+rx+10,c[1]],'#dce8e4');ln([c[0],c[1]-ry-10],[c[0],c[1]+ry+10],'#dce8e4');create('polygon',{points:P.map(p=>p.join(',')).join(' '),fill:'#e4f3ed',stroke:'#147f80','stroke-width':2.4});P.forEach((p,i)=>{label(p,'ABC'[i]);if(showTangent){let q=[-rx*pts[i][1],-ry*pts[i][0]], l=norm(q);q=scale(q,66/l);ln(sum(p,q),sum(p,scale(q,-1)),'#d06d4d',true);}});label(c,'O','#53676d');let G=scale(P.reduce(sum,[0,0]),1/3);if(norm(sum(G,scale(c,-1)))>3)label(G,'G','#d06d4d');if(showMid){let M=scale(sum(P[0],P[1]),.5);ln(P[2],M,'#7461ba',true);label(M,'M','#7461ba');if(showPara){let v=scale(sum(P[0],scale(P[1],-1)),.5);ln(sum(P[2],v),sum(P[2],scale(v,-1)),'#d06d4d',true);ln(c,M,'#7461ba',true);}}}
+function render(){let theta=Number(rot.value)*Math.PI/180, v=Number(change.value), pts, aa=5,bb=3, bound=max;
+ if(mode==='03-vieta'||mode==='07-conjugate'){let t=v,p=[Math.cos(theta),Math.sin(theta)],q=[-p[1],p[0]],s=Math.sqrt(1-t*t);pts=[sum(scale(p,t),scale(q,s)),sum(scale(p,t),scale(q,-s)),scale(p,-1)];}
+ else if(mode==='02-trigonometry'){let x=Math.PI/3+v*Math.PI/180,y=Math.PI/3-v*Math.PI/180;pts=[theta,theta+2*x,theta+2*(x+y)].map(a=>[Math.cos(a),Math.sin(a)]);}
+ else{let delta=(mode==='05-hadamard'||mode==='01-affine')?0:v*Math.PI/180;pts=[theta,theta+tau/3+delta,theta+2*tau/3].map(a=>[Math.cos(a),Math.sin(a)]);}
+ let S=Math.abs(pts.reduce((s,p,i)=>s+det(p,pts[(i+1)%3]),0))/2;geom.replaceChildren();
+ if(mode==='01-affine'){bb=v;plot(pts,65,65,[125,140]);plot(pts,105,105*bb/aa,[385,140]);create('text',{x:125,y:258,'font-size':16,'text-anchor':'middle',fill:'#53676d'},'单位圆');create('text',{x:385,y:258,'font-size':16,'text-anchor':'middle',fill:'#53676d'},'椭圆');}
+ else plot(pts,150,90,[260,142],mode==='06-tangent',mode==='03-vieta'||mode==='07-conjugate',mode==='03-vieta'||mode==='07-conjugate');
+ let msg='';if(mode==='01-affine'){msg='单位圆面积 '+fmt(S)+'；面积缩放因子 ab = '+fmt(aa*bb)+'。';}
+ if(mode==='02-trigonometry'){msg='x = '+(60+v).toFixed(0)+'°，y = '+(60-v).toFixed(0)+'°，z = 60°；固定 z 时 x=y 最优。';}
+ if(mode==='03-vieta'||mode==='07-conjugate'){msg='t = '+v.toFixed(2)+'；理论面积函数值 '+fmt((1+v)*Math.sqrt(1-v*v))+'；t=1/2 取等。';}
+ if(mode==='04-cauchy'){let u=pts.map(p=>p[0]),w=pts.map(p=>p[1]),d=[w[1]-w[2],w[2]-w[0],w[0]-w[1]],X=inner(u,u),Y=inner(w,w);bound=Math.sqrt(3*X*Y)/2;msg='X='+fmt(X)+'，Y='+fmt(Y)+'，X+Y='+fmt(X+Y)+'；柯西上界 '+fmt(norm(u)*norm(d)/2)+'，均值前上界 '+fmt(bound)+'。';}
+ if(mode==='05-hadamard'){bound=(1+v*v)**1.5/(2*v);msg='t='+v.toFixed(4)+'；哈达玛上界 / ab = '+fmt(bound)+'；两行内积 t²−1/2 = '+fmt(v*v-.5)+'。当前三角形固定为最优族，改变的是证明上界。';}
+ if(mode==='06-tangent'){let err=Math.max(...pts.map((p,i)=>Math.abs(inner(p,sum(pts[(i+1)%3],scale(pts[(i+2)%3],-1))))));msg='三个切线平行条件的最大残差 '+fmt(err)+'；残差为零时三条切线均平行于对边。';}
+ $('area').textContent=fmt(S*aa*bb);$('ratio').textContent=fmt(S);$('optimum').textContent=fmt(max*aa*bb);$('rval').textContent=rot.value+'°';$('vval').textContent=String(v);st.textContent=msg;}
+rot.addEventListener('input',render);change.addEventListener('input',render);$('reset').addEventListener('click',()=>{rot.value=0;change.value=mode==='01-affine'?3:mode==='05-hadamard'?Math.SQRT1_2:mode==='03-vieta'||mode==='07-conjugate'?.5:0;render();});render();
+})();</script></body></html>

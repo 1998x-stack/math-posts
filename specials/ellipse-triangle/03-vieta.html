@@ -1,0 +1,617 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>椭圆内接三角形 · 直线与韦达定理法</title><style>
+:root{color-scheme:light;--paper:#fffdf9;--ink:#203035;--subtle:#53676d;--accent:#147f80;--border:#dce8e4;--surface:#f3f9f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}a{color:var(--accent);text-underline-offset:.2em}a:focus-visible,button:focus-visible,input:focus-visible,.math-scroll:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.skip-link{position:absolute;left:1rem;top:-5rem;padding:.5rem 1rem;background:white;z-index:10}.skip-link:focus{top:1rem}.layout{max-width:1200px;margin:auto;display:grid;grid-template-columns:195px minmax(0,1fr);gap:clamp(2rem,5vw,5rem);padding:3.5rem 2rem 6rem}.toc{position:sticky;top:2rem;align-self:start;font-size:.86rem;line-height:1.6}.toc strong{display:block;margin:1rem 0}.toc a{display:block;text-decoration:none;color:var(--subtle);border-left:2px solid var(--border);padding:.38rem .65rem}.toc a:hover{color:var(--accent);border-color:var(--accent)}main,article{min-width:0}article{max-width:820px;margin:auto}.kicker{font-size:.83rem;color:var(--accent);letter-spacing:.12em;font-weight:700}.article-header{border-bottom:1px solid var(--border);padding-bottom:1.1rem}.article-header h1{font-size:clamp(2.25rem,5.4vw,4rem);line-height:1.16;letter-spacing:-.035em;margin:.55rem 0 1rem}.dek{font-size:1.2rem;color:var(--subtle);line-height:1.65}section{scroll-margin-top:1.5rem;margin-top:3.5rem}h2{font-size:clamp(1.45rem,3vw,1.95rem);line-height:1.4;margin:0 0 1.1rem}p{margin:1rem 0}figure{margin:1.8rem 0;padding:1rem;border:1px solid var(--border);border-radius:.8rem;background:#fff}figure svg{width:100%;height:auto;display:block}figcaption{font-size:.88rem;color:var(--subtle);line-height:1.65;border-top:1px solid var(--border);margin-top:.8rem;padding-top:.8rem}.math-equation{margin:1.1rem 0;border-block:1px solid var(--border);padding:.55rem 0;min-width:0}.math-scroll{overflow-x:auto;overflow-y:hidden;max-width:100%;min-width:0}.math-scroll math{width:max-content;min-width:100%;font-size:clamp(1.04rem,2.1vw,1.28rem)}.eqno{text-align:right;color:var(--subtle);font-size:.73rem}.note{border-left:3px solid var(--accent);padding:.65rem 1rem;background:var(--surface)}.controls{display:grid;gap:.55rem;margin:1rem 0}.controls label{display:flex;justify-content:space-between;font-size:.94rem;gap:.5rem}.controls input{width:100%;accent-color:var(--accent)}button{background:white;border:1px solid var(--accent);border-radius:5px;padding:.45rem .8rem;color:var(--accent);font:inherit;cursor:pointer;justify-self:start}output{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}.metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0}.metrics div{padding:.7rem;background:var(--surface);border-radius:.4rem;font-size:.85rem}.metrics strong{display:block;font-size:1.25rem;color:var(--accent);font-variant-numeric:tabular-nums}.series{display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:3rem;font-size:.92rem}.legend{color:var(--subtle);font-size:.87rem}.answer{margin-top:1rem;padding:1rem 1.2rem;background:var(--surface);border-left:4px solid var(--accent)}details{margin:1.2rem 0}summary{cursor:pointer;color:var(--accent)}pre{white-space:pre;overflow:auto;background:#edf3f1;padding:1rem;border-radius:.5rem;font-size:.85rem} @media(max-width:900px){.layout{display:block;padding:1.7rem 1.2rem 4rem}.toc{position:static;margin-bottom:2rem;border-bottom:1px solid var(--border);padding-bottom:1rem}.toc a{display:inline-block;border:0;padding:.3rem .45rem}.toc strong{margin:.4rem 0}}@media(max-width:480px){body{font-size:16px}.layout{padding:1.2rem 1rem 3rem}figure{padding:.55rem}section{margin-top:2.6rem}.metrics strong{font-size:1.05rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;font-size:11pt}.layout{display:block;padding:0}.toc,.controls,.skip-link,.series{display:none}figure,.math-equation{break-inside:avoid}section{margin-top:1.5rem}.math-scroll{overflow:visible}.math-scroll math{font-size:1rem}}
+</style></head><body data-mode="03-vieta"><a class="skip-link" href="#content">跳转至正文</a><div class="layout"><nav class="toc" aria-label="文章目录"><a href="index.html">← 七种解法总览</a><strong>本篇目录</strong><a href="#problem">01 · 问题与猜想</a><a href="#s1">02 · 用直线控制底边</a><a href="#s2">03 · 韦达定理求弦长</a><a href="#s3">04 · 平行切线给出最大高</a><a href="#s4">05 · 整体换元与取等</a><a href="#experiment">06 · 交互实验</a><a href="#summary">07 · 结论与检验</a></nav><main id="content"><article><header class="article-header"><div class="kicker">椭圆内接三角形 · 03 / 07</div><h1>直线与韦达定理法</h1><p class="dek">把三个动点变成一条弦：斜率为什么最终消失？</p></header><section id="problem"><h2>问题与猜想</h2><p>给定长半轴 a、短半轴 b 的椭圆。在椭圆上任取三个不同的点 A、B、C，求三角形面积的最大值，并刻画全部取等情况。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 1，可横向滚动"><math aria-label="\frac{x^2}{a^2}+\frac{y^2}{b^2}=1,\quad a\geq b&gt;0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mfrac>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>a</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>+</mo>
+  <mfrac>
+    <msup>
+      <mi>y</mi>
+      <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>b</mi>
+      <mn>2</mn>
+    </msup>
+  </mfrac>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>a</mi>
+  <mo>&#x2265;</mo>
+  <mi>b</mi>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(01)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f1-title 03-vieta-f1-desc" data-export="03-vieta-f1.svg"><title id="03-vieta-f1-title">同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</title><desc id="03-vieta-f1-desc">同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</desc><ellipse cx="260" cy="142" rx="140" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="98.000" y1="142.000" x2="422.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="397.209,123.722 201.739,58.345 230.489,231.933" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="397.209" cy="123.722" r="4" fill="#147f80" /><text x="405.209" y="113.722" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><line x1="397.209" y1="123.722" x2="216.114" y2="145.139" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="201.739" cy="58.345" r="4" fill="#147f80" /><text x="179.739" y="48.345" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><line x1="201.739" y1="58.345" x2="313.849" y2="177.828" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="230.489" cy="231.933" r="4" fill="#147f80" /><text x="208.489" y="248.933" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><line x1="230.489" y1="231.933" x2="299.474" y2="91.034" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text><circle cx="276.479" cy="138.000" r="4" fill="#d06d4d" /><text x="284.479" y="128.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#d06d4d" >G</text></svg><figcaption>图 1 · 同一个椭圆内，不同的顶点分布给出不同面积；橙色点是当前三角形重心。</figcaption></figure><p>直觉上，三个点应尽量分散。但如何把“分散”转化为可证明的数学条件？</p></section><section id="s1"><h2>用直线控制底边</h2><p>设 AB 所在直线为 y=kx+m。非退化三角形至少有一条非竖直边，故可选这样的 AB，不损失一般性。把直线代入椭圆方程，令 D=b²+a²k²。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 2，可横向滚动"><math aria-label="Dx^2+2a^2kmx+a^2(m^2-b^2)=0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>D</mi>
+  <msup>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <mn>2</mn>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <mi>k</mi>
+  <mi>m</mi>
+  <mi>x</mi>
+  <mo>+</mo>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <msup>
+    <mi>m</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>b</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(02)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 3，可横向滚动"><math aria-label="D=b^2+a^2k^2&gt;0,\qquad \Delta=4a^2b^2(D-m^2)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>D</mi>
+  <mo>=</mo>
+  <msup>
+    <mi>b</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>+</mo>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mi>k</mi>
+    <mn>2</mn>
+  </msup>
+  <mo>&gt;</mo>
+  <mn>0</mn>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <mi mathvariant="normal">&#x394;</mi>
+  <mo>=</mo>
+  <mn>4</mn>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mi>b</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>D</mi>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>m</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+</math></div><div class="eqno">(03)</div></div><p>两个不同交点要求 m²&lt;D。用一条直线的两个参数代替底边两端点的四个坐标。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f2-title 03-vieta-f2-desc" data-export="03-vieta-f2.svg"><title id="03-vieta-f2-title">直线移动时，两根就是弦端点的横坐标；割线必须在两条平行切线之间。</title><desc id="03-vieta-f2-desc">直线移动时，两根就是弦端点的横坐标；割线必须在两条平行切线之间。</desc><ellipse cx="260" cy="142" rx="150" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="88.000" y1="142.000" x2="432.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="271.030,50.249 384.037,193.734 124.933,182.017" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><line x1="412.352" y1="229.685" x2="242.715" y2="14.298" stroke="#147f80" stroke-width="1.5" /><line x1="177.129" y1="248.290" x2="72.737" y2="115.744" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="440.738" y1="159.972" x2="349.396" y2="43.994" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><circle cx="271.030" cy="50.249" r="4" fill="#147f80" /><text x="279.030" y="42.249" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="384.037" cy="193.734" r="4" fill="#147f80" /><text x="392.037" y="185.734" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="124.933" cy="182.017" r="4" fill="#147f80" /><text x="132.933" y="174.017" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="266.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></svg><figcaption>图 2 · 直线移动时，两根就是弦端点的横坐标；割线必须在两条平行切线之间。</figcaption></figure></section><section id="s2"><h2>韦达定理求弦长</h2><p>设交点横坐标为 x₁、x₂。韦达定理直接给出根的和与积，无需求出两个根本身。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 4，可横向滚动"><math aria-label="x_1+x_2=-\frac{2a^2km}{D},\qquad x_1x_2=\frac{a^2(m^2-b^2)}{D}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>=</mo>
+  <mo>&#x2212;</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mi>k</mi>
+      <mi>m</mi>
+    </mrow>
+    <mi>D</mi>
+  </mfrac>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="2em"></mspace>
+  </mstyle>
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <msup>
+        <mi>a</mi>
+        <mn>2</mn>
+      </msup>
+      <mo stretchy="false">(</mo>
+      <msup>
+        <mi>m</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>&#x2212;</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+      <mo stretchy="false">)</mo>
+    </mrow>
+    <mi>D</mi>
+  </mfrac>
+</math></div><div class="eqno">(04)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 5，可横向滚动"><math aria-label="|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1x_2}=\frac{2ab\sqrt{D-m^2}}{D}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>1</mn>
+  </msub>
+  <mo>&#x2212;</mo>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <msqrt>
+    <mo stretchy="false">(</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <mo>+</mo>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+    <msup>
+      <mo stretchy="false">)</mo>
+      <mn>2</mn>
+    </msup>
+    <mo>&#x2212;</mo>
+    <mn>4</mn>
+    <msub>
+      <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+  </msqrt>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>a</mi>
+      <mi>b</mi>
+      <msqrt>
+        <mi>D</mi>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>m</mi>
+          <mn>2</mn>
+        </msup>
+      </msqrt>
+    </mrow>
+    <mi>D</mi>
+  </mfrac>
+</math></div><div class="eqno">(05)</div></div><p>由于 y₁−y₂=k(x₁−x₂)，所以真实弦长为</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 6，可横向滚动"><math aria-label="|AB|=\frac{2ab\sqrt{1+k^2}\sqrt{D-m^2}}{D}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">|</mo>
+  <mi>A</mi>
+  <mi>B</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <mi>a</mi>
+      <mi>b</mi>
+      <msqrt>
+        <mn>1</mn>
+        <mo>+</mo>
+        <msup>
+          <mi>k</mi>
+          <mn>2</mn>
+        </msup>
+      </msqrt>
+      <msqrt>
+        <mi>D</mi>
+        <mo>&#x2212;</mo>
+        <msup>
+          <mi>m</mi>
+          <mn>2</mn>
+        </msup>
+      </msqrt>
+    </mrow>
+    <mi>D</mi>
+  </mfrac>
+</math></div><div class="eqno">(06)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f3-title 03-vieta-f3-desc" data-export="03-vieta-f3.svg"><title id="03-vieta-f3-title">弦长由横坐标根差乘以斜率修正因子得到。</title><desc id="03-vieta-f3-desc">弦长由横坐标根差乘以斜率修正因子得到。</desc><ellipse cx="260" cy="142" rx="150" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="88.000" y1="142.000" x2="432.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="271.030,50.249 384.037,193.734 124.933,182.017" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><line x1="412.352" y1="229.685" x2="242.715" y2="14.298" stroke="#147f80" stroke-width="1.5" /><line x1="177.129" y1="248.290" x2="72.737" y2="115.744" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="440.738" y1="159.972" x2="349.396" y2="43.994" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="271.030" y1="50.249" x2="271.030" y2="142.000" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><text x="271.030" y="161.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#7461ba" >x1</text><line x1="384.037" y1="193.734" x2="384.037" y2="142.000" stroke="#7461ba" stroke-width="1.5" stroke-dasharray="6 5" /><text x="384.037" y="161.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#7461ba" >x2</text><circle cx="271.030" cy="50.249" r="4" fill="#147f80" /><text x="279.030" y="42.249" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="384.037" cy="193.734" r="4" fill="#147f80" /><text x="392.037" y="185.734" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="124.933" cy="182.017" r="4" fill="#147f80" /><text x="132.933" y="174.017" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="266.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></svg><figcaption>图 3 · 弦长由横坐标根差乘以斜率修正因子得到。</figcaption></figure></section><section id="s3"><h2>平行切线给出最大高</h2><p>固定 AB 后，只需让 C 到底边的距离最大。考虑平行线 y=kx+n，其与椭圆联立所得判别式非负。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 7，可横向滚动"><math aria-label="4a^2b^2(D-n^2)\geq0\Longrightarrow -\sqrt D\leq n\leq\sqrt D" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mn>4</mn>
+  <msup>
+    <mi>a</mi>
+    <mn>2</mn>
+  </msup>
+  <msup>
+    <mi>b</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">(</mo>
+  <mi>D</mi>
+  <mo>&#x2212;</mo>
+  <msup>
+    <mi>n</mi>
+    <mn>2</mn>
+  </msup>
+  <mo stretchy="false">)</mo>
+  <mo>&#x2265;</mo>
+  <mn>0</mn>
+  <mo stretchy="false">&#x27F9;</mo>
+  <mo>&#x2212;</mo>
+  <msqrt>
+    <mi>D</mi>
+  </msqrt>
+  <mo>&#x2264;</mo>
+  <mi>n</mi>
+  <mo>&#x2264;</mo>
+  <msqrt>
+    <mi>D</mi>
+  </msqrt>
+</math></div><div class="eqno">(07)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 8，可横向滚动"><math aria-label="h=\frac{|y_C-kx_C-m|}{\sqrt{1+k^2}}\leq\frac{\sqrt D+|m|}{\sqrt{1+k^2}}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>h</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mo stretchy="false">|</mo>
+      <msub>
+        <mi>y</mi>
+        <mi>C</mi>
+      </msub>
+      <mo>&#x2212;</mo>
+      <mi>k</mi>
+      <msub>
+        <mi>x</mi>
+        <mi>C</mi>
+      </msub>
+      <mo>&#x2212;</mo>
+      <mi>m</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msqrt>
+      <mn>1</mn>
+      <mo>+</mo>
+      <msup>
+        <mi>k</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <msqrt>
+        <mi>D</mi>
+      </msqrt>
+      <mo>+</mo>
+      <mrow data-mjx-texclass="ORD">
+        <mo stretchy="false">|</mo>
+      </mrow>
+      <mi>m</mi>
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <msqrt>
+      <mn>1</mn>
+      <mo>+</mo>
+      <msup>
+        <mi>k</mi>
+        <mn>2</mn>
+      </msup>
+    </msqrt>
+  </mfrac>
+</math></div><div class="eqno">(08)</div></div><p>当 m&gt;0 时，最远切线为 n=−√D；m&lt;0 时取正号；m=0 时两端均可。这样求的是全椭圆上的最大距离，而非局部近似。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f4-title 03-vieta-f4-desc" data-export="03-vieta-f4.svg"><title id="03-vieta-f4-title">最远的平行切线与底边之间的垂直距离就是最大高。</title><desc id="03-vieta-f4-desc">最远的平行切线与底边之间的垂直距离就是最大高。</desc><ellipse cx="260" cy="142" rx="150" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="88.000" y1="142.000" x2="432.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="271.030,50.249 384.037,193.734 124.933,182.017" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><line x1="412.352" y1="229.685" x2="242.715" y2="14.298" stroke="#147f80" stroke-width="1.5" /><line x1="177.129" y1="248.290" x2="72.737" y2="115.744" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="440.738" y1="159.972" x2="349.396" y2="43.994" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="124.933" y1="182.017" x2="279.149" y2="60.558" stroke="#d06d4d" stroke-width="2.3" stroke-dasharray="6 5" /><circle cx="279.149" cy="60.558" r="4" fill="#d06d4d" /><text x="287.149" y="51.558" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#d06d4d" >H</text><text x="192.041" y="111.287" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#d06d4d" >h</text><circle cx="271.030" cy="50.249" r="4" fill="#147f80" /><text x="279.030" y="42.249" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="384.037" cy="193.734" r="4" fill="#147f80" /><text x="392.037" y="185.734" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="124.933" cy="182.017" r="4" fill="#147f80" /><text x="132.933" y="174.017" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="266.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></svg><figcaption>图 4 · 最远的平行切线与底边之间的垂直距离就是最大高。</figcaption></figure></section><section id="s4"><h2>整体换元与取等</h2><p>将弦长与最大高代入底乘高的一半。两个含斜率的根式相消，令 t=|m|/√D。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 9，可横向滚动"><math aria-label="S\leq\frac{ab}{D}\sqrt{D-m^2}(\sqrt D+|m|)=ab(1+t)\sqrt{1-t^2}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>S</mi>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mrow>
+      <mi>a</mi>
+      <mi>b</mi>
+    </mrow>
+    <mi>D</mi>
+  </mfrac>
+  <msqrt>
+    <mi>D</mi>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>m</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+  <mo stretchy="false">(</mo>
+  <msqrt>
+    <mi>D</mi>
+  </msqrt>
+  <mo>+</mo>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mi>m</mi>
+  <mrow data-mjx-texclass="ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <mo stretchy="false">)</mo>
+  <mo>=</mo>
+  <mi>a</mi>
+  <mi>b</mi>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msqrt>
+    <mn>1</mn>
+    <mo>&#x2212;</mo>
+    <msup>
+      <mi>t</mi>
+      <mn>2</mn>
+    </msup>
+  </msqrt>
+</math></div><div class="eqno">(09)</div></div><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 10，可横向滚动"><math aria-label="(1-t)(1+t)^3=27(1-t)\left(\frac{1+t}{3}\right)^3\leq\frac{27}{16}" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>+</mo>
+  <mi>t</mi>
+  <msup>
+    <mo stretchy="false">)</mo>
+    <mn>3</mn>
+  </msup>
+  <mo>=</mo>
+  <mn>27</mn>
+  <mo stretchy="false">(</mo>
+  <mn>1</mn>
+  <mo>&#x2212;</mo>
+  <mi>t</mi>
+  <mo stretchy="false">)</mo>
+  <msup>
+    <mrow data-mjx-texclass="INNER">
+      <mo data-mjx-texclass="OPEN">(</mo>
+      <mfrac>
+        <mrow>
+          <mn>1</mn>
+          <mo>+</mo>
+          <mi>t</mi>
+        </mrow>
+        <mn>3</mn>
+      </mfrac>
+      <mo data-mjx-texclass="CLOSE">)</mo>
+    </mrow>
+    <mn>3</mn>
+  </msup>
+  <mo>&#x2264;</mo>
+  <mfrac>
+    <mn>27</mn>
+    <mn>16</mn>
+  </mfrac>
+</math></div><div class="eqno">(10)</div></div><p>等号条件为 t=1/2。若 m&gt;0，则 m=√D/2，使用韦达根和求得弦中点 M，使用判别式为零的重根求得切点 C。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 11，可横向滚动"><math aria-label="M=\left(-\frac{a^2k}{2\sqrt D},\frac{b^2}{2\sqrt D}\right),\quad C=\left(\frac{a^2k}{\sqrt D},-\frac{b^2}{\sqrt D}\right)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>M</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>k</mi>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <msqrt>
+          <mi>D</mi>
+        </msqrt>
+      </mrow>
+    </mfrac>
+    <mo>,</mo>
+    <mfrac>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+      <mrow>
+        <mn>2</mn>
+        <msqrt>
+          <mi>D</mi>
+        </msqrt>
+      </mrow>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mi>k</mi>
+      </mrow>
+      <msqrt>
+        <mi>D</mi>
+      </msqrt>
+    </mfrac>
+    <mo>,</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+      <msqrt>
+        <mi>D</mi>
+      </msqrt>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math></div><div class="eqno">(11)</div></div><p>故 C=−2M，A+B+C=0。m&lt;0 时对称成立。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f5-title 03-vieta-f5-desc" data-export="03-vieta-f5.svg"><title id="03-vieta-f5-title">每种斜率的归一化最大高面积曲线相同；峰值在 t=1/2。</title><desc id="03-vieta-f5-desc">每种斜率的归一化最大高面积曲线相同；峰值在 t=1/2。</desc><line x1="58.000" y1="38.000" x2="58.000" y2="236.000" stroke="#53676d" stroke-width="1.4" /><line x1="58.000" y1="236.000" x2="478.000" y2="236.000" stroke="#53676d" stroke-width="1.4" /><line x1="58.000" y1="198.000" x2="468.000" y2="198.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="203.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.29</text><line x1="58.000" y1="160.000" x2="468.000" y2="160.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="165.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.58</text><line x1="58.000" y1="122.000" x2="468.000" y2="122.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="127.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >0.87</text><line x1="58.000" y1="84.000" x2="468.000" y2="84.000" stroke="#dce8e4" stroke-width="1" stroke-dasharray="6 5" /><text x="49.000" y="89.000" font-family="system-ui, sans-serif" font-size="13" text-anchor="end" fill="#53676d" >1.16</text><polyline points="58.000,104.966 60.562,104.149 63.125,103.338 65.688,102.532 68.250,101.732 70.812,100.937 73.375,100.147 75.938,99.364 78.500,98.586 81.062,97.814 83.625,97.048 86.188,96.288 88.750,95.535 91.312,94.787 93.875,94.047 96.438,93.312 99.000,92.585 101.562,91.864 104.125,91.150 106.688,90.442 109.250,89.742 111.812,89.050 114.375,88.364 116.938,87.686 119.500,87.015 122.062,86.352 124.625,85.697 127.188,85.050 129.750,84.410 132.312,83.779 134.875,83.156 137.438,82.542 140.000,81.936 142.562,81.338 145.125,80.749 147.688,80.169 150.250,79.599 152.812,79.037 155.375,78.484 157.938,77.941 160.500,77.408 163.062,76.884 165.625,76.370 168.188,75.866 170.750,75.373 173.312,74.889 175.875,74.416 178.438,73.953 181.000,73.501 183.562,73.060 186.125,72.631 188.688,72.212 191.250,71.804 193.812,71.409 196.375,71.025 198.938,70.652 201.500,70.292 204.062,69.944 206.625,69.609 209.188,69.286 211.750,68.976 214.312,68.679 216.875,68.395 219.438,68.124 222.000,67.867 224.562,67.624 227.125,67.394 229.688,67.179 232.250,66.979 234.812,66.793 237.375,66.621 239.938,66.465 242.500,66.325 245.062,66.199 247.625,66.090 250.188,65.997 252.750,65.920 255.312,65.860 257.875,65.816 260.438,65.790 263.000,65.781 265.562,65.790 268.125,65.817 270.688,65.862 273.250,65.926 275.812,66.009 278.375,66.111 280.938,66.233 283.500,66.375 286.062,66.537 288.625,66.720 291.188,66.924 293.750,67.150 296.312,67.398 298.875,67.667 301.438,67.960 304.000,68.276 306.562,68.615 309.125,68.979 311.688,69.367 314.250,69.781 316.812,70.220 319.375,70.685 321.938,71.177 324.500,71.697 327.062,72.245 329.625,72.821 332.188,73.426 334.750,74.062 337.312,74.728 339.875,75.426 342.438,76.156 345.000,76.919 347.562,77.715 350.125,78.547 352.688,79.415 355.250,80.319 357.812,81.261 360.375,82.242 362.938,83.263 365.500,84.325 368.062,85.430 370.625,86.579 373.188,87.773 375.750,89.015 378.312,90.304 380.875,91.644 383.438,93.036 386.000,94.483 388.562,95.985 391.125,97.547 393.688,99.169 396.250,100.855 398.812,102.608 401.375,104.431 403.938,106.327 406.500,108.301 409.062,110.355 411.625,112.496 414.188,114.728 416.750,117.056 419.312,119.488 421.875,122.030 424.438,124.690 427.000,127.478 429.562,130.406 432.125,133.484 434.688,136.728 437.250,140.157 439.812,143.790 442.375,147.654 444.938,151.782 447.500,156.215 450.062,161.009 452.625,166.239 455.188,172.012 457.750,178.495 460.312,185.963 462.875,194.951 465.438,206.837 468.000,236.000" fill="none" stroke="#147f80" stroke-width="3"/><line x1="263.000" y1="65.781" x2="263.000" y2="236.000" stroke="#d06d4d" stroke-width="1.8" stroke-dasharray="6 5" /><circle cx="263.000" cy="65.781" r="4" fill="#d06d4d" /><text x="263.000" y="53.781" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#d06d4d" >最大值 1.299</text><text x="58.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >0</text><text x="263.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >0.5</text><text x="468.000" y="258.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#53676d" >1</text><text x="490.000" y="237.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle" fill="#53676d" >t</text><text x="60.000" y="25.000" font-family="system-ui, sans-serif" font-size="14" text-anchor="start" fill="#53676d" >面积上界 / ab</text></svg><figcaption>图 5 · 每种斜率的归一化最大高面积曲线相同；峰值在 t=1/2。</figcaption></figure></section><section id="experiment"><h2>亲手检验：改变参数，观察面积</h2><p>移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。</p><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f6-title 03-vieta-f6-desc" data-export="03-vieta-f6.svg"><title id="03-vieta-f6-title">移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。</title><desc id="03-vieta-f6-desc">移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。</desc><g id="demo-geometry"><ellipse cx="260" cy="142" rx="150" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="88.000" y1="142.000" x2="432.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="297.500,52.921 297.500,231.079 110.000,142.000" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><line x1="297.500" y1="261.600" x2="297.500" y2="22.400" stroke="#147f80" stroke-width="1.5" /><line x1="110.000" y1="215.600" x2="110.000" y2="68.400" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="410.000" y1="206.400" x2="410.000" y2="77.600" stroke="#d06d4d" stroke-width="1.5" stroke-dasharray="6 5" /><line x1="110.000" y1="142.000" x2="410.000" y2="142.000" stroke="#7461ba" stroke-width="1.8" stroke-dasharray="6 5" /><line x1="260.000" y1="234.000" x2="260.000" y2="50.000" stroke="#d06d4d" stroke-width="1.6" stroke-dasharray="6 5" /><line x1="297.500" y1="142.000" x2="110.000" y2="142.000" stroke="#7461ba" stroke-width="2" stroke-dasharray="6 5" /><circle cx="410.000" cy="142.000" r="4" fill="#7461ba" /><text x="418.000" y="133.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#7461ba" >P</text><circle cx="260.000" cy="50.000" r="4" fill="#d06d4d" /><text x="268.000" y="41.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#d06d4d" >Q</text><circle cx="297.500" cy="142.000" r="4" fill="#7461ba" /><text x="305.500" y="133.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#7461ba" >M</text><circle cx="297.500" cy="52.921" r="4" fill="#147f80" /><text x="305.500" y="44.921" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="297.500" cy="231.079" r="4" fill="#147f80" /><text x="305.500" y="223.079" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="110.000" cy="142.000" r="4" fill="#147f80" /><text x="118.000" y="134.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="266.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></g></svg><div class="controls"><label for="rotation">初始参数角 θ <output id="rval">0°</output></label><input id="rotation" type="range" min="0" max="360" step="1" value="0"><label for="variation">归一化截距 t <output id="vval">0.25</output></label><input id="variation" type="range" min="0" max="0.99" step="0.01" value="0.25"><button id="reset" type="button">恢复取等状态</button></div><div class="metrics"><div>当前面积<strong id="area">18.1546</strong></div><div>理论最大面积<strong id="optimum">19.4856</strong></div><div>当前面积 / ab<strong id="ratio">1.2103</strong></div></div><p id="demo-status" class="note" aria-live="polite">移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。</p><figcaption>图 6 · 移动弦的位置，第三个顶点保持在最远平行切线上；旋转参数方向改变弦方向。</figcaption></figure></section><section id="summary"><h2>结论、边界与自测</h2><div class="answer"><strong>最大面积</strong><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 12，可横向滚动"><math aria-label="S_{\max}=\frac{3\sqrt3}{4}ab" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>S</mi>
+    <mrow data-mjx-texclass="ORD">
+      <mo data-mjx-texclass="OP" movablelimits="true">max</mo>
+    </mrow>
+  </msub>
+  <mo>=</mo>
+  <mfrac>
+    <mrow>
+      <mn>3</mn>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+    </mrow>
+    <mn>4</mn>
+  </mfrac>
+  <mi>a</mi>
+  <mi>b</mi>
+</math></div><div class="eqno">(12)</div></div><p>当且仅当三个顶点的位置向量之和为零，即三角形重心与椭圆中心重合。等价地，三个椭圆参数角相隔 120°。</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 13，可横向滚动"><math aria-label="A+B+C=0" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>+</mo>
+  <mi>B</mi>
+  <mo>+</mo>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mn>0</mn>
+</math></div><div class="eqno">(13)</div></div></div><p>一个可直接代入验证的取等例：</p><div class="math-equation"><div class="math-scroll" data-math-scroll tabindex="0" role="region" aria-label="公式 14，可横向滚动"><math aria-label="A=(a,0),\quad B=\left(-\frac a2,\frac{\sqrt3 b}{2}\right),\quad C=\left(-\frac a2,-\frac{\sqrt3 b}{2}\right)" xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>A</mi>
+  <mo>=</mo>
+  <mo stretchy="false">(</mo>
+  <mi>a</mi>
+  <mo>,</mo>
+  <mn>0</mn>
+  <mo stretchy="false">)</mo>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>B</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo>,</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mi>b</mi>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>,</mo>
+  <mstyle scriptlevel="0">
+    <mspace width="1em"></mspace>
+  </mstyle>
+  <mi>C</mi>
+  <mo>=</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mi>a</mi>
+      <mn>2</mn>
+    </mfrac>
+    <mo>,</mo>
+    <mo>&#x2212;</mo>
+    <mfrac>
+      <mrow>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mi>b</mi>
+      </mrow>
+      <mn>2</mn>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+</math></div><div class="eqno">(14)</div></div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 284" role="img" aria-labelledby="03-vieta-f7-title 03-vieta-f7-desc" data-export="03-vieta-f7.svg"><title id="03-vieta-f7-title">一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</title><desc id="03-vieta-f7-desc">一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</desc><ellipse cx="260" cy="142" rx="140" ry="92" fill="none" stroke="#53676d" stroke-width="1.7"/><line x1="98.000" y1="142.000" x2="422.000" y2="142.000" stroke="#dce8e4" stroke-width="1" /><line x1="260.000" y1="30.000" x2="260.000" y2="254.000" stroke="#dce8e4" stroke-width="1" /><polygon points="400.000,142.000 190.000,62.326 190.000,221.674" fill="#e4f3ed" stroke="#147f80" stroke-width="2.4" /><circle cx="400.000" cy="142.000" r="4" fill="#147f80" /><text x="408.000" y="132.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >A</text><circle cx="190.000" cy="62.326" r="4" fill="#147f80" /><text x="168.000" y="52.326" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >B</text><circle cx="190.000" cy="221.674" r="4" fill="#147f80" /><text x="168.000" y="238.674" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#147f80" >C</text><circle cx="260.000" cy="142.000" r="4" fill="#53676d" /><text x="267.000" y="158.000" font-family="system-ui, sans-serif" font-size="16" text-anchor="start" fill="#53676d" >O</text></svg><figcaption>图 7 · 一种取等构型；将参数角同时旋转，得到其他最大面积三角形。</figcaption></figure><p>上述结论假设 a、b 均为正；退化椭圆不属于本题。若 a=b，最大三角形是实际的正三角形；若 a≠b，则通常不是。</p><details><summary>为什么斜率有限的假设不丢失全局最优？</summary><p>非退化三角形不可能三条边都是竖直线，任意三角形都可以选择一条非竖直边作底。</p></details><details><summary>可运行的数值检查（Python 标准库）</summary><p>以下计算只检验一个取等构型，不能替代前面的严格证明。</p><pre><code>from math import sin, cos, pi, sqrt, isclose
+
+def area(points):
+    return abs(sum(x*v-y*u for (x,y),(u,v)
+               in zip(points, points[1:]+points[:1])))/2
+
+a, b, theta = 5, 3, 0.37
+points = [(a*cos(theta+2*pi*i/3),
+           b*sin(theta+2*pi*i/3)) for i in range(3)]
+assert isclose(area(points), 3*sqrt(3)*a*b/4)
+assert all(abs(sum(p[j] for p in points)) &lt; 1e-12
+           for j in range(2))
+print(area(points))</code></pre></details></section><div class="series"><a href="index.html">七种解法总览</a><a href="02-trigonometry.html">← 三角变换法</a><a href="04-cauchy.html">柯西不等式法 →</a></div></article></main></div><script>(()=>{
+const mode=document.body.dataset.mode, $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', tau=2*Math.PI, max=3*Math.sqrt(3)/4;
+const rot=$('rotation'), change=$('variation'), st=$('demo-status'), geom=$('demo-geometry');
+const fmt=x=>Number(x).toFixed(4), det=(a,b)=>a[0]*b[1]-a[1]*b[0], sum=(a,b)=>[a[0]+b[0],a[1]+b[1]], scale=(a,s)=>a.map(x=>x*s), norm=a=>Math.hypot(...a), inner=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0);
+function create(tag,attr,text){let n=document.createElementNS(NS,tag);for(let [k,v] of Object.entries(attr))n.setAttribute(k,v);if(text)n.textContent=text;geom.append(n);return n;}
+function ln(a,b,col='#53676d',dash=false){create('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:col,'stroke-width':1.8,...(dash?{'stroke-dasharray':'5 4'}:{})});}
+function label(p,s,col='#147f80'){create('circle',{cx:p[0],cy:p[1],r:4,fill:col});create('text',{x:p[0]+(p[0]>260?8:-8),y:p[1]+(p[1]>142?17:-9),fill:col,'font-size':16,'text-anchor':p[0]>260?'start':'end','font-family':'system-ui,sans-serif'},s);}
+function plot(pts,rx,ry,c,showTangent=false,showMid=false,showPara=false){let P=pts.map(p=>[c[0]+rx*p[0],c[1]-ry*p[1]]);create('ellipse',{cx:c[0],cy:c[1],rx,ry,fill:'none',stroke:'#53676d','stroke-width':1.8});ln([c[0]-rx-10,c[1]],[c[0]+rx+10,c[1]],'#dce8e4');ln([c[0],c[1]-ry-10],[c[0],c[1]+ry+10],'#dce8e4');create('polygon',{points:P.map(p=>p.join(',')).join(' '),fill:'#e4f3ed',stroke:'#147f80','stroke-width':2.4});P.forEach((p,i)=>{label(p,'ABC'[i]);if(showTangent){let q=[-rx*pts[i][1],-ry*pts[i][0]], l=norm(q);q=scale(q,66/l);ln(sum(p,q),sum(p,scale(q,-1)),'#d06d4d',true);}});label(c,'O','#53676d');let G=scale(P.reduce(sum,[0,0]),1/3);if(norm(sum(G,scale(c,-1)))>3)label(G,'G','#d06d4d');if(showMid){let M=scale(sum(P[0],P[1]),.5);ln(P[2],M,'#7461ba',true);label(M,'M','#7461ba');if(showPara){let v=scale(sum(P[0],scale(P[1],-1)),.5);ln(sum(P[2],v),sum(P[2],scale(v,-1)),'#d06d4d',true);ln(c,M,'#7461ba',true);}}}
+function render(){let theta=Number(rot.value)*Math.PI/180, v=Number(change.value), pts, aa=5,bb=3, bound=max;
+ if(mode==='03-vieta'||mode==='07-conjugate'){let t=v,p=[Math.cos(theta),Math.sin(theta)],q=[-p[1],p[0]],s=Math.sqrt(1-t*t);pts=[sum(scale(p,t),scale(q,s)),sum(scale(p,t),scale(q,-s)),scale(p,-1)];}
+ else if(mode==='02-trigonometry'){let x=Math.PI/3+v*Math.PI/180,y=Math.PI/3-v*Math.PI/180;pts=[theta,theta+2*x,theta+2*(x+y)].map(a=>[Math.cos(a),Math.sin(a)]);}
+ else{let delta=(mode==='05-hadamard'||mode==='01-affine')?0:v*Math.PI/180;pts=[theta,theta+tau/3+delta,theta+2*tau/3].map(a=>[Math.cos(a),Math.sin(a)]);}
+ let S=Math.abs(pts.reduce((s,p,i)=>s+det(p,pts[(i+1)%3]),0))/2;geom.replaceChildren();
+ if(mode==='01-affine'){bb=v;plot(pts,65,65,[125,140]);plot(pts,105,105*bb/aa,[385,140]);create('text',{x:125,y:258,'font-size':16,'text-anchor':'middle',fill:'#53676d'},'单位圆');create('text',{x:385,y:258,'font-size':16,'text-anchor':'middle',fill:'#53676d'},'椭圆');}
+ else plot(pts,150,90,[260,142],mode==='06-tangent',mode==='03-vieta'||mode==='07-conjugate',mode==='03-vieta'||mode==='07-conjugate');
+ let msg='';if(mode==='01-affine'){msg='单位圆面积 '+fmt(S)+'；面积缩放因子 ab = '+fmt(aa*bb)+'。';}
+ if(mode==='02-trigonometry'){msg='x = '+(60+v).toFixed(0)+'°，y = '+(60-v).toFixed(0)+'°，z = 60°；固定 z 时 x=y 最优。';}
+ if(mode==='03-vieta'||mode==='07-conjugate'){msg='t = '+v.toFixed(2)+'；理论面积函数值 '+fmt((1+v)*Math.sqrt(1-v*v))+'；t=1/2 取等。';}
+ if(mode==='04-cauchy'){let u=pts.map(p=>p[0]),w=pts.map(p=>p[1]),d=[w[1]-w[2],w[2]-w[0],w[0]-w[1]],X=inner(u,u),Y=inner(w,w);bound=Math.sqrt(3*X*Y)/2;msg='X='+fmt(X)+'，Y='+fmt(Y)+'，X+Y='+fmt(X+Y)+'；柯西上界 '+fmt(norm(u)*norm(d)/2)+'，均值前上界 '+fmt(bound)+'。';}
+ if(mode==='05-hadamard'){bound=(1+v*v)**1.5/(2*v);msg='t='+v.toFixed(4)+'；哈达玛上界 / ab = '+fmt(bound)+'；两行内积 t²−1/2 = '+fmt(v*v-.5)+'。当前三角形固定为最优族，改变的是证明上界。';}
+ if(mode==='06-tangent'){let err=Math.max(...pts.map((p,i)=>Math.abs(inner(p,sum(pts[(i+1)%3],scale(pts[(i+2)%3],-1))))));msg='三个切线平行条件的最大残差 '+fmt(err)+'；残差为零时三条切线均平行于对边。';}
+ $('area').textContent=fmt(S*aa*bb);$('ratio').textContent=fmt(S);$('optimum').textContent=fmt(max*aa*bb);$('rval').textContent=rot.value+'°';$('vval').textContent=String(v);st.textContent=msg;}
+rot.addEventListener('input',render);change.addEventListener('input',render);$('reset').addEventListener('click',()=>{rot.value=0;change.value=mode==='01-affine'?3:mode==='05-hadamard'?Math.SQRT1_2:mode==='03-vieta'||mode==='07-conjugate'?.5:0;render();});render();
+})();</script></body></html>
