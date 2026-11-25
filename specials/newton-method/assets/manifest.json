@@ -1,0 +1,42 @@
+[
+  {
+    "file": "01-root.svg",
+    "concept": "从求平方根到求零点",
+    "description": "抛物线与横轴相交，根位于 1 与 2 之间。"
+  },
+  {
+    "file": "02-tangent.svg",
+    "concept": "切线预测下一次猜测",
+    "description": "绿色为函数，橙色切线经过当前点并在下一猜测处穿过横轴。"
+  },
+  {
+    "file": "03-steps.svg",
+    "concept": "连续切线逐步逼近",
+    "description": "从 2 到 1.5 再到 1.4167，逐步靠近平方根。"
+  },
+  {
+    "file": "04-local.svg",
+    "concept": "曲线与切线的二阶差异",
+    "description": "在根处，切线值和真实函数值的差异与当前距离的平方有关。"
+  },
+  {
+    "file": "05-error.svg",
+    "concept": "误差的对数图",
+    "description": "牛顿法实际误差快速下降，二分法区间半宽上界缓慢下降。"
+  },
+  {
+    "file": "06-cycle.svg",
+    "concept": "二周期振荡",
+    "description": "初值 0 的切线横轴交点是 1，初值 1 的切线交点又是 0。"
+  },
+  {
+    "file": "07-multiple.svg",
+    "concept": "重根使牛顿法变慢",
+    "description": "函数在重根处相切，普通牛顿步只消去一半误差。"
+  },
+  {
+    "file": "08-safe.svg",
+    "concept": "带区间保护的牛顿步",
+    "description": "候选点在区间内可以进一步检查，越界则改用二分中点。"
+  }
+]

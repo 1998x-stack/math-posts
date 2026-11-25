@@ -67,6 +67,19 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
         for name in pages:
             route='specials/ellipse-triangle/'+('' if name=='index.html' else name)
             assert route in (out/'sitemap.xml').read_text(encoding='utf-8')
+    newton=ROOT/'specials/newton-method'
+    if newton.is_dir():
+        route='specials/newton-method/'
+        path=route+'index.html'
+        expect.append(path)
+        assert (out/path).read_bytes()==(ROOT/path).read_bytes(),f'Special page altered: {path}'
+        check_article_layout((out/path).read_text(encoding='utf-8'),path)
+        svgs=list((newton/'assets').glob('*.svg'))
+        assert len(svgs)==8
+        for svg in svgs:
+            assert (out/route/'assets'/svg.name).read_bytes()==svg.read_bytes()
+        assert route in (out/'index.html').read_text(encoding='utf-8')
+        assert route in (out/'sitemap.xml').read_text(encoding='utf-8')
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'

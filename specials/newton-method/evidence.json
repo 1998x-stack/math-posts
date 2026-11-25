@@ -1,0 +1,83 @@
+[
+  {
+    "id": "N01",
+    "claim": "普通牛顿迭代及单根局部二次收敛",
+    "kind": "reference",
+    "source_url": "https://dlmf.nist.gov/3.8.ii",
+    "locator": "3.8.4",
+    "status": "verified",
+    "notes": "二阶连续可导与非零导数"
+  },
+  {
+    "id": "N02",
+    "claim": "平方根迭代及精确误差递推",
+    "kind": "algebra",
+    "source_url": null,
+    "locator": "公式 4,8",
+    "status": "derived",
+    "notes": "直接代数化简"
+  },
+  {
+    "id": "N03",
+    "claim": "泰勒余项误差界",
+    "kind": "proof",
+    "source_url": null,
+    "locator": "公式 5–7",
+    "status": "derived",
+    "notes": "拉格朗日余项；局部条件"
+  },
+  {
+    "id": "N04",
+    "claim": "误差图",
+    "kind": "experiment",
+    "source_url": null,
+    "locator": "图 5",
+    "status": "derived",
+    "notes": "Decimal 70 digits; bisection half-width bound"
+  },
+  {
+    "id": "N05",
+    "claim": "二周期 0→1→0",
+    "kind": "counterexample",
+    "source_url": null,
+    "locator": "图 6",
+    "status": "derived",
+    "notes": "直接代入多项式"
+  },
+  {
+    "id": "N06",
+    "claim": "重根修正",
+    "kind": "reference",
+    "source_url": "https://dlmf.nist.gov/3.8.ii",
+    "locator": "paragraph after 3.8.4",
+    "status": "verified",
+    "notes": "重数已知且局部光滑"
+  },
+  {
+    "id": "N07",
+    "claim": "二分夹根",
+    "kind": "reference",
+    "source_url": "https://dlmf.nist.gov/3.8.iii",
+    "locator": "Bisection Method",
+    "status": "verified",
+    "notes": "连续异号区间"
+  },
+  {
+    "id": "N08",
+    "claim": "区间中部接受条件",
+    "kind": "proof",
+    "source_url": null,
+    "locator": "图 8",
+    "status": "derived",
+    "notes": "每步剩余长度≤3/4"
+  },
+  {
+    "id": "N09",
+    "claim": "多元牛顿",
+    "kind": "reference",
+    "source_url": "https://dlmf.nist.gov/3.8.vii",
+    "locator": "Systems of Nonlinear Equations",
+    "status": "verified",
+    "notes": "局部线性化"
+  }
+]

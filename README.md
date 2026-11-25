@@ -141,3 +141,7 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 ## 数学专题：椭圆内接三角形的七种证明
 
 [专题源码](specials/ellipse-triangle/) · [专题阅读入口](https://1998x-stack.github.io/math-posts/specials/ellipse-triangle/)。七篇独立 HTML、49 幅 SVG、94 条编号 MathML 公式及交互实验，附数学验证脚本与此前的 Chromium QA 报告。本专题为独立数学教学推导，不是考试原卷，不计入试卷题目统计。部署状态以 Actions 与实际页面为准。
+
+## 数学专题：牛顿迭代法
+
+[专题源码](specials/newton-method/) · [阅读入口（部署后）](https://1998x-stack.github.io/math-posts/specials/newton-method/)。包含 8 张 SVG、12 个 MathML 公式、切线迭代和数值实验、局部收敛证明、反例与 Python 验证。不计入考试题目统计；以 CI 和实际页面为发布依据。

@@ -621,6 +621,23 @@ def build(root:Path,out:Path,base:str):
         marker='<section id="categories"'
         assert marker in home
         home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="special-title"><div class="section-header"><div><div class="eyebrow muted">MATHEMATICAL EXPLORATIONS</div><h2 id="special-title">数学专题 · 一题多解</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/ellipse-triangle/">椭圆内接三角形：七种证明</a></h3><p>从仿射变换到共轭直径，七篇独立图解与交互实验。</p><a class="route-start" href="specials/ellipse-triangle/">进入专题 →</a></article></div></section>'+marker,1)
+    newton=root/'specials/newton-method'
+    if newton.is_dir():
+        target=out/'specials/newton-method'
+        target.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(newton/'index.html',target/'index.html')
+        shutil.copytree(newton/'assets',target/'assets')
+        special_urls.append(url_join(base,'specials/newton-method/'))
+        card='<article class="route-card"><h3><a href="specials/newton-method/">牛顿迭代法：用切线寻找方程的根</a></h3><p>从几何直觉到二次收敛证明，含失败反例和交互式数值实验。</p><a class="route-start" href="specials/newton-method/">进入专题 →</a></article>'
+        if special.is_dir():
+            home=home.replace('数学专题 · 一题多解','数学专题 · 可视化探索',1)
+            marker='</article></div></section><section id="categories"'
+            assert marker in home
+            home=home.replace(marker,'</article>'+card+'</div></section><section id="categories"',1)
+        else:
+            marker='<section id="categories"'
+            assert marker in home
+            home=home.replace(marker,'<section class="container spotlight-section" aria-label="数学专题"><h2>数学专题 · 可视化探索</h2><div class="route-grid">'+card+'</div></section>'+marker,1)
     write(out,'index.html',home)
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]
