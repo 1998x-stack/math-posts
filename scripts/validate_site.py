@@ -67,6 +67,18 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
         for name in pages:
             route='specials/ellipse-triangle/'+('' if name=='index.html' else name)
             assert route in (out/'sitemap.xml').read_text(encoding='utf-8')
+    geometry=ROOT/'specials/geometry-transformations'
+    if geometry.is_dir():
+        names=sorted(p.name for p in geometry.glob('*.html'))
+        assert len(names)==13 and 'index.html' in names, 'Need 12 competition lessons + series index'
+        for name in names:
+            path='specials/geometry-transformations/'+name
+            expect.append(path)
+            assert (out/path).read_bytes()==(ROOT/path).read_bytes(),f'Geometry page altered: {path}'
+            url='specials/geometry-transformations/'+('' if name=='index.html' else name)
+            assert url in (out/'sitemap.xml').read_text(encoding='utf-8'),f'Missing geometry sitemap route: {url}'
+        assert len(list((out/'specials/geometry-transformations/svg').glob('*.svg')))==12
+        assert 'specials/geometry-transformations/' in (out/'index.html').read_text(encoding='utf-8')
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'
