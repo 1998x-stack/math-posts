@@ -1,0 +1,89 @@
+{
+  "count": 12,
+  "lessons": [
+    {
+      "n": 1,
+      "slug": "01-vieta-symmetry",
+      "source": "13",
+      "title": "韦达定理与对称多项式",
+      "teaser": "把三个根压缩成三个基本对称量。"
+    },
+    {
+      "n": 2,
+      "slug": "02-newton-sums",
+      "source": "14",
+      "title": "牛顿恒等式与根的幂和",
+      "teaser": "不求根，直接求高阶幂和。"
+    },
+    {
+      "n": 3,
+      "slug": "03-factor-remainder",
+      "source": "15",
+      "title": "多项式整除、余数与根",
+      "teaser": "从一次代入发现整个代数因子。"
+    },
+    {
+      "n": 4,
+      "slug": "04-lagrange-interpolation",
+      "source": "16",
+      "title": "拉格朗日插值",
+      "teaser": "由三个节点重建唯一二次多项式。"
+    },
+    {
+      "n": 5,
+      "slug": "05-cauchy-equation",
+      "source": "17",
+      "title": "函数方程：从特殊代入到结构",
+      "teaser": "证明连续性何时把可加函数锁成直线。"
+    },
+    {
+      "n": 6,
+      "slug": "06-complex-rotation",
+      "source": "18-A",
+      "title": "复数乘法与平面旋转",
+      "teaser": "模与幅角解释长度和方向。"
+    },
+    {
+      "n": 7,
+      "slug": "07-roots-of-unity",
+      "source": "18-B",
+      "title": "单位根与离散筛选",
+      "teaser": "几何级数揭示旋转对称与相消。"
+    },
+    {
+      "n": 8,
+      "slug": "08-chebyshev",
+      "source": "19",
+      "title": "切比雪夫多项式与倍角公式",
+      "teaser": "三角倍角变成代数递推。"
+    },
+    {
+      "n": 9,
+      "slug": "09-characteristic-recurrence",
+      "source": "20-A",
+      "title": "线性递推与特征方程",
+      "teaser": "两个特征根产生指数通项。"
+    },
+    {
+      "n": 10,
+      "slug": "10-fibonacci-matrix",
+      "source": "20-B",
+      "title": "矩阵快速幂与斐波那契递推",
+      "teaser": "矩阵更新、快速幂和行列式。"
+    },
+    {
+      "n": 11,
+      "slug": "11-finite-difference",
+      "source": "21",
+      "title": "有限差分与数列求和",
+      "teaser": "从立方差和望远镜求出平方和。"
+    },
+    {
+      "n": 12,
+      "slug": "12-sophie-germain",
+      "source": "22",
+      "title": "多项式恒等式与代数构造",
+      "teaser": "先补完全平方，再发现因子。"
+    }
+  ]
+}
