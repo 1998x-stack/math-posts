@@ -42,7 +42,13 @@ def test_all_number_theory_pages_render_and_interact():
                       }),
                       svg: [...document.querySelectorAll('figure svg')].every(s=>
                         s.getBoundingClientRect().width>0 && s.getBoundingClientRect().height>0),
-                      visible: [...document.querySelectorAll('math')].every(m=>m.getClientRects().length>0)
+                      visible: [...document.querySelectorAll('math')].every(m=>m.getClientRects().length>0),
+                      scrollWidth: document.documentElement.scrollWidth,
+                      viewport: innerWidth,
+                      offenders: [...document.querySelectorAll('body *')].filter(e=>{
+                        const rect=e.getBoundingClientRect();const own=e.scrollWidth>e.clientWidth+1;
+                        return rect.right>innerWidth+2 && !own;
+                      }).slice(0,8).map(e=>({tag:e.tagName,class:e.className?.baseVal||e.className,outerRight:Math.round(e.getBoundingClientRect().right)}))
                     })''')
                     assert not result['overflow'],(article,width,'document overflow')
                     assert result['math'] and result['visible'],(article,width,'MathML not rendered')
