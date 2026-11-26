@@ -651,6 +651,21 @@ def build(root:Path,out:Path,base:str):
         marker='<section id="categories"'
         assert marker in home
         home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="algebra-title"><div class="section-header"><div><div class="eyebrow muted">COMPETITION ALGEBRA</div><h2 id="algebra-title">竞赛代数 · 结构与多项式</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/algebra-structures/">代数结构与多项式：十二讲</a></h3><p>韦达、牛顿恒等式、插值、复数、单位根、切比雪夫、线性递推、矩阵、有限差分与代数构造。</p><a class="route-start" href="specials/algebra-structures/">进入专题 →</a></article></div></section>'+marker,1)
+    # Independent number-theory lessons, not exam posts.
+    nt=root/'specials/number-theory'
+    if nt.is_dir():
+        dest=out/'specials/number-theory'
+        dest.mkdir(parents=True,exist_ok=True)
+        pages=sorted(x.name for x in nt.glob('*.html'))
+        assert len(pages)==13 and 'index.html' in pages, '12 number-theory pages + landing required'
+        for name in pages:
+            shutil.copy2(nt/name,dest/name)
+            special_urls.append(url_join(base,'specials/number-theory/'+('' if name=='index.html' else name)))
+        shutil.copytree(nt/'assets',dest/'assets')
+        shutil.copytree(nt/'svg',dest/'svg')
+        marker='<section id="categories"'
+        assert marker in home
+        home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="number-theory-title"><div class="section-header"><div><div class="eyebrow muted">NUMBER THEORY</div><h2 id="number-theory-title">整数世界与数论 · 十二讲</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/number-theory/">从整除走向二次剩余</a></h3><p>十二篇完整 MathML 证明与交互式图解，涵盖欧几里得算法、素数、同余、中国剩余定理与欧拉定理。</p><a class="route-start" href="specials/number-theory/">进入课程 →</a></article></div></section>'+marker,1)
     write(out,'index.html',home)
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]

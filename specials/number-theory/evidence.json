@@ -1,0 +1,97 @@
+{
+  "title": "整数世界与数论",
+  "source_kind": "classical elementary number theory, original explanatory writing",
+  "exam_source": false,
+  "source_note": "Self-contained mathematical proofs are included in each article; visuals illustrate rather than prove claims",
+  "qa": {
+    "static": "structural and arithmetic test suite supplied",
+    "browser": "not verified yet",
+    "pages": "not verified yet"
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "slug": "01-division",
+      "title": "整除与余数：整数可以被分成几类",
+      "claim": "带余除法：整数 a 与正整数 b 唯一确定整数商 q 与余数 r。",
+      "diagram": "division"
+    },
+    {
+      "number": 2,
+      "slug": "02-euclid",
+      "title": "欧几里得算法：为什么反复取余就能求 gcd",
+      "claim": "对于 a=bq+r，两个数的最大公因数在取余后保持不变。",
+      "diagram": "euclid"
+    },
+    {
+      "number": 3,
+      "slug": "03-bezout",
+      "title": "贝祖恒等式：最大公因数是一种最小刻度",
+      "claim": "a、b 不全为零时，存在整数 x、y 使其组合等于 gcd(a,b)。",
+      "diagram": "bezout"
+    },
+    {
+      "number": 4,
+      "slug": "04-factor",
+      "title": "算术基本定理：整数为什么有唯一的素数指纹",
+      "claim": "每个 n≥2 唯一分解为素数的正整数幂之积，顺序除外。",
+      "diagram": "factor"
+    },
+    {
+      "number": 5,
+      "slug": "05-sieve",
+      "title": "埃氏筛法：筛素数为什么只需到平方根",
+      "claim": "每个合数 n 都存在不超过 √n 的素因子 p。",
+      "diagram": "sieve"
+    },
+    {
+      "number": 6,
+      "slug": "06-modular",
+      "title": "模运算：无穷整数怎样折叠成钟表",
+      "claim": "模 n 同余等价于整数之差是 n 的倍数。",
+      "diagram": "clock"
+    },
+    {
+      "number": 7,
+      "slug": "07-inverse",
+      "title": "模逆元：什么时候余数世界允许除法",
+      "claim": "当 n≥2 时，模 n 的逆元存在当且仅当与 n 互素。",
+      "diagram": "inverse"
+    },
+    {
+      "number": 8,
+      "slug": "08-crt",
+      "title": "中国剩余定理：两种周期如何定位一个数",
+      "claim": "任意两组余数在模 15 意义下有唯一解。",
+      "diagram": "crt"
+    },
+    {
+      "number": 9,
+      "slug": "09-binary",
+      "title": "快速幂：指数再大也能通过反复平方计算",
+      "claim": "快速幂利用指数奇偶和递归平方，把操作数减至 O(log e)。",
+      "diagram": "binary"
+    },
+    {
+      "number": 10,
+      "slug": "10-fermat",
+      "title": "费马小定理：素数模数下的乘法周期",
+      "claim": "若 p 为素数且 p 不整除 a，则 a^{p−1} 与 1 同余。",
+      "diagram": "fermat"
+    },
+    {
+      "number": 11,
+      "slug": "11-totient",
+      "title": "欧拉函数：从可逆余数个数推广费马定理",
+      "claim": "n≥2 且 gcd(a,n)=1 时，a 的 φ(n) 次幂余 1。",
+      "diagram": "totient"
+    },
+    {
+      "number": 12,
+      "slug": "12-squares",
+      "title": "二次剩余：非零平方为什么恰好占一半",
+      "claim": "对于任意奇素数 p，非零平方剩余恰有 (p−1)/2 种。",
+      "diagram": "square"
+    }
+  ]
+}
