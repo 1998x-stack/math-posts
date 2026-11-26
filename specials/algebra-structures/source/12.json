@@ -1,0 +1,119 @@
+{
+  "n": 12,
+  "slug": "12-sophie-germain",
+  "source": "22",
+  "title": "多项式恒等式与代数构造",
+  "subtitle": "看见四次幂之和时，为什么要先补出一个平方？",
+  "level": "综合",
+  "tagline": "配方 · 平方差 · 整数因式",
+  "question": "如何证明对于每个大于一的整数 n，n 的四次方加四都不是素数，而不需要逐个试除？",
+  "intro": [
+    "有些式子看起来像“两个没有公共因子的四次幂之和”，但经过有意识的加减同一项，就能显露一个平方差。",
+    "Sophie Germain 恒等式是一种典型的反向构造：我们预先希望看见两个二次式相乘，于是回过头寻找应该补出的交叉项。"
+  ],
+  "insight": "先把四次式改写为两个平方的差，再用平方差公式分解；用于整数合数时还须检验两个因子都大于一。",
+  "stages": [
+    "选较小整数，因子乘积直接可检验。",
+    "改变整数，两个二次因子同步变化。",
+    "两个因子可能大小悬殊，但积恰等于四次表达式。",
+    "验证不同整数对时恒等式仍严格成立。"
+  ],
+  "demo": "两块数值卡表示平方差产生的两个因子；下方实时核对乘积与原式之差",
+  "theorem": "Sophie Germain 恒等式把 x⁴+4y⁴ 分解为两个二次式之积。证明方法是配出 (x²+2y²)²，再减去 (2xy)²，最后运用平方差公式。对于 n>1 的正整数，代 x=n、y=1 可证明 n⁴+4 必为合数。",
+  "core": [
+    {
+      "aria": "Sophie Germain 恒等式",
+      "xml": "<mrow><mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow><mo>=</mo><mrow><mo>(</mo><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "平方差的中间构造",
+      "xml": "<mrow><mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow><mo>=</mo><msup><mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><msup><mrow><mrow><mo>(</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow>"
+    },
+    {
+      "aria": "自然数 n 的特例",
+      "xml": "<mrow><mrow><msup><mrow><mi>n</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><mo>=</mo><mrow><mo>(</mo><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>2</mn><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>2</mn><mo>)</mo></mrow></mrow></mrow>"
+    }
+  ],
+  "assumptions": "代入实数或复数变量时是恒等式；用于合数证明时需要 n 为大于一的正整数并核对两个因子都是大于一的整数。n=1 是例外，得到素数五。",
+  "example": {
+    "text": "证明任意整数 n>1，n⁴+4 都是合数；先通过配方推导恒等式，而不是直接引用公式。",
+    "eq": {
+      "aria": "整数合数命题的表达式",
+      "xml": "<mrow><mrow><msup><mrow><mi>n</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "看到四次式加四，可以把四看作两个 y 平方项的平方：通过补入中间项，构成完全平方再拆解。",
+  "steps": [
+    {
+      "title": "配出一个完全平方",
+      "goal": "写出 (x²+2y²)²，比较它与原式的差。",
+      "reason": "完全平方展开会多出 4x²y²，恰好是 (2xy)²。",
+      "eq": {
+        "aria": "完全平方展开式",
+        "xml": "<mrow><mrow><msup><mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>4</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow></mrow>"
+      },
+      "check": "补出的交叉项系数是四，不是二。"
+    },
+    {
+      "title": "用平方差拆成两个二次因子",
+      "goal": "减去 (2xy)² 后应用平方差公式。",
+      "reason": "一般恒等式 A²−B²=(A−B)(A+B) 对任意交换环成立。",
+      "eq": {
+        "aria": "平方差分解结果",
+        "xml": "<mrow><mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>4</mn></mrow></msup></mrow><mo>=</mo><mrow><mo>(</mo><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mi>x</mi><mi>y</mi><mo>+</mo><mn>2</mn><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "将两个因子反向展开，应恢复四次幂与四倍四次幂。"
+    },
+    {
+      "title": "特化为整数 n",
+      "goal": "令 x=n、y=1，得到两个整数因子。",
+      "reason": "整数代入后两个二次式仍为整数。",
+      "eq": {
+        "aria": "整数代入后的两个因子",
+        "xml": "<mrow><mrow><msup><mrow><mi>n</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><mo>=</mo><mrow><mo>(</mo><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>2</mn><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>2</mn><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "题目范围是 n>1；n=1 时第一个因子为一，不能由此证明合数。"
+    },
+    {
+      "title": "分别证明两个因子大于一",
+      "goal": "把较小因子再次配方。",
+      "reason": "n²−2n+2=(n−1)²+1，对 n≥2 最小为 2；另一因子显然更大。",
+      "eq": {
+        "aria": "较小因子等于一个平方加一",
+        "xml": "<mrow><mrow><msup><mrow><mi>n</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>2</mn><mo>=</mo><msup><mrow><mrow><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn><mo>≥</mo><mn>2</mn></mrow></mrow>"
+      },
+      "check": "两个因子都为正整数且严格大于一，才构成合数证明。"
+    }
+  ],
+  "takeaway": "配方不是毫无根据的试运气：从预期的平方差结构出发，反推必须补入的交叉项。",
+  "mistakes": [
+    "把较小因子可能等于一的情况略过。",
+    "只验证几个整数取值就称其为所有 n 的恒等式证明。",
+    "将平方和直接错误套成普通平方差。"
+  ],
+  "boundary": "当 n=1，n⁴+4=5 是素数，合数结论必须写成 n>1。对于负整数可按绝对值分类，但本题只讨论正整数。",
+  "exercises": [
+    {
+      "q": "计算 n=3 时两个因子各是多少。",
+      "a": "两因子为 5 与 17，因此原式等于 85。",
+      "answerEq": {
+        "aria": "三的四次幂加四等于八十五",
+        "xml": "<mrow><mrow><msup><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></msup><mo>+</mo><mn>4</mn><mo>=</mo><mn>5</mn><mo>·</mo><mn>17</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "把 y=0 代入 Sophie Germain 恒等式，还成立吗？",
+      "a": "仍成立，右侧成为 x² 与 x² 的乘积，等于 x⁴。",
+      "answerEq": {
+        "aria": "零 y 时的恒等式",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>·</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup></mrow></mrow>"
+      }
+    },
+    {
+      "q": "思考哪些系数 k 可以让 x⁴+k y⁴ 通过同类平方差构造分解。",
+      "a": "寻找一个可配成平方差的交叉项，同时要求系数在目标系数域中合法；不能无条件断言每个 k 都可用同一结构。"
+    }
+  ],
+  "connection": "第 03 讲的因式定理从零点产生因子；本讲通过配方构造因子。第 01 讲的对称多项式可帮助发现可重复使用的代数结构。",
+  "extension": "比较 Sophie Germain 恒等式与其他四次恒等式，学习从最终因子形状反推构造步骤。"
+}
