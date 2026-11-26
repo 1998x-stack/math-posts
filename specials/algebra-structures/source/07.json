@@ -1,0 +1,112 @@
+{
+  "n": 7,
+  "slug": "07-roots-of-unity",
+  "source": "18（拆分）",
+  "derived": true,
+  "title": "单位根与离散筛选",
+  "subtitle": "围绕单位圆的一组复数，为什么高次幂和会突然变成零？",
+  "level": "提高",
+  "tagline": "单位圆 · 旋转对称 · 等比级数",
+  "question": "把全部 n 次单位根升到同一个整数次幂，再相加：为什么答案只有两种可能？",
+  "intro": [
+    "单位根是重复固定角度旋转后回到 1 的复数。n 个根等间距分布在单位圆上，排列成正多边形。",
+    "当所有根升到 m 次幂时，要先判断旋转是否退化成恒等；这是理解求和为何为零或为 n 的关键。"
+  ],
+  "insight": "先判断公比是否等于一，再使用有限等比数列求和；分母为零时要单独计数。",
+  "stages": [
+    "较少根时，每个角位置清楚可见。",
+    "根数增加，仍然以原点为中心。",
+    "幂指数取三时，只有某些 n 使全部根变成一。",
+    "交换根的数量，筛选公式仍由整除性控制。"
+  ],
+  "demo": "单位根在圆周上的位置完全来自指数公式；数值输出检查三次幂和",
+  "theorem": "设 n≥2，取本原 n 次单位根 ω。把 ω 的零次到 n−1 次幂全部相加：其 m 次幂和在 n 整除 m 时等于 n，否则等于 0。",
+  "core": [
+    {
+      "aria": "本原单位根的指数表达",
+      "xml": "<mrow><mrow><mi>ω</mi><mo>=</mo><msup><mrow><mi>e</mi></mrow><mrow><mfrac><mrow><mrow><mn>2</mn><mi>π</mi><mi>i</mi></mrow></mrow><mrow><mi>n</mi></mrow></mfrac></mrow></msup><mo>，</mo><msup><mrow><mi>ω</mi></mrow><mrow><mi>n</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow></mrow>"
+    },
+    {
+      "aria": "单位根的幂和筛选公式",
+      "xml": "<mrow><mrow><mrow><munderover><mo>∑</mo><mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></munderover><msup><mrow><mi>ω</mi></mrow><mrow><mrow><mi>k</mi><mi>m</mi></mrow></mrow></msup></mrow><mo>=</mo><mo>{</mo><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mi>n</mi><mo>∤</mo><mi>m</mi></mrow></mtd></mtr><mtr><mtd><mi>n</mi></mtd><mtd><mrow><mi>n</mi><mo>∣</mo><mi>m</mi></mrow></mtd></mtr></mtable></mrow></mrow>"
+    }
+  ],
+  "assumptions": "n≥2 且 m 为整数；要求 ω 是本原 n 次根，且确实取遍全部 n 项。分母为零的等比级数必须分情况。",
+  "example": {
+    "text": "取四次单位根 1、i、−1、−i，求它们的二次幂和与四次幂和。",
+    "eq": {
+      "aria": "四个四次单位根",
+      "xml": "<mrow><mrow><mo>{</mo><mn>1</mn><mo>,</mo><mi>i</mi><mo>,</mo><mo>−</mo><mn>1</mn><mo>,</mo><mo>−</mo><mi>i</mi><mo>}</mo></mrow></mrow>"
+    }
+  },
+  "motivation": "在这个简单案例中可直接逐项计算，但方法应当能延伸到任意 n 和任意 m。",
+  "steps": [
+    {
+      "title": "列出完整四次单位根",
+      "goal": "令 ω=i，写出前四个幂。",
+      "reason": "虚数单位的四次幂是 1，且前四项互异。",
+      "eq": {
+        "aria": "虚数单位四次幂为一",
+        "xml": "<mrow><mrow><msup><mrow><mi>i</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>=</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "不要只取 1、−1 两个实根。"
+    },
+    {
+      "title": "检查平方和",
+      "goal": "每一项升到二次幂。",
+      "reason": "平方结果为 1、−1、1、−1，全部抵消。",
+      "eq": {
+        "aria": "平方和为零",
+        "xml": "<mrow><mrow><mn>1</mn><mo>−</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "四不整除二，与一般公式相符。"
+    },
+    {
+      "title": "检查四次幂和",
+      "goal": "每项升到四次幂。",
+      "reason": "四个根的四次幂都是 1，因此总和为 4。",
+      "eq": {
+        "aria": "四次幂和为四",
+        "xml": "<mrow><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>4</mn></mrow></mrow>"
+      },
+      "check": "四整除四，结果处于筛选公式另一分支。"
+    },
+    {
+      "title": "从案例走到一般证明",
+      "goal": "设公比 q=ω^m，分别处理 q=1 和 q≠1。",
+      "reason": "公比不为一时，将有限幂和乘以 1−q，可消去中间项，最终剩下 1−q^n=0。",
+      "eq": {
+        "aria": "有限等比级数的消去式",
+        "xml": "<mrow><mrow><mrow><mo>(</mo><mn>1</mn><mo>−</mo><mi>q</mi><mo>)</mo></mrow><mrow><munderover><mo>∑</mo><mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></munderover><msup><mrow><mi>q</mi></mrow><mrow><mi>k</mi></mrow></msup></mrow><mo>=</mo><mn>1</mn><mo>−</mo><msup><mrow><mi>q</mi></mrow><mrow><mi>n</mi></mrow></msup></mrow></mrow>"
+      },
+      "check": "当 q=1 时绝不除以 1−q；这时直接数出 n 项。"
+    }
+  ],
+  "takeaway": "单位根求和先检查指数与根数的整除关系；复杂复数和因此变成零或整数。",
+  "mistakes": [
+    "角间隔应为 2π/n，不是 π/n。",
+    "不能在 q=1 时除以 1−q。",
+    "非本原的根可能重复，不能当成互异 n 次根。"
+  ],
+  "boundary": "对于 n=1，可单独规定唯一单位根为 1；本文聚焦 n≥2 的旋转结构。",
+  "exercises": [
+    {
+      "q": "写出全部六次单位根的六个辐角。",
+      "a": "分别为零、π/3、2π/3、π、4π/3、5π/3。"
+    },
+    {
+      "q": "将全部五次单位根升到第十次幂后求和。",
+      "a": "五整除十，所有结果都是 1，所以总和为 5。",
+      "answerEq": {
+        "aria": "五次单位根十次幂和为五",
+        "xml": "<mrow><mrow><mrow><munderover><mo>∑</mo><mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow></mrow><mrow><mn>4</mn></mrow></munderover><msup><mrow><mi>ω</mi></mrow><mrow><mrow><mn>10</mn><mi>k</mi></mrow></mrow></msup></mrow><mo>=</mo><mn>5</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "为什么仅取全部 n 次根的一半，不能使用同一个筛选结论？",
+      "a": "完整几何级数的相消需要所有 n 个根；删去任意一部分会破坏完整周期。"
+    }
+  ],
+  "connection": "源课程第 18 讲的复数与单位根被拆为本讲和上一讲；第 11 讲幂次求和与组合模块生成函数可以继续复用单位根筛选。",
+  "extension": "尝试用单位根筛选保留多项式中次数属于指定同余类的项。"
+}
