@@ -1,7 +1,7 @@
 function algebraScene(id,u){
 u=Math.max(0,Math.min(1,Number(u)||0));
 const W=760,H=390, v=[],teal="#147f80",blue="#2768b0",orange="#d27452",purple="#7a64b6",ink="#273e46",muted="#668088";
-const fmt=x=>Math.abs(x)<1e-9?"0":Number(x).toFixed(Math.abs(x)>=100?0:Math.abs(x)>=10?2:4).replace(/\.?0+$/,"");
+const fmt=x=>{if(Math.abs(x)<1e-9)return "0";const s=Number(x).toFixed(Math.abs(x)>=100?0:Math.abs(x)>=10?2:4);return s.includes(".")?s.replace(/0+$/,"").replace(/\.$/,""):s;};
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const L=(x1,y1,x2,y2,col=muted,w=2,dash=false)=>v.push(`<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" stroke="${col}" stroke-width="${w}" ${dash?'stroke-dasharray="5 5"':""}/>`);
 const T=(s,x,y,col=ink,size=17)=>v.push(`<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" fill="${col}" font-size="${size}" font-weight="500">${esc(s)}</text>`);
@@ -36,7 +36,7 @@ if(id===4){
  metric=`P(x)=${fmt(coef)}x²+(${fmt(linear)})x+1；三个节点残差=0`;description="拉格朗日插值曲线穿过三个互异横坐标的节点，拖动第三个纵坐标不改变前两个节点";
 }
 if(id===5){
- const c=.5+2.7*u,x=1.2,y=1.8;R(65,80,600,232,"#fff");T("拆成 x 和 y 后，输出仍可相加",95,110);const unit=125;
+ const c=.5+2.7*u,x=1.2,y=1.8;R(65,80,600,232,"#fff");T("拆成 x 和 y 后，输出仍可相加",95,110);const unit=125*c/3.2;
  R(96,144,unit*x,39,blue);R(96+unit*x,144,unit*y,39,orange);R(96,229,unit*(x+y),39,teal);
  T("f(x)",98,170,"white");T("f(y)",98+unit*x,170,"white");T("f(x+y)",98,255,"white");
  metric=`c=${fmt(c)}；f(x)+f(y)=${fmt(c*x+c*y)}；f(x+y)=${fmt(c*(x+y))}；残差=0`;description="任取线性函数 f(t)=ct，它保持加法；这只是连续柯西方程解的实例";
@@ -68,7 +68,7 @@ if(id===10){
  T("n = "+n,110,174,orange,19);const det=entries[0][0]*entries[1][1]-entries[0][1]*entries[1][0];metric=`Fₙ=${F[n]}；Fₙ₊₁=${F[n+1]}；det(Mⁿ)=${det}；(−1)ⁿ=${(-1)**n}`;description="斐波那契矩阵 M 的 n 次方四个元素依次由相邻斐波那契数构成";
 }
 if(id===11){
- const k=Math.round(6*u),n=8,R0=42,top=90;
+ const k=Math.round(5*u),n=8,R0=42,top=90;
  T("aₙ=n²",70,75,teal);T("Δaₙ=2n+1",70,163,blue);T("Δ²aₙ=2",70,254,orange);
  for(let j=0;j<n;j++){const x=180+j*67;const fill=j===k?"#d9f3e8":"#f2f8f5";R(x,86,55,46,fill);T(String(j*j),x+17,115,ink,17);if(j<n-1){R(x,174,55,46,j===k?"#e8f0fb":"#f2f8f5");T(String(2*j+1),x+17,202,blue,17)}if(j<n-2){R(x,266,55,46,j===k?"#fff1e5":"#f8f4f0");T("2",x+22,295,orange,17)}}
  metric=`n=${k}；aₙ=${k*k}；Δaₙ=${2*k+1}；Δ²aₙ=2`;description="平方数的一阶差分为奇数列，二阶差分是常数 2";
