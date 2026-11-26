@@ -1,0 +1,124 @@
+{
+  "n": 6,
+  "slug": "06-complex-rotation",
+  "source": "18（拆分）",
+  "derived": true,
+  "title": "复数乘法与平面旋转",
+  "subtitle": "为什么乘以虚数单位就能把平面向量转过直角？",
+  "level": "基础→提高",
+  "tagline": "复平面 · 幅角 · 模",
+  "question": "将复数 1+i 的对应向量旋转 90°，为什么只需乘一个 i？",
+  "intro": [
+    "复数的模提供长度，幅角提供方向。复数乘法使模相乘、角相加，因此将二维旋转与伸缩统一成一个代数操作。",
+    "当乘子在单位圆上时，其模为一，乘法就是纯旋转，不改变向量长度。几何模块的螺旋相似可以视为这一规则的直接应用。"
+  ],
+  "insight": "先用分配律做一次具体计算，再转向极形式解释角度与长度为什么同时满足要求。",
+  "stages": [
+    "小转角时像向量靠近原向量。",
+    "旋转增大，端点始终落在等距圆上。",
+    "转过半周后方向变了，模长没变。",
+    "继续旋转，原向量与像向量仍有同样的模。"
+  ],
+  "demo": "蓝色为原复向量，橙色为乘单位复数后的像",
+  "theorem": "对非零复数 z，极形式是模 r 与幅角 θ 的乘积。两个非零复数相乘时，模相乘、幅角相加（模 2π）；乘以单位复数等价于纯旋转。",
+  "core": [
+    {
+      "aria": "复数极形式 z = r e 的 iθ 次方",
+      "xml": "<mrow><mrow><mi>z</mi><mo>=</mo><mi>r</mi><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>θ</mi></mrow></mrow></msup></mrow></mrow>"
+    },
+    {
+      "aria": "单位复数旋转后模长保持",
+      "xml": "<mrow><mrow><mo>|</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>φ</mi></mrow></mrow></msup><mi>z</mi><mo>|</mo><mo>=</mo><mo>|</mo><mi>z</mi><mo>|</mo></mrow></mrow>"
+    },
+    {
+      "aria": "乘法时幅角增加 phi",
+      "xml": "<mrow><mrow><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>φ</mi></mrow></mrow></msup><mi>r</mi><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>θ</mi></mrow></mrow></msup><mo>=</mo><mi>r</mi><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mrow><mo>(</mo><mi>θ</mi><mo>+</mo><mi>φ</mi><mo>)</mo></mrow></mrow></mrow></msup></mrow></mrow>"
+    }
+  ],
+  "assumptions": "零复数没有唯一的幅角；角度必须按模 2π 处理。只有乘子的模为 1，才能保证原向量长度不变。",
+  "example": {
+    "text": "令原复数为 1+i，乘子是 i。计算像复数，并比较旋转前后的模长。",
+    "eq": {
+      "aria": "i 乘以一加 i",
+      "xml": "<mrow><mrow><mi>i</mi><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow></mrow></mrow>"
+    }
+  },
+  "motivation": "在复数代数中，旋转不需要分别推导二维坐标变换。",
+  "steps": [
+    {
+      "title": "先做精确复数乘法",
+      "goal": "展开乘积。",
+      "reason": "虚数单位满足平方等于负一。",
+      "eq": {
+        "aria": "旋转后的复数为负一加 i",
+        "xml": "<mrow><mrow><mi>i</mi><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mn>1</mn><mo>+</mo><mi>i</mi></mrow></mrow>"
+      },
+      "check": "必须把 i² 化为 −1。"
+    },
+    {
+      "title": "分别计算模长",
+      "goal": "计算旋转前后向量的欧氏长度。",
+      "reason": "模长是实虚部平方和的平方根。",
+      "eq": {
+        "aria": "两个复数的模均为根号二",
+        "xml": "<mrow><mrow><mo>|</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>|</mo><mo>=</mo><mo>|</mo><mo>−</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>|</mo><mo>=</mo><msqrt><mn>2</mn></msqrt></mrow></mrow>"
+      },
+      "check": "两向量的长度平方都等于二。"
+    },
+    {
+      "title": "确定乘子所代表的角度",
+      "goal": "从单位圆的位置识别 i 的幅角。",
+      "reason": "虚数单位位于单位圆正上方，对应逆时针旋转直角。",
+      "eq": {
+        "aria": "虚数单位的辐角为二分之 pi",
+        "xml": "<mrow><mrow><mi>arg</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></mrow>"
+      },
+      "check": "如果改乘 −i，方向改为顺时针。"
+    },
+    {
+      "title": "推广到一般单位复数乘子",
+      "goal": "把 i 换成 e 的 iφ 次方。",
+      "reason": "模的乘法性与幅角加法性同时成立。",
+      "eq": {
+        "aria": "单位复数的模为一",
+        "xml": "<mrow><mrow><mo>|</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>φ</mi></mrow></mrow></msup><mo>|</mo><mo>=</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "若乘子为 2e 的 iφ 次方，就会把长度放大两倍。"
+    }
+  ],
+  "takeaway": "复数乘法把旋转与伸缩交给同一个乘子：模决定尺度，幅角决定方向。",
+  "mistakes": [
+    "误把 i² 写成正一。",
+    "把幅角相加的等式当成无须取模 2π 的实数等式。",
+    "在零复数处强行指定唯一辐角。"
+  ],
+  "boundary": "复数的主辐角只是指定一个取值区间的代表值；跨越分支切割线时不能简单逐项相加而忽略模 2π。",
+  "exercises": [
+    {
+      "q": "计算 (2+i) 乘以 i 的结果。",
+      "a": "分配律给 −1+2i。",
+      "answerEq": {
+        "aria": "复数乘法结果",
+        "xml": "<mrow><mrow><mi>i</mi><mrow><mo>(</mo><mn>2</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mn>1</mn><mo>+</mo><mn>2</mn><mi>i</mi></mrow></mrow>"
+      }
+    },
+    {
+      "q": "将向量旋转 180° 且不改变长度，应乘哪个复数？",
+      "a": "乘以 −1，它的幅角为 π、模为 1。",
+      "answerEq": {
+        "aria": "半周旋转乘子",
+        "xml": "<mrow><mrow><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>i</mi><mi>π</mi></mrow></mrow></msup><mo>=</mo><mo>−</mo><mn>1</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "任意两个复数的模为何满足乘法性？",
+      "a": "从极形式的模与幅角分别相乘得到结论，也可展开实虚部后比较平方。",
+      "answerEq": {
+        "aria": "复数模满足乘法",
+        "xml": "<mrow><mrow><mo>|</mo><mi>z</mi><mi>w</mi><mo>|</mo><mo>=</mo><mo>|</mo><mi>z</mi><mo>|</mo><mo>|</mo><mi>w</mi><mo>|</mo></mrow></mrow>"
+      }
+    }
+  ],
+  "connection": "第 07 讲利用离散旋转生成全部单位根；几何模块的螺旋相似与本讲复数乘法直接关联。",
+  "extension": "研究复数的共轭与反射，以及模长大于一的乘子对应的螺旋相似。"
+}
