@@ -55,7 +55,7 @@
       "explain": "由像距公式可知三条像线段各等于 R² 倍原弦长，再除以其两端到 A 的距离乘积。",
       "eq": {
         "aria": "反演距离公式",
-        "xml": "<mrow><mi>B′D′</mi><mo>=</mo><mfrac><msup><mi>R</mi><mn>2</mn></msup><mi>BD</mi><mi>AB</mi><mo>·</mo><mi>AD</mi></mfrac></mrow>"
+        "xml": "<mrow><mi>B′D′</mi><mo>=</mo><mfrac><mrow><msup><mi>R</mi><mn>2</mn></msup><mi>BD</mi></mrow><mrow><mi>AB</mi><mo>·</mo><mi>AD</mi></mrow></mfrac></mrow>"
       },
       "check": "对 B′C′ 和 C′D′ 也要用各自正确的端点 AB、AC、AD。"
     },

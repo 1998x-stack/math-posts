@@ -25,7 +25,7 @@
     },
     {
       "aria": "像点距离 P′Q′ 等于 R 平方乘 PQ 除以 OP 乘 OQ",
-      "xml": "<mrow><mi>P′Q′</mi><mo>=</mo><mfrac><msup><mi>R</mi><mn>2</mn></msup><mi>PQ</mi><mi>OP</mi><mo>·</mo><mi>OQ</mi></mfrac></mrow>"
+      "xml": "<mrow><mi>P′Q′</mi><mo>=</mo><mfrac><mrow><msup><mi>R</mi><mn>2</mn></msup><mi>PQ</mi></mrow><mrow><mi>OP</mi><mo>·</mo><mi>OQ</mi></mrow></mfrac></mrow>"
     }
   ],
   "domain": "中心 O 没有有限反演像；经过 O 的圆与直线在扩充平面中的解释要区别于普通欧氏平面。",

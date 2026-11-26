@@ -25,7 +25,7 @@
     },
     {
       "aria": "椭圆内接三角形最大面积",
-      "xml": "<mrow><mi>S</mi><mo>max</mo><mo>=</mo><mfrac><mn>3</mn><msqrt><mn>3</mn></msqrt><mi>ab</mi><mn>4</mn></mfrac></mrow>"
+      "xml": "<mrow><mi>S</mi><mo>max</mo><mo>=</mo><mfrac><mrow><mn>3</mn><msqrt><mn>3</mn></msqrt><mi>ab</mi></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>"
     }
   ],
   "domain": "矩阵 M 可逆，即 det M≠0；椭圆半轴 a,b>0。最大三角形为单位圆正三角形的仿射像，不一定是欧氏正三角形。",
@@ -64,7 +64,7 @@
       "explain": "单位圆最优三角形的三个参数角相隔 120°，三个位置向量之和为 0。仿射变换保持重心，得到椭圆内接最优三角形的重心是椭圆中心。",
       "eq": {
         "aria": "椭圆内接三角形面积最大值",
-        "xml": "<mrow><mi>S</mi><mo>max</mo><mo>=</mo><mfrac><mn>3</mn><msqrt><mn>3</mn></msqrt><mi>ab</mi><mn>4</mn></mfrac></mrow>"
+        "xml": "<mrow><mi>S</mi><mo>max</mo><mo>=</mo><mfrac><mrow><mn>3</mn><msqrt><mn>3</mn></msqrt><mi>ab</mi></mrow><mrow><mn>4</mn></mrow></mfrac></mrow>"
       },
       "check": "不能把仿射像误称为欧氏正三角形；这里只保持了面积关系和重心。"
     }
