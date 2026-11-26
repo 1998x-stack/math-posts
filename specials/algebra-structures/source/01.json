@@ -1,0 +1,119 @@
+{
+  "n": 1,
+  "slug": "01-vieta-symmetry",
+  "source": "13",
+  "title": "韦达定理与对称多项式",
+  "subtitle": "为什么不知道三个根分别是谁，仍能算出它们的平方和？",
+  "level": "基础",
+  "tagline": "从对称性降维",
+  "question": "已知三个未知数的和与两两乘积之和，怎样不逐一解出未知数，就确定它们的平方和？",
+  "intro": [
+    "排列三个根会改变谁被叫作第一根，却不会改变根的总和、两两乘积和总乘积。韦达定理让我们直接从多项式系数读取这些对称量。",
+    "对称多项式的技巧不是把式子展开得更长，而是把复杂表达式重写成更少的基本量；只要目标本身对根的置换不敏感，就应优先寻找这样的改写。"
+  ],
+  "insight": "先把题目里反复出现的三元对称表达式压缩成三个系数，再使用恒等式，而不是解三次方程。",
+  "stages": [
+    "先固定两根，移动第三根，观察三种基本量怎样随集合变化。",
+    "即使两根重合，对称量的计算公式也不失效。",
+    "第三根越过其他根时，并不需要重新指定根的顺序。",
+    "更换根的位置，平方和与韦达式依然完全相符。"
+  ],
+  "demo": "数轴上的三个彩色点对应三根；显示的对称量来自它们的实际数值",
+  "theorem": "设三数为 x、y、z，记其和为 p，两两乘积和为 q，总乘积为 r。按重数计算，它们正好是三次首一多项式的三个根。所有三元对称多项式都能表示为这三种基本量的多项式。",
+  "core": [
+    {
+      "aria": "三个基本对称量",
+      "xml": "<mrow><mrow><mi>p</mi><mo>=</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>；</mo><mi>q</mi><mo>=</mo><mi>x</mi><mi>y</mi><mo>+</mo><mi>y</mi><mi>z</mi><mo>+</mo><mi>z</mi><mi>x</mi><mo>；</mo><mi>r</mi><mo>=</mo><mi>x</mi><mi>y</mi><mi>z</mi></mrow></mrow>"
+    },
+    {
+      "aria": "根与系数的对应",
+      "xml": "<mrow><mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>t</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mi>p</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mi>q</mi><mi>t</mi><mo>−</mo><mi>r</mi></mrow></mrow>"
+    }
+  ],
+  "assumptions": "这里的多项式以实数或复数为系数，根可以相等，也可以不是实数；不要擅自额外假设三数为正。",
+  "example": {
+    "text": "已知三数的和为 3，两两乘积之和为 2，求三数平方之和。",
+    "eq": {
+      "aria": "三数和为三，两两乘积和为二",
+      "xml": "<mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>=</mo><mn>3</mn><mo>；</mo><mi>x</mi><mi>y</mi><mo>+</mo><mi>y</mi><mi>z</mi><mo>+</mo><mi>z</mi><mi>x</mi><mo>=</mo><mn>2</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "目标是三个平方的和，恰好能从“和的平方”中扣掉所有混合乘积；不需要知道三个根的具体取值。",
+  "steps": [
+    {
+      "title": "识别已知的是哪两种对称量",
+      "goal": "把和与两两乘积和分别命名为 p 与 q。",
+      "reason": "它们都是交换 x、y、z 后值保持不变的表达式。",
+      "eq": {
+        "aria": "p 等于三，q 等于二",
+        "xml": "<mrow><mrow><mi>p</mi><mo>=</mo><mn>3</mn><mo>；</mo><mi>q</mi><mo>=</mo><mn>2</mn></mrow></mrow>"
+      },
+      "check": "不要求知道三数的总乘积 r。"
+    },
+    {
+      "title": "展开和的平方",
+      "goal": "对已知的总和平方，注意每种混合项出现两次。",
+      "reason": "按乘法分配律，交叉乘积 x y、y z、z x 各出现两次。",
+      "eq": {
+        "aria": "三数和平方展开式",
+        "xml": "<mrow><mrow><msup><mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "混合项系数一定是 2，不能漏掉任何一对。"
+    },
+    {
+      "title": "把目标单独移到左边",
+      "goal": "由恒等式减去混合项两倍。",
+      "reason": "三数平方和恰为 p 的平方减去 2q。",
+      "eq": {
+        "aria": "平方和化成两个基本对称量",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mi>p</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mi>q</mi></mrow></mrow>"
+      },
+      "check": "此式是恒等式，对正负、重复根或复数根均成立。"
+    },
+    {
+      "title": "代入并独立验算",
+      "goal": "代入 p=3、q=2 得到数值。",
+      "reason": "只使用题目明确给出的两条约束。",
+      "eq": {
+        "aria": "最终平方和等于五",
+        "xml": "<mrow><mrow><msup><mrow><mn>3</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mo>·</mo><mn>2</mn><mo>=</mo><mn>5</mn></mrow></mrow>"
+      },
+      "check": "结果并不意味着三个根都一定为实数。"
+    }
+  ],
+  "takeaway": "先找不随根交换而变化的表达式，把求根问题变成求系数问题。",
+  "mistakes": [
+    "把两两乘积和误写成所有乘积的两倍。",
+    "在没有条件时假设三根正数或互不相等。",
+    "把求根的任务强加给只需对称量的题目。"
+  ],
+  "boundary": "含有特定某一个根的表达式（例如单独求 x）一般不能只由 p、q、r 的对称性质唯一指定；必须补充选择根的规则。",
+  "exercises": [
+    {
+      "q": "若两根之和为 5、积为 6，求它们的平方和。",
+      "a": "先平方两根的和，再减两倍的积，结果为 25−12=13。",
+      "answerEq": {
+        "aria": "两根平方和十三",
+        "xml": "<mrow><mrow><mn>25</mn><mo>−</mo><mn>12</mn><mo>=</mo><mn>13</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "已知三数和为 0，两两乘积之和为 −7，求平方和。",
+      "a": "由平方和等于和的平方减去两倍的两两乘积和，得到 14。",
+      "answerEq": {
+        "aria": "平方和十四",
+        "xml": "<mrow><mrow><mn>0</mn><mo>−</mo><mn>2</mn><mrow><mo>(</mo><mo>−</mo><mo>)</mo></mrow><mo>=</mo><mn>14</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "说明为什么三个根的三次幂和可以只用 p、q、r 表示。",
+      "a": "从立方和恒等式或下一讲牛顿恒等式得到对应式。",
+      "answerEq": {
+        "aria": "三次幂和恒等式",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>+</mo><msup><mrow><mi>y</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>=</mo><msup><mrow><mi>p</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>3</mn><mi>p</mi><mi>q</mi><mo>+</mo><mn>3</mn><mi>r</mi></mrow></mrow>"
+      }
+    }
+  ],
+  "connection": "第 02 讲把“平方和”推广到任意次根幂和；第 03 讲通过根判断因子；第 12 讲用对称化构造恒等式。",
+  "extension": "对于四个未知根，尝试先写出四个基本对称多项式，再计算前几项幂和。"
+}

@@ -1,0 +1,123 @@
+{
+  "n": 3,
+  "slug": "03-factor-remainder",
+  "source": "15",
+  "title": "多项式整除、余数与根",
+  "subtitle": "把一个代入运算变成寻找因子的入口。",
+  "level": "基础→提高",
+  "tagline": "根、余数、因式",
+  "question": "怎样在不知道所有根时，找到一个线性因子并逐层剥离多项式？",
+  "intro": [
+    "一条曲线穿过横轴，意味着函数值为零。对多项式来说，这不仅是几何事实，还给出一个精确的代数因子。",
+    "带余除法说明：一个多项式除以线性式后的余数是常数，而这个常数恰好是原多项式在对应点的取值。"
+  ],
+  "insight": "先用易验证的小整数试根；每找到一个真根，立刻除去对应一次因子，降低剩余多项式的次数。",
+  "stages": [
+    "移动取值点，观察非零函数值与余数。",
+    "点经过第一个根时，线性因子出现。",
+    "再经过其他根，余数再次为零。",
+    "离开根后余数重新非零，但带余等式始终成立。"
+  ],
+  "demo": "橙色点 P(a) 是函数值，数值读数也等于除以一次式时的余数",
+  "theorem": "在域上的多项式除法中，存在唯一多项式 Q 和常数 R，使 f(x)=(x−a)Q(x)+R。代入 x=a 得到 R=f(a)。因此 a 是根当且仅当 x−a 是因子。",
+  "core": [
+    {
+      "aria": "线性式带余除法",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mi>Q</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "因式定理的充要关系",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>⇔</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>∣</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+    }
+  ],
+  "assumptions": "多项式系数所在集合应为域（例如有理数、实数、复数）；有理根定理只产生候选值，不确保候选一定为根。",
+  "example": {
+    "text": "求一个三次多项式的全部根，并反向检验展开系数。",
+    "eq": {
+      "aria": "三次多项式 f(x)=x³−6x²+11x−6",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>6</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>11</mn><mi>x</mi><mo>−</mo><mn>6</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "常数项为 −6，整数根候选较少；试根比直接套三次方程公式更有效。",
+  "steps": [
+    {
+      "title": "先找到一个根",
+      "goal": "代入最小的正整数候选 1。",
+      "reason": "余数定理保证代入值为零时，就得到线性因子。",
+      "eq": {
+        "aria": "代入一函数值为零",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mn>6</mn><mo>+</mo><mn>11</mn><mo>−</mo><mn>6</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "零不是因为图上曲线接近横轴，而是代数值严格为零。"
+    },
+    {
+      "title": "除去一次因子",
+      "goal": "将原多项式除以 x−1。",
+      "reason": "因式定理确保整除，商多项式次数降为二。",
+      "eq": {
+        "aria": "除去 x 减一后得到二次商",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "重新相乘核对三次项、二次项和常数项。"
+    },
+    {
+      "title": "继续分解二次商",
+      "goal": "寻找和为 5、积为 6 的两数。",
+      "reason": "二次多项式的根可以用最简单的配对分解。",
+      "eq": {
+        "aria": "二次式等于 x 减二与 x 减三的乘积",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "两个因子的常数积为 6，一次项系数为 −5。"
+    },
+    {
+      "title": "读出全部根并验证",
+      "goal": "将三个一次因子对应的零点列出。",
+      "reason": "三次多项式已分解成三个一次因子，不会遗漏其他复根（按重数）。",
+      "eq": {
+        "aria": "三个根分别是一二三",
+        "xml": "<mrow><mrow><mi>x</mi><mo>∈</mo><mo>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>}</mo></mrow></mrow>"
+      },
+      "check": "根的和为 6、两两乘积和为 11、总乘积为 6，与原方程完全相符。"
+    }
+  ],
+  "takeaway": "把求根变成“试根—除因子—再降低次数”，并始终使用反向展开来验证。",
+  "mistakes": [
+    "有理根定理给的是候选，而不是结论。",
+    "有重根时，不可把根的个数与不同零点个数混为一谈。",
+    "数值作图的近似横轴交点不能作为代数整除证明。"
+  ],
+  "boundary": "对非零常数多项式没有根；对零多项式每个输入都是零，因子讨论须按正确的整除定义区分。",
+  "exercises": [
+    {
+      "q": "求四次多项式在实数范围内的全部零点。",
+      "eq": {
+        "aria": "x四次方减一等于零",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "a": "先分解成两个平方差，实根为 1 与 −1；剩余二次式在实数中无根。",
+      "answerEq": {
+        "aria": "平方差分解",
+        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow>"
+      }
+    },
+    {
+      "q": "多项式除以 x−2 的余数是多少？",
+      "eq": {
+        "aria": "多项式 f(x)=x³−6x²+11x−6",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>6</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>11</mn><mi>x</mi><mo>−</mo><mn>6</mn></mrow></mrow>"
+      },
+      "a": "代入 2 得到 0，所以 x−2 整除原式。",
+      "answerEq": {
+        "aria": "代入二余数为零",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "一个四次多项式有三个互异已知根且第四个根未知，怎样使用韦达定理寻找它？",
+      "a": "把三个已知根的和与四次多项式三次项系数比较，求剩余根；随后代回验证。"
+    }
+  ],
+  "connection": "第 01 讲用系数信息计算对称式，第 03 讲从一个零点反向识别因子；第 04 讲的插值唯一性也依赖多项式零点数不能超过次数。",
+  "extension": "证明：若次数不超过 n 的非零多项式有 n+1 个互异零点，会产生怎样的矛盾？"
+}
