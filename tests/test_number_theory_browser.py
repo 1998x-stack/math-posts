@@ -19,7 +19,7 @@ def test_all_number_theory_pages_render_and_interact():
                     errors.clear()
                     tab.goto(article.as_uri(),wait_until='load',timeout=30000)
                     tab.locator('math').first.wait_for(timeout=10000)
-                    assert tab.locator('math').count()==5,(article,width)
+                    assert tab.locator('math').count()==6,(article,width)
                     assert tab.locator('figure svg').count()==4,(article,width)
                     before=tab.locator('[data-visual] svg').evaluate('(e)=>e.outerHTML')
                     slider=tab.locator('[data-nt] input[type=range]')

@@ -12,7 +12,7 @@ def test_pages():
   page=ROOT/(row['slug']+'.html')
   soup=BeautifulSoup(page.read_text(encoding='utf-8'),'html.parser')
   assert len(soup.find_all('h1'))==1 and soup.find('main')
-  assert len(soup.find_all('math'))==5
+  assert len(soup.find_all('math'))==6
   assert len(soup.find_all('svg'))==4
   assert len(soup.select('.proof-step'))==4
   assert len(soup.select('.exercise'))==3
