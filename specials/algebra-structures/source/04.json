@@ -1,0 +1,115 @@
+{
+  "n": 4,
+  "slug": "04-lagrange-interpolation",
+  "source": "16",
+  "title": "拉格朗日插值：由点重建多项式",
+  "subtitle": "为什么三个不同横坐标的点恰好决定唯一一条二次曲线？",
+  "level": "提高",
+  "tagline": "局部数据与整体重建",
+  "question": "只知道一条未知曲线经过三个给定点，就能够找出整条曲线吗？怎样同时证明“找到一个”和“不会有第二个”？",
+  "intro": [
+    "插值不是凭感觉找一条漂亮曲线，而是先给出次数上界，再要求多项式经过每一个数据点。",
+    "拉格朗日基函数的设计非常巧妙：一个基函数只负责自己的节点，在其他所有节点自动为零。"
+  ],
+  "insight": "把拟合一个未知多项式的问题拆成几个“只在一个节点发声”的基函数，再叠加。",
+  "stages": [
+    "第三点下降，插值曲线仍穿过前两点。",
+    "第三点略移动，二次项系数发生变化。",
+    "曲线的形状改变，但插值点始终准确命中。",
+    "第三点升高，拉格朗日基函数自动调整整条曲线。"
+  ],
+  "demo": "动态修改第三个节点纵坐标，另外两个插值约束始终满足",
+  "theorem": "给定横坐标互异的 n+1 个点，存在唯一的次数不超过 n 的插值多项式。每个拉格朗日基函数在对应节点为 1、其余节点为 0，因而组合后准确插值。",
+  "core": [
+    {
+      "aria": "拉格朗日插值和式",
+      "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msub><mrow><mi>y</mi></mrow><mrow><mi>i</mi></mrow></msub><msub><mrow><mi>L</mi></mrow><mrow><mi>i</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "拉格朗日基函数乘积定义",
+      "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>i</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munder><mo>∏</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></munder><mfrac><mrow><mrow><mi>x</mi><mo>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mrow><mrow><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mrow></mfrac></mrow>"
+    }
+  ],
+  "assumptions": "所有节点横坐标必须两两不同，否则拉格朗日公式的分母为零；并须明确次数不超过 n。",
+  "example": {
+    "text": "求唯一的次数不超过二的多项式，它在横坐标 0、1、2 处的函数值分别为 1、2、5。",
+    "eq": {
+      "aria": "三个插值条件",
+      "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>；</mo><mi>P</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mo>；</mo><mi>P</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow><mo>=</mo><mn>5</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "三个数据点暗示一个二次以下模型；既可以通过差分猜出，也可以用拉格朗日基函数系统构造。",
+  "steps": [
+    {
+      "title": "构造第一个基函数",
+      "goal": "让它在横坐标 0 处取 1，在 1、2 处取 0。",
+      "reason": "取另外两个节点的一次因子，再除以在当前节点的值。",
+      "eq": {
+        "aria": "第一个拉格朗日基函数",
+        "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>"
+      },
+      "check": "L0(0)=1、L0(1)=L0(2)=0。"
+    },
+    {
+      "title": "构造另外两个基函数",
+      "goal": "分别让 L1 和 L2 只在自己的节点等于 1。",
+      "reason": "重复相同的零点构造规则。",
+      "eq": {
+        "aria": "第二和第三个拉格朗日基函数",
+        "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>x</mi><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mo>；</mo><msub><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>"
+      },
+      "check": "L1(1)=1，L2(2)=1，其余规定节点处为零。"
+    },
+    {
+      "title": "按节点纵坐标加权组合",
+      "goal": "将三个基函数依次乘以 1、2、5 后求和。",
+      "reason": "在每个节点只会留下对应权重，其余项都自动消失。",
+      "eq": {
+        "aria": "插值结果为 x 平方加一",
+        "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msub><mrow><mi>L</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>2</mn><msub><mrow><mi>L</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mn>5</mn><msub><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "逐点代入得到 1、2、5；展开不依赖数值拟合。"
+    },
+    {
+      "title": "证明唯一性",
+      "goal": "假设另有次数不超过二的 Q 也满足三个节点。",
+      "reason": "P−Q 次数不超过二，却在三处不同横坐标都为零，只能是零多项式。",
+      "eq": {
+        "aria": "插值多项式与任何另一候选恒相等",
+        "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>−</mo><mi>Q</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>≡</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "“次数不超过二”是关键；若允许更高次数，可以加任意倍的 x(x−1)(x−2)。"
+    }
+  ],
+  "takeaway": "每个基函数负责一个节点的值；唯一性来自“低次多项式不能有过多互异零点”。",
+  "mistakes": [
+    "横坐标相同而纵坐标不同的数据无法用通常的单值多项式同时插值。",
+    "若没有次数上界，经过给定节点的多项式有无限多条。",
+    "插值精确命中节点不代表在节点外的数值预测稳定。"
+  ],
+  "boundary": "插值的代数唯一性与数值计算的病态性不同；横坐标极近时，某些基函数系数可能很大。",
+  "exercises": [
+    {
+      "q": "两点分别为 (0,2) 和 (1,5)，求一次插值函数。",
+      "a": "截距为 2，斜率为 3，结果为 3x+2。",
+      "answerEq": {
+        "aria": "一次插值函数",
+        "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "若把第三节点函数值由 5 改为 7，前两个节点不变，重新求二次插值多项式。",
+      "a": "用系数 a、b、c 或拉格朗日法，结果为 2x²−x+1。",
+      "answerEq": {
+        "aria": "新的二次插值式",
+        "xml": "<mrow><mrow><mi>P</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "说明为什么次数不超过二的多项式若在三个不同横坐标全为零，就必恒为零。",
+      "a": "每个不同根提供一个一次因子，三个互异根会要求非零多项式至少三次，与次数不超过二矛盾。"
+    }
+  ],
+  "connection": "第 03 讲提供因式定理和零点计数；第 11 讲的有限差分是等距节点插值的一种自然版本。",
+  "extension": "尝试比较拉格朗日插值与牛顿差商插值，在增加新节点时哪一种更容易增量更新？"
+}

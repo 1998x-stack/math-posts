@@ -1,0 +1,123 @@
+{
+  "n": 8,
+  "slug": "08-chebyshev",
+  "source": "19",
+  "title": "切比雪夫多项式：三角函数的代数影子",
+  "subtitle": "多项式次数升高，为什么在一个区间仍能保持等幅振荡？",
+  "level": "提高",
+  "tagline": "余弦倍角 · 递推 · 最值",
+  "question": "如何把三倍角余弦写成 cosθ 的三次多项式？为什么这个多项式在 −1 到 1 之间不超过 1？",
+  "intro": [
+    "第一类切比雪夫多项式将三角倍角公式装进递推序列，避免每次从三角和差公式重新展开。",
+    "区间上的有界性来自一个清楚的代换：在闭区间内每一个 x 都可写成 cosθ，于是 T_n(x)=cos(nθ) 的取值自然不超过 1。"
+  ],
+  "insight": "先建立递推，再推导 T2 与 T3。严格区分多项式恒等式和只在指定区间成立的界。",
+  "stages": [
+    "自变量靠近右端点时，三次曲线达到上方。",
+    "逐渐改变角度，多项式经过波峰与波谷。",
+    "T1、T2、T3 的振荡次数不同。",
+    "回到左端点时，第三项取负一。"
+  ],
+  "demo": "三条曲线对应第一、第二、第三项；橙色点准确落在第三条曲线上",
+  "theorem": "第一类切比雪夫多项式的初值为 T0=1、T1=x。依余弦倍角恒等式，T_{n+1}=2xT_n−T_{n−1}；对任何实角 θ，都有 T_n(cosθ)=cos(nθ)。",
+  "core": [
+    {
+      "aria": "切比雪夫多项式递推式",
+      "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mi>x</mi><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>−</mo><msub><mrow><mi>T</mi></mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "第一类切比雪夫与余弦倍角",
+      "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub><mrow><mo>(</mo><mi>cos</mi><mi>θ</mi><mo>)</mo></mrow><mo>=</mo><mi>cos</mi><mrow><mo>(</mo><mi>n</mi><mi>θ</mi><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "闭区间内的绝对值上界",
+      "xml": "<mrow><mrow><mo>|</mo><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>|</mo><mo>≤</mo><mn>1</mn><mo>，</mo><mo>−</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>1</mn></mrow></mrow>"
+    }
+  ],
+  "assumptions": "本讲使用第一类 T_n，而不是第二类 U_n。上界仅在 x∈[−1,1] 成立；不能无条件推广到整个实轴。",
+  "example": {
+    "text": "利用切比雪夫递推推导三倍角余弦的表达式，并求它在指定闭区间内的绝对值上界。",
+    "eq": {
+      "aria": "三倍角余弦可表示为第三切比雪夫多项式",
+      "xml": "<mrow><mrow><mi>cos</mi><mrow><mo>(</mo><mn>3</mn><mi>θ</mi><mo>)</mo></mrow><mo>=</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub><mrow><mo>(</mo><mi>cos</mi><mi>θ</mi><mo>)</mo></mrow></mrow></mrow>"
+    }
+  },
+  "motivation": "三次项只需要两次递推便可得到。最后再用余弦形式解释有界性，而不是依靠曲线观察猜测。",
+  "steps": [
+    {
+      "title": "确立初值",
+      "goal": "写出 T0 与 T1。",
+      "reason": "二阶递推由两个初始多项式唯一确定。",
+      "eq": {
+        "aria": "两个切比雪夫初值",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>；</mo><msub><mrow><mi>T</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi></mrow></mrow>"
+      },
+      "check": "T1 是 x，不是 2x。"
+    },
+    {
+      "title": "求第二项",
+      "goal": "在递推中代入 n=1。",
+      "reason": "T2=2xT1−T0。",
+      "eq": {
+        "aria": "第二项等于二 x 平方减一",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "在 x=0 时为 −1，在 x=1 时为 1。"
+    },
+    {
+      "title": "求第三项",
+      "goal": "再代入 n=2，完全展开。",
+      "reason": "T3=2xT2−T1，所得三次项与一次项必须正确合并。",
+      "eq": {
+        "aria": "第三项为四 x 立方减三 x",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>4</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>3</mn><mi>x</mi></mrow></mrow>"
+      },
+      "check": "最高次系数是 4，二次项恰好消失。"
+    },
+    {
+      "title": "解释取值上界",
+      "goal": "令 x=cosθ，利用余弦值范围。",
+      "reason": "闭区间内的每个 x 都可写成一个实角的余弦。",
+      "eq": {
+        "aria": "三次多项式在指定区间绝对值不超过一",
+        "xml": "<mrow><mrow><mo>|</mo><mn>4</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>3</mn><mi>x</mi><mo>|</mo><mo>≤</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "须保留 x 在 −1 与 1 之间的条件；例如 x=2 时值为 26。"
+    }
+  ],
+  "takeaway": "倍角是递推的三角解释；通过代换可将难解的多项式最值转换成普通余弦的幅值。",
+  "mistakes": [
+    "第一类与第二类切比雪夫多项式不应混淆。",
+    "看到区间内的振荡曲线，便声称全实数有界。",
+    "用数值图取代对任意 n 的递推证明。"
+  ],
+  "boundary": "等幅振荡可以启发最小最大逼近定理，但完整最优化结论需要额外论证。",
+  "exercises": [
+    {
+      "q": "利用递推写出第四个多项式。",
+      "a": "结果为 8x⁴−8x²+1。",
+      "answerEq": {
+        "aria": "第四切比雪夫多项式",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mn>4</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>8</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>−</mo><mn>8</mn><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "证明任何非负整数 n 都满足 T_n(1)=1。",
+      "a": "令 θ=0，余弦倍角为 1；也可使用递推归纳。",
+      "answerEq": {
+        "aria": "切比雪夫在一处取值一",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mi>n</mi></mrow></msub><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "将 2 代入 T3，求出结果，并解释为何不违背区间有界结论。",
+      "a": "数值为 26，但输入 2 在指定区间外。",
+      "answerEq": {
+        "aria": "区间外多项式值二十六",
+        "xml": "<mrow><mrow><msub><mrow><mi>T</mi></mrow><mrow><mn>3</mn></mrow></msub><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow><mo>=</mo><mn>26</mn></mrow></mrow>"
+      }
+    }
+  ],
+  "connection": "复数旋转也能解释倍角公式；下两讲把类似的二阶递推写为特征根与矩阵语言。",
+  "extension": "在单位最高次项系数的约束下研究切比雪夫多项式的最小最大偏差性质。"
+}

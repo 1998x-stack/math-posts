@@ -1,0 +1,115 @@
+{
+  "n": 2,
+  "slug": "02-newton-sums",
+  "source": "14",
+  "title": "牛顿恒等式与根的幂和",
+  "subtitle": "不解方程，也能知道三个复杂复数根的十次幂和吗？",
+  "level": "提高",
+  "tagline": "系数决定幂和递推",
+  "question": "三次方程的根可能完全不容易写出，但根的四次幂、十次幂之和为什么仍能被简单计算？",
+  "intro": [
+    "第 01 讲只处理了平方和。牛顿恒等式告诉我们：对于一个已知系数的多项式，根的任意正整数次幂和都能由这些系数递推求出。",
+    "递推中的前几个步骤含有额外的系数乘子。把前三项硬套成统一的长递推会漏掉常数项。"
+  ],
+  "insight": "不尝试数值求根，而是让每个根满足同一条三次方程，再将三条根方程相加。",
+  "stages": [
+    "同一组三根决定一个一阶幂和。",
+    "平方和与系数之间的关系可直接验算。",
+    "立方和的公式中必须出现 3r。",
+    "根继续移动时，递推恒等式左右保持相等。"
+  ],
+  "demo": "三个幂和用同一组三根计算，并通过牛顿公式得到另一种数值",
+  "theorem": "若 x、y、z 是首一三次多项式的根，令 s_k 为它们 k 次幂之和。牛顿恒等式给出前三阶的特殊初始化；从第四阶开始，根的三次方程直接导出齐次线性递推。",
+  "core": [
+    {
+      "aria": "前三个牛顿根幂和",
+      "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><mi>p</mi><mo>；</mo><msub><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>=</mo><mi>p</mi><msub><mrow><mi>s</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>−</mo><mn>2</mn><mi>q</mi><mo>；</mo><msub><mrow><mi>s</mi></mrow><mrow><mn>3</mn></mrow></msub><mo>=</mo><mi>p</mi><msub><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>−</mo><mi>q</mi><msub><mrow><mi>s</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>+</mo><mn>3</mn><mi>r</mi></mrow></mrow>"
+    },
+    {
+      "aria": "第四阶起的根幂和递推",
+      "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>=</mo><mi>p</mi><msub><mrow><mi>s</mi></mrow><mrow><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>−</mo><mi>q</mi><msub><mrow><mi>s</mi></mrow><mrow><mrow><mi>k</mi><mo>−</mo><mn>2</mn></mrow></mrow></msub><mo>+</mo><mi>r</mi><msub><mrow><mi>s</mi></mrow><mrow><mrow><mi>k</mi><mo>−</mo><mn>3</mn></mrow></mrow></msub></mrow></mrow>"
+    }
+  ],
+  "assumptions": "所用三次多项式必须按首一形式书写；复根按重数计算。前三项的特殊项不能直接使用 k>3 的递推式。",
+  "example": {
+    "text": "设 x、y、z 是一个三次方程的全部根，求三次幂和及四次幂和。",
+    "eq": {
+      "aria": "三次方程 t 立方减二 t 平方加 t 减一等于零",
+      "xml": "<mrow><mrow><msup><mrow><mi>t</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mn>2</mn><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mi>t</mi><mo>−</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "这道方程不易心算出根，但三个系数极其简单；根的幂和比根本身容易求。",
+  "steps": [
+    {
+      "title": "读出根的三个对称量",
+      "goal": "将方程系数与首一三次多项式对照。",
+      "reason": "韦达定理直接给 p、q、r。",
+      "eq": {
+        "aria": "对应 p 等于二 q 等于一 r 等于一",
+        "xml": "<mrow><mrow><mi>p</mi><mo>=</mo><mn>2</mn><mo>；</mo><mi>q</mi><mo>=</mo><mn>1</mn><mo>；</mo><mi>r</mi><mo>=</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "注意方程常数项写作 −r，因此 r=1。"
+    },
+    {
+      "title": "求第一阶与第二阶幂和",
+      "goal": "由总和和两两乘积和得到初始两项。",
+      "reason": "牛顿恒等式先给出 s1，再计算 s2。",
+      "eq": {
+        "aria": "第一阶和第二阶幂和皆为二",
+        "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><mn>2</mn><mo>；</mo><msub><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>=</mo><msup><mrow><mn>2</mn></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>2</mn><mo>·</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow></mrow>"
+      },
+      "check": "这里的系数 2q 不可写成 q。"
+    },
+    {
+      "title": "第三阶出现常数项三倍",
+      "goal": "将前三项代入第三个牛顿恒等式。",
+      "reason": "三次首一多项式的第三个基本对称量在第三阶出现 3r。",
+      "eq": {
+        "aria": "第三阶幂和为五",
+        "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mn>3</mn></mrow></msub><mo>=</mo><mn>2</mn><mo>·</mo><mn>2</mn><mo>−</mo><mn>1</mn><mo>·</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>·</mo><mn>1</mn><mo>=</mo><mn>5</mn></mrow></mrow>"
+      },
+      "check": "若误写为 +r 会得到 3，而正确答案为 5。"
+    },
+    {
+      "title": "第四阶以后使用统一递推",
+      "goal": "将 k=4 代入齐次递推。",
+      "reason": "三次根方程乘以相应幂次再相加，不再出现额外校正项。",
+      "eq": {
+        "aria": "第四阶幂和为十",
+        "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mn>4</mn></mrow></msub><mo>=</mo><mn>2</mn><mo>·</mo><mn>5</mn><mo>−</mo><mn>1</mn><mo>·</mo><mn>2</mn><mo>+</mo><mn>1</mn><mo>·</mo><mn>2</mn><mo>=</mo><mn>10</mn></mrow></mrow>"
+      },
+      "check": "第四阶递推中末项是 r 乘 s1，不能遗漏。"
+    }
+  ],
+  "takeaway": "幂和由系数递推，根不需要显式表示；构造递推比求精确根可靠得多。",
+  "mistakes": [
+    "把第三阶公式中的 3r 误抄成 r。",
+    "对 k=1、2、3 强行套用 k>3 的齐次递推。",
+    "忘记先把方程整理为首一形式。"
+  ],
+  "boundary": "多项式的系数与幂和均可为复数；数值根只能做独立验算，不会替代牛顿恒等式的证明。",
+  "exercises": [
+    {
+      "q": "二次方程的两根之和为 4，积为 3，求两根三次幂之和。",
+      "a": "两根平方和为 16−6=10；三次幂和等于 4×10−3×4=28。",
+      "answerEq": {
+        "aria": "两根立方幂和二十八",
+        "xml": "<mrow><mrow><mn>4</mn><mo>·</mo><mn>10</mn><mo>−</mo><mn>3</mn><mo>·</mo><mn>4</mn><mo>=</mo><mn>28</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "对于本讲三次方程，继续求第五阶根幂和。",
+      "a": "由第四阶幂和为十，第三阶为五，第二阶为二，得到 2×10−5+2=17。",
+      "answerEq": {
+        "aria": "第五阶幂和十七",
+        "xml": "<mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mn>5</mn></mrow></msub><mo>=</mo><mn>17</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "解释为何高阶根幂和满足与原方程同样系数的线性递推。",
+      "a": "每个根满足 t³=pt²−qt+r。乘 t 的 k−3 次幂，对全部根求和，得到 k>3 的递推。"
+    }
+  ],
+  "connection": "第 01 讲处理低阶对称量，第 09 讲用特征方程解递推，第 10 讲把线性递推组织为矩阵更新。",
+  "extension": "对四次首一多项式建立前四阶牛顿恒等式，注意前四阶校正项的系数。"
+}

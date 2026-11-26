@@ -1,0 +1,120 @@
+{
+  "n": 9,
+  "slug": "09-characteristic-recurrence",
+  "source": "20（拆分）",
+  "derived": true,
+  "title": "线性递推与特征方程",
+  "subtitle": "一条二阶递推，为什么会自然长出指数函数？",
+  "level": "基础→提高",
+  "tagline": "递推 · 特征根 · 通项",
+  "question": "一个数列每一项都由前两项的线性组合得到，怎样不逐项计算就写出任意第 n 项？",
+  "intro": [
+    "递推公式说明“如何从过去得到未来”，但求高阶项时逐项推进可能非常繁琐。",
+    "把单独的指数列代入二阶线性递推，会得到只含常数 λ 的代数方程。这些 λ 被称为特征根，它们决定解的基本形状。"
+  ],
+  "insight": "先尝试指数型解，再用初始条件确定不同特征根的组合系数；避免仅凭前几项猜通项。",
+  "stages": [
+    "选择较早的数列项，观察离散点的增长。",
+    "指数型解的两种基本增长速率仍可辨认。",
+    "递推得到的新项严格满足同一规则。",
+    "项数增大时，闭式比逐项展开更清楚。"
+  ],
+  "demo": "青绿色圆点显示递推数列，橙色点突出当前所选项，公式残差独立计算",
+  "theorem": "对于常系数二阶线性齐次递推 a_{n+2}=p a_{n+1}+q a_n，尝试指数解 a_n=λ^n 得到特征方程 λ²−pλ−q=0。两根不同且非零时，所有解都可由两条指数列线性组合得到。",
+  "core": [
+    {
+      "aria": "一般二阶线性递推关系",
+      "xml": "<mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow></msub><mo>=</mo><mi>p</mi><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mo>+</mo><mi>q</mi><msub><mrow><mi>a</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mrow>"
+    },
+    {
+      "aria": "特征方程",
+      "xml": "<mrow><mrow><msup><mrow><mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>p</mi><mi>λ</mi><mo>−</mo><mi>q</mi><mo>=</mo><mn>0</mn></mrow></mrow>"
+    },
+    {
+      "aria": "两不同特征根的通项结构",
+      "xml": "<mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mi>n</mi></mrow></msub><mo>=</mo><mi>A</mi><msup><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow><mrow><mi>n</mi></mrow></msup><mo>+</mo><mi>B</mi><msup><mrow><msub><mrow><mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow><mrow><mi>n</mi></mrow></msup></mrow></mrow>"
+    }
+  ],
+  "assumptions": "使用两不同根的标准通项时，必须检查特征根是否不同并处理零根或重根的细节。此例中的两个根为 1 和 2，均非零。",
+  "example": {
+    "text": "给定首项为零、第二项为一的递推数列，写出闭式并检验。",
+    "eq": {
+      "aria": "特例二阶递推",
+      "xml": "<mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow></msub><mo>=</mo><mn>3</mn><msub><mrow><mi>a</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mo>−</mo><mn>2</mn><msub><mrow><mi>a</mi></mrow><mrow><mi>n</mi></mrow></msub><mo>；</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>0</mn></mrow></msub><mo>=</mo><mn>0</mn><mo>；</mo><msub><mrow><mi>a</mi></mrow><mrow><mn>1</mn></mrow></msub><mo>=</mo><mn>1</mn></mrow></mrow>"
+    }
+  },
+  "motivation": "系数常数、递推齐次是识别指数解的信号；先找两个基本指数解再使用初值，比解大规模方程组更经济。",
+  "steps": [
+    {
+      "title": "假设存在指数型解",
+      "goal": "令单项依照 λ 的 n 次方变化。",
+      "reason": "代入常系数递推后，每项都有共同的 λ 的 n 次方因子。",
+      "eq": {
+        "aria": "得到二次特征方程",
+        "xml": "<mrow><mrow><msup><mrow><mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>3</mn><mi>λ</mi><mo>+</mo><mn>2</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "λ=0 时要避免直接把零次幂的消去当作一般合法步骤；本例根均不为零。"
+    },
+    {
+      "title": "分解并识别两个不同特征根",
+      "goal": "对二次式因式分解。",
+      "reason": "两个互异的指数列满足同一个线性递推。",
+      "eq": {
+        "aria": "特征方程分解为两个一次因子",
+        "xml": "<mrow><mrow><mrow><mo>(</mo><mi>λ</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mrow><mo>(</mo><mi>λ</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "根分别为 1、2；它们不重合。"
+    },
+    {
+      "title": "写一般通项并代初值",
+      "goal": "写成常数 A 加 B 乘二的 n 次方。",
+      "reason": "对于线性齐次递推，两个独立指数解的线性组合仍是解。",
+      "eq": {
+        "aria": "由初值确定两组合系数",
+        "xml": "<mrow><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>=</mo><mn>0</mn><mo>；</mo><mi>A</mi><mo>+</mo><mn>2</mn><mi>B</mi><mo>=</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "一阶初值代 n=1，不要误代 n=2。"
+    },
+    {
+      "title": "解出系数并反代验证",
+      "goal": "得到 A 为负一、B 为一，并写出闭式。",
+      "reason": "代入原递推，两侧的常数项与指数项分别一致。",
+      "eq": {
+        "aria": "递推数列闭式等于二的 n 次方减一",
+        "xml": "<mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mi>n</mi></mrow></msub><mo>=</mo><msup><mrow><mn>2</mn></mrow><mrow><mi>n</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "n=0 得零，n=1 得一，n=2 得三，全部符合原递推。"
+    }
+  ],
+  "takeaway": "线性递推的根不是原数列的零点，而是“指数增长模式”的比例因子。",
+  "mistakes": [
+    "将特征方程 λ²−pλ−q 误写成 λ²−pλ+q。",
+    "根为重根时仍写出两个相同的指数项却认为独立。",
+    "未核对初始条件就把某个满足递推的指数列当成最终数列。"
+  ],
+  "boundary": "两特征根重合时，需要使用乘 n 的附加解；若根为零，前述 λ^n 写法的起始指标及独立性需要另行处理。",
+  "exercises": [
+    {
+      "q": "对本讲递推，求第六项的数值。",
+      "a": "闭式给出二的六次方减一，结果为 63。",
+      "answerEq": {
+        "aria": "第六项为六十三",
+        "xml": "<mrow><mrow><msub><mrow><mi>a</mi></mrow><mrow><mn>6</mn></mrow></msub><mo>=</mo><mn>63</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "若递推是后项等于前两项之和，写出特征方程。",
+      "a": "得到 λ²−λ−1=0；它的两根就是斐波那契闭式常见的两个基数。",
+      "answerEq": {
+        "aria": "斐波那契特征方程",
+        "xml": "<mrow><mrow><msup><mrow><mi>λ</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mi>λ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "如果特征方程有二重根，为什么不能只用一个指数序列满足所有初值？",
+      "a": "两独立初始条件一般需要两个线性独立的基本解；重根时另一解常形如 nλ^n，需进一步验证。"
+    }
+  ],
+  "connection": "原课程第 20 讲拆分为本讲的特征根方法和第 10 讲的矩阵快速幂，两者分别从函数模式与线性算子的角度理解同一递推。",
+  "extension": "研究特征根复数时的振荡递推，以及重根情形通项中的 n 因子如何出现。"
+}

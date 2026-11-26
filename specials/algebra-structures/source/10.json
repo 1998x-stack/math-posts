@@ -1,0 +1,124 @@
+{
+  "n": 10,
+  "slug": "10-fibonacci-matrix",
+  "source": "20（拆分）",
+  "derived": true,
+  "title": "矩阵快速幂与斐波那契递推",
+  "subtitle": "为什么将两个数装成一个向量，能大幅加速递推？",
+  "level": "提高",
+  "tagline": "线性变换 · 行列式 · 快速幂",
+  "question": "斐波那契数列看似必须一项一项往后算，为什么用一个固定矩阵的幂就能直接获得远处的项？",
+  "intro": [
+    "二阶递推需要记住两个最近状态。把两个数合并为列向量后，每次更新就变成一次矩阵乘法。",
+    "矩阵可以被反复平方：要计算很大的幂次，不必相乘上万次，而是利用二进制展开完成对数数量级的矩阵乘法。"
+  ],
+  "insight": "将过去两项组成状态向量，再利用矩阵乘法的结合律把多步更新压缩为矩阵幂。",
+  "stages": [
+    "较小的幂次直接对应斐波那契递推的前几项。",
+    "矩阵各元素始终是相邻的斐波那契数。",
+    "矩阵幂的行列式交替取正负一。",
+    "n 继续增加时，公式保持结构一致。"
+  ],
+  "demo": "矩阵四格由相邻斐波那契数计算，数值行列式独立核验",
+  "theorem": "对 F0=0、F1=1 的斐波那契数列，固定矩阵 M=[[1,1],[1,0]] 使状态 (F_{n+1},F_n) 由 M^n 生成。对 n≥1，其幂次矩阵的四项恰由相邻斐波那契数组成。",
+  "core": [
+    {
+      "aria": "斐波那契递推定义",
+      "xml": "<mrow><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow></msub><mo>=</mo><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mo>+</mo><msub><mrow><mi>F</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mrow>"
+    },
+    {
+      "aria": "二乘二斐波那契转移矩阵",
+      "xml": "<mrow><mrow><mi>M</mi><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "矩阵幂元素公式",
+      "xml": "<mrow><mrow><msup><mrow><mi>M</mi></mrow><mrow><mi>n</mi></mrow></msup><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub></mrow></mtd><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mtd><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "矩阵行列式给出 Cassini 恒等式",
+      "xml": "<mrow><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow></msub><mo>−</mo><msup><mrow><msub><mrow><mi>F</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mrow><mo>(</mo><mo>−</mo><mn>1</mn><mo>)</mo></mrow></mrow><mrow><mi>n</mi></mrow></msup></mrow></mrow>"
+    }
+  ],
+  "assumptions": "矩阵幂的四项公式从 n≥1 开始书写，这样不需要约定 F_{−1}；初值 F0=0、F1=1 必须固定。涉及快速幂时只使用整数幂次。",
+  "example": {
+    "text": "用矩阵计算斐波那契数列第五项，并借矩阵行列式检查计算结果。",
+    "eq": {
+      "aria": "需要求 M 的五次幂",
+      "xml": "<mrow><mrow><msup><mrow><mi>M</mi></mrow><mrow><mn>5</mn></mrow></msup></mrow></mrow>"
+    }
+  },
+  "motivation": "直接递推求第五项并不难，重点是通过这一小例子观察能推广到巨大 n 的运算法则。",
+  "steps": [
+    {
+      "title": "写出状态更新",
+      "goal": "把连续两项组成列向量。",
+      "reason": "新状态第一分量是旧两分量之和，第二分量复制旧第一分量。",
+      "eq": {
+        "aria": "斐波那契状态满足线性变换",
+        "xml": "<mrow><mrow><mrow><mo>(</mo><mtable><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>M</mi><mrow><mo>(</mo><mtable><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mrow><mi>F</mi></mrow><mrow><mi>n</mi></mrow></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "矩阵行、列顺序不能互换。"
+    },
+    {
+      "title": "先平方以减少运算",
+      "goal": "计算 M² 和 M⁴。",
+      "reason": "重复平方比从 M 逐个乘到 M⁵ 更适合推广。",
+      "eq": {
+        "aria": "斐波那契矩阵平方",
+        "xml": "<mrow><mrow><msup><mrow><mi>M</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mn>2</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "右下角是 1，不是 0。"
+    },
+    {
+      "title": "得到第五次幂",
+      "goal": "用 M⁴ 乘一次 M。",
+      "reason": "矩阵幂次可用平方与乘法组合。",
+      "eq": {
+        "aria": "斐波那契矩阵五次方",
+        "xml": "<mrow><mrow><msup><mrow><mi>M</mi></mrow><mrow><mn>5</mn></mrow></msup><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mn>8</mn></mrow></mtd><mtd><mrow><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>5</mn></mrow></mtd><mtd><mrow><mn>3</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+      },
+      "check": "从矩阵读出 F5=5、F6=8。"
+    },
+    {
+      "title": "利用行列式做第二种核验",
+      "goal": "直接计算 M⁵ 的行列式。",
+      "reason": "det(M)=−1，因而 det(M⁵)=−1；具体数值应吻合。",
+      "eq": {
+        "aria": "五次幂行列式等于负一",
+        "xml": "<mrow><mrow><mn>8</mn><mo>·</mo><mn>3</mn><mo>−</mo><mn>5</mn><mo>·</mo><mn>5</mn><mo>=</mo><mo>−</mo><mn>1</mn></mrow></mrow>"
+      },
+      "check": "这一行正好验证 Cassini 恒等式在 n=5 处成立。"
+    }
+  ],
+  "takeaway": "二维状态空间将递推变为线性变换；快速幂利用矩阵乘法结合律而不是改变数列定义。",
+  "mistakes": [
+    "把状态向量按反顺序排列，却仍沿用原矩阵。",
+    "矩阵乘法不满足交换律；平方与乘积次序必须清楚。",
+    "把 F_{n+1}F_{n-1}−F_n² 的符号误写成固定正一。"
+  ],
+  "boundary": "对不同递推系数需要重新建立转移矩阵，不能直接套斐波那契的矩阵元素公式。",
+  "exercises": [
+    {
+      "q": "用 M³ 读出第三、第四个斐波那契数。",
+      "a": "M³ 的四项为 3、2、2、1，因此 F3=2、F4=3。",
+      "answerEq": {
+        "aria": "矩阵三次方",
+        "xml": "<mrow><mrow><msup><mrow><mi>M</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>=</mo><mrow><mo>(</mo><mtable><mtr><mtd><mrow><mn>3</mn></mrow></mtd><mtd><mrow><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn></mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow>"
+      }
+    },
+    {
+      "q": "计算矩阵 M 的六次幂的行列式，不必求全部元素。",
+      "a": "det M=−1，因此 det M⁶=1。",
+      "answerEq": {
+        "aria": "六次幂行列式一",
+        "xml": "<mrow><mrow><mi>det</mi><mrow><mo>(</mo><msup><mrow><mi>M</mi></mrow><mrow><mn>6</mn></mrow></msup><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "解释快速幂为什么只需要与 log₂n 同阶的平方/乘法次数。",
+      "a": "每次平方将可表示的指数倍增；将 n 写成二进制，按置位组合即可。"
+    }
+  ],
+  "connection": "第 09 讲利用特征根求通项；本讲利用矩阵幂快速计算；两种视角在对角化时还会合流。",
+  "extension": "研究 M 的特征值与黄金分割比的关系，以及矩阵对角化如何推导斐波那契的 Binet 公式。"
+}

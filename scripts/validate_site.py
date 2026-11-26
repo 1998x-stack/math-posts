@@ -79,6 +79,20 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
             assert url in (out/'sitemap.xml').read_text(encoding='utf-8'),f'Missing geometry sitemap route: {url}'
         assert len(list((out/'specials/geometry-transformations/svg').glob('*.svg')))==12
         assert 'specials/geometry-transformations/' in (out/'index.html').read_text(encoding='utf-8')
+    algebra=ROOT/'specials/algebra-structures'
+    if algebra.is_dir():
+        names=sorted(p.name for p in algebra.glob('*.html'))
+        assert len(names)==13 and 'index.html' in names, 'Expected 12 algebra lessons plus index'
+        for name in names:
+            path='specials/algebra-structures/'+name
+            expect.append(path)
+            assert (out/path).read_bytes()==(ROOT/path).read_bytes(),f'Algebra page changed during build: {path}'
+            route='specials/algebra-structures/'+('' if name=='index.html' else name)
+            assert route in (out/'sitemap.xml').read_text(encoding='utf-8'),f'Missing algebra sitemap route: {route}'
+        assert len(list((out/'specials/algebra-structures/svg').glob('*.svg')))==12
+        assert (out/'specials/algebra-structures/assets/article.css').is_file()
+        assert (out/'specials/algebra-structures/assets/algebra.js').is_file()
+        assert 'specials/algebra-structures/' in (out/'index.html').read_text(encoding='utf-8')
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'

@@ -1,0 +1,115 @@
+{
+  "n": 5,
+  "slug": "05-cauchy-equation",
+  "source": "17",
+  "title": "函数方程：从特殊代入到结构",
+  "subtitle": "为什么加入连续性以后，加法函数只剩下一条直线？",
+  "level": "提高",
+  "tagline": "特殊代入 · 有理数逼近",
+  "question": "若一个函数满足“输入相加、输出也相加”，能否立即断定它是直线？连续性究竟在哪一步起作用？",
+  "intro": [
+    "竞赛函数方程要先追问定义域、值域与附加条件，然后才尝试代零、交换变量或迭代。柯西加法方程是“只靠几个值不够”的典型例子。",
+    "在整数和有理数上，加法性已经迫使函数表现得像直线；要把结论扩展到全部实数，必须进一步利用连续性或其他正则性条件。"
+  ],
+  "insight": "先代零得出基础性质，再推到有理数；用连续性完成从稠密子集到全部实数的过渡。",
+  "stages": [
+    "取小斜率，拆分加法仍成立。",
+    "斜率改变，组成部分的输出同步改变。",
+    "任意线性模型都满足可加性。",
+    "演示不是唯一性证明，推广还必须借助连续性。"
+  ],
+  "demo": "两个相加的输入被表示成蓝、橙两段，整体输出用绿色表示",
+  "theorem": "若 f 从实数映射到实数，满足加法方程并且在零点连续，则存在常数 c，使函数在所有实数上的值都等于 cx。不附加连续性等条件，可能存在非线性的加法函数。",
+  "core": [
+    {
+      "aria": "柯西加法函数方程",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>f</mi><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow></mrow>"
+    },
+    {
+      "aria": "连续加法函数的结论 f(x)=cx",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>c</mi><mi>x</mi></mrow></mrow>"
+    }
+  ],
+  "assumptions": "定义域、值域均为实数；从有理数推到所有实数需要连续性（或可测性、局部有界等适当条件）。",
+  "example": {
+    "text": "设 f:R→R 满足柯西加法方程，并且在零点连续。证明存在实数 c，使它在每个实数 x 处等于 cx。",
+    "eq": {
+      "aria": "对任意实数 x y，f(x+y)=f(x)+f(y)",
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>f</mi><mrow><mo>(</mo><mi>y</mi><mo>)</mo></mrow></mrow></mrow>"
+    }
+  },
+  "motivation": "解函数方程时应先找到能证明的最弱结论，不应因为画出的例子是一条直线就直接宣布唯一性。",
+  "steps": [
+    {
+      "title": "代零",
+      "goal": "令两变量均为零，求 f(0)。",
+      "reason": "等式化为 f(0)=2f(0)，相减得到结论。",
+      "eq": {
+        "aria": "函数零点取值为零",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow>"
+      },
+      "check": "仅凭图像过原点不能证明任意函数过原点，必须使用加法条件。"
+    },
+    {
+      "title": "处理整数倍与相反数",
+      "goal": "依次推出负数和整数倍输入的关系。",
+      "reason": "f(x)+f(−x)=f(0)=0；正整数用归纳即可。",
+      "eq": {
+        "aria": "整数倍输入使输出乘相同整数",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>m</mi><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>m</mi><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>，</mo><mi>m</mi><mo>∈</mo><mi>ℤ</mi></mrow></mrow>"
+      },
+      "check": "负整数需要先建立 f(−x)=−f(x)。"
+    },
+    {
+      "title": "固定 c=f(1)，推广到有理数",
+      "goal": "对于任意有理数 r，证明 f(r)=rc。",
+      "reason": "将整数倍公式用于有理数分母，再使用分子作为整数倍。",
+      "eq": {
+        "aria": "有理数上的线性关系",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow><mo>=</mo><mi>r</mi><mi>c</mi><mo>，</mo><mi>r</mi><mo>∈</mo><mi>ℚ</mi></mrow></mrow>"
+      },
+      "check": "有理数还不是整个实数集合。"
+    },
+    {
+      "title": "利用连续性",
+      "goal": "让有理数列收敛到任意实数 x。",
+      "reason": "先由加法性和零点连续证明全局连续，再交换极限与函数。",
+      "eq": {
+        "aria": "实数输入处函数满足 f(x)=cx",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>c</mi><mi>x</mi></mrow></mrow>"
+      },
+      "check": "若删除连续条件，此结论不能无条件成立。"
+    }
+  ],
+  "takeaway": "特殊代入给出稠密集合上的刚性结构，正则性负责从稠密集合扩张到全域。",
+  "mistakes": [
+    "把可加函数无条件视为线性函数。",
+    "只证明整数输入的关系，就认为已涵盖无理数。",
+    "把滑块中展示的一族直线当成所有函数方程解。"
+  ],
+  "boundary": "不连续的加法函数可以借助实数作为有理数向量空间的哈梅尔基构造；这里只陈述存在性，不把它们等同于普通连续曲线。",
+  "exercises": [
+    {
+      "q": "若 f(1)=4 且 f 可加，求 f(3)、f(−2)。",
+      "a": "整数倍公式给出十二与负八。",
+      "answerEq": {
+        "aria": "整数输入的两个函数值",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow><mo>=</mo><mn>12</mn><mo>；</mo><mi>f</mi><mrow><mo>(</mo><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mn>8</mn></mrow></mrow>"
+      }
+    },
+    {
+      "q": "证明在零点连续的加法函数在任意点 a 连续。",
+      "a": "利用 f(a+h)−f(a)=f(h)，当 h 趋零时右边趋零。",
+      "answerEq": {
+        "aria": "加法性产生平移后的增量等式",
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>+</mo><mi>h</mi><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo>(</mo><mi>h</mi><mo>)</mo></mrow></mrow></mrow>"
+      }
+    },
+    {
+      "q": "为什么只知道 f 在有理数上等于 c 倍输入还不足以完成实数域的证明？",
+      "a": "必须利用连续性控制无理数处的取值；稠密性本身不能控制任意不连续函数。"
+    }
+  ],
+  "connection": "第 09 讲的线性递推同样从局部规则推出整体结构；第 06 讲把代数运算对应到平面变换。",
+  "extension": "研究可加函数在一点有界、在一个区间单调或可测时的线性结论。"
+}
