@@ -23,11 +23,11 @@
   "core": [
     {
       "aria": "线性式带余除法",
-      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mi>Q</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow></mrow>"
+      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo>)</mo></mrow><mi>Q</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>+</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow>"
     },
     {
       "aria": "因式定理的充要关系",
-      "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>⇔</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>∣</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+      "xml": "<mrow><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>⇔</mo><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo>)</mo></mrow><mo>∣</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow>"
     }
   ],
   "assumptions": "多项式系数所在集合应为域（例如有理数、实数、复数）；有理根定理只产生候选值，不确保候选一定为根。",
@@ -56,7 +56,7 @@
       "reason": "因式定理确保整除，商多项式次数降为二。",
       "eq": {
         "aria": "除去 x 减一后得到二次商",
-        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow>"
+        "xml": "<mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mo>)</mo></mrow></mrow>"
       },
       "check": "重新相乘核对三次项、二次项和常数项。"
     },
@@ -66,7 +66,7 @@
       "reason": "二次多项式的根可以用最简单的配对分解。",
       "eq": {
         "aria": "二次式等于 x 减二与 x 减三的乘积",
-        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+        "xml": "<mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>6</mn><mo>=</mo><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo>)</mo></mrow></mrow>"
       },
       "check": "两个因子的常数积为 6，一次项系数为 −5。"
     },
@@ -98,7 +98,7 @@
       "a": "先分解成两个平方差，实根为 1 与 −1；剩余二次式在实数中无根。",
       "answerEq": {
         "aria": "平方差分解",
-        "xml": "<mrow><mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>)</mo></mrow></mrow></mrow>"
+        "xml": "<mrow><msup><mrow><mi>x</mi></mrow><mrow><mn>4</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mrow><mo>(</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1</mn><mo>)</mo></mrow></mrow>"
       }
     },
     {

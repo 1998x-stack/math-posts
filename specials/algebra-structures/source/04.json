@@ -27,7 +27,7 @@
     },
     {
       "aria": "拉格朗日基函数乘积定义",
-      "xml": "<mrow><mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>i</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munder><mo>∏</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></munder><mfrac><mrow><mi>x</mi></mrow><mrow><mo>−</mo></mrow></mfrac><mfrac><mrow><mn>1</mn></mrow><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mfrac></mrow></mrow>"
+      "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mi>i</mi></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munder><mo>∏</mo><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></munder><mfrac><mrow><mrow><mi>x</mi><mo>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mrow><mrow><mrow><msub><mrow><mi>x</mi></mrow><mrow><mi>i</mi></mrow></msub><mo>−</mo><msub><mrow><mi>x</mi></mrow><mrow><mi>j</mi></mrow></msub></mrow></mrow></mfrac></mrow>"
     }
   ],
   "assumptions": "所有节点横坐标必须两两不同，否则拉格朗日公式的分母为零；并须明确次数不超过 n。",
@@ -46,7 +46,7 @@
       "reason": "取另外两个节点的一次因子，再除以在当前节点的值。",
       "eq": {
         "aria": "第一个拉格朗日基函数",
-        "xml": "<mrow><mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></mrow>"
+        "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>0</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>"
       },
       "check": "L0(0)=1、L0(1)=L0(2)=0。"
     },
@@ -56,7 +56,7 @@
       "reason": "重复相同的零点构造规则。",
       "eq": {
         "aria": "第二和第三个拉格朗日基函数",
-        "xml": "<mrow><mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>x</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>；</mo><msub><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mi>x</mi></mrow><mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mfrac></mrow></mrow>"
+        "xml": "<mrow><msub><mrow><mi>L</mi></mrow><mrow><mn>1</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mi>x</mi><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo>)</mo></mrow><mo>；</mo><msub><mrow><mi>L</mi></mrow><mrow><mn>2</mn></mrow></msub><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow></mrow></mrow><mrow><mn>2</mn></mrow></mfrac></mrow>"
       },
       "check": "L1(1)=1，L2(2)=1，其余规定节点处为零。"
     },

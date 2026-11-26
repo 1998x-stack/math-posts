@@ -27,7 +27,7 @@
     },
     {
       "aria": "根与系数的对应",
-      "xml": "<mrow><mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>t</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mi>p</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mi>q</mi><mi>t</mi><mo>−</mo><mi>r</mi></mrow></mrow>"
+      "xml": "<mrow><mrow><mo>(</mo><mi>t</mi><mo>−</mo><mi>x</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>−</mo><mi>y</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>t</mi><mo>−</mo><mi>z</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mi>t</mi></mrow><mrow><mn>3</mn></mrow></msup><mo>−</mo><mi>p</mi><msup><mrow><mi>t</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mi>q</mi><mi>t</mi><mo>−</mo><mi>r</mi></mrow>"
     }
   ],
   "assumptions": "这里的多项式以实数或复数为系数，根可以相等，也可以不是实数；不要擅自额外假设三数为正。",
@@ -56,7 +56,7 @@
       "reason": "按乘法分配律，交叉乘积 x y、y z、z x 各出现两次。",
       "eq": {
         "aria": "三数和平方展开式",
-        "xml": "<mrow><mrow><msup><mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow>"
+        "xml": "<mrow><msup><mrow><mrow><mo>(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo>)</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><msup><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>y</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>2</mn><mrow><mo>(</mo><mi>x</mi><mi>y</mi><mo>+</mo><mi>y</mi><mi>z</mi><mo>+</mo><mi>z</mi><mi>x</mi><mo>)</mo></mrow></mrow>"
       },
       "check": "混合项系数一定是 2，不能漏掉任何一对。"
     },
@@ -102,7 +102,7 @@
       "a": "由平方和等于和的平方减去两倍的两两乘积和，得到 14。",
       "answerEq": {
         "aria": "平方和十四",
-        "xml": "<mrow><mrow><mn>0</mn><mo>−</mo><mn>2</mn><mrow><mo>(</mo><mo>−</mo><mo>)</mo></mrow><mo>=</mo><mn>14</mn></mrow></mrow>"
+        "xml": "<mrow><mn>0</mn><mo>−</mo><mn>2</mn><mrow><mo>(</mo><mo>−</mo><mn>7</mn><mo>)</mo></mrow><mo>=</mo><mn>14</mn></mrow>"
       }
     },
     {
