@@ -1,0 +1,91 @@
+{
+  "series": "geometry-transformations",
+  "slugs": [
+    "01-inversion",
+    "02-spiral-similarity",
+    "03-affine",
+    "04-ceva-menelaus",
+    "05-radical-axis",
+    "06-euler-nine-point",
+    "07-ptolemy",
+    "08-simson",
+    "09-miquel",
+    "10-cross-ratio",
+    "11-polar-line",
+    "12-pascal"
+  ],
+  "lessons": [
+    {
+      "n": 1,
+      "slug": "01-inversion",
+      "title": "圆的反演变换",
+      "level": "提高"
+    },
+    {
+      "n": 2,
+      "slug": "02-spiral-similarity",
+      "title": "相似、旋转与螺旋相似",
+      "level": "基础→提高"
+    },
+    {
+      "n": 3,
+      "slug": "03-affine",
+      "title": "仿射变换：椭圆、面积比与重心",
+      "level": "提高"
+    },
+    {
+      "n": 4,
+      "slug": "04-ceva-menelaus",
+      "title": "塞瓦、梅涅劳斯与共点共线",
+      "level": "基础→提高"
+    },
+    {
+      "n": 5,
+      "slug": "05-radical-axis",
+      "title": "圆幂、根轴与根心",
+      "level": "基础→提高"
+    },
+    {
+      "n": 6,
+      "slug": "06-euler-nine-point",
+      "title": "三角形五心、欧拉线与九点圆",
+      "level": "提高"
+    },
+    {
+      "n": 7,
+      "slug": "07-ptolemy",
+      "title": "托勒密定理与圆内接四边形",
+      "level": "提高"
+    },
+    {
+      "n": 8,
+      "slug": "08-simson",
+      "title": "西姆松线：投影为何突然共线",
+      "level": "提高"
+    },
+    {
+      "n": 9,
+      "slug": "09-miquel",
+      "title": "米克尔点与三圆共点",
+      "level": "提高"
+    },
+    {
+      "n": 10,
+      "slug": "10-cross-ratio",
+      "title": "调和点列与交比",
+      "level": "拓展"
+    },
+    {
+      "n": 11,
+      "slug": "11-polar-line",
+      "title": "极点与极线：点线对偶",
+      "level": "拓展"
+    },
+    {
+      "n": 12,
+      "slug": "12-pascal",
+      "title": "帕斯卡定理与射影几何初探",
+      "level": "拓展"
+    }
+  ]
+}

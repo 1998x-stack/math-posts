@@ -1,0 +1,127 @@
+{
+  "title": "高中竞赛数学 · 几何变换与不变量十二讲",
+  "source": {
+    "kind": "user_provided_curriculum",
+    "title": "高中竞赛数学60讲_课程总纲与逐讲设计.md",
+    "status": "user_provided",
+    "notes": "12 讲主题及原始课程提纲来自用户此前编制的课程文档；本系列重新组织为独立数学教学文章，不来自原始考试试题。"
+  },
+  "scope": "12 HTML articles, each with an interactive geometry model, four progressive SVG states, MathML and worked example; this ledger is not an official mathematical peer review",
+  "claim_kind": "classical_math_and_derived_models",
+  "chapters": [
+    {
+      "n": 1,
+      "slug": "01-inversion",
+      "title": "圆的反演变换",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 01"
+    },
+    {
+      "n": 2,
+      "slug": "02-spiral-similarity",
+      "title": "相似、旋转与螺旋相似",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 02"
+    },
+    {
+      "n": 3,
+      "slug": "03-affine",
+      "title": "仿射变换：椭圆、面积比与重心",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 03"
+    },
+    {
+      "n": 4,
+      "slug": "04-ceva-menelaus",
+      "title": "塞瓦、梅涅劳斯与共点共线",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 04"
+    },
+    {
+      "n": 5,
+      "slug": "05-radical-axis",
+      "title": "圆幂、根轴与根心",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 05"
+    },
+    {
+      "n": 6,
+      "slug": "06-euler-nine-point",
+      "title": "三角形五心、欧拉线与九点圆",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 06"
+    },
+    {
+      "n": 7,
+      "slug": "07-ptolemy",
+      "title": "托勒密定理与圆内接四边形",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 07"
+    },
+    {
+      "n": 8,
+      "slug": "08-simson",
+      "title": "西姆松线：投影为何突然共线",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 08"
+    },
+    {
+      "n": 9,
+      "slug": "09-miquel",
+      "title": "米克尔点与三圆共点",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "standard stated hypotheses",
+      "source_reference": "course outline lesson 09"
+    },
+    {
+      "n": 10,
+      "slug": "10-cross-ratio",
+      "title": "调和点列与交比",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "advanced projective cases require nondegeneracy conventions",
+      "source_reference": "course outline lesson 10"
+    },
+    {
+      "n": 11,
+      "slug": "11-polar-line",
+      "title": "极点与极线：点线对偶",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "advanced projective cases require nondegeneracy conventions",
+      "source_reference": "course outline lesson 11"
+    },
+    {
+      "n": 12,
+      "slug": "12-pascal",
+      "title": "帕斯卡定理与射影几何初探",
+      "kind": "classical_theorem_or_derived",
+      "status": "derived_or_stated",
+      "limits": "advanced projective cases require nondegeneracy conventions",
+      "source_reference": "course outline lesson 12"
+    }
+  ],
+  "verifier_policy": {
+    "symbolic": "independent proof in each article; sample models are not general proofs",
+    "numeric": "deterministic property checks",
+    "browser": "requires actual CI or local Playwright evidence",
+    "publishing": "PR only until CI and Pages verified"
+  }
+}
