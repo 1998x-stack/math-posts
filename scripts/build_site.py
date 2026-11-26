@@ -621,6 +621,21 @@ def build(root:Path,out:Path,base:str):
         marker='<section id="categories"'
         assert marker in home
         home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="special-title"><div class="section-header"><div><div class="eyebrow muted">MATHEMATICAL EXPLORATIONS</div><h2 id="special-title">数学专题 · 一题多解</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/ellipse-triangle/">椭圆内接三角形：七种证明</a></h3><p>从仿射变换到共轭直径，七篇独立图解与交互实验。</p><a class="route-start" href="specials/ellipse-triangle/">进入专题 →</a></article></div></section>'+marker,1)
+    # Independent Olympiad lessons: not exam-paper posts, no paper metadata leakage.
+    geometry=root/'specials/geometry-transformations'
+    if geometry.is_dir():
+        target=out/'specials/geometry-transformations'
+        target.mkdir(parents=True,exist_ok=True)
+        geometry_pages=sorted(x.name for x in geometry.glob('*.html'))
+        assert len(geometry_pages)==13 and 'index.html' in geometry_pages, '12 geometry articles plus index required'
+        for name in geometry_pages:
+            shutil.copy2(geometry/name,target/name)
+            special_urls.append(url_join(base,'specials/geometry-transformations/'+('' if name=='index.html' else name)))
+        shutil.copytree(geometry/'assets',target/'assets')
+        shutil.copytree(geometry/'svg',target/'svg')
+        marker='<section id="categories"'
+        assert marker in home
+        home=home.replace(marker, '<section class="container spotlight-section" aria-labelledby="geometry-title"><div class="section-header"><div><div class="eyebrow muted">COMPETITION GEOMETRY</div><h2 id="geometry-title">竞赛几何 · 变换与不变量</h2></div></div><div class="route-grid"><article class="route-card"><h3><a href="specials/geometry-transformations/">几何变换与不变量：12讲</a></h3><p>反演、螺旋相似、仿射、圆幂、欧拉线、米克尔点与射影几何的渐进式图解课程。</p><a class="route-start" href="specials/geometry-transformations/">进入课程 →</a></article></div></section>'+marker,1)
     write(out,'index.html',home)
     write(out,'papers/index.html',build_papers_index(papers,posts,base,html_page))
     public_papers=[paper for paper in papers if any(p["paper_id"]==paper["id"] and p["status"]=="published" for p in posts)]
