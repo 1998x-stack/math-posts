@@ -64,7 +64,7 @@
       "explain": "设 f(x)=(ax+b)/(cx+d)。两点差 f(u)−f(v) 等于 (ad−bc)(u−v)/[(cu+d)(cv+d)]。交比中同一个点出现的分母因子相互消去，剩下原始交比。",
       "eq": {
         "aria": "一次分式变换的两点差公式",
-        "xml": "<mrow><mi>f(u)−f(v)</mi><mo>=</mo><mfrac><mo>(</mo><mi>ad−bc</mi><mo>)</mo><mo>(</mo><mi>u−v</mi><mo>)</mo><mo>(</mo><mi>cu+d</mi><mo>)</mo><mo>(</mo><mi>cv+d</mi><mo>)</mo></mfrac></mrow>"
+        "xml": "<mrow><mi>f(u)−f(v)</mi><mo>=</mo><mfrac><mrow><mo>(</mo><mi>ad−bc</mi><mo>)</mo><mo>(</mo><mi>u−v</mi><mo>)</mo></mrow><mrow><mo>(</mo><mi>cu+d</mi><mo>)</mo><mo>(</mo><mi>cv+d</mi><mo>)</mo></mrow></mfrac></mrow>"
       },
       "check": "需要 ad−bc≠0 且分母在当前仿射坐标图中不为零；极点另在射影意义下处理。"
     }
