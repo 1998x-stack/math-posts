@@ -141,3 +141,7 @@ GitHub Actions 在 PR 上只验证，main 分支部署 Pages；确认成功之�
 ## 数学专题：椭圆内接三角形的七种证明
 
 [专题源码](specials/ellipse-triangle/) · [专题阅读入口](https://1998x-stack.github.io/math-posts/specials/ellipse-triangle/)。七篇独立 HTML、49 幅 SVG、94 条编号 MathML 公式及交互实验，附数学验证脚本与此前的 Chromium QA 报告。本专题为独立数学教学推导，不是考试原卷，不计入试卷题目统计。部署状态以 Actions 与实际页面为准。
+
+## 整数世界与数论：十二讲
+
+[专题首页](specials/number-theory/)提供 12 篇原生 MathML 与交互式 SVG 教学文章：整除、欧几里得算法、贝祖、素因子分解、埃氏筛、模运算、逆元、CRT、快速幂、费马、欧拉与二次剩余。作为独立数学专题加入网站首页与 sitemap，不混入考试试卷元数据。是否部署成功以实际 GitHub Actions/Pages 结果为准。

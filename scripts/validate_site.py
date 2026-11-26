@@ -93,6 +93,18 @@ def published_site(out:Path,base:str=DEFAULT_URL,require_pdfs:bool=False):
         assert (out/'specials/algebra-structures/assets/article.css').is_file()
         assert (out/'specials/algebra-structures/assets/algebra.js').is_file()
         assert 'specials/algebra-structures/' in (out/'index.html').read_text(encoding='utf-8')
+    nt=ROOT/'specials/number-theory'
+    if nt.is_dir():
+        pages=sorted(p.name for p in nt.glob('*.html'))
+        assert len(pages)==13 and 'index.html' in pages
+        for name in pages:
+            path='specials/number-theory/'+name
+            expect.append(path)
+            assert (out/path).read_bytes()==(ROOT/path).read_bytes()
+            url='specials/number-theory/'+('' if name=='index.html' else name)
+            assert url in (out/'sitemap.xml').read_text(encoding='utf-8')
+        assert len(list((out/'specials/number-theory/svg').glob('*.svg')))==12
+        assert 'specials/number-theory/' in (out/'index.html').read_text(encoding='utf-8')
     for f in expect:assert (out/f).is_file(),f'Missing output: {f}'
     sitemap=(out/'sitemap.xml').read_text(encoding='utf-8')
     assert '/topics/' in sitemap,'Knowledge map absent from sitemap'
